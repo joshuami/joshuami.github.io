@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Content Strategy Update: What are we up to?
+title: "Content Strategy Update: What are we up to?"
 ---
 
 Back in December, as part of our ongoing efforts to improve Drupal.org, we <a href="https://assoc.drupal.org/blog/tvn/forum-one-work-content-strategy-drupal.org">kicked off a content strategy project with Forum One</a>. Drupal Association engineering and marketing/communication staff partnered with the <a href="/governance/drupalorg-working-groups/content">Drupal.org Content Working Group</a> and met for a two-day workshop to help get the project team from Forum One (content strategists and user experience designers) up to speed on Drupal.org and the ecosystem of sites and services that our community uses to build and use Drupal.
