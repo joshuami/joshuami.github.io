@@ -1,0 +1,30 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Joshuami
+tagline:          'A place for Josh Mitchell to write'
+description:      'Josh Mitchell is the CTO of the Drupal Association and architect of large websites and high performing teams.'
+url:              http://joshuami.com
+baseurl:          /
+
+author:
+  name:           'Josh Mitchell'
+  url:            https://twitter.com/joshua_io
+
+paginate:         5
+
+# Custom vars
+github:
+  repo:           https://joshuami.github.io
+
+pages_list:
+  Home: '/'
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
