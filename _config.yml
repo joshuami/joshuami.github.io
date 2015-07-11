@@ -17,13 +17,13 @@ author:
   name:           'Josh Mitchell'
   url:            https://twitter.com/joshua_io
 
-paginate:         5
+paginate:         1
 
 # Custom vars
 github:
   repo:           https://joshuami.github.io
 
-pages_list:
+menu:
   Home: '/'
   About: '/about'
   Archive: '/archive'
