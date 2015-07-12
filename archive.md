@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Archive
+weight: 3
 ---
 
 {% for post in site.posts %}

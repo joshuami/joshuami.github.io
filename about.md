@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+weight: 2
 ---
 
 ## Why I do what I do:
