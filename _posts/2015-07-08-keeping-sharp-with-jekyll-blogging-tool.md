@@ -5,7 +5,7 @@ title: Keeping sharp with Jekyll for blogging
 
 To keep my skills sharp, I have started a series a Friday experiments. This Friday, I decided to explore moving my personal site—which was moved to Drupal 7 last year off of a Wordpress installation—to a Jekyll installation with Github Pages integration.
 
-Another key reason to test the Jekyll experience is that it has become a key project that is frequently used in headless Drupal installations. (Headless is something I am very keen to try at some point.)
+Another key reason to test the Jekyll experience is that it has become a frequently used tool in creating headless Drupal installations. (Headless is something I am very keen to try at some point.)
 
 To pull this together I used the following resources:
 
