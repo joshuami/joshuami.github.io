@@ -4,7 +4,7 @@ title: About
 weight: 2
 ---
 
-## Why I do what I do:
+## Why I do what I do (I'm passionate):
 People need the Web. I like building great sites and web-based software for people. I devote time in every project to listening to the people who will use the tools I help build.
 I believe the Web can and should make communication and collaboration easier. I enjoy finding simple solutions for difficult problems.
 I prefer open source technologies, and I’m particularly found of Drupal.
