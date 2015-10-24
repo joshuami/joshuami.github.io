@@ -44,19 +44,31 @@ This digital identity is a key part of digital ownership. What happens if you lo
 If you enabled two-factor authentication—and you should for security's sake—transferring those digital rights is even more complex. Did you put your recovery codes in a place your loved ones know about?
 
 This issue of ownership extends to your the photos and videos—your personal creations—if you have no backups of these files on media you can access outside of the service. Have all of your photos in an online service? What happens if that service loses your data? What happens if you die and your children lose access to the entire digital documentation of their lives? Have all your photos on your phone, but you never backup your phone? What happens if it is stolen, damaged, or lost? This is the digital equivalent of your physical possessions being lost to fire or disappearing on a sinking ship while being transported across the ocean.
+
 ##A sane way to protect your digital collection
+
 The thought of losing all your stuff may scare you a little. You may wonder what you should do to protect that precious personal history. You don't want to disappear and be forgotten because your children have no history to pass to their children—right?
+
 ###Your grandkids don't want that photo of a flower you took on a walk through the neighborhood when you were 27… unless it was really freakin' spectacular
+
 First, get over yourself. Four generations ago the idea of passing significant amounts of photo or video documentation was not possible. You might have a photo or two of your great-great grandparents, maybe an antique or two that was passed down from family member to family member. That scarcity has the effect of making those items more valuable, more precious.
 ###Save the best and give it a little extra attention
 So think about what you feel has the most value to pass down. I have over 200GB of family photos and home videos. I do not want my family to have to wade through those 200GB of data to decide what is worth keeping, so I'm not necessarily going to give it the same level of care in backups.
+
 ###Rate your data
+
 In IT, information owners tend to rate data by its importance. Do the same with your digital collections. You should be backing up the most precious and valuable memories and data in at least two ways.
+
 ###Rotate your backups
+
 Make sure that you regularly rotate that data to someplace safe and away from your computer. That could be a copy on a portable hard drive that you keep in a safe deposit box, but chances are you are not going to update that very often. A fire safe in a detached garage might work, but again, you are probably taking a risk.
+
 ###Be redundant with your cloud storage
+
 If you can whittle that collection of precious down, you will be best off if you select a couple of online services to backup your data. Put a copy in Dropbox or Amazon Web Services. Backup that photo library to both Google Photo and Flickr. Do not trust a single point of failure.
+
 ##Think about what it means to live in a digital age
+
 It is far too easy to ignore just how much our lives are reliant on vast amounts of storage sitting in data centers around the world. We are a little out of touch with the past and a little oblivious to what the future may hold. We are the first generations in human history to be burdened by the cognitive load of digital living. 
 
 That doesn't make us all that special. Every generation has lived through the significant history that defines it, but we do carry a little extra responsibility to our kids and loved ones to pass on data in a somewhat intentional way. 
