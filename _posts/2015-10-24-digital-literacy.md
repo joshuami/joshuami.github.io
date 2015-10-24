@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Digital literacy: the collected media of our lives
+title: Digital literacy - the collected media of our lives
 ---
 
 My kids are getting older. They are fully teenagers at this point. My son has a beard! My daughter gets mistaken for her mother! I'm not feeling that old—we started parenthood quite young compared to our peers—but I do have to think about things like life insurance and paying for college. 
