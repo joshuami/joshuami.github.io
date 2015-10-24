@@ -3,6 +3,8 @@ layout: post
 title: Digital literacy - the collected media of our lives
 ---
 
+<a href="https://medium.com/@joshuami/digital-literacy-the-collected-media-of-our-lives-b818b3c5703c">Republished on Medium</a>
+
 My kids are getting older. They are fully teenagers at this point. My son has a beard! My daughter gets mistaken for her mother! I'm not feeling that old—we started parenthood quite young compared to our peers—but I do have to think about things like life insurance and paying for college. 
 
 It strikes me that I am part of the first generation of humans that really has to think of the legacy they leave their kinds in terms of the digital footprint we leave behind. My son is just old enough that his early years were documented on film—which means they are sitting in a box somewhere. My daughter's entire life has been digital—which means her early years are sitting on a hard drive.
