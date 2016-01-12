@@ -3,7 +3,7 @@ layout: post
 title: A (fairly) extensive list of contribution types on Drupal.org
 ---
 
-<em><a href="https://www.drupal.org/node/2649100">Contribut to this big long list on Drupal.org</a></em>
+<em><a href="https://www.drupal.org/node/2649100">Contribute to this big long list on Drupal.org</a></em>
 
 This is an extensive list of contribution types that we either track or could track. It should be noted that this is not comprehensive. There are forms of contribution that do not leave behind data that cannot be collected. That said, this list does cover lots of types of contribution and not just code.
 
