@@ -20,16 +20,16 @@ title: A guide to issue credits and the Drupal.org marketplace
 <p>A commit credit format alone was not going to get the information onto Drupal.org. Eventually, we settled on a couple of different solutions for tracking organization involvement and pulled all of this together into the current state of the Drupal.org Marketplace.</p>
 <h2>Organizations that support modules, themes, and distributions</h2>
 <p>First, we added a feature to projects on Drupal.org (modules, themes, distributions) that allowed <a href="https://www.drupal.org/node/2267789" rel="nofollow">maintainers to reference organizations that were supporting a module</a>—either by providing time to their developers to give back or by directly funding development.</p>
-<p><img src="/files/supporting-organizations-field.jpg" alt="Supporting organizations field" /></p>
+<p><img src="https://www.drupal.org/files/supporting-organizations-field.jpg" alt="Supporting organizations field" /></p>
 <h2>Commit credit user interface</h2>
 <p>The next part of the work was <a rel="nofollow">giving maintainers a better way to create their commit message</a> related to a particular issue. A lot of the complexity of deciding who should get credit for work on Drupal.org was simplified into a UI that showed how many people had participated in an issue, how much each person had participated, and whether that person had uploaded files related to the issue. The UI also generated the Git command that would properly tie the resulting code changes to the issue and people involved. The result for a relatively large issue thread looks like the image below:</p>
-<p><img src="/files/issues/Screen%20Shot%202014-10-30%20at%201.48.36%20PM.png" alt="Commit credit UI" /></p>
+<p><img src="https://www.drupal.org/files/issues/Screen%20Shot%202014-10-30%20at%201.48.36%20PM.png" alt="Commit credit UI" /></p>
 <h2>Attribution</h2>
 <p>While that effort made it a lot easier to create commit credits, it didn’t solve the problem of attributing issues that didn’t result in code change, nor did it allow people to give credit to the organizations that made it possible for them to work on that issue—by giving them time or by paying for the work directly as a customer.</p>
 <p>To do that we had to figure out a way to add organization attribution to the work being done on an issue. </p>
 <p>Issues and comments are the primary tools for tracking what needs to be built out in Drupal code. This is where we determine the features, report the bugs, plan out the work, and more. Tracking intent at the point of this interaction was the best way for us to cover the widest range of contribution to Drupal core, modules, themes and distributions.</p>
 <p>The resulting UI for attributing a comment to an organization is simple and straightforward. </p>
-<p><img src="/files/initial-comment-attribution.gif" alt="Attribution UI" /></p>
+<p><img src="https://www.drupal.org/files/initial-comment-attribution.gif" alt="Attribution UI" /></p>
 <p>While the instructions for attributing a contribution are documented, there’s still some confusion about when to attribute a comment to an organization versus a customer.</p>
 <h3>Attributions for organizations</h3>
 <p>These attributions are to allow a person to attribute their participation in a specific issue to a company that allotted time for them to work on the issue. This is typically an employer that pays that person's salary or wage. This organization must be directly tied to the contributor's user profile on Drupal.org as a current or past employer and the organization must have an organization profile on Drupal.org. (<a href="https://www.drupal.org/node/add/organization" rel="nofollow">Create an organization profile</a>).</p>
@@ -62,12 +62,12 @@ title: A guide to issue credits and the Drupal.org marketplace
 <h3>User profiles</h3>
 <p>Do you log in to Drupal.org? Great! You have a profile.</p>
 <p>On every user profile, we show the total number of issues that a contributor has helped fix in the past 90 days.</p>
-<p><img src="/files/issue-credits-on-user-profile.png" /></p>
+<p><img src="https://www.drupal.org/files/issue-credits-on-user-profile.png" /></p>
 <p>You can drill into this information and see the specifics. This is a good way to see a facet of how a person is contributing to Drupal. There are other examples on a user's profile that show other ways they are involved.</p>
 <h3>Organization profiles</h3>
 <p>Any <a href="https://www.drupal.org/node/1887616" rel="nofollow">confirmed user</a> can <a href="https://www.drupal.org/node/add/organization" rel="nofollow">create an organization page</a> on Drupal.org. Organization profiles are currently related to a single user, but we have plans to roll out additional permissions to relate multiple users to an organization.</p>
 <p>On the organization profile, we show the number of issues that an organization has contributed to fixing in the last 90 days.</p>
-<p><img src="/files/organization-profile-issue-credits.png" /></p>
+<p><img src="https://www.drupal.org/files/organization-profile-issue-credits.png" /></p>
 <p>Organization profiles also show a list of modules that have been supported by that organization, whether that organization is a <a href="https://assoc.drupal.org/membership" rel="nofollow">Drupal Association member</a> or <a href="https://www.drupal.org/supporters" rel="nofollow">Supporting Partner</a>, and additional self-reported information about their involvement in the Drupal community. </p>
 <p>We are currently working to automate more methods for collecting data about how organizations are contributing to the community through <a href="https://www.drupal.org/drupalcon" rel="nofollow">DrupalCon</a> and Drupal Camp sponsorships as well as hosting <a href="https://groups.drupal.org/" rel="nofollow">user groups</a> to help support meetups, and giving to <a href="https://www.drupal.org/global-training-days" rel="nofollow">Global Training Day</a> events. The number of case studies associated with an organization is another indicator of how much they use Drupal and how they are helping get others to use Drupal by sharing their success stories.</p>
 <h3>Marketplace</h3>
