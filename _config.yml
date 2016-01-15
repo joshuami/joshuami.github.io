@@ -1,10 +1,9 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
+highlighter:	pygmment
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
 title:            Joshuami
@@ -16,8 +15,6 @@ baseurl:          /
 author:
   name:           'Josh Mitchell'
   url:            https://twitter.com/joshua_io
-
-paginate:         1
 
 # Custom vars
 github:
