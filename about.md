@@ -29,6 +29,7 @@ I prefer open source technologies, and I’m particularly found of Drupal.
 
 ## Where I've done what I've done:
 * Drupal Association: [drupal.org](https://drupal.org), [jobs.drupal.org](https://jobs.drupal.org), etc.
+* [City of Portland Technology Oversight Committee](https://www.portlandoregon.gov/omf/56112) (volunteer): representing Commissioner Steve Novick
 * Multnomah County Oregon: [web.multco.us](https://web.multco.us), [web.multcolib.org](web.multcolib.org), [multcopets.org](https://multcopets.org), an Intranet, an LMS and more
 * The New Group: [thenewgroup.com](http://thenewgroup.com)
 * Kavi: [kavi.com](http://kavi.com)
