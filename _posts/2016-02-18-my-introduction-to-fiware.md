@@ -3,6 +3,7 @@ layout: post
 title: My introduction to FIWARE
 comments: true
 ---
+[Republished on Medium](https://medium.com/@joshuami/my-introduction-to-fiware-d8991bcbbb3c#.1wqo4hfm3)
 
 Among [my interests and volunteer activities](http://joshuami.com/about), I sit on the City of Portland Technology Oversight Committee. My role in that committee is to give feedback to City of Portland IT leadership on large-scale, high-visibility technology projects. This can range from projects to revamp water billing to systems managing loans and liens in the housing bureau to the attempted rewrite of all of the City's recording and permitting systems. When something goes wrong on one of these big projects, usually a local paper will write about it. Through monthly updates and quarterly public council reports, the TOC gives the City council a dashboard of how these projects are doing based on independent review of major project deliverables. I won't lie, sometimes these reports are boring as hell... but usually there is something about these projects that make them a wee bit exciting to a tech and government geek like me.
 
