@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Technology, done correctly, can improve our government at every level
+title: Principles of technology that can improve governments at every level
 comments: true
 ---
 
