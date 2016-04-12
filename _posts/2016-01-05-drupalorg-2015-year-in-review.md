@@ -14,7 +14,7 @@ Below are a few highlights from our 2015 <a href="https://www.drupal.org/news/ch
 
 ## February
 * <a href="https://latinamerica2015.drupal.org/">DrupalCon Latin America</a>
-* Launch of Drupal Events (<a href="https://events.drupal.org>events.drupal.org</a>) with the site for DrupalCon Los Angeles - all new events sites are hosted from the same installation
+* Launch of Drupal Events (<a href="https://events.drupal.org">events.drupal.org</a>) with the site for DrupalCon Los Angeles - all new events sites are hosted from the same installation
 * Account creation improvements including a faster 2-step registration that returns users to the site they initiated registration from
 * Support for the 2015 community elections for board member at large
 * Implementation of Server Density for systems monitoring
