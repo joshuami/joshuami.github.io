@@ -8,6 +8,7 @@ title: 2015 Year in Review for Drupal.org
 If your 2015 was anything like mine, it passed by extremely quickly. It was marked by periods of frustration (spammers still love Drupal.org) and elation (Drupal 8 launched, woot!).
 
 Below are a few highlights from our 2015 <a href="https://www.drupal.org/news/change-notifications-drupalorg">change logs</a> on Drupal.org. For a more detailed look into each monthly update you can read our <a href="https://assoc.drupal.org/personal-blog-tags/whats-new-drupal.org">"What's New on Drupal.org?" blog posts</a>.
+
 ## January
 * New database cluster was put into service and migrations to that server begin
 * <a href="https://www.drupal.org/node/2281763">User and organization profile improvements</a> (lots more work to be done here, but it was a great start)
