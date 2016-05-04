@@ -4,10 +4,10 @@ title: The Drupal.org Complexity
 comments: true
 ---
 
-To say Drupal.org is complex is an understatement. Of all the projects I've worked on, there is no site with more integration points than [Drupal.org and its related sites and services](https://www.drupal.org/drupalorg/ecosystem).
+To say Drupal.org is complex is an understatement. There are few systems with more integration points than [Drupal.org and its related sites and services](https://www.drupal.org/drupalorg/ecosystem).
 
 ![The Drupal.org ecosystem of sites and services.](/public/images/drupalorg-ecosystem.png)
-<caption>The ecosystem is complex with lots of services that share integrations like login (Bakery single sign on) and cross-site code/themes.</caption>
+<p class="caption">The ecosystem is complex with lots of services that share integrations like login (Bakery single sign on) and cross-site code/themes.</p>
 
 ## It all starts with the code
 
@@ -209,4 +209,4 @@ It would be important to phase in this new feature rather than make a wholesale 
 
 We need to be flexible. Github is the future of open source distribution and collaboration—likely for the foreseeable future. However, not every major project is on Github. Linux is on Git repositories with rudimentary tools and a patch-based workflow that relies heavily on email. It works for them. Wordpress is still on Subversion—even though they've started to accept some pull requests on Github. These projects are poised to make the right decision rather than a rash decision.
 
-The sky will not fall if we keep our current model, but we are losing opportunities to grow as a community of contributors. 
+The sky will not fall if we keep our current model, but we are losing opportunities to grow as a community of contributors.
