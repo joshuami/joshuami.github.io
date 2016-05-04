@@ -189,22 +189,24 @@ In none of these cases did the Drupal Association actually spend $1 million USD 
 
 I'm going to go back to the [summary on the Github discussion](https://groups.drupal.org/node/313068#comment-955593). There are reasons why both options seem to be the best possible option or the worst possible option.
 
-Would a best practice workflow and toolset be worth the change? Absolutely. The tools are easier to pick up. And... if we are going to start including a Javascript front end, we could get contributions from developers and designers that have no interest in creating an account on Drupal.org might participate within Github.
+Would a best practice workflow and toolset be worth the change? Absolutely. Github (or Gitlab) tools are easier for newcomers to learn. Further, because we are using PHP and Javascript libraries that are hosted on Github, we could get contributions from developers and designers that are involved in those projects and do not wish to have account on Drupal.org.
 
-We cannot afford a full migration right now. Dries put it well at DrupalCon Los Angeles. The Drupal Association is not a bag of money. With continued growth of revenue, there is a long term possibility of more paid developer resources, but not in the short term. It is too much to ask volunteers to give up a year of their life to run the project as a community initiative. That leads to burn out and frustration.
+The drawbacks are considerable. We cannot afford a full migration right now. Dries put it well at DrupalCon Los Angeles during core conversations. The Drupal Association is not a bag of money. With significant growth of revenue, there is a long term possibility of more paid developer resources, but not in the short term. It is too much to ask volunteers to give up a year of their life to run the project as a community initiative. That leads to burn out and frustration.
 
-We should also consider whether the immediate disruption to the community be worth it. I don't think so. Not if that disruption meant stalling the transition of contrib projects that are critical to solidifying Drupal 8 adoption.
+We should also consider whether the disruption to the current collaboration workflow will be worth it. I don't think so. Not if that disruption meant stalling the update of contrib projects that are critical to solidifying Drupal 8 adoption. (Though I could argue that much of this upgrade to Drupal 8 work is being performed on Github as some—perhaps many—developers prefer those tools.)
 
 ## Is there a middle ground?
 
-Drupal spends a lot of time getting to the middle ground. Many of the best innovations in Drupal come from getting to the middle ground—from reaching consensus.
+Drupal spends a lot of time getting to the middle ground. Many of the best innovations in Drupal come from getting to the middle ground—from reaching a general consensus and then allowing someone who has support and time iron out the details.
 
-So for the first step, we should add functionality to projects on Drupal.org that allow maintainers to shift their workflow to Github while still publishing their project on Drupal.org.
+So for the first step, we **should** add functionality to projects on Drupal.org that allow maintainers to shift their workflow to Github while still publishing their project on Drupal.org. This allows the canonical browsing of projects, the continued support of the security team, and most importantly the continued distribution of Drupal through Composer, release packaging and the updates system.
 
-We have a solid way forward for these integrations for most requirements with the exception of issue credits. We would still need to figure out how to award an issue credit to someone that participated in an issue on Github. We might be able to institute commit credits that could be parsed into issue credits from the participation on Github, but it would not be as inclusive as the current model.
+We have a solid way forward for these integrations as the requirements are narrow enough in scope to accomplish in a 4-6 month timeframe using dedicated resources. We would still need to figure out how to award an issue credit to someone that participated in an issue on Github. We might be able to institute commit credits that could be parsed into issue credits from the participation on Github, but it would not be as inclusive as the current model.
 
 It would be important to phase in this new feature rather than make a wholesale change. Once that integration is in place, we could extend DrupalCI to test pull requests similar to how we currently test patches submitted to an issue.
 
 ## Stay flexible
 
 We need to be flexible. Github is the future of open source distribution and collaboration—likely for the foreseeable future. However, not every major project is on Github. Linux is on Git repositories with rudimentary tools and a patch-based workflow that relies heavily on email. It works for them. Wordpress is still on Subversion—even though they've started to accept some pull requests on Github. These projects are poised to make the right decision rather than a rash decision.
+
+The sky will not fall if we keep our current model, but we are losing opportunities to grow as a community of contributors. 
