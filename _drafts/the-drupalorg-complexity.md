@@ -178,7 +178,7 @@ If we take the four biggest lifts in the Drupal project's history, what do we ge
 
 1. **Drupal.org redesign** - There were tens of people involved in the project, hundreds giving feedback. The timeline was about a year from start to implementation.
 2. **The Great Git Migration** - There were tens of people involved in the project. Far fewer users gave feedback, but the project took about two years from brainstorming to initial commit to the Git repos—with a few months of clean up after.
-3. **Drupal.org upgrades to Drupal 7** - The project took about two years with tens of people involved in about 8 months of clean up issues. 
+3. **Drupal.org upgrades to Drupal 7** - The project took about two years with tens of people involved in about 8 months of clean up issues.
 4. **Drupal 8** - 5 years of development by over 3,000 contributors.
 
 I don't think than anyone would argue that each of these projects would have been bid at well over $1 million. I would put a migration to Github at somewhere between the complexity of The Great Git Migration and Drupal 8.
@@ -186,3 +186,25 @@ I don't think than anyone would argue that each of these projects would have bee
 In none of these cases did the Drupal Association actually spend $1 million USD in project dollars. However, in all of the projects, there was lengthy discussion followed by substantial volunteer contribution, and then a significant bit of paid work to finish the job. It's a pattern that makes sense and will likely repeat itself over and over.
 
 ## Would it be worth it?
+
+I'm going to go back to the [summary on the Github discussion](https://groups.drupal.org/node/313068#comment-955593). There are reasons why both options seem to be the best possible option or the worst possible option.
+
+Would a best practice workflow and toolset be worth the change? Absolutely. The tools are easier to pick up. And... if we are going to start including a Javascript front end, we could get contributions from developers and designers that have no interest in creating an account on Drupal.org might participate within Github.
+
+We cannot afford a full migration right now. Dries put it well at DrupalCon Los Angeles. The Drupal Association is not a bag of money. With continued growth of revenue, there is a long term possibility of more paid developer resources, but not in the short term. It is too much to ask volunteers to give up a year of their life to run the project as a community initiative. That leads to burn out and frustration.
+
+We should also consider whether the immediate disruption to the community be worth it. I don't think so. Not if that disruption meant stalling the transition of contrib projects that are critical to solidifying Drupal 8 adoption.
+
+## Is there a middle ground?
+
+Drupal spends a lot of time getting to the middle ground. Many of the best innovations in Drupal come from getting to the middle ground—from reaching consensus.
+
+So for the first step, we should add functionality to projects on Drupal.org that allow maintainers to shift their workflow to Github while still publishing their project on Drupal.org.
+
+We have a solid way forward for these integrations for most requirements with the exception of issue credits. We would still need to figure out how to award an issue credit to someone that participated in an issue on Github. We might be able to institute commit credits that could be parsed into issue credits from the participation on Github, but it would not be as inclusive as the current model.
+
+It would be important to phase in this new feature rather than make a wholesale change. Once that integration is in place, we could extend DrupalCI to test pull requests similar to how we currently test patches submitted to an issue.
+
+## Stay flexible
+
+We need to be flexible. Github is the future of open source distribution and collaboration—likely for the foreseeable future. However, not every major project is on Github. Linux is on Git repositories with rudimentary tools and a patch-based workflow that relies heavily on email. It works for them. Wordpress is still on Subversion—even though they've started to accept some pull requests on Github. These projects are poised to make the right decision rather than a rash decision.
