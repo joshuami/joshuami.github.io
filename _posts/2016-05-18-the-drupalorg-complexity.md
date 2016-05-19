@@ -135,7 +135,7 @@ To truly understand the problem of a migration of this scale, we have to look at
 
 ![Representation of the relationships between services and sites in the Drupal.org ecosystem.](/public/images/the-drupalorg-complexity.png)
 
-Each block in this diagram is a service. Each line is a point of integration between the services. Some of these *services* are on Druapl.org or subsites with thousands of lines of custom code defining the interactions. Other *services* are not built in Drupal and represent projects in Java (Jenkins) or Python (our Git daemon) with varying degrees of customization and configuration.
+Each block in this diagram is a service. Each line is a point of integration between the services. Some of these *services* are on Drupal.org or subsites with thousands of lines of custom code defining the interactions. Other *services* are not built in Drupal and represent projects in Java (Jenkins) or Python (our Git daemon) with varying degrees of customization and configuration.
 
 As the diagram suggests, it is truly a *web* of integrations. Pull one or more services out of this ecosystem and you have to either refactor a ton of code or remove a critical component of how the community collaborates and how our users build sites with Drupal.
 
