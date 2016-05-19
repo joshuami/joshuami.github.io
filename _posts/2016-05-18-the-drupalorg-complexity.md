@@ -4,6 +4,12 @@ title: The Drupal.org Complexity
 comments: true
 ---
 
+At DrupalCon New Orleans, during both [Dries's keynote](https://www.youtube.com/watch?v=Ksp5JVFryEg) and at the [State of Drupal Core Conversation](https://events.drupal.org/neworleans2016/sessions/state-drupal), question of whether/when to move to Github came up again.
+
+Interestingly, I was already deep into researching ways we could reduce the cost of our collaboration tools while bringing in new contributors. This post is meant to serve as a little history of how we got to where we are and to provide information about how we might choose to go forward.
+
+## It's complex
+
 To say Drupal.org is complex is an understatement. There are few systems with more integration points than [Drupal.org and its related sites and services](https://www.drupal.org/drupalorg/ecosystem).
 
 ![The Drupal.org ecosystem of sites and services.](/public/images/drupalorg-ecosystem.png)
