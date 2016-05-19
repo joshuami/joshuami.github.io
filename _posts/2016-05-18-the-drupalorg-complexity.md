@@ -4,7 +4,7 @@ title: The Drupal.org Complexity
 comments: true
 ---
 
-<a href=https://www.drupal.org/drupalorg/blog/the-drupalorg-complexity">Cross-posted on Drupal.org</a>
+<a href="https://www.drupal.org/drupalorg/blog/the-drupalorg-complexity">Cross-posted on Drupal.org</a>
 
 At DrupalCon New Orleans, during both [Dries's keynote](https://events.drupal.org/neworleans2016/driesnote) and at the [State of Drupal Core Conversation](https://events.drupal.org/neworleans2016/sessions/state-drupal), question of whether/when to move to Github came up again.
 
