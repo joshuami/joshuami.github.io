@@ -18,6 +18,10 @@ weight: 1
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
     {{ post.content }}
+
+    <a href="{{ post.url }}#disqus_thread">
+      Comment on <em>{{ post.title }}</em>
+    </a>
   </div>
   <div class="pagination">
     {% if post.previous.url %}
