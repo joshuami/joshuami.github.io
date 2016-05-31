@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Saying goodbye
-comments: false
+comments: true
 ---
 
 <a href="https://www.drupal.org/drupalorg/blog/saying-goodbye">Reposted from Drupal.org</a>
