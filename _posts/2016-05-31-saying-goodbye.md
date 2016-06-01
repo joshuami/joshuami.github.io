@@ -16,7 +16,7 @@ In looking at our structure with the leadership team, Holly, Matt and I saw that
 
 Drupal.org is a complex site and with a reduced engineering team, they will need to focus on mission critical services and find new ways to work with the community to continue to make the site great for contributors and evaluators.
 
-With help from the rest of the team, I wrote a post called *[The Drupal.org Complexity](http://joshuami.com/2016-05-18/the-drupal-org-complexity)* that tries to take all of the complexity that surrounds our Git repositories and their integration with projects and issues on Drupal.org and describe it in a way that begins to show just how amazing our tools are. (I have yet to find a project with more total contributors to a single version of the code.)
+With help from the rest of the team, I wrote a post called *[The Drupal.org Complexity](http://joshuami.com/2016-05-18/the-drupalorg-complexity)* that tries to take all of the complexity that surrounds our Git repositories and their integration with projects and issues on Drupal.org and describe it in a way that begins to show just how amazing our tools are. (I have yet to find a project with more total contributors to a single version of the code.)
 
 Our smaller team is going to need to focus on sustaining services like testing, packaging, security updates, etc. They will be updating the [Drupal.org roadmap](https://www.drupal.org/drupalorg/roadmap) with a more narrow focus.
 
