@@ -33,7 +33,7 @@ The majority of these test runs are Drupal 8 tests at this point. (19,599 core t
 
 ## An overly simple history of automated testing for Drupal
 
-Automated testing first became a thing for Drupal contributed projects Drupal 4.5 with the introduction of the [SimpleTest module](https://www.drupal.org/project/simpletest). It was not until Drupal 6 that we started manually building out testbots and running these tests on Drupal.org hardware.
+Automated testing first became a thing for Drupal contributed projects during Drupal version 4.5 with the introduction of the [SimpleTest module](https://www.drupal.org/project/simpletest). It was not until Drupal 6 that we started manually building out testbots and running these tests on Drupal.org hardware.
 
 In Drupal 7, SimpleTest was brought into Drupal Core. (More information about what that took can be reviewed in the [SimpleTest Roadmap for Drupal 7](https://groups.drupal.org/node/10099).)
 
@@ -70,9 +70,9 @@ To make this automation happen, we have an installation of Jenkins (Infrastructu
 
 These jobs live in a database record alongside Drupal.org.
 
-![The infrastructure jenkins instance polls Drupal.org once per minute looks for new jobs to queue.](/public/images/DrupalCI-step-0-poll-for-jobs.png)
+![The infrastructure jenkins instance polls Drupal.org once per minute looking for new jobs to queue.](/public/images/DrupalCI-step-0-poll-for-jobs.png)
 
-Infrastructure Jenkins speaks to the CI Dispatcher (also Jenkins) where the testing queue  regularly passes those jobs to available testbots. CI Dispatcher using an Amazon Web Services EC2 plugin to spin up new testbots when no existing testbot is available. Each testbot is a able to spin up Docker containers with the specific test images defined by the maintainer. Theses containers pull from DockerHub repositories with official combinations of PHP and database engines that Drupal supports.
+Infrastructure Jenkins speaks to the CI Dispatcher (also Jenkins) where the testing queue  regularly passes those jobs to available testbots. CI Dispatcher using an Amazon Web Services EC2 plugin to spin up new testbots when no existing testbot is available. Each testbot can spin up Docker containers with the specific test images defined by the maintainer. Theses containers pull from DockerHub repositories with official combinations of PHP and database engines that Drupal supports.
 
 ![The CI Dispatcher maintains the queue of jobs to run. When a job is ready, it uses an EC2 plugin to use an existing testbot or spin up a new bot as needed.](/public/images/DrupalCI-step-1-ci-dispatcher.png)
 
@@ -80,7 +80,7 @@ After a testbot is running, the CI Dispatcher is in constant communication with 
 
 ![Once the testbot has been spun up, the CI Dispatcher listens to it for results.](/public/images/DrupalCI-step-2-listen-for-results.png)
 
-Once per minute, Drupal.org is polling the CI Dispatcher for test status. It responds with pending, running, failed or passed. Failed and passed tests are then pulled back into Drupal.org for display using the Jenkins JSON API.
+Once per minute, Drupal.org polls the CI Dispatcher for test status. It responds with pending, running, failed or passed. Failed and passed tests are then pulled back into Drupal.org for display using the Jenkins JSON API.
 
 ![Drupal.org checks for test status once per minute: pending, running, failed, passed. All the results are pulled back into Drupal.org using the Jenkins' JSON API.](/public/images/DrupalCI-step-3-write-status-to-drupalorg.png)
 
@@ -88,7 +88,7 @@ Tests can also be run on demand at the patch, commit or branch level using the h
 
 ## Why did we build this ourselves? Why not use [insert testing platform here]
 
-Lot's of people have asked "why don't we use TravisCI, CircleCI or some other hosted testing solution." The short answer is that most publicly available testing systems require Github authentication and integration.
+Lot's of people have asked why we don't use TravisCI, CircleCI or some other hosted testing solution. The short answer is that most publicly available testing systems require Github authentication and integration.
 
 Additionally, our testing infrastructure is powerful because of its integration with our issue queues. Read the aforementioned *[The Drupal.org Complexity](/2016/05/18/the-drupalorg-complexity/)* for more information.
 
