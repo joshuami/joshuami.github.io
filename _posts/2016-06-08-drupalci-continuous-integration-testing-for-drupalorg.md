@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DrupalCI: Continuous Integration Testing for Drupal.org
+title: DrupalCI - Continuous Integration Testing for Drupal.org
 ---
 
 [Republished from Druapl.org](https://www.drupal.org/drupalorg/blog/drupalci-continuous-integration-testing-for-drupalorg)
