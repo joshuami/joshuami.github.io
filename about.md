@@ -60,6 +60,12 @@ I prefer open source technologies, and I’m particularly found of Drupal.
   * [pacificu.edu](http://pacificu.edu)
 * Concordia University
   * [cu-portland.edu](http://cu-portland.edu)
+* Drupal Association: [drupal.org](https://drupal.org), [jobs.drupal.org](https://jobs.drupal.org), etc.
+* Multnomah County Oregon: [web.multco.us](https://web.multco.us), [web.multcolib.org](web.multcolib.org), [multcopets.org](https://multcopets.org), an Intranet, an LMS and more
+* The New Group: [thenewgroup.com](http://thenewgroup.com)
+* Kavi: [kavi.com](http://kavi.com)
+* Pacific University: [pacificu.edu](http://pacificu.edu)
+* Concordia University: [cu-portland.edu](http://cu-portland.edu)
 
 ## Where I volunteer my time
 
