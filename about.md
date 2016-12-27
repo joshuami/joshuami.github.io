@@ -29,10 +29,51 @@ I prefer open source technologies, and I’m particularly found of Drupal.
 
 ## Where I've done what I've done:
 * [Phase2](https://phase2technology.com)
-* Drupal Association: [drupal.org](https://drupal.org), [jobs.drupal.org](https://jobs.drupal.org), etc.
-* [City of Portland Technology Oversight Committee](https://www.portlandoregon.gov/omf/56112) (volunteer): representing Commissioner Steve Novick
-* Multnomah County Oregon: [web.multco.us](https://web.multco.us), [web.multcolib.org](web.multcolib.org), [multcopets.org](https://multcopets.org), an Intranet, an LMS and more
-* The New Group: [thenewgroup.com](http://thenewgroup.com)
-* Kavi: [kavi.com](http://kavi.com)
-* Pacific University: [pacificu.edu](http://pacificu.edu)
-* Concordia University: [cu-portland.edu](http://cu-portland.edu)
+  * Clients included:
+    * Johnson and Johnson
+* Drupal Association
+  * [drupal.org](https://drupal.org)
+  * [jobs.drupal.org](https://jobs.drupal.org)
+  * etc.
+* Multnomah County Oregon
+  * [web.multco.us](https://web.multco.us)
+  * [web.multcolib.org](web.multcolib.org)
+  * [multcopets.org](https://multcopets.org)
+  * an Intranet
+  * an LMS
+  * much, much more
+* The New Group
+  * [thenewgroup.com](http://thenewgroup.com)
+  * Clients included:
+    * The Recording Academy
+    * Freightliner
+    * Intel
+* Kavi
+  * [kavi.com](http://kavi.com)
+  * Clients included:
+    * Intel
+    * DLNA
+    * USB
+    * WiMAX
+    * SMPTE
+* Pacific University
+  * [pacificu.edu](http://pacificu.edu)
+* Concordia University
+  * [cu-portland.edu](http://cu-portland.edu)
+
+## Where I volunteer my time
+
+* Multnomah County Library Community Action Team
+* [City of Portland Technology Oversight Committee](https://www.portlandoregon.gov/omf/56112)
+* Coached 4+ years of youth basketball
+
+## What I do when I'm not working
+
+* Family
+* Fun
+  * Running
+  * Cycling
+  * Hiking
+  * Kayaking
+  * Skiing
+  * More things that end in "ing" as time permits
