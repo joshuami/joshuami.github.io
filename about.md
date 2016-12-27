@@ -29,6 +29,7 @@ I prefer open source technologies, and I’m particularly found of Drupal.
 
 ## Where I've done what I've done:
 * [Phase2](https://phase2technology.com)
+<<<<<<< HEAD
   * Clients included:
     * Johnson and Johnson
 * Drupal Association
@@ -60,6 +61,14 @@ I prefer open source technologies, and I’m particularly found of Drupal.
   * [pacificu.edu](http://pacificu.edu)
 * Concordia University
   * [cu-portland.edu](http://cu-portland.edu)
+=======
+* Drupal Association: [drupal.org](https://drupal.org), [jobs.drupal.org](https://jobs.drupal.org), etc.
+* Multnomah County Oregon: [web.multco.us](https://web.multco.us), [web.multcolib.org](web.multcolib.org), [multcopets.org](https://multcopets.org), an Intranet, an LMS and more
+* The New Group: [thenewgroup.com](http://thenewgroup.com)
+* Kavi: [kavi.com](http://kavi.com)
+* Pacific University: [pacificu.edu](http://pacificu.edu)
+* Concordia University: [cu-portland.edu](http://cu-portland.edu)
+>>>>>>> 49e518a65d1e132423ef94e442609be7de73ac7d
 
 ## Where I volunteer my time
 
@@ -70,10 +79,18 @@ I prefer open source technologies, and I’m particularly found of Drupal.
 ## What I do when I'm not working
 
 * Family
+<<<<<<< HEAD
 * Fun
+=======
+* Fun:
+>>>>>>> 49e518a65d1e132423ef94e442609be7de73ac7d
   * Running
   * Cycling
   * Hiking
   * Kayaking
   * Skiing
+<<<<<<< HEAD
   * More things that end in "ing" as time permits
+=======
+  * more things that end in "ing" as time permits
+>>>>>>> 49e518a65d1e132423ef94e442609be7de73ac7d
