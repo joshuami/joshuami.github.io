@@ -15,4 +15,4 @@ To pull this together I used the following resources:
 
 Instead of the default [Poole](http://getpoole.com/) layouts that Lande used, I decided to go with [Hyde](https://github.com/poole/hyde).
 
-So far, I'm enjoying typing a post directly into markdown rather than a bloated WYSIWIG. We'll see if that encourages me to write a bit more.
+So far, I'm enjoying typing a post directly into markdown rather than a bloated WYSIWYG. We'll see if that encourages me to write a bit more.
