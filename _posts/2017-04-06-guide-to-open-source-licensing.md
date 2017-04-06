@@ -4,11 +4,8 @@ title: A Layperson's Guide to Open Source Licensing
 comments: false
 ---
 
-<<<<<<< HEAD
 This post was republished from a series originally contributed to the [Phase 2 blog](https://www.phase2technology.com/blog-list/):
-=======
-This post was republished from a series originally published on the Phase 2 blog:
->>>>>>> fe249b3edb132cfc3ba60a01803094d999cb89c4
+
 - [Open Source Licensing Part 1: An Introduction](https://www.phase2technology.com/blog/open-source-licensing-part-1-an-introduction/)
 - [Open Source Licensing Part 2: Software Licensing is a Continuum](https://www.phase2technology.com/blog/open-source-licensing-part-2-software-licensing-is-a-continuum/)
 - [Open Source Licensing Part 3: Which License Should I Choose?](https://www.phase2technology.com/blog/open-source-licensing-part-3-which-license-should-i-choose/)
