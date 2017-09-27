@@ -20,4 +20,6 @@ A while back, I published a series of posts on open source licensing. In [part 3
 
 I still think that the MIT expat license is the most human readable—as opposed to lawyer readable—of the open source licenses. It pretty much just states that people are free to use your code without a lot of fuss about what you plan to do with it or how you distribute it afterwards.
 
+The MIT license is simple enough that it does not scare away businesses looking to keep a handle on their open source software portfolio. It lacks the aggressiveness of protective copyleft licenses like the GPLv3 that many businesses seek to avoid. Whether a business needs to avoid the GPLv3 for fear of losing rights on proprietary software they have created is not an issue one wants to confront when trying to build a great solution for your client or organization.
+
 Facebook made a good choice for the communities of developers that use their code—even if that decision may have left their lawyers with concerns about petty litigation. It is heartening to see open source market forces work out for the greater good.
