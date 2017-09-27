@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         Kramdown
+markdown:         kramdown
 
 # Permalinks
 permalink:        pretty
