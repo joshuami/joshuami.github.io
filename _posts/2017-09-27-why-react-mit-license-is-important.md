@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React's Switch to the MIT License is Important
+title: React\'s Switch to the MIT License is Important
 comments: true
 ---
 
