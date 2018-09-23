@@ -2,27 +2,21 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@joshua_io">
+  {% if page.canonical %}<link relation="canonical" href="{{ page.canonical }}">
+  <meta property="og:url" content="{{ page.canonical }}">{% endif %}
+  {% if page.title AND page.title != "Home" %}<meta property="og:title" content="{{ page.title}}">{% endif %}
+  {% if page.title != "Home" %}<meta property="og:type" content="article">{% endif %}
+  {% if page.description %}<meta property="og:description" content="{{ page.description }}">
+  <meta type="description" content="{{ page.description }}">{% endif %}
+  {% if page.image %} <meta property="og:image" content="{{ page.image }}">{% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
-
-  <!-- CSS -->
+  <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
   <link rel="stylesheet" href="/public/css/styles.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-
-  <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
   <link rel="shortcut icon" href="/public/favicon.ico">
-
-  <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
