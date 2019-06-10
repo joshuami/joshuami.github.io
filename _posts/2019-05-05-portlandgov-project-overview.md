@@ -3,7 +3,7 @@ layout: post
 title: Portland.gov Project Overview
 canonical: https://joshuami.com/2019/05/15/portlandgov-project-overview/
 description: For a little over a year, I have been consulting with the City of Portland, Oregon to transform their website into a place where services and information are easy to find, access, and understand.
-comments: false
+comments: true
 ---
 At DrupalCon Seattle, I presented [Architecting government websites: migrating Portland.gov to Drupal 8](https://events.drupal.org/seattle2019/sessions/content-structures-government-websites-build-plan-portlandgov). Unfortunately, the 90-minute sessions were not recorded this year. I have had a lot of requests for more information about the project with Portland and the [slides from the presetation](https://events.drupal.org/sites/default/files/slides/Migrating%20Portlandgov%20DrupalCon%20Seattle2019%20compressed.pdf). 
 
