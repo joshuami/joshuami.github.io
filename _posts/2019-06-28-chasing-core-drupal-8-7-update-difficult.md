@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chasing Core: Why the Drupal 8.7 Update Was So Difficult
+title: "Chasing Core: Why the Drupal 8.7 Update Was So Difficult"
 canonical: https://joshuami.com/2019/06/28/questions-and-answers-oregon-digital-government
 description: Drupal 8.7 was released nearly two months ago and it took me that long to upgrade a complex site.
 comments: true
