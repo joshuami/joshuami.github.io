@@ -11,7 +11,7 @@ So why is chasing Drupal Core to the 8.7 update so difficult? A normal update to
 
 ## I let the configuration become too complex
 
-It happens to all of us that work in Drupal long enough. We start a new team on a new project that is big and complex and we teach them to Drupal along the way. In the process, one developer adds a module for this and another adds a module for that. 
+It happens to all of us that work in Drupal long enough. We start a new team on a new project that is big and complex and we teach them to Drupal along the way. In the process, one developer adds a module for this and another adds a module for that.
 
 We started with Acquia Lightning, but our approach has bloated along the way to include modules like Groups (Organic Groups wasn't ready yet), Paragraphs (Layout Builder wasn't ready yet), Display Suite (Layout Builder doesn't really do this), Content Lock, migrations, Solr Search API (which we have to fool composer to load a more modern version than what Acquia uses), Webform, and more.
 
@@ -19,7 +19,7 @@ On their own, these are all amazing tools to have when building a complex site. 
 
 ### Speaking of patches
 
-It might be a good rule of thumb to limit your total patches to no more than twice the years you have worked with Drupal 8. Patches are amazing as they allow you to add a fix that is coming in the future with very little effort. The problem is that a patch is a promise of how code will be added to files in the future. Changes accepted before the patch in that future release can make the patch no longer apply. 
+It might be a good rule of thumb to limit your total patches to no more than twice the years you have worked with Drupal 8. Patches are amazing as they allow you to add a fix that is coming in the future with very little effort. The problem is that a patch is a promise of how code will be added to files in the future. Changes accepted before the patch in that future release can make the patch no longer apply.
 
 As a developer in Composer world, if you apply too many patches, you will spend a lot of time rerolling patches in the Drupal issue queue—or grabbing it from others when they beat you to it.
 
@@ -33,23 +33,23 @@ Configuration is awesome when it helps you keep your database in sync, but it ca
 
 ### Composer will try to update everything
 
-Dependency management is pretty amazing. When I built up the team at the Drupal Association to support Drupal.org, it became apparent pretty quickly that if we wanted Drupal 8 to suceed, we needed Composer integration to succeed. 
+Dependency management is pretty amazing. When I built up the team at the Drupal Association to support Drupal.org, it became apparent pretty quickly that if we wanted Drupal 8 to succeed, we needed Composer integration to succeed.
 
-Composer is amazing at what it does, but I would not say that it is easy to understand all the inner workings. You have to understand semantic versioning (semver) deeply to have success with Composer. 
+Composer is amazing at what it does, but I would not say that it is easy to understand all the inner workings. You have to understand semantic versioning (semver) deeply to have success with Composer.
 
-When everyone in your dependency tree is doing their job, and your `composer.json` is well structured, running `composer update` will give you all the new stuff you need from Drupal and all its depenedencies as well as put your contributed dependencies into an easily understandable directory structure that sorts code from others and the code you have customized in your git repo.
+When everyone in your dependency tree is doing their job, and your `composer.json` is well structured, running `composer update` will give you all the new stuff you need from Drupal and all its dependencies as well as put your contributed dependencies into an easily understandable directory structure that sorts code from others and the code you have customized in your git repo.
 
 I found that this particular Drupal update needed as few concurrent upgrades running as possible. That meant pinning Lightning to the 3.x release (`composer require acquia/lightning:^3.2), as well as updating a lot of underlying modules like Entity Views Attach, Field Defaults, Easy Breadcrumb, and getting core up to the latest release of 8.6.17.
 
 If it hadn't been for this gem of a [blog post](https://www.previousnext.com.au/blog/patch-drupal-core-without-things-ending-up-corecore-or-coreb), I don't think everything would have updated cleanly to Drupal 8.6.17 because a couple of my patches were writing to `core/core` instead of just `core`.
 
-I should also not that the final build required that I [pin our version of Lightning Layout per an known issue](https://www.drupal.org/project/lightning/issues/3056074) as well as stick Search API Page (`composer require drupal/search_api_page:1.0.0-alpha12`) and the Groups module (`composer require drupal/group:1.0.0-rc2`). It is not that either of those modules are a hard dependency, but their upgrades were failing for other reasons and I wan't to isolate the Drupal 8.7 upgrade as much as possible.
+I should also note that the final build required that I [pin our version of Lightning Layout per a known issue](https://www.drupal.org/project/lightning/issues/3056074) as well as stick Search API Page (`composer require drupal/search_api_page:1.0.0-alpha12`) and the Groups module (`composer require drupal/group:1.0.0-rc2`). It is not that either of those modules are a hard dependency, but their upgrades were failing for other reasons and I wan't to isolate the Drupal 8.7 upgrade as much as possible.
 
 ## Core decided to add revisioning to taxonomy terms and menu links
 
 I'm actually okay with the decision. If I had it my way, every entity in Drupal would just be an entity with all the same field and workflow options. Let me publish and unpublish all the things!
 
-The approach was solid, but the ability to apply that approach is heavily dependent on a fairly simple Drupal installation. Tests can only uncover so much. As a result, there are a significant number of sites that have strugged to upgrade with issues like:
+The approach was solid, but the ability to apply that approach is heavily dependent on a fairly simple Drupal installation. Tests can only uncover so much. As a result, there are a significant number of sites that have struggled to upgrade with issues like:
 
 * [Unable to update Drupal 8.6 to Drupal 8.7; Field storage definition for 'type' could not be found in file_update_8700()](https://www.drupal.org/project/drupal/issues/3052204)
 * [update from 8.6.15 to 8.7 fails due to menu_link_content](https://www.drupal.org/project/drupal/issues/3052318)
@@ -78,39 +78,39 @@ I also use Oh My Zsh with some Git shorthand to reduce my typing. I'll provide t
 
 1. `gco master` (`git checkout master`)
 2. `lando latest` (The following commands run from the project root.)
-    1. `mkdir -p /app/artifacts`
-    2. `rm -f /app/artifacts/database.tar.gz`
-    3. `terminus backup:get portlandor.dev --element=database --to=/app/artifacts/database.tar.gz` (We use Pantheon for our hosting, but all the big Drupal hosts have similar commands you can run.)
-    4. `database: cd /app && /helpers/sql-import.sh artifacts/database.tar.gz`
-    5. `drush cr -y`
+   1. `mkdir -p /app/artifacts`
+   2. `rm -f /app/artifacts/database.tar.gz`
+   3. `terminus backup:get portlandor.dev --element=database --to=/app/artifacts/database.tar.gz` (We use Pantheon for our hosting, but all the big Drupal hosts have similar commands you can run.)
+   4. `database: cd /app && /helpers/sql-import.sh artifacts/database.tar.gz`
+   5. `drush cr -y`
 3. `lando refresh` (This command gives us a clean starting point with our database.)
-    1. `composer install`
-    2. `drush cr -y`
-    3. `drush updb -y`
-    4. `drush cim -y`
-    5. `drush core:cron -y`
-    6. `drush cr -y`
-    7. `npm -C /app/web/themes/custom/$theme run build:dev` (This last command will vary depending on whether you compile your theme with something like Webpack or Gulp.)
+   1. `composer install`
+   2. `drush cr -y`
+   3. `drush updb -y`
+   4. `drush cim -y`
+   5. `drush core:cron -y`
+   6. `drush cr -y`
+   7. `npm -C /app/web/themes/custom/$theme run build:dev` (This last command will vary depending on whether you compile your theme with something like Webpack or Gulp.)
 
 You can see why we turned these into commands. I can't tell you how many times I have seen one of these steps skipped and the resulting build just fails. Usually from a configuration conflict or an entity update that didn't happen as it should.
 
 ### Once you have updated your composer.json
 
 1. `lando cupex` (This is kinda a goofy little shorthand I came up.)
-    1. `composer update` (Yes, I just update it all and I do so pretty regularly.)
-    2. `drush updb -y` (Runs all your update and post-update hooks which changes the database.)
-    3. `drush cex -y` (This is the shorthand for config-export and it takes all those database changes and writes them to config.)
+   1. `composer update` (Yes, I just update it all and I do so pretty regularly.)
+   2. `drush updb -y` (Runs all your update and post-update hooks which changes the database.)
+   3. `drush cex -y` (This is the shorthand for config-export and it takes all those database changes and writes them to config.)
 2. `gaa` (`git add -A` is my preferred way to deal with automation like this as it just grabs every change and I can see those changes in my editor.)
-3. `gcmsg "My commit message"` (This commmand is so much less verbose and easy to type than `git commit -m "My commmit message"`. We include our Jira issue IDs in the message to tie it all back to our sprint board.)
+3. `gcmsg "My commit message"` (This command is so much less verbose and easier to type than `git commit -m "My commit message"`. We include our Jira issue IDs in the message to tie it all back to our sprint board.)
 4. `git push -u origin $branch-id` (I think there is shorthand for this that I just haven't taken the time to learn. Yeah... me too.)
 
-And here is where the magic happens and we let our GitHub and CircleCI integration take over and build our multidev environment for automated (Behat) and manual testing. QA still catches a lot, so we haven't stopped doing it. Our CirleCI scripts are pretty much using the same set of commands to build our artifacts that get pushed to our servers on Pantheon. 
+And here is where the magic happens and we let our GitHub and CircleCI integration take over and build our multidev environment for automated (Behat) and manual testing. QA still catches a lot, so we haven't stopped doing it. Our CircleCI scripts are pretty much using the same set of commands to build our artifacts that get pushed to our servers on Pantheon.
 
 ## It took six smaller builds to finally get to 8.7
 
 You read that correct. I had to incrementally update a lot of "small" things and get all those patches to apply cleanly before the final build would give me a site that had no errors and passing tests. That means I had to repeat the "*latest* > *refresh* > *change some things* > *cupex* > *push to origin*" over and over. Developing in PHP is so much like developing in Javascript now! Write some recipes and compile! Sigh.
 
-Funny story... after working on this upgrade off an on for a month, and having a build that worked in our dev site, our build process was haulted by a system outage upstream.  `¯\_(ツ)_/¯`.
+Funny story... after working on this upgrade off an on for a month, and having a build that worked in our dev site, our build process was halted by a system outage upstream.  `¯\_(ツ)_/¯`.
 
 ## Was it worth it
 
@@ -118,6 +118,6 @@ In truth, yes. I learned a lot about Drupal 8 in this process. Over the last yea
 
 Drupal 8.7 has several cool new features that make it worth trying. In fact, on a clean install, I found a lot to love by grabbing Lightning 4—released on May 16—and adding a minimal amount of configuration.
 
-Chasing core and staying as up to date with your dependencies as feasible is important with Drupal. In truth, this is important with any software now as depedency management and compiling a lot of a code written by a lot of different people is a must to build the complex tools that we try to make look simple to the people that use our software.
+Chasing core and staying up to date with your dependencies as feasible is important with Drupal. In truth, this is important with any software now as dependency management and compiling a lot of a code written by a lot of different people is a must to build the complex tools that we try to make look simple to the people that use our software.
 
 Did I get any of the above completely wrong? Have a question I didn't answer? Hit me up in the comments. I haven't seen a comment in months.
