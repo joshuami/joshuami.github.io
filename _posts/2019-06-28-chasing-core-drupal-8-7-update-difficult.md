@@ -58,11 +58,13 @@ The approach was solid, but the ability to apply that approach is heavily depend
 
 I have been following these issues, and more, over the past month to figure out what exactly was causing database updates to fail on my attempts to upgrade.
 
-The short answer is that I had three patches in place that conflicted with the entity update code that was a part of the changes that added revisioning to taxonomy terms and menu items.
+Solutions to the corrupted tables ranged from writing custom modules with update hooks to unset configuration that was in conflict to database queries to remove tables or add fields manually. I'm not a big fan of altering a Drupal database under anything other than extreme circumstances. The abstraction that makes Drupal so powerful for configuration and site building also makes it incredibly complex. Any database change made without absolute understanding of the complex joins that will be made for entities or views is fraught with danger.
 
-The first, [Add a views sort handler for sorting content by moderation state](https://www.drupal.org/project/drupal/issues/2953331), I decided we didn't need. Sorting by moderation state is an administrative task of questionable value. You might group by moderation state or filter by moderation state, but do you really need to sort. So I removed that patch.
+So how did I manage to fix this mess without touching anything more than a composer.json and updating a couple of views. The short answer is that I had three patches in place that conflicted with the entity update code that was a part of the changes that added revisioning to taxonomy terms and menu items.
 
-The next two issues, [Dynamically provide action plugins for every moderation state change](https://www.drupal.org/project/drupal/issues/2797583) and [View output is not used for entityreference options](https://www.drupal.org/project/drupal/issues/2174633), were code that we needed. However, Drupal 8.6 needed the code in a different place than in Drupal 8.7. (See the patches problem statement above.)
+The first, [Add a views sort handler for sorting content by moderation state](https://www.drupal.org/project/drupal/issues/2953331), I decided we didn't need. Sorting by moderation state is an administrative task of questionable value. You might group by moderation state or filter by moderation state, but do you really need to sort. So I removed that patch and updated the 5 administrative views with tables that were trying to sort by moderation state. These changes were all in the table settings for that view display.
+
+The next two issues, [Dynamically provide action plugins for every moderation state change](https://www.drupal.org/project/drupal/issues/2797583) and [View output is not used for entityreference options](https://www.drupal.org/project/drupal/issues/2174633), were code that we needed. However, Drupal 8.6 needed the code in a different place than in Drupal 8.7. (See the patches problem statement above.) Because this update required multiple builds that ran all the way from local to multidev to dev to test to live, I had to modify the composer.json file to have a different patch when updating Lighting 3.2.x than from updating Lighting 4.0.x.
 
 ## Order of operations in automated builds is very important
 
@@ -70,7 +72,7 @@ One of the developers on the team at the City of Portland took a zsh alias that 
 
 This upgrade was particularly challenging as it has a pretty critical list of updates that require a configuration export **after** the updates are complete. This made me reconsider my scripts... which I will now provide here for those that might want to incorporate this into their Drupal workflow.
 
-I also use Oh My Zsh with some git shorthand to reduce my typing. I'll provide the full commands alongside.
+I also use Oh My Zsh with some Git shorthand to reduce my typing. I'll provide the full commands alongside.
 
 ### Starting a new branch from master
 
@@ -102,16 +104,20 @@ You can see why we turned these into commands. I can't tell you how many times I
 3. `gcmsg "My commit message"` (This commmand is so much less verbose and easy to type than `git commit -m "My commmit message"`. We include our Jira issue IDs in the message to tie it all back to our sprint board.)
 4. `git push -u origin $branch-id` (I think there is shorthand for this that I just haven't taken the time to learn. Yeah... me too.)
 
-And here is where the magic happens and we let our Github and CircleCI integration take over and build our multidev environment for automated (Behat) and manual testing. QA still catches a lot, so we haven't stopped doing it. Our CirleCI scripts are pretty much using the same set of commands to build our artifacts that get pushed to our servers on Pantheon. 
+And here is where the magic happens and we let our GitHub and CircleCI integration take over and build our multidev environment for automated (Behat) and manual testing. QA still catches a lot, so we haven't stopped doing it. Our CirleCI scripts are pretty much using the same set of commands to build our artifacts that get pushed to our servers on Pantheon. 
 
 ## It took six smaller builds to finally get to 8.7
 
 You read that correct. I had to incrementally update a lot of "small" things and get all those patches to apply cleanly before the final build would give me a site that had no errors and passing tests. That means I had to repeat the "*latest* > *refresh* > *change some things* > *cupex* > *push to origin*" over and over. Developing in PHP is so much like developing in Javascript now! Write some recipes and compile! Sigh.
 
+Funny story... after working on this upgrade off an on for a month, and having a build that worked in our dev site, our build process was haulted by a system outage upstream.  `¯\_(ツ)_/¯`.
+
 ## Was it worth it
 
-In truth, yes. I learned a lot about Drupal 8 in this process. I am much more intimately aware of entity updates and update hooks than I was before.
+In truth, yes. I learned a lot about Drupal 8 in this process. Over the last year of this project with the City of Portland, I have learned just how much of my D7 and D6 knowledge applies and just how much does not. I am much more intimately aware of some of the subsystems now than I was before—even if I still don't consider myself much of a true PHP developer as much as a really advanced site builder with some frontend chops.
 
-What's more, Drupal 8.7 has several cool new features that make it worth trying. In fact, on a clean install, I found a lot to love by grabbing Lightning 4—released on May 16—and adding a minimal amount of configuration.
+Drupal 8.7 has several cool new features that make it worth trying. In fact, on a clean install, I found a lot to love by grabbing Lightning 4—released on May 16—and adding a minimal amount of configuration.
+
+Chasing core and staying as up to date with your dependencies as feasible is important with Drupal. In truth, this is important with any software now as depedency management and compiling a lot of a code written by a lot of different people is a must to build the complex tools that we try to make look simple to the people that use our software.
 
 Did I get any of the above completely wrong? Have a question I didn't answer? Hit me up in the comments. I haven't seen a comment in months.
