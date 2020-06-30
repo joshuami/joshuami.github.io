@@ -39,6 +39,8 @@ site/_site/
 coverage
 .ruby-version
 .ruby-gemset
+.jekyll-cache
+.jekyll-cache/*
 .sass-cache
 tmp/*
 .jekyll-metadata
