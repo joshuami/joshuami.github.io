@@ -1,0 +1,16 @@
+I"�<p>To keep my skills sharp, I have started a series a Friday experiments. This Friday, I decided to explore moving my personal site—which was moved to Drupal 7 last year off of a Wordpress installation—to a Jekyll installation with Github Pages integration.</p>
+
+<p>Another key reason to test the Jekyll experience is that it has become a frequently used tool in creating headless Drupal installations. (Headless is something I am very keen to try at some point.)</p>
+
+<p>To pull this together I used the following resources:</p>
+
+<ul>
+  <li><a href="http://joshualande.com/jekyll-github-pages-poole/">Joshua Lande’s excellent run down</a> of how he migrated his personal blog</li>
+  <li><a href="http://jekyllrb.com/docs/home/">Jekyll’s complete—but rather esoteric—documentation</a></li>
+  <li><a href="https://help.github.com/articles/using-jekyll-with-pages/">GitHub’s documentation on using Jekyll with GitHub Pages</a></li>
+</ul>
+
+<p>Instead of the default <a href="http://getpoole.com/">Poole</a> layouts that Lande used, I decided to go with <a href="https://github.com/poole/hyde">Hyde</a>.</p>
+
+<p>So far, I’m enjoying typing a post directly into markdown rather than a bloated WYSIWYG. We’ll see if that encourages me to write a bit more.</p>
+:ET

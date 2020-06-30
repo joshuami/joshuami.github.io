@@ -5,13 +5,16 @@ weight: 2
 ---
 
 ## Why I do what I do (I'm passionate):
-People need the Web. To put it simply, I like building great sites and web-based software for **people**. I devote time in every project to listening to the users of the tools I help build.
+People need the Web. To put it simply, I like building great software for **people**. I devote time in every project to listening to the users of the tools I help build.
+
 I believe the Web can and should make communication and collaboration easier. I enjoy finding simple solutions for difficult problems.
-I prefer open source technologies. I’m particularly found of Drupal because of the role it has played in my career.
+
+I’m particularly found of open source solutions integrated with best-in-class cloud services.
 
 ## What I do (in no particular order):
 * Product lifecycle
 * Drupal
+* Wordpress
 * Google Apps for Government
 * Google Apps for Education
 * Agile Project Management
@@ -28,6 +31,12 @@ I prefer open source technologies. I’m particularly found of Drupal because of
 * Social Media Marketing and Outreach
 
 ## Where I've done what I've done:
+* M6L LLC
+  * Founder/Principal Consultant
+* [City of Portland, Oregon](https://www.portland.gov/) (via M6L LLC)
+  * [Portland.gov](https://www.portland.gov/)
+  * Employee Intranet
+  * Customer Service Management Platform
 * [Phase2](https://phase2technology.com)
   * Clients included:
     * Johnson and Johnson
