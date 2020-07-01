@@ -5,7 +5,7 @@ canonical: https://joshuami.com/2020/06/30/launching-portlandgov
 description: "On June 16th at 7:30 a.m., we switched the homepage of PortlandOregon.gov over to Portland.gov and officially moved a platform two years in the making out of beta."
 comments: true
 ---
-On June 16th at 7:30 a.m., we switched the homepage of PortlandOregon.gov over to Portland.gov. The switch officially moved a platform two years in the making out of beta.
+On June 16th at 7:30 a.m., we switched the homepage of PortlandOregon.gov over to [Portland.gov](https://www.portland.gov/). The switch officially moved a platform two years in the making out of beta.
 
 ## Easy to find, access, and understand
 When I started on this project in January of 2018, I knew this was a huge project. Two years later, the vision for what we wanted to achieve still holds up:
