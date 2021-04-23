@@ -5,9 +5,12 @@ canonical: https://joshuami.com/2021/04/22/agile-development-scrum-terms-and-rec
 description: "When starting work consulting with a new team, we often find the need to establish common language. On simple projects, I usually walk the team through the terms as part of walking through the toolset."
 comments: true
 ---
-When starting work consulting with a new team, we often find the need to establish common language. On simple projects, I usually walk the team through the terms as part of walking through the toolset. The toolset is usually some combination of Jira with Github/Gitlab/Bitbucket and a CI/CD toolchain that connects to hosting. There are many possible toolsets, but the agile product management process that uses scrum methodology nearly always has the same dictionary of terms.
+When starting a new agile project or product with a new team, I often find the need to establish common language. On simple projects, I usually walk the team through the following terms.
+
+The toolset associated with these terms is usually some combination of Jira with Github/Gitlab/Bitbucket and a CI/CD toolchain that connects to hosting. There are many possible toolsets, but the agile product management process that uses scrum methodology nearly always has the same dictionary of terms.
 
 To facilitate some larger projects, and to try and get down definitions that meet my own needs for large Drupal CMS implementations, I am writing this handy guide to the most used terms that I use in consulting.
+
 Rather than present an alphabetical list, I find it best to start with some of the largest concepts and work them down and then back up again in complexity.
 
 So… where to start?
