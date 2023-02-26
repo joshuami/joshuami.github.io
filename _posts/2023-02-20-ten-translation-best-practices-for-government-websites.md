@@ -3,6 +3,7 @@ layout: post
 title: "10 Translation Best Practices for Government Websites"
 canonical: https://joshuami.com/2023/02/20/ten-translation-best-practices-for-government-websites
 description: "Governments increasingly want to support community members with limited language proficiency. There are a range of techniques that encourage proper translation for SEO, usability, equity, and accessibility."
+image: "/public/images/cover-10-best-practices-translating-government-websites.png"
 comments: false
 ---
 The following applies to any government website, regardless of country or level of government organization (nation/federal, state/province, local jurisdictions, etc.). That said, the more immigration a country has, versus emigration, the greater the impact created by the translation of governmental resources.
