@@ -478,7 +478,7 @@ a.pagination-item:hover {
 }
 .sidebar-nav-item {
   display: block;
-  line-height: 1.75;
+  padding: 1rem 0;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {

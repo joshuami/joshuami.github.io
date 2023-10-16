@@ -1,23 +1,22 @@
 ---
 layout: page
 title: About
+description: Experienced technology leader focused on agile product management and helping organizations developer expertise in continuous integration and deployment.
 weight: 2
 ---
 
 ## Why I do what I do (I'm passionate):
-People need the Web. To put it simply, I like building great software for **people**. I devote time in every project to listening to the users of the tools I help build.
+With over 10 years of experience in technology leadership, product management, and web development, I help large organizations implement transformative digital solutions and improve their day-to-day operations. I am the founder of M6L LLC, a consulting firm that provides coaching, strategic direction, and technical implementation to clients across various sectors and industries.
 
-I believe the Web can and should make communication and collaboration easier. I enjoy finding simple solutions for difficult problems.
-
-I’m particularly found of open source solutions integrated with best-in-class cloud services.
+My mission is to engage the customer in the software development lifecycle (SDLC) of their digital products, and to teach management how to invest in DevOps and a CI/CD workflow to improve cost, quality, and time to release. I have successfully launched and migrated web platforms for Washington County and the City of Portland, using Jira, ServiceNow, Github, CircleCI, Pantheon, Acquia as the core tools and frameworks. I also deliver training, presentations, and workshops to end users, stakeholders, and senior leaders, and conduct surveys, usability testing, and community engagement to ensure site satisfaction. I am passionate about finding simple solutions for difficult problems, and building the careers of smart and capable people.
 
 ## What I do (in no particular order):
 * Product lifecycle
+* DevOps/CI/CD
 * Drupal
 * Wordpress
-* Google Apps for Government
-* Google Apps for Education
-* Agile Project Management
+* Google Workspaces
+* Agile Product Management
 * Solutions Architecture
 * Information Architecture
 * Usability Testing
@@ -33,6 +32,8 @@ I’m particularly found of open source solutions integrated with best-in-class 
 ## Where I've done what I've done:
 * M6L LLC
   * Founder/Principal Consultant
+* [Washington County Oregon](https://www.washingtoncountyor.gov/) (via M6L LLC)
+  * [WashingtonCountyOR.gov](https://www.washingtoncountyor.gov/)
 * [City of Portland, Oregon](https://www.portland.gov/) (via M6L LLC)
   * [Portland.gov](https://www.portland.gov/)
   * Employee Intranet
@@ -52,13 +53,11 @@ I’m particularly found of open source solutions integrated with best-in-class 
   * an LMS
   * much, much more
 * The New Group
-  * [thenewgroup.com](http://thenewgroup.com)
   * Clients included:
     * The Recording Academy
     * Freightliner
     * Intel
 * Kavi
-  * [kavi.com](http://kavi.com)
   * Clients included:
     * Intel
     * DLNA
@@ -68,21 +67,19 @@ I’m particularly found of open source solutions integrated with best-in-class 
 * Pacific University
   * [pacificu.edu](http://pacificu.edu)
 * Concordia University
-  * [cu-portland.edu](http://cu-portland.edu)
 
 ## Where I volunteer my time
 
 * Multnomah County Library Community Action Team
-* [City of Portland Technology Oversight Committee](https://www.portlandoregon.gov/omf/56112)
+* City of Portland Technology Oversight Committee
 * Coached 4+ years of youth basketball
 
 ## What I do when I'm not working
 
-* Family
-* Fun
-  * Running
-  * Cycling
-  * Hiking
-  * Kayaking
-  * Skiing
-  * More things that end in "ing" as time permits
+* Guitar/Ukelele/Mandolin Singer/Songwriter
+* Running
+* Cycling
+* Hiking
+* Kayaking
+* Skiing
+* Basically anything outdoors
