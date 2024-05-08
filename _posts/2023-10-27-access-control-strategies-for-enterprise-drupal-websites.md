@@ -6,6 +6,14 @@ description: "When working with large organizations—whether in private enterpr
 image: "/public/images/cover-access-control-strategies-for-drupal-websites.png"
 comments: false
 ---
+Update: The contents of this post were presented at DrupalCon Portland 2024. 
+
+[View the presentation slides with notes](https://docs.google.com/presentation/d/1uwVCpYfdQfFZmubVOL6tGhtOscoRFbskrOEIbZ2wvJ4/edit?usp=sharing)
+
+Video coming soon.
+
+---
+
 When working with large organizations—whether in private enterprise, governmental organizations, or nonprofits—editorial responsibility is often spread across multiple sub-organizations. Depending on the type of organization, those subdivisions can look very different:
 
 * Department > division > section or program
