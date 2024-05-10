@@ -10,7 +10,7 @@ Update: The contents of this post were presented at DrupalCon Portland 2024.
 
 [View the presentation slides with notes](https://docs.google.com/presentation/d/1uwVCpYfdQfFZmubVOL6tGhtOscoRFbskrOEIbZ2wvJ4/edit?usp=sharing)
 
-Video coming soon.
+[Watch the video on YouTube](https://www.youtube.com/watch?v=SCQFVqZ1zzQ&list=PLpeDXSh4nHjThszrEoBfJ8sY2NYif0k6b)
 
 ---
 
