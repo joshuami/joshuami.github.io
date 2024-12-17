@@ -17,7 +17,6 @@
     "require": {
         "composer/installers": "^2.3",
         "drupal/core-composer-scaffold": "^11.1",
-        "drupal/core-project-message": "^11.1",
         "drupal/core-recommended": "^11.1",
         "drupal/drupal_cms_accessibility_tools": "*",
         "drupal/drupal_cms_ai": "*",
@@ -35,6 +34,16 @@
         "drupal/tome": "^1.13",
         "drush/drush": "^13"
     },
+    "scripts": {
+        "gh-pages": "./scripts/gh-pages.sh",
+        "symlink": "./scripts/symlink.sh",
+        "post-install-cmd": [
+            "@symlink"
+        ],
+        "post-update-cmd": [
+            "@symlink"
+        ]
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -44,7 +53,6 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true,
             "php-http/discovery": true
         },
         "sort-packages": true,
@@ -67,20 +75,6 @@
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
             "recipes/{$name}": ["type:drupal-recipe"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
-        },
-        "drupal-core-project-message": {
-            "include-keys": ["homepage", "support"],
-            "post-create-project-cmd-message": [
-                "<bg=blue;fg=white>                                                   </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed Drupal CMS!    </>",
-                "<bg=blue;fg=white>                                                   </>",
-                "",
-                "<bg=yellow;fg=black>Next steps</>:",
-                "  * Run <fg=yellow>./launch-drupal-cms.sh</> to initialize Drupal CMS and open it in a browser.",
-                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-                "  * Get support: https://drupal.org/support",
-                "  * Get involved with the Drupal community: https://drupal.org/getting-involved"
-            ]
         }
     }
 }
