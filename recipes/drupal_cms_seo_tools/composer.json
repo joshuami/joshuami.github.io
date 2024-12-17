@@ -1,0 +1,17 @@
+{
+    "name": "drupal/drupal_cms_seo_tools",
+    "description": "Adds SEO tools to help configure and manage meta tags, SEO analysis, sitemaps, with an SEO checklist and dashboard.",
+    "type": "drupal-recipe",
+    "license": ["GPL-2.0-or-later"],
+    "require": {
+        "drupal/core": ">=10.3",
+        "drupal/field_group": "^3.6",
+        "drupal/focal_point": "^2.1",
+        "drupal/metatag": "^2.0",
+        "drupal/robotstxt": "^1.6",
+        "drupal/seo_checklist": "^5.2.1",
+        "drupal/simple_sitemap": "^4.2.2",
+        "drupal/sitemap": "^2.0",
+        "drupal/token_or": "^2.2"
+    }
+}

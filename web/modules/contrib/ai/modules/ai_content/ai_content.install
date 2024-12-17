@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Install and update functions for the AI Content module.
+ */
+
+/**
+ * Copy the old settings over to the new module and disable this one.
+ */
+function ai_content_update_9100(): void {
+  $storage = \Drupal::service('config.storage');
+
+  // List all configurations starting with 'ai_content.'.
+  $config_names = $storage->listAll('ai_content.');
+
+  $values = [];
+
+  // Unset all permissions from the old configuration.
+  $target_permission = 'access ai content tools';
+  /** @var \Drupal\user\Entity\Role $role_storage */
+  $role_storage = \Drupal::entityTypeManager()->getStorage('user_role');
+  $roles = $role_storage->loadMultiple();
+  foreach ($roles as $role_id => $role) {
+    if ($role->hasPermission($target_permission)) {
+      $role->revokePermission($target_permission);
+      $role->save();
+
+      \Drupal::logger('ai')->notice('Removed permission "@permission" from role: @role.', [
+        '@permission' => $target_permission,
+        '@role' => $role->label(),
+      ]);
+    }
+  }
+
+  foreach ($config_names as $old_config_name) {
+    // Generate the new configuration name.
+    $new_config_name = str_replace('ai_content.', 'ai_content_suggestions.', $old_config_name);
+
+    // Load the old configuration data.
+    $config_data = $storage->read($old_config_name);
+
+    if ($config_data !== FALSE) {
+      foreach ([
+        'analyse_policies' => 'moderate',
+        'tone_adjust' => 'tone',
+        'summarise' => 'summarise',
+        'suggest_title' => 'title_suggest',
+        'suggest_tax' => 'taxonomy_suggest',
+      ] as $old => $new) {
+        if (array_key_exists($old . '_enabled', $config_data)) {
+
+          // If the plugin is not enabled, we don't store data about it in the
+          // new version so we can safely ignore.
+          if (isset($config_data[$old . '_enabled'])) {
+            $values[$new] = ($config_data[$old . '_model']) ?? '';
+          }
+        }
+      }
+
+      // Write the data to the new configuration.
+      $storage->write($new_config_name, ['plugins' => $values]);
+
+      // Delete the old configuration.
+      $storage->delete($old_config_name);
+    }
+  }
+
+  // Uninstall the outdated module.
+  \Drupal::service('module_installer')->uninstall(['ai_content']);
+
+  // And install the new one if it is not already.
+  if (!\Drupal::service('module_handler')->moduleExists('ai_content_suggestions')) {
+    \Drupal::service('module_installer')->install(['ai_content_suggestions']);
+  }
+}

@@ -1,0 +1,23 @@
+content_root: ''
+assertiveness: assertive
+no_load: ''
+ignore_all_if_absent: ''
+ignore_elements: '.leaflet-map-pane *'
+panel_no_cover: ''
+embedded_content_warning: ''
+download_links: ''
+link_strings_new_windows: ''
+ignore_link_strings: ''
+link_ignore_selector: 'svg.ext, svg.mailto, .link-purpose-text'
+hidden_handlers: ''
+ed11y_theme: sleekTheme
+shadow_components: ''
+disable_sync: false
+preserve_params: 'search,keys,page,language,language_content_entity'
+redundant_prefix: ''
+custom_tests: 0
+disable_live: false
+live_h_inherit: ''
+live_h2: 'form[id^="node-"] #edit-body-wrapper .ck-content'
+live_h3: ''
+live_h4: ''

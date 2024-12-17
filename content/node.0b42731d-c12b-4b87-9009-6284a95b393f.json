@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "0b42731d-c12b-4b87-9009-6284a95b393f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Woohoo! Biking to school and loving it"
+        }
+    ],
+    "created": [
+        {
+            "value": "2007-09-07T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2007\/09\/07\/biking-to-school-and-loving-it",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Yesterday represents the first time that my kids and I biked to school. As a long time advocate of biking whenever possible, this was really cool to get my 8 and 6 year olds out in the fast lane\u2013well, 8 mph is not exactly fast.<!--more--><\/p><p>The skinny:<\/p><ul>        <li>1 mountain bike for Dad (Gary Fisher Marlin 1999)<\/li>        <li>1 trail-a-bike for the little kid (Adams Trail-a-Bike)<\/li>        <li>1 mountain bike for the big kid (Raleigh Rowdy)<\/li>        <li>~30 minutes of ride time<\/li>        <li>~9 mph average speed<\/li>        <li>4.8 miles with kids<\/li>        <li>5 miles to work without kids<\/li><\/ul><p>(Pictures to follow, I forgot to take one in the rush to get out the door.)Keeton did awesome on the bike lanes of North Portland. The Columbia Blvd. trail leaves a little to be desired at a couple of spots, but it was safe and traveled well. Mishya is now officially over her fears of biking. (I think the trailer was just a little too much loss of control as of late\u2013the trail-a-bike is a much better fit for a 6-year old.)<\/p><p>My only complaints are that the coupling on the trail-a-bike was having a squeak-a-thon\u2013it has been checked, it is not part of the recall from a year ago\u2013and that the mountain bike is way heavy compared to my usual aluminum road steed. If I do this regularly, which is the plan, I think I\u2019m going to need to switch to some lighter tires. I love the glass-crunching-ride-with-abandon fell of the Specialized Armadillo Crossroads I currently have on the Marlin, but man the tires feel heavy. I have to find something that will give me the top end speed of the slicks I used to ride with the puncture protection. I can then save the crossroads for trail riding\u2013which I don\u2019t get to do that often.<\/p><p>Two final issues with riding bikes to school that is 4+ miles from home. I can\u2019t do pick up, so Diana had to swing by and grab the bikes with a car in the afternoon and Keeton and I crossed-wires regarding his helmet. I hope the helmet is sitting at school, but if not we are going to need to get him a new one before we can ride again.  Darn.<\/p>",
+            "format": "content_format",
+            "processed": "<p>Yesterday represents the first time that my kids and I biked to school. As a long time advocate of biking whenever possible, this was really cool to get my 8 and 6 year olds out in the fast lane\u2013well, 8 mph is not exactly fast.<\/p>\n<!--more--><\/p>\n<p>The skinny:<\/p>\n<ul>\n<li>1 mountain bike for Dad (Gary Fisher Marlin 1999)<\/li>\n<li>1 trail-a-bike for the little kid (Adams Trail-a-Bike)<\/li>\n<li>1 mountain bike for the big kid (Raleigh Rowdy)<\/li>\n<li>~30 minutes of ride time<\/li>\n<li>~9 mph average speed<\/li>\n<li>4.8 miles with kids<\/li>\n<li>5 miles to work without kids<\/li>\n<\/ul>\n<p>(Pictures to follow, I forgot to take one in the rush to get out the door.)Keeton did awesome on the bike lanes of North Portland. The Columbia Blvd. trail leaves a little to be desired at a couple of spots, but it was safe and traveled well. Mishya is now officially over her fears of biking. (I think the trailer was just a little too much loss of control as of late\u2013the trail-a-bike is a much better fit for a 6-year old.)<\/p>\n<p>My only complaints are that the coupling on the trail-a-bike was having a squeak-a-thon\u2013it has been checked, it is not part of the recall from a year ago\u2013and that the mountain bike is way heavy compared to my usual aluminum road steed. If I do this regularly, which is the plan, I think I\u2019m going to need to switch to some lighter tires. I love the glass-crunching-ride-with-abandon fell of the Specialized Armadillo Crossroads I currently have on the Marlin, but man the tires feel heavy. I have to find something that will give me the top end speed of the slicks I used to ride with the puncture protection. I can then save the crossroads for trail riding\u2013which I don\u2019t get to do that often.<\/p>\n<p>Two final issues with riding bikes to school that is 4+ miles from home. I can\u2019t do pick up, so Diana had to swing by and grab the bikes with a car in the afternoon and Keeton and I crossed-wires regarding his helmet. I hope the helmet is sitting at school, but if not we are going to need to get him a new one before we can ride again.  Darn.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "aef49e688e5c9f451347a064964174e2",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

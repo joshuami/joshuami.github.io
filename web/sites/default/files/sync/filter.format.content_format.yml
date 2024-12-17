@@ -1,0 +1,106 @@
+uuid: bd0d3f90-d8cc-4fb3-a988-75fd72d7928a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.16_9_large
+    - core.entity_view_mode.media.16_9_medium
+    - core.entity_view_mode.media.16_9_small
+    - core.entity_view_mode.media.1_1_square_large
+    - core.entity_view_mode.media.1_1_square_medium
+    - core.entity_view_mode.media.1_1_square_small
+    - core.entity_view_mode.media.3_4_large
+    - core.entity_view_mode.media.3_4_medium
+    - core.entity_view_mode.media.3_4_small
+    - core.entity_view_mode.media.4_3_large
+    - core.entity_view_mode.media.4_3_medium
+    - core.entity_view_mode.media.4_3_small
+    - core.entity_view_mode.media.9_16_large
+    - core.entity_view_mode.media.9_16_medium
+    - core.entity_view_mode.media.9_16_small
+    - core.entity_view_mode.media.large
+    - core.entity_view_mode.media.medium
+    - core.entity_view_mode.media.small
+  module:
+    - linkit
+    - media
+_core:
+  default_config_hash: aVDMN3cEhgq0W4PD4MCc_l1u0e_w2VRd9fW7o0rzxHk
+name: Content
+format: content_format
+weight: 0
+filters:
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 15
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: medium
+      allowed_view_modes:
+        16_9_large: 16_9_large
+        16_9_medium: 16_9_medium
+        16_9_small: 16_9_small
+        1_1_square_large: 1_1_square_large
+        1_1_square_medium: 1_1_square_medium
+        1_1_square_small: 1_1_square_small
+        3_4_large: 3_4_large
+        3_4_medium: 3_4_medium
+        3_4_small: 3_4_small
+        4_3_large: 4_3_large
+        4_3_medium: 4_3_medium
+        4_3_small: 4_3_small
+        9_16_large: 9_16_large
+        9_16_medium: 9_16_medium
+        9_16_small: 9_16_small
+        large: large
+        medium: medium
+        small: small
+      allowed_media_types: {  }

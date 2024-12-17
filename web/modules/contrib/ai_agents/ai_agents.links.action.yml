@@ -1,0 +1,10 @@
+ai_agents.add_custom:
+  title: 'Add Custom Automator Agent'
+  route_name: ai_agents.settings_form
+  appears_on:
+    - ai_agents.settings_form
+ai_agents.find_agents:
+  title: 'Find Agents'
+  route_name: ai_agents.settings_form
+  appears_on:
+    - ai_agents.settings_form

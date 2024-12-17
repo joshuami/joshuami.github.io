@@ -1,0 +1,16 @@
+name: AI Assisted Content Types
+type: module
+description: The AI Assisted Content Types module provides a way to generate content types with the help of AI.
+package: AI Tools
+core_version_requirement: ^10.3 || ^11
+lifecycle: deprecated
+lifecycle_link: https://www.drupal.org/project/ai_agents/issues/3488363
+hidden: true
+
+dependencies:
+  - ai_agents:ai_agents
+
+# Information added by Drupal.org packaging script on 2024-12-12
+version: '1.0.0-beta1'
+project: 'ai_agents'
+datestamp: 1734023402

@@ -1,0 +1,11 @@
+name: 'Webform Wizard Custom test'
+type: module
+description: 'Support module for webform for wizard customization testing.'
+package: Testing
+dependencies:
+  - 'webform:webform'
+
+# Information added by Drupal.org packaging script on 2024-12-10
+version: '6.3.0-alpha3'
+project: 'webform'
+datestamp: 1733851313

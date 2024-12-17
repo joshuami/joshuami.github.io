@@ -1,0 +1,13 @@
+{
+  "name": "drupal/ai_simple_provider_installer",
+  "description": "This adds a simple form for installing and setting up simple AI Providers like OpenAI or Anthropic.",
+  "type": "drupal-module",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/core": "^10.2 || ^11",
+    "drupal/ai": "^1.0.0-beta2"
+  }
+}

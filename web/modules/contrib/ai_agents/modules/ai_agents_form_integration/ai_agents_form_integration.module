@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * @file
+ * Contains ai_agents_form.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function ai_agents_form_integration_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter') {
+    // Move 'ai_webform_form_alter' to the end.
+    $callback = 'ai_webform_form_alter';
+    if (isset($implementations[$callback])) {
+      $implementation = [$callback => $implementations[$callback]];
+      unset($implementations[$callback]);
+      $implementations += $implementation;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ai_agents_form_integration_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'webform_add_form' && \Drupal::currentUser()->hasPermission('create ai assisted webforms')) {
+    // Check so the webform agent is installed.
+    if (!\Drupal::service('plugin.manager.ai_agents')->hasDefinition('webform_agent')) {
+      return;
+    }
+
+    // Use AI checkbox.
+    $form['use_ai'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Generate with AI'),
+      '#description' => t('Use AI to populate the webform via prompt or doodle.'),
+      '#default_value' => FALSE,
+    ];
+
+    // Add a details that only is visible when the checkbox is checked.
+    $form['use_ai_details'] = [
+      '#type' => 'details',
+      '#title' => t('AI Details'),
+      '#open' => TRUE,
+      '#states' => [
+        'visible' => [
+          ':input[name="use_ai"]' => ['checked' => TRUE],
+        ],
+      ],
+    ];
+
+    // If checked add an image upload and a text prompt.
+    $form['use_ai_details']['use_ai_file'] = [
+      '#type' => 'managed_file',
+      '#title' => t('Webform AI File Context'),
+      '#description' => t('Upload an file to be used by the AI to understand what you are trying to setup.'),
+      '#upload_location' => 'public://',
+      '#upload_validators' => [
+        'file_validate_extensions' => ['png gif jpg jpeg pdf docx xlsx pptx txt doc xls ppt csv'],
+      ],
+    ];
+
+    $form['use_ai_details']['use_ai_text'] = [
+      '#type' => 'textarea',
+      '#title' => t('Webform AI Text prompt'),
+      '#description' => t('(or/and) a text prompt to be used by the AI to understand what you are trying to setup.'),
+    ];
+
+    // Add a submit handler.
+    $form['actions']['submit']['#submit'][] = 'ai_agents_form_integration_webform_add_form_submit';
+  }
+}
+
+/**
+ * Submit handler for webform_add_form.
+ *
+ * @param array $form
+ *   The form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state.
+ */
+function ai_agents_form_integration_webform_add_form_submit(array &$form, FormStateInterface $form_state) {
+  /** @var \Drupal\Core\Entity\ContentEntityForm */
+  $form_object = $form_state->getFormObject();
+  $webform = $form_object->getEntity();
+
+  // We add batching if the user wants to use AI.
+  if ($form_state->getValue('use_ai')) {
+    $file = $form_state->getValue('use_ai_file')[0] ?? NULL;
+    $text = $form_state->getValue('use_ai_text');
+    $open = $form_state->getValue('status');
+    $description = $form_state->getValue('description');
+    // Store the image, text and webform id in a cache.
+    \Drupal::cache()->set('ai_webform', [
+      'webform_id' => $webform->id(),
+      'file' => $file,
+      'text' => $text,
+      'open' => $open,
+      'description' => $description,
+    ]);
+
+    $form_state->setRedirect('ai_agents_form_integration.webform_batch_redirect');
+  }
+}

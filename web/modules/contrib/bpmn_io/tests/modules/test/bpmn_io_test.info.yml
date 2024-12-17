@@ -1,0 +1,16 @@
+name: 'BPMN.iO for ECA test'
+type: module
+description: 'Support module for BPMN.io tests.'
+package: Testing
+dependencies:
+  - eca:eca_base
+  - eca:eca_content
+  - eca:eca_modeller_bpmn
+  - eca:eca_user
+  - eca:eca_views
+  - drupal:user
+
+# Information added by Drupal.org packaging script on 2024-11-20
+version: '2.0.2'
+project: 'bpmn_io'
+datestamp: 1732117752

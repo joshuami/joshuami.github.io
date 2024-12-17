@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "69af4c28-e23b-444d-9ed3-ee246c7de99e"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Cyldesdales coming to the Cross Crusade"
+        }
+    ],
+    "created": [
+        {
+            "value": "2007-10-19T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2007\/10\/19\/clydesdales-coming-to-cross-crusade",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>[Via Bike Portland] <a href=\"http:\/\/bikeportland.org\/2007\/10\/18\/cyldesdales-coming-to-the-cross-crusade\/\">Cyldesdales coming to the Cross Crusade<\/a>. I qualify for this category. I wonder if there is a cyclocross bike loaner program for us beefy riders?\u00c2  That\u2019s a lot of extra stress on the bike!<\/p><p>Note to anyone concerned for my health: I weigh considerably less than when I was a offensive lineman on my high school football team when I weighed in excess of 260 pounds. My svelter self is in large part due to cycling and the calories I burn commuting to work and riding on the weekends. With my 6\u2019 3\u201d frame, I doubt I could ever weigh less than 200 pounds. That said, I could stand to lose about 10 pounds right now as my commute-by-bike options have been hampered by the kids\u2019 new school schedule.<\/p><p>A couple clydesdale races might be just the ticket for burning off some calories and raising the endorphine levels a bit.<\/p>",
+            "format": "content_format",
+            "processed": "<p>[Via Bike Portland] <a href=\"http:\/\/bikeportland.org\/2007\/10\/18\/cyldesdales-coming-to-the-cross-crusade\/\">Cyldesdales coming to the Cross Crusade<\/a>. I qualify for this category. I wonder if there is a cyclocross bike loaner program for us beefy riders?\u00c2  That\u2019s a lot of extra stress on the bike!<\/p>\n<p>Note to anyone concerned for my health: I weigh considerably less than when I was a offensive lineman on my high school football team when I weighed in excess of 260 pounds. My svelter self is in large part due to cycling and the calories I burn commuting to work and riding on the weekends. With my 6\u2019 3\u201d frame, I doubt I could ever weigh less than 200 pounds. That said, I could stand to lose about 10 pounds right now as my commute-by-bike options have been hampered by the kids\u2019 new school schedule.<\/p>\n<p>A couple clydesdale races might be just the ticket for burning off some calories and raising the endorphine levels a bit.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "a1988035c7e38ce7af1459e8f6d6fd9e",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

@@ -47,3 +47,5 @@ tmp/*
 /vendor
 /test/source/file_name.txt
 _drafts
+/.editorconfig
+/.gitattributes

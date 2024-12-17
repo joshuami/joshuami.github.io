@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "2cc96969-4d29-4248-afa3-013ffd1a79d1"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Things to know when updating a Wordpress one-click install"
+        }
+    ],
+    "created": [
+        {
+            "value": "2006-11-12T08:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2006\/11\/12\/wordpress-one-click-install",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>I just finished updating the theme for Portland Tillamook Cooperative Preschool\u2019s Web site using the Dreamhost one-click installer. (Well, it was their one-click updater really.)<\/p><p>Two very valuable lessons were learned.<\/p><p>One, Dreamhost likes to overwrite any existing themes with the same names (directories) as the themes installed with their default. This means anyone who has simply edited a default theme will lose their edits.<\/p><p>The second lesson I learned is that their default backup of the site to a directory with \u201c.old\u201d at the end is a very handy failsafe. Oddly enough, I did not have a local copy saved before clicking \u201cupgrade.\u201d A rare data-related mistake that I will not repeat.On a final note, I certainly appreciate that Dreamhost installs some rather interesting themes with their one-click installer, but I wish it weren\u2019t so many. It really slows down the page load on presentations. It also takes a while to delete them all.<\/p>",
+            "format": "content_format",
+            "processed": "<p>I just finished updating the theme for Portland Tillamook Cooperative Preschool\u2019s Web site using the Dreamhost one-click installer. (Well, it was their one-click updater really.)<\/p>\n<p>Two very valuable lessons were learned.<\/p>\n<p>One, Dreamhost likes to overwrite any existing themes with the same names (directories) as the themes installed with their default. This means anyone who has simply edited a default theme will lose their edits.<\/p>\n<p>The second lesson I learned is that their default backup of the site to a directory with \u201c.old\u201d at the end is a very handy failsafe. Oddly enough, I did not have a local copy saved before clicking \u201cupgrade.\u201d A rare data-related mistake that I will not repeat.On a final note, I certainly appreciate that Dreamhost installs some rather interesting themes with their one-click installer, but I wish it weren\u2019t so many. It really slows down the page load on presentations. It also takes a while to delete them all.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "b1955b6c340ff8b36efff294eb35b0d4",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

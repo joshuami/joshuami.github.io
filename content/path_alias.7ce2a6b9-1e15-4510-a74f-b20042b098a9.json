@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "7ce2a6b9-1e15-4510-a74f-b20042b098a9"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/42"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/https:\/\/joshuami.com\/2015\/10\/24\/digital-literacy"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

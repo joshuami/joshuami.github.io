@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "ba0c097d-cecd-4aa9-be6a-8add3e186607"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "90% of college freshmen have never shared a room"
+        }
+    ],
+    "created": [
+        {
+            "value": "2005-04-27T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2005\/04\/27\/90-percent-college-freshman-never-shared-room",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>When I heard this statistic&mdash;which is a statistic for Pacific University, though likely to be fairly typical&mdash;I couldn't help but be a little discouraged by it.  Pacific's growth plans include the development of residence halls (dorms to anyone not used to higher-education speak) with rooms that will house individuals&mdash;no roommates.  If 90% of incoming students have never had to share space and resources with a sibling, how can we expect them to share space and resources on a larger scale.<\/p><p>While I will readily admit to having a room of my own for the majority of my middle and high school years, I experienced the benefit of compromise-laden living with my younger brother for about 10 years of our lives together.  Including my married years, I can say that I have spent twice as many years sharing a bedroom as not.  There is a lot to be gleaned from the ability to share a relatively small space on a regular basis.  With siblings, or with a life partner, there will inevitably be arguments and clashes of opinion, but it is the response to these conflicts that helps to shape our emotional intelligence.<\/p><p>While I believe you can learn empathy in a number of ways, it seems to be that the lessons learned from compromising with a roommate could be extremely valuable.  While there may be some merit to the solitude that an individual room in a residence hall could afford, I would hope that the incoming freshmen would be encouraged to share a little of themselves in a way more intimate than instant messaging&mdash;which increasingly seems to be the choice of the college-age crowd.<\/p>",
+            "format": "content_format",
+            "processed": "<p>When I heard this statistic&mdash;which is a statistic for Pacific University, though likely to be fairly typical&mdash;I couldn't help but be a little discouraged by it.  Pacific's growth plans include the development of residence halls (dorms to anyone not used to higher-education speak) with rooms that will house individuals&mdash;no roommates.  If 90% of incoming students have never had to share space and resources with a sibling, how can we expect them to share space and resources on a larger scale.<\/p>\n<p>While I will readily admit to having a room of my own for the majority of my middle and high school years, I experienced the benefit of compromise-laden living with my younger brother for about 10 years of our lives together.  Including my married years, I can say that I have spent twice as many years sharing a bedroom as not.  There is a lot to be gleaned from the ability to share a relatively small space on a regular basis.  With siblings, or with a life partner, there will inevitably be arguments and clashes of opinion, but it is the response to these conflicts that helps to shape our emotional intelligence.<\/p>\n<p>While I believe you can learn empathy in a number of ways, it seems to be that the lessons learned from compromising with a roommate could be extremely valuable.  While there may be some merit to the solitude that an individual room in a residence hall could afford, I would hope that the incoming freshmen would be encouraged to share a little of themselves in a way more intimate than instant messaging&mdash;which increasingly seems to be the choice of the college-age crowd.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "dd658d40e0b36ead84e992f5e4ea55c6",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

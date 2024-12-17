@@ -1,0 +1,101 @@
+{
+    "uuid": [
+        {
+            "value": "f7b5b15b-bd1e-4286-b932-2e5b722659ef"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page",
+            "target_type": "node_type",
+            "target_uuid": "9e61234e-a646-4b64-a27f-cf0e9ffe8631"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T22:53:24+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": false
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Accessibility Tools demo page"
+        }
+    ],
+    "created": [
+        {
+            "value": "2024-11-25T00:06:21+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T22:53:24+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/accessibility-tools-demo-page",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>This page shows some of the accessibility issues flagged by the Editoria11y accessibility checker.<\/p><p>Some things to try on this page:<\/p><ul><li>Explore the tips, either by manually toggling the tooltips below, or by using the \u201cNext\u201d button on the checker controls at the bottom right of the page.<\/li><li>Try marking a manual check as \u201cOK\u201d or \u201cHidden,\u201d then click \"Show hidden alert\" from the checker controls.<\/li><li>Explore the document outline using the \"Check headings and alt text\" button on the checker controls.<\/li><li>Click \"Open site reports in a new tab\" from the checker controls.<\/li><li>Edit the page, and try all that again while modifying the content.<\/li><\/ul><p>When you are done, delete this page.<\/p><hr><h2>Sample content with a lot of issues<\/h2><h3>Headings<\/h3><h4>Empty headings<\/h4><p>This heading has no text:<\/p><h3>&nbsp;<\/h3><h4>Skipped heading levels<\/h4><h6>This H6 should have been an H3<\/h6><h4>Suspiciously long headings<\/h4><h5>A very long heading. Headings should not be used for emphasis, but rather for a document outline, so if you find yourself talking this much, this probably is being used for visual formatting, not a heading.<\/h5><h4>Suspiciously short blockquotes that maybe should be headings<\/h4><blockquote><p>Not a blockquote<\/p><\/blockquote><h4>Suspicious paragraphs that look like headings<\/h4><p><strong>This looks suspiciously like a heading<\/strong><\/p><p>Note that this test only flags an all-bold paragraph that has no punctuation at all,<\/p><p><strong>so this paragraph will not be flagged as a false positive.<\/strong><\/p><h3>Meaningful Links<\/h3><h4>Links with no text at all<\/h4><p>&nbsp;<\/p><h4>Links titled with a URL<\/h4><p><a href=\"https:\/\/editoria11y.princeton.edu\">https:\/\/editoria11y.princeton.edu<\/a><\/p><h4>Links only titled with generic text<\/h4><p>\u201cClick here,\u201d \u201clearn more,\u201d \u201cdownload,\u201d etc.<\/p><p><a href=\"https:\/\/www.youtube.com\/watch?v=DLzxrzFCyOs\">Click here<\/a><\/p><h4>Links that open in a new window without an external link icon or text warning<\/h4><p><a href=\"https:\/\/www.youtube.com\/watch?v=DLzxrzFCyOs\">An informative video.<\/a><\/p><h4>Links to a documents<\/h4><p>Note that you can set what Editoria11y should look for in your preferences file. By default it checks for PDF and DOC files.<\/p><p><a href=\"https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ#.pdf\">A fake PDF link.<\/a><\/p><h3>Tables<\/h3><h4>Tables without valid headers<\/h4><table><tbody><tr><td>A table without a TH header is invalid<\/td><td>And no, an \u201cH3\u201d does not count.<\/td><\/tr><\/tbody><\/table><h4>Empty table header cells<\/h4><table><thead><tr><th>Empty table heading cells will also be flagged:<\/th><th><br>&nbsp;<\/th><\/tr><\/thead><\/table><h3>Legibility<\/h3><h4>Lists<\/h4><p>a. Fake lists<\/p><p>b. use letters or numbers.<\/p><p>c. rather than real formatting.<\/p><h4>Caps lock<\/h4><p>SEVERAL WORDS IN A ROW OF CAPS LOCK TEXT WILL TRIGGER A MANUAL CHECK WARNING.<\/p>",
+            "format": "content_format",
+            "processed": "<p>This page shows some of the accessibility issues flagged by the Editoria11y accessibility checker.<\/p>\n<p>Some things to try on this page:<\/p>\n<ul>\n<li>Explore the tips, either by manually toggling the tooltips below, or by using the \u201cNext\u201d button on the checker controls at the bottom right of the page.<\/li>\n<li>Try marking a manual check as \u201cOK\u201d or \u201cHidden,\u201d then click \"Show hidden alert\" from the checker controls.<\/li>\n<li>Explore the document outline using the \"Check headings and alt text\" button on the checker controls.<\/li>\n<li>Click \"Open site reports in a new tab\" from the checker controls.<\/li>\n<li>Edit the page, and try all that again while modifying the content.<\/li>\n<\/ul>\n<p>When you are done, delete this page.<\/p>\n<hr>\n<h2>Sample content with a lot of issues<\/h2>\n<h3>Headings<\/h3>\n<h4>Empty headings<\/h4>\n<p>This heading has no text:<\/p>\n<h3>&nbsp;<\/h3>\n<h4>Skipped heading levels<\/h4>\n<h6>This H6 should have been an H3<\/h6>\n<h4>Suspiciously long headings<\/h4>\n<h5>A very long heading. Headings should not be used for emphasis, but rather for a document outline, so if you find yourself talking this much, this probably is being used for visual formatting, not a heading.<\/h5>\n<h4>Suspiciously short blockquotes that maybe should be headings<\/h4>\n<blockquote><p>Not a blockquote<\/p>\n<\/blockquote>\n<h4>Suspicious paragraphs that look like headings<\/h4>\n<p><strong>This looks suspiciously like a heading<\/strong><\/p>\n<p>Note that this test only flags an all-bold paragraph that has no punctuation at all,<\/p>\n<p><strong>so this paragraph will not be flagged as a false positive.<\/strong><\/p>\n<h3>Meaningful Links<\/h3>\n<h4>Links with no text at all<\/h4>\n<p>&nbsp;<\/p>\n<h4>Links titled with a URL<\/h4>\n<p><a href=\"https:\/\/editoria11y.princeton.edu\">https:\/\/editoria11y.princeton.edu<\/a><\/p>\n<h4>Links only titled with generic text<\/h4>\n<p>\u201cClick here,\u201d \u201clearn more,\u201d \u201cdownload,\u201d etc.<\/p>\n<p><a href=\"https:\/\/www.youtube.com\/watch?v=DLzxrzFCyOs\">Click here<\/a><\/p>\n<h4>Links that open in a new window without an external link icon or text warning<\/h4>\n<p><a href=\"https:\/\/www.youtube.com\/watch?v=DLzxrzFCyOs\">An informative video.<\/a><\/p>\n<h4>Links to a documents<\/h4>\n<p>Note that you can set what Editoria11y should look for in your preferences file. By default it checks for PDF and DOC files.<\/p>\n<p><a href=\"https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ#.pdf\">A fake PDF link.<\/a><\/p>\n<h3>Tables<\/h3>\n<h4>Tables without valid headers<\/h4>\n<table>\n<tbody>\n<tr>\n<td>A table without a TH header is invalid<\/td>\n<td>And no, an \u201cH3\u201d does not count.<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<h4>Empty table header cells<\/h4>\n<table>\n<thead>\n<tr>\n<th>Empty table heading cells will also be flagged:<\/th>\n<th><br>&nbsp;<\/th>\n<\/tr>\n<\/thead>\n<\/table>\n<h3>Legibility<\/h3>\n<h4>Lists<\/h4>\n<p>a. Fake lists<\/p>\n<p>b. use letters or numbers.<\/p>\n<p>c. rather than real formatting.<\/p>\n<h4>Caps lock<\/h4>\n<p>SEVERAL WORDS IN A ROW OF CAPS LOCK TEXT WILL TRIGGER A MANUAL CHECK WARNING.<\/p>\n",
+            "summary": ""
+        }
+    ],
+    "field_description": [
+        {
+            "value": "This is a page to demonstrate how to use the Accessibility Tools"
+        }
+    ],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

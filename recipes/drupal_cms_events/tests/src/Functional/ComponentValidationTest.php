@@ -1,0 +1,156 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Drupal\Tests\drupal_cms_events\Functional;
+
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
+use Drupal\Tests\BrowserTestBase;
+use Drupal\Tests\drupal_cms_content_type_base\ContentModelTestTrait;
+
+/**
+ * @group drupal_cms_events
+ */
+class ComponentValidationTest extends BrowserTestBase {
+
+  use ContentModelTestTrait;
+  use RecipeTestTrait;
+
+  /**
+   * {@inheritdoc}
+   */
+  protected $defaultTheme = 'stark';
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function setUp(): void {
+    parent::setUp();
+
+    $dir = realpath(__DIR__ . '/../../..');
+    // The recipe should apply cleanly.
+    $this->applyRecipe($dir);
+    // Apply it again to prove that it is idempotent.
+    $this->applyRecipe($dir);
+  }
+
+  public function testContentModel(): void {
+    $this->assertContentModel([
+      'event' => [
+        'title' => [
+          'type' => 'string',
+          'cardinality' => 1,
+          'required' => TRUE,
+          'translatable' => TRUE,
+          'label' => 'Title',
+          'input type' => 'text',
+          'help text' => '',
+        ],
+        'field_description' => [
+          'type' => 'string_long',
+          'cardinality' => 1,
+          'required' => TRUE,
+          'translatable' => TRUE,
+          'label' => 'Description',
+          'input type' => 'textarea',
+          'help text' => 'Describe the page content. This appears as the description in search engine results.',
+        ],
+        'field_featured_image' => [
+          'type' => 'entity_reference',
+          'cardinality' => 1,
+          'required' => FALSE,
+          'translatable' => FALSE,
+          'label' => 'Featured image',
+          'input type' => 'media library',
+          'help text' => 'Include an image. This appears as the image in search engine results.',
+        ],
+        'body' => [
+          'type' => 'text_with_summary',
+          'cardinality' => 1,
+          'required' => FALSE,
+          'translatable' => TRUE,
+          'label' => 'Content',
+          'input type' => 'wysiwyg',
+          'help text' => 'The content of this page.',
+        ],
+        'field_event__date' => [
+          'type' => 'smartdate',
+          'cardinality' => 1,
+          'required' => TRUE,
+          'translatable' => FALSE,
+          'label' => 'Date',
+          'input type' => 'date',
+          'help text' => '',
+        ],
+        'field_event__location_name' => [
+          'type' => 'string',
+          'cardinality' => 1,
+          'required' => FALSE,
+          'translatable' => FALSE,
+          'label' => 'Location name',
+          'input type' => 'text',
+          'help text' => '',
+        ],
+        'field_event__location_address' => [
+          'type' => 'address',
+          'cardinality' => 1,
+          'required' => FALSE,
+          'translatable' => FALSE,
+          'label' => 'Location address',
+          'input type' => 'address',
+          'help text' => '',
+        ],
+        'field_event__file' => [
+          'type' => 'entity_reference',
+          'cardinality' => 1,
+          'required' => FALSE,
+          'translatable' => FALSE,
+          'label' => 'File',
+          'input type' => 'media library',
+          'help text' => '',
+        ],
+        'field_event__link' => [
+          'type' => 'link',
+          'cardinality' => 1,
+          'required' => FALSE,
+          'translatable' => FALSE,
+          'label' => 'Link',
+          'input type' => 'text',
+          'help text' => '',
+        ],
+        'field_tags' => [
+          'type' => 'entity_reference',
+          'cardinality' => FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED,
+          'required' => FALSE,
+          'translatable' => FALSE,
+          'label' => 'Tags',
+          'input type' => 'text',
+          'help text' => 'Include tags for relevant topics.',
+        ],
+      ],
+    ]);
+
+    // The geofield should not be on the edit form in any way, shape, or form.
+    $assert_session = $this->assertSession();
+    $assert_session->addressEquals('/node/add/event');
+    $assert_session->responseNotContains('field_geofield');
+  }
+
+  public function testPathAliasPatternPrecedence(): void {
+    $dir = realpath(__DIR__ . '/../../../../drupal_cms_seo_basic');
+    $this->applyRecipe($dir);
+
+    // Ensure there's at least one text format we can use as an anonymous user.
+    $this->applyRecipe('core/recipes/restricted_html_format');
+
+    // Confirm that events have the expected path aliases.
+    $node = $this->drupalCreateNode([
+      'type' => 'event',
+      'title' => 'Grand Jubilee',
+    ]);
+    $this->assertStringEndsWith('/events/grand-jubilee', $node->toUrl()->toString());
+  }
+
+
+}

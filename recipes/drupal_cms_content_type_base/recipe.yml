@@ -1,0 +1,70 @@
+name: 'Content Basics'
+type: Drupal CMS
+description: 'Provides basic tools for creating content.'
+recipes:
+  - core/recipes/content_editor_role
+  # The media library cannot be opened via CKEditor unless at least one media
+  # type exists. This is due a core bug; see https://drupal.org/i3486284#comment-15861965.
+  # However, we also ship a `field_featured_image`, which is meant to refer to
+  # an image media item, so it makes sense to have the image media type available
+  # right out of the gate.
+  - drupal_cms_image
+install:
+  - autosave_form
+  - bpmn_io
+  - ckeditor5
+  - eca_content
+  - eca_misc
+  - eca_render
+  - filter
+  - layout_builder
+  - linkit
+  - node
+  - shortcut
+  - taxonomy
+  - token
+  - trash
+  # We don't have a specific use of the Options or Field UI modules in this recipe,
+  # but we expect that site builders will want to add fields to their content types,
+  # so install these modules anyway.
+  - field_ui
+  - options
+config:
+  # Treat all field storages strictly, since they influence the database layout.
+  strict:
+    - field.storage.node.body
+    - field.storage.node.field_description
+    - field.storage.node.field_featured_image
+    - field.storage.node.field_tags
+    - field.storage.node.layout_builder__layout
+  import:
+    filter: '*'
+    node:
+      # Only import config which is also imported by the Standard profile.
+      - core.entity_view_mode.node.full
+      - core.entity_view_mode.node.rss
+      - core.entity_view_mode.node.teaser
+      - field.storage.node.body
+      - system.action.node_delete_action
+      - system.action.node_make_sticky_action
+      - system.action.node_make_unsticky_action
+      - system.action.node_promote_action
+      - system.action.node_publish_action
+      - system.action.node_save_action
+      - system.action.node_unpromote_action
+      - system.action.node_unpublish_action
+    shortcut:
+      - shortcut.set.default
+    trash: '*'
+  actions:
+    autosave_form.settings:
+      # Enable autosave for all content types.
+      simpleConfigUpdate:
+        allowed_content_entity_types:
+          node:
+            bundles: []
+    user.role.anonymous:
+      # We assume all published content should be accessible to anonymous users.
+      grantPermission: 'access content'
+    user.role.content_editor:
+      grantPermission: 'use text format content_format'

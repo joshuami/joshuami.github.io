@@ -1,0 +1,20 @@
+ai_agents_form_integration.webform_batch_redirect:
+  path: '/admin/webform/batch-redirect'
+  defaults:
+    _controller: '\Drupal\ai_agents_form_integration\Controller\BatchRedirect::startRedirect'
+  requirements:
+    _permission: 'create ai assisted webforms'
+ai_agents_form_integration.ai_assisted_generation:
+  path: '/admin/structure/types/add-ai-assisted'
+  defaults:
+    _form: '\Drupal\ai_agents_form_integration\Form\ContentTypes'
+    _title: 'Generate Content Type with AI'
+  requirements:
+    _permission: 'create ai assisted content types'
+ai_agents_form_integration.content_type_assisted_blueprint:
+  path: '/admin/structure/types/ai-blueprint'
+  defaults:
+    _form: '\Drupal\ai_agents_form_integration\Form\ContentTypeBlueprint'
+    _title: 'Confirm AI Assisted Blueprint'
+  requirements:
+    _permission: 'create ai assisted content types'

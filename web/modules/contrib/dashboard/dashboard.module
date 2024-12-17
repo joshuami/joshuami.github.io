@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * @file
+ * Add dashboards functionality to Drupal.
+ */
+
+use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_user_login().
+ *
+ * Redirect to the dashboard after login if there is an applicable dashboard.
+ */
+function dashboard_user_login(AccountInterface $account): void {
+  \Drupal::service('dashboard.user_redirect')->userLogin($account);
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function dashboard_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'dashboard/toolbar';
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ *
+ * Remove the default dashboard tab, so it is not duplicated.
+ */
+function dashboard_menu_local_tasks_alter(&$data, $route_name, RefinableCacheableDependencyInterface &$cacheability) {
+  $account = \Drupal::currentUser();
+  $storage = \Drupal::entityTypeManager()->getStorage('dashboard');
+  $query = $storage->getQuery()
+    ->accessCheck(TRUE)
+    ->condition('status', TRUE)
+    ->sort('weight', 'ASC');
+  $dashboard_ids = $query->execute();
+  $default = NULL;
+  foreach ($dashboard_ids as $dashboard_id) {
+    $dashboard = $storage->load($dashboard_id);
+    if ($dashboard->access('view', $account)) {
+      $default = $dashboard->id();
+      break;
+    }
+  }
+
+  if ($default !== NULL && isset($data['tabs'][0]['dashboard.dashboards:dashboard.' . $default])) {
+    unset($data['tabs'][0]['dashboard.dashboards:dashboard.' . $default]);
+  }
+  // The tab we're removing is dependent on the user's access to see dashboard.
+  $cacheability->addCacheContexts(['user.permissions']);
+  // The tab we're removing is dependent on the dashboard list.
+  $cacheability->addCacheTags(['dashboard_list']);
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dashboard_theme($existing, $type, $theme, $path) {
+  $items['menu_region__dashboard'] = [
+    'variables' => [
+      'url' => [],
+      'title' => NULL,
+    ],
+  ];
+  return $items;
+}
+
+/**
+ * Implements hook_menu_links_discovered_alter().
+ *
+ * If navigation is present, we would use our own navigation block so no need to
+ * duplicate in the menu.
+ */
+function dashboard_menu_links_discovered_alter(&$links) {
+  if (\Drupal::moduleHandler()->moduleExists('navigation')) {
+    unset($links['system.dashboard']);
+  }
+}
+
+/**
+ * Implements hook_block_alter().
+ *
+ * Hide dashboard blocks from the blocks UI.
+ * Mark navigation menu as navigation safe.
+ *
+ * @todo Revisit if https://www.drupal.org/project/drupal/issues/3443882 lands.
+ */
+function dashboard_block_alter(&$definitions): void {
+  $block_ids = [
+    'dashboard_text_block',
+    'dashboard_site_status',
+    'navigation_dashboard',
+  ];
+  // Hide blocks from the blocks UI.
+  foreach ($block_ids as $block_id) {
+    if (isset($definitions[$block_id])) {
+      $definitions[$block_id]['_block_ui_hidden'] = TRUE;
+    }
+  }
+
+  // Allow the navigation dashboard block in navigation.
+  if (isset($definitions['navigation_dashboard'])) {
+    $definitions['navigation_dashboard']['allow_in_navigation'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_library_info_alter().
+ *
+ * If the admin theme is gin, we add extra css that uses gin styling.
+ */
+function dashboard_library_info_alter(&$libraries, $extension) {
+  if ($extension === 'dashboard' && \Drupal::config('system.theme')->get('admin') === 'gin') {
+    $libraries['dashboard']['css']['theme'] += ['css/dashboard.gin.css' => []];
+  }
+  return $libraries;
+}

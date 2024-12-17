@@ -1,0 +1,11 @@
+name: 'Coffee module tests'
+type: module
+description: 'Support module for coffee testing.'
+package: Testing
+dependencies:
+  - drupal:node
+
+# Information added by Drupal.org packaging script on 2024-11-11
+version: '2.0.0'
+project: 'coffee'
+datestamp: 1731340399

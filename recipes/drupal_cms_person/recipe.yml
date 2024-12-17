@@ -1,0 +1,26 @@
+name: 'Person profiles'
+type: Drupal CMS
+description: 'Adds a person profile content type that provides information about a person.'
+recipes:
+  - drupal_cms_content_type_base
+  - core/recipes/tags_taxonomy
+install:
+  - pathauto
+  - shortcut
+  - telephone
+config:
+  # Treat all field storages strictly, since they influence the database layout.
+  strict:
+    - field.storage.node.field_person__email
+    - field.storage.node.field_person__phone_number
+    - field.storage.node.field_person__role_job_title
+  import:
+    shortcut:
+      - shortcut.set.default
+  actions:
+    user.role.content_editor:
+      grantPermissions:
+        - 'create person content'
+        - 'delete person revisions'
+        - 'delete any person content'
+        - 'edit any person content'

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "ab8e1f2e-6557-4b40-ad9c-6e754e7daf6f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/44"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/https:\/\/joshuami.com\/2015\/07\/08\/keeping-sharp-with-jekyll-blogging-tool"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

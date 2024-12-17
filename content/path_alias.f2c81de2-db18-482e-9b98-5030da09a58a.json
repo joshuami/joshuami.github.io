@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "f2c81de2-db18-482e-9b98-5030da09a58a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/50"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/https:\/\/joshuami.com\/2013\/01\/08\/drupal-at-multnomah-county"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

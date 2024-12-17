@@ -1,0 +1,14 @@
+name: 'Tome Static'
+type: module
+description: 'Exports an entire Drupal site to static HTML.'
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+package: Tome
+dependencies:
+  - drupal:system (>= 8.6)
+  - tome:tome_base
+
+# Information added by Drupal.org packaging script on 2024-11-23
+version: '8.x-1.13'
+project: 'tome'
+datestamp: 1732382853

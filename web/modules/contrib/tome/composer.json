@@ -1,0 +1,36 @@
+{
+  "name": "drupal/tome",
+  "description": "Everything you need to do everything statically.",
+  "type": "drupal-module",
+  "homepage": "http://drupal.org/project/tome",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Samuel Mortenson",
+      "homepage": "https://www.drupal.org/u/samuelmortenson",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Lee Rowlands",
+      "homepage": "https://www.drupal.org/u/larowlan",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/tome",
+    "source": "https://git.drupalcode.org/project/tome"
+  },
+  "conflict": {
+    "drush/drush": "<11.6"
+  },
+  "require": {
+    "drupal/core": "^9 || ^10 || ^11"
+  },
+  "require-dev": {
+    "drupal/ctools": "^4.1",
+    "drupal/pathauto": "^1.13",
+    "drupal/redirect": "^1.10",
+    "drupal/token": "^1.15",
+    "drupal/book": "^1.0"
+  }
+}

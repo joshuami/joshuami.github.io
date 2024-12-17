@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "2f330263-4507-449e-b6f7-1c91b72a0812"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Turning over a new leaf... again... and again..."
+        }
+    ],
+    "created": [
+        {
+            "value": "2006-11-11T08:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2006\/11\/11\/turning-over-new-leaf-again",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>By far the most difficult aspect of blogging is keeping up the momentum of writing. The most successful bloggers may appear to have a ton of time on their hands\u2013and many probably do\u2013but they have something else as well. They have developed a drive to write and write often. (It probably helps when you suddenly start getting regular comments on your blog and are introduced to a taste of fame.)<!--more--><\/p><p>MobileHippie has languished for an extremely long time. I\u2019ve never really been able to convince myself that blogging was important enough to commit to it. I certainly haven\u2019t had the time to put any real effort into establishing a line of thought on which this blog can focus.<\/p><p>At first I thought a blog about being a designer\/developer would be interesting, but I don\u2019t design or develop enough these days to add anything meaningful to that conversation. I could write about being a project manager, but there are others with far more experience that have contributed outstanding articles covering effective project management techniques. I could write a more personal blog about being a parent or the state of public schools or the challenges and joys of raising a family in North Portland. I could write a bit about commuting by bicycle and the all-weather joy of being carless by choice\u2013mostly.<\/p><p>In the end, none of these topics seem compelling enough to focus a regular blog. While there is little doubt that many of these topics will come up when I begin to write more regularly, they will not be the focus.<\/p><p>So what will be the focus? Coming soon.<\/p>",
+            "format": "content_format",
+            "processed": "<p>By far the most difficult aspect of blogging is keeping up the momentum of writing. The most successful bloggers may appear to have a ton of time on their hands\u2013and many probably do\u2013but they have something else as well. They have developed a drive to write and write often. (It probably helps when you suddenly start getting regular comments on your blog and are introduced to a taste of fame.)<\/p>\n<!--more--><\/p>\n<p>MobileHippie has languished for an extremely long time. I\u2019ve never really been able to convince myself that blogging was important enough to commit to it. I certainly haven\u2019t had the time to put any real effort into establishing a line of thought on which this blog can focus.<\/p>\n<p>At first I thought a blog about being a designer\/developer would be interesting, but I don\u2019t design or develop enough these days to add anything meaningful to that conversation. I could write about being a project manager, but there are others with far more experience that have contributed outstanding articles covering effective project management techniques. I could write a more personal blog about being a parent or the state of public schools or the challenges and joys of raising a family in North Portland. I could write a bit about commuting by bicycle and the all-weather joy of being carless by choice\u2013mostly.<\/p>\n<p>In the end, none of these topics seem compelling enough to focus a regular blog. While there is little doubt that many of these topics will come up when I begin to write more regularly, they will not be the focus.<\/p>\n<p>So what will be the focus? Coming soon.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "083df199532040844854fa58c6efae03",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

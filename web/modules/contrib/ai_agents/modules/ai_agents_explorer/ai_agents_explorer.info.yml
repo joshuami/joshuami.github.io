@@ -1,0 +1,14 @@
+name: AI Agents Explorer
+type: module
+description: A helper tool for running and debugging Agents.
+package: AI Tools
+core_version_requirement: ^10.3 || ^11
+lifecycle: experimental
+
+dependencies:
+  - ai_agents:ai_agents
+
+# Information added by Drupal.org packaging script on 2024-12-12
+version: '1.0.0-beta1'
+project: 'ai_agents'
+datestamp: 1734023402

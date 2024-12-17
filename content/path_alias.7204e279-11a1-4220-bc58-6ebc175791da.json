@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "7204e279-11a1-4220-bc58-6ebc175791da"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/30"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/https:\/\/joshuami.com\/2017\/04\/06\/guide-to-open-source-licensing"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

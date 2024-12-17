@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains uninstall stuff.
+ */
+
+/**
+ * Disable the AI Views module.
+ */
+function ai_views_update_13001(): void {
+  $module_to_uninstall = 'ai_views';
+
+  // Uninstall the module.
+  \Drupal::service('module_installer')->uninstall([$module_to_uninstall]);
+  \Drupal::messenger()->addMessage(t('The AI Views module has been deprecated, and at present there is no replacement. The module has been disabled.'));
+}

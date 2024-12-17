@@ -1,0 +1,6 @@
+ai_views.type_add:
+  route_name: ai_views.ai_assisted_generation
+  title: 'Generate with AI'
+  appears_on:
+    - entity.view.collection
+  weight: 100

@@ -1,0 +1,26 @@
+name: Blog
+type: Drupal CMS
+description: 'Sets up a basic blog, with tagging.'
+recipes:
+  - drupal_cms_content_type_base
+  - core/recipes/tags_taxonomy
+install:
+  - add_content_by_bundle
+  - menu_link_content
+  - pathauto
+  - shortcut
+  - selective_better_exposed_filters
+config:
+  strict: false
+  import:
+    shortcut:
+      - shortcut.set.default
+    system:
+      - system.menu.main
+  actions:
+    user.role.content_editor:
+      grantPermissions:
+        - 'create blog content'
+        - 'delete blog revisions'
+        - 'delete any blog content'
+        - 'edit any blog content'

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "a91a28fc-226d-42c5-bb73-bd3878d10ae9"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/20e8e526-b396-4e23-98ae-7cba74f502aa"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2013\/01\/08\/drupal-at-multnomah-county"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

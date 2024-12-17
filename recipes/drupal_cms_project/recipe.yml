@@ -1,0 +1,26 @@
+name: Projects
+type: Drupal CMS
+description: 'Adds a project content type that provides information about an example of work to the intended audience.'
+recipes:
+  - drupal_cms_content_type_base
+  - core/recipes/tags_taxonomy
+install:
+  - link
+  - pathauto
+  - shortcut
+config:
+  # Treat all field storages strictly, since they influence the database layout.
+  strict:
+    - field.storage.node.field_project__client_link
+    - field.storage.node.field_project__client_logo
+    - field.storage.node.field_project__client_name
+  import:
+    shortcut:
+      - shortcut.set.default
+  actions:
+    user.role.content_editor:
+      grantPermissions:
+        - 'create project content'
+        - 'delete project revisions'
+        - 'delete any project content'
+        - 'edit any project content'

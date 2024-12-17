@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "a05d744e-db6c-419e-8c4f-14e794a2dae4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/a24479fe-726f-4be7-8416-f835e5791231"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2005\/06\/08\/integrated-calendaring-quest-simple-complexity"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

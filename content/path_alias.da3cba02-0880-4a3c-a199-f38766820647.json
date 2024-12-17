@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "da3cba02-0880-4a3c-a199-f38766820647"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/3"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2024-08\/building-blog-using-drupal"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

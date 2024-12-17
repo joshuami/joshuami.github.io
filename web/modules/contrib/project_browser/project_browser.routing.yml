@@ -1,0 +1,39 @@
+project_browser.api_get_categories:
+  path: '/project-browser/data/categories'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\project_browser\Controller\ProjectBrowserEndpointController::getAllCategories'
+    _title: 'Get all categories'
+  requirements:
+    _permission: 'administer modules'
+  #options:
+  #  no_cache: 'TRUE'
+project_browser.api_project_get_all:
+  path: '/project-browser/data/project'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\project_browser\Controller\ProjectBrowserEndpointController::getAllProjects'
+    _title: 'Get all projects'
+  requirements:
+    _permission: 'administer modules'
+  #options:
+  #  no_cache: 'TRUE'
+project_browser.browse:
+  path: '/admin/modules/browse/{source}/{id}'
+  defaults:
+    _controller: '\Drupal\project_browser\Controller\BrowserController::browse'
+    _title: 'Browse projects'
+    id: null
+    source: null
+  requirements:
+    _permission: 'administer modules'
+project_browser.settings:
+  path: '/admin/config/development/project_browser'
+  defaults:
+    _form: '\Drupal\project_browser\Form\SettingsForm'
+    _title: 'Project Browser'
+  requirements:
+    _permission: 'administer site configuration'
+
+route_callbacks:
+  - '\Drupal\project_browser\Routing\ProjectBrowserRoutes::routes'

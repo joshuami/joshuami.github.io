@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:202;--color--primary-saturation:79%;--color--primary-lightness:50">
+  <head>
+    <meta charset="utf-8">
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><meta name="description" content="When starting a new agile project or product with a new team, I often find the need to establish common language. On simple projects, I usually walk the team through the following terms. The toolset associated with these terms is usually some combination of Jira with Github/Gitlab/Bitbucket and a CI/CD toolchain that connects to hosting. There are many possible toolsets, but the agile product management process that uses scrum methodology nearly always has the same dictionary of terms.">
+<link rel="canonical" href="https://joshuami.com/2021/04/22/agile-development-scrum-terms-and-recommendations">
+<link rel="shortlink" href="https://joshuami.com/">
+<meta name="rights" content="Copyright &copy;2024 All rights reserved.">
+<meta name="referrer" content="unsafe-url">
+<meta property="og:site_name" content="Joshuami">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://joshuami.com/2021/04/22/agile-development-scrum-terms-and-recommendations">
+<meta property="og:title" content="Agile Development Scrum Terms and Recommendations">
+<meta property="og:description" content="When starting a new agile project or product with a new team, I often find the need to establish common language. On simple projects, I usually walk the team through the following terms. The toolset associated with these terms is usually some combination of Jira with Github/Gitlab/Bitbucket and a CI/CD toolchain that connects to hosting. There are many possible toolsets, but the agile product management process that uses scrum methodology nearly always has the same dictionary of terms.">
+<meta property="og:updated_time" content="2024-12-16T15:06:46-08:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="When starting a new agile project or product with a new team, I often find the need to establish common language. On simple projects, I usually walk the team through the following terms. The toolset associated with these terms is usually some combination of Jira with Github/Gitlab/Bitbucket and a CI/CD toolchain that connects to hosting. There are many possible toolsets, but the agile product management process that uses scrum methodology nearly always has the same dictionary of terms.">
+<meta name="twitter:title" content="Agile Development Scrum Terms and Recommendations">
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://joshuami.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Agile Development Scrum Terms and Recommendations"
+        }
+    ]
+}</script>
+<link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <title>Agile Development Scrum Terms and Recommendations | Joshuami</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_l6Ab_R29-OB3Y6lyVlNn0Rxfg0m2c03WgWoPxwAzmiA.css?delta=0&amp;language=en&amp;theme=drupal_cms_olivero&amp;include=eJxtjEEKwzAMBD9k4ycVORausOINkpui3zftofTQy8DswA4lQxlvJqXAY92a-IaTLQomb9AElUtRuqKSZl-hMvt3nnRKpyWY-TDZyeJf8utqtt944MnGLdfIVbGN5OGL91LJOS0jv5cPX6l5QBw">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_ABDMqpC54X4QgJa9Vnbz_8gfadu-k8HKG-USLtS_Fgs.css?delta=1&amp;language=en&amp;theme=drupal_cms_olivero&amp;include=eJxtjEEKwzAMBD9k4ycVORausOINkpui3zftofTQy8DswA4lQxlvJqXAY92a-IaTLQomb9AElUtRuqKSZl-hMvt3nnRKpyWY-TDZyeJf8utqtt944MnGLdfIVbGN5OGL91LJOS0jv5cPX6l5QBw">
+
+    <script src="/libraries/klaro/dist/klaro-no-css.js?solzie"></script>
+
+    
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?solzie">
+</noscript>
+  </head>
+  <body class="path-node page-node-type-blog">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+          <header id="header" class="site-header" data-drupal-selector="site-header" role="banner">
+
+                <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
+          <div class="site-header__initial">
+            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="Sticky header" aria-checked="false">
+              <span class="sticky-header-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+
+                    <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+            <div class="container site-header__inner__container">
+
+              
+
+
+<div id="block-drupal-cms-olivero-site-branding" class="site-branding block block-system block-system-branding-block">
+  
+    
+    <div class="site-branding__inner">
+              <div class="site-branding__text">
+        <div class="site-branding__name">
+          <a href="/" title="Home" rel="home">Joshuami</a>
+        </div>
+      </div>
+      </div>
+</div>
+
+<div class="header-nav-overlay" data-drupal-selector="header-nav-overlay"></div>
+
+
+                              <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
+                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="Main Menu" aria-controls="header-nav" aria-expanded="false">
+                    <span class="mobile-nav-button__label">Menu</span>
+                    <span class="mobile-nav-button__icon"></span>
+                  </button>
+                </div>
+
+                <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
+                  
+<nav id="block-drupal-cms-olivero-main-menu" class="primary-nav block block-menu navigation menu--main" aria-labelledby="block-drupal-cms-olivero-main-menu-menu" role="navigation">
+            
+  <h2 class="visually-hidden block__title" id="block-drupal-cms-olivero-main-menu-menu">Main navigation</h2>
+  
+        
+
+
+          
+        
+    <ul class="menu primary-nav__menu primary-nav__menu--level-1" data-drupal-selector="primary-nav-menu--level-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/blog" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="blog">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Blog</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+
+                  
+
+  <div class="region region--secondary-menu">
+    <nav id="block-drupal-cms-olivero-account-menu" class="block block-menu navigation menu--account secondary-nav" aria-labelledby="block-drupal-cms-olivero-account-menu-menu" role="navigation">
+            
+  <span class="visually-hidden" id="block-drupal-cms-olivero-account-menu-menu">User account menu</span>
+  
+        
+
+
+          <ul class="menu secondary-nav__menu secondary-nav__menu--level-1">
+            
+                          
+        
+        
+        <li class="secondary-nav__menu-item secondary-nav__menu-item--link secondary-nav__menu-item--level-1">
+          <a href="/user/login" class="secondary-nav__menu-link secondary-nav__menu-link--link secondary-nav__menu-link--level-1" data-drupal-link-system-path="user/login">Log in</a>
+
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                </div>
+                          </div>
+          </div>
+        </div>
+      </header>
+    
+    <div id="main-wrapper" class="layout-main-wrapper layout-container">
+      <div id="main" class="layout-main">
+        <div class="main-content">
+          <a id="main-content" tabindex="-1"></a>
+          
+          <div class="main-content__container container">
+            
+
+  <div class="region region--highlighted grid-full layout--pass--content-medium">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+            
+
+  <div class="region region--breadcrumb grid-full layout--pass--content-medium">
+    
+
+<div id="block-drupal-cms-olivero-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="block__content">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <div class="breadcrumb__content">
+      <ol class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                          <a href="/" class="breadcrumb__link">Home</a>
+                      </li>
+                  <li class="breadcrumb__item">
+                          Agile Development Scrum Terms and Recommendations
+                      </li>
+              </ol>
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+  </div>
+
+
+                          <main role="main">
+                
+
+  <div class="region region--content-above grid-full layout--pass--content-medium">
+    
+
+<div id="block-drupal-cms-olivero-page-title" class="block block-core block-page-title-block">
+  
+  
+
+  <h1 class="title page-title">
+<span>Agile Development Scrum Terms and Recommendations</span>
+</h1>
+
+
+  
+</div>
+
+  </div>
+
+                
+
+  <div class="region region--content grid-full layout--pass--content-medium" id="content">
+    
+
+<div id="block-drupal-cms-olivero-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      
+
+<article class="node node--type-blog node--promoted node--view-mode-full">
+  <header class="">
+    
+          
+          <div class="node__meta">
+              <span>
+          By <span class="node__author">
+<span><span>admin</span></span>
+</span>, 22 April 2021
+        </span>
+        
+      </div>
+      </header>
+  <div class="node__content">
+          <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+      
+
+<div class="block block-layout-builder block-field-blocknodeblogbody">
+  
+    
+      <div class="block__content">
+      
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>When starting a new agile project or product with a new team, I often find the need to establish common language. On simple projects, I usually walk the team through the following terms.</p>
+<p>The toolset associated with these terms is usually some combination of Jira with Github/Gitlab/Bitbucket and a CI/CD toolchain that connects to hosting. There are many possible toolsets, but the agile product management process that uses scrum methodology nearly always has the same dictionary of terms.</p>
+<p>To facilitate some larger projects, and to try and get down definitions that meet my own needs for large Drupal CMS implementations, I am writing this handy guide to the most used terms that I use in consulting.</p>
+<p>Rather than present an alphabetical list, I find it best to start with some of the largest concepts and work them down and then back up again in complexity.</p>
+<p>So&hellip; where to start?</p>
+<h2 id="product-roadmap">Product Roadmap</h2>
+<p>You are not working solely on a &ldquo;project&rdquo; anymore&mdash;even if you may call it a project because it has a planned end date and some milestones to get to that state of readiness&mdash;note that I didn&rsquo;t use completeness; most products are never &ldquo;complete&rdquo; so long as they are still delivering value.</p>
+<p>Once you take on agile methodology to manage your applications, software, or process, you aren&rsquo;t really working on a strict schedule defined by predecessors and successor tasks as is common in waterfall style project management. That doesn&rsquo;t mean you can&rsquo;t project a schedule, but no single task is going to get a start and end date and show up on a gantt chart.</p>
+<p>Instead, you are going to break your work into logical pieces related to your product goals, we sometimes call this a roadmap. You are drawing this map as you go. It will change.</p>
+<h2 id="themes-and-epics">Themes and Epics</h2>
+<p>Your first level of defining your product roadmap is quite broad. If the product is large enough, you may find that you need to group work that represents deliverable features (<strong>epics</strong>) into larger categories of work based on your goals (<strong>themes</strong>). Not every product roadmap requires themes, but every product roadmap will have epics to help with planning.</p>
+<p>If you use themes, you&rsquo;ll want to keep them broadly-related to the goals of your project. Good examples of themes in large Drupal CMS implementations would include accessibility, mobility, maintenance and devops, and localization (or internationalization if global). While you might use these one-word labels to describe your themes, you should spend some time detailing what success looks like for each.</p>
+<p>Epics are the larger features that are related to a theme. Epics themselves are not a deliverable, but they help group the work to achieve a large change to the site. Epics might get target schedules applied to them so that you can show these schedules on a roadmap that looks a little like a gantt chart but is usually more flexible.</p>
+<h2 id="stories-tasks-and-bugs">Stories, Tasks, and Bugs</h2>
+<p>While epics help you group your work to plan, the deliverable work for your team will come in the form of stories, tasks, and bugs. (Some folks call bugs &ldquo;defects&rdquo;, but it seems so much more satisfying to squash a virtual bug&mdash;and much less karmically intense than squashing a live bug.)</p>
+<h3 id="stories">Stories</h3>
+<p>A <strong>story</strong> is a discrete set of work that delivers value to your product. Some teams will only use a story to define work that will be delivered as a code change. I am not that picky. To me, a story is anything of value. In addition to code, value could be delivered in the form of documentation, research, analysis, design, or content creation. You will need to set the norms with your team.</p>
+<p>Each story should fit into the following criteria that are sometimes abbreviated with the mnemonic I.N.V.E.S.T:Independent: self-contained in a way that allows the work to be released without depending on another story. (Though you can choose to build upon previous stories that were delivered before you release a larger feature.)</p>
+<ul>
+<li><strong>Negotiable</strong>: leave room for conversation as the team is working on the story. Don&rsquo;t write a contract so much as ensure that you have enough guidance to make the work achievable.</li>
+<li><strong>Valuable</strong>: it&rsquo;s easy to allow your backlog to grow with stories that don&rsquo;t represent a lot of value to the end user. Make sure you clean up your backlog and only put work into your work plan (more on that soon) that truly improves the product.</li>
+<li><strong>Estimable</strong>: you need to be able to put a solid guess for how much effort and time a story will take when you start work on it. There are a couple of exceptions to this I will describe below.</li>
+<li><strong>Small</strong>: I would actually argue that this is more of an &ldquo;as small as feasible&rdquo; requirement. You might find that very small stories make your deployment pipeline slow to a crawl, but large stories can have a similar impact.</li>
+<li><strong>Testable</strong>: some folks swear by test driven development (TDD). I find that is a bit of overkill for most Drupal CMS projects, but you should know what you intend to test via automated tests and what you need to verify through a quality assurance test from someone on your team. Write this up as acceptance criteria on every story in your sprint. You can modify this test through negotiation&mdash;see above&mdash;but you need to know that the final thing you deliver is adding the value you hoped to add.</li>
+</ul>
+<p>(I&rsquo;m not a huge fan of mnemonics, but sometimes they are helpful.)</p>
+<p>I have a couple of exceptions to this recommendation to make it possible to include work in your roadmap that is hard to estimate.</p>
+<h3 id="pointing-stories">Pointing Stories</h3>
+<p>What is the value of your story? I&rsquo;ve had teams in the past that joke &ldquo;points mean prizes&rdquo;. While I have never actually awarded prizes for &ldquo;most points completed&rdquo;,  I really appreciate team members that figure out the ability to estimate how many stories they can take in a given work plan. (I&rsquo;ll describe sprints below; sprints are iterations of work.)</p>
+<p><strong>Points</strong> are not strictly a time estimate. Ideally, points represent the difficulty of a story and the general size. There are many different pointing approaches that each have their pros and cons.</p>
+<h4 id="t-shirt-sizing">T-Shirt Sizing</h4>
+<p>Small, medium, large, and extra large can form the basic of defining story complexity. These labels are handy to abbreviate following the standards used by the clothing industry.</p>
+<h4 id="1-to-5-or-1-to-4">1 to 5 (or 1 to 4)</h4>
+<p>Is it a 1, 2, 3, 4, or 5? This is probably my least favorite. You have to have an extremely high functioning team to agree what each of these numbers really mean. (It would almost be better to not point at all.)</p>
+<h4 id="fibonacci-sequence">Fibonacci Sequence</h4>
+<p>The best-named pointing scheme by far! The Fibonacci sequence creates a list of numbers based on adding the previous number to the next number: 1, 2, 3, 5, 8, 13, 21. (1+2=3, 2+3=5, 3+5=8, etc.) This is mathematically beautiful pointing! (The nautilus shell grows based on the Fibonacci ratio&mdash;so this pointing scheme happens in nature.)</p>
+<h4 id="doubling-closest-to-time-based-pointing">Doubling (Closest to Time-based Pointing)</h4>
+<p>My personal favorite for teams new to pointing stories is a doubling scheme: 1, 2, 4, 8, 16, 32.</p>
+<p>Doubling is the closest to time-based pointing. Some would say this is a reason not to use this approach, but everybody can get the idea that a point is roughly an hour. By enforcing doubling, you basically tell your team that hour estimates are not that accurate. You are more accurate with smaller stories and less accurate the more complex they get. 16 doesn&rsquo;t mean 16 hours, it means the story is probably a couple days of work&mdash;give or take. 8 is not a commitment to finishing a story in a day, but it does mean you think the story will take you &ldquo;about a day&rdquo;.</p>
+<p>My teams limit the use of 32 point stories to <em>spikes</em>. What&rsquo;s a spike? A spike is a story that is really hard to estimate because it involves investigation and analysis. (The lore behind the name spike suggests it was related to mountain climbing and the act of setting a spike to help define your path and anchor you to the parts of the route you already know. That lore might be true&mdash;I hope it is.)</p>
+<p>You can point spikes that are smaller than 32 points&mdash;with the expectation that they are &ldquo;time-boxed&rdquo; to less time.</p>
+<p>Some teams choose not to point spikes, but personally, I feel that makes it hard to balance your team members&rsquo; load of work in a sprint.</p>
+<p>Pointed stories are the core of planning your product roadmap, but there are other types of work that will get added to your backlog and into your sprints.</p>
+<h3 id="tasks">Tasks</h3>
+<p>Tasks are quick work that can be completed without a lot of complexity&mdash;and usually not much direct value to the product. Each team may choose to use tasks differently. Most teams choose to not point tasks.</p>
+<h3 id="bugs">Bugs</h3>
+<p>Dangit! There&rsquo;s a bug!</p>
+<p>Seriously, bugs happen. When you find a defect in your product that needs to be fixed. Add it to your backlog and prioritize it. Most teams don&rsquo;t point bugs&mdash;similar to spikes, they are extremely difficult to estimate.</p>
+<h2 id="sprints">Sprints</h2>
+<p>So now, you have your themes &gt; epics &gt; stories/tasks/bugs (and your stories are pointed) and you are ready to plan a <strong>sprint</strong>.</p>
+<p>I understand why they are called &ldquo;sprints&rdquo;&mdash;they are a short period of time; they represent a short term goal&mdash;though I wish the term was &ldquo;iteration&rdquo; or &ldquo;period&rdquo;. Constantly &ldquo;sprinting&rdquo; is kinda exhausting. Building a great software product is really more of a long-distance sort of run.</p>
+<p>That said, sprints are the frequency of your planning and agile rituals. You don&rsquo;t want to plan for sprints that are too long (a month-long sprint is really the maximum) or too short (less than a week would be kinda insane). I&rsquo;m a fan of 2 or 3 week sprints, but it really does depend on the team.</p>
+<p>Sprints have three types of regular meetings (rituals) that define their cadence: sprint planning, standups, grooming meetings, and sprint retrospectives.</p>
+<h3 id="sprint-planning">Sprint Planning</h3>
+<p>At the start of each sprint, you want to bring the team together to determine the following:</p>
+<ul>
+<li>What is the start and end date of the sprint?</li>
+<li>Who is available for the sprint&mdash;and how much? (Plan for time off!)</li>
+<li>What are the goals of the sprint?What stories, tasks, and bugs should be included from the backlog?</li>
+<li>Who gets what stories as their assignments?At the end of sprint planning, you should have what amounts to a team contract regarding what you&rsquo;d like to complete in that period of time.</li>
+</ul>
+<h3 id="standups">Standups</h3>
+<p>The name <strong>standup</strong> comes from the idea that you shouldn&rsquo;t sit down for this quick meeting that should ideally last less than 15 minutes. You want to hold a standup everyday that you aren&rsquo;t planning or holding a retrospective&mdash;we don&rsquo;t want to meet so much that we don&rsquo;t have time to get things done.</p>
+<p>In a standup, you are just keeping each other up to date on your progress towards the sprint plan. There are three questions you may answer in your brief daily update:</p>
+<ul>
+<li>What I did yesterday&hellip;</li>
+<li>What do I plan to do today&hellip;</li>
+<li>What is blocking my work&hellip;</li>
+</ul>
+<p>I have yet to work with a team that is truly great at the timing of standups. My best attempt at getting a team to stick to the timing involved a 2 minute timer on my phone that would quack if the team member went over time. At least we got to laugh at the time-keeping device.</p>
+<p>The most important part of standups is learning the blockers and figuring out a way around those blockers.</p>
+<h3 id="grooming">Grooming</h3>
+<p>Another weird scrum word, <strong>grooming</strong> is the act of making sure your backlog is ready for the next planning session. Every sprint should have some time to work through negotiating the details of your stories to make sure you can point them and put them into an upcoming sprint.</p>
+<p>I recommend about an hour per week of sprint dedicated to grooming. If your team velocity allows, you could easily spend up to 3 hours grooming stories for future sprints.</p>
+<h3 id="sprint-retrospectives">Sprint Retrospectives</h3>
+<p>At the end of each sprint, the team should conduct a <strong>retrospective</strong> (AKA &ldquo;retros&rdquo;) and to talk through the following:</p>
+<ul>
+<li>What went well this sprint? (Celebrations)</li>
+<li>What could have gone better? (Blockers to the plan)</li>
+<li>What are we going to change going forward?</li>
+</ul>
+<p>High-functioning teams using scrum for product development will use this time for honest and reflective feedback.</p>
+<h3 id="demonstrations-with-stakeholders">Demonstrations with Stakeholders</h3>
+<p>Often tacked on to the end of the retrospective meetings, demos are the key to making sure you are doing the correct work and give your stakeholders a chance to add feedback. Stakeholder feedback should be captured as future epics, stories, tasks, and bugs.</p>
+<p>Demonstrations can be a mix of show and tell and usability testing with stakeholders actually trying out the feature while the team watches and takes notes.</p>
+<h2 id="optional-but-helpful-rituals">Optional (But Helpful) Rituals</h2>
+<h3 id="planning-retreat">Planning Retreat</h3>
+<p>You may find that you need to spend an extended time planning the roadmap with the team on a quarterly basis to build up a longer term roadmap and weed out stories that may never be addressed. Think of these sessions as extended and more intense grooming. You might even meet for 3-4 hours several times over the course of a week to talk through product vision and goals or two break down collected analytics and study of usability test artifacts.</p>
+<p>Don&rsquo;t plan a sprint over the top of these retreats. Use the time as a way to reset and get back to a shared vision. This is especially helpful for larger products that have multiple scrum teams that collaborate on separate components. Getting these teams together to hear presentations from all the teams involved is invaluable in creating a cohesive product.</p>
+<h3 id="pair-programming">Pair Programming</h3>
+<p>During any given sprint, you may choose to assign a story to more than a single developer to ensure knowledge sharing/skills or to just tackle a particularly difficult problem. Giving team members the freedom to work together rather than in isolation is a great way to foster creativity and a better final product.</p>
+<h2 id="when-is-the-scrum-project-complete">When is the Scrum Project Complete?</h2>
+<p>Software applications and website platforms tend to go through a software lifecycle that starts with investing in the product then transitioning to more of a sustain and maintain and eventually to deprecate and/or replace.</p>
+<p>Scrum is appropriate for organizations investing in their application.</p>
+</div>
+      
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  </div>
+  </article>
+
+    </div>
+  </div>
+
+  </div>
+
+              </main>
+                        
+          </div>
+        </div>
+        <div class="social-bar">
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        
+
+  <div class="region region--footer-top grid-full layout--pass--content-medium">
+    <div class="region--footer_top__inner">
+      <nav id="block-drupal-cms-olivero-footer-menu" class="block block-menu navigation menu--footer" aria-labelledby="block-drupal-cms-olivero-footer-menu-menu" role="navigation">
+            
+  <h2 class="visually-hidden block__title" id="block-drupal-cms-olivero-footer-menu-menu">Footer</h2>
+  
+        
+          <ul class="menu menu--level-1">
+            
+                          
+        
+        
+        <li class="menu__item menu__item--link menu__item--level-1">
+                    
+          <a href="" rel="open-consent-manager" class="menu__link menu__link--link menu__link--level-1">My privacy settings</a>
+
+          
+        </li>
+          </ul>
+  
+
+
+  </nav>
+
+    </div>
+  </div>
+
+        
+
+  <div class="region region--footer-bottom grid-full layout--pass--content-medium">
+    
+
+<div id="block-drupal-cms-olivero-powered" class="block block-system block-system-powered-by-block">
+  
+    
+    
+  <span>
+    Powered by    <a href="https://www.drupal.org">Drupal</a>
+    <span class="drupal-logo" role="img" aria-label="Drupal Logo">
+      <svg width="14" height="19" viewbox="0 0 42.15 55.08" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.75 11.73C25.87 7.86 22.18 4.16 21.08 0 20 4.16 16.28 7.86 12.4 11.73 6.59 17.54 0 24.12 0 34a21.08 21.08 0 1042.15 0c0-9.88-6.59-16.46-12.4-22.27zM10.84 35.92a14.13 14.13 0 00-1.65 2.62.54.54 0 01-.36.3h-.18c-.47 0-1-.92-1-.92-.14-.22-.27-.45-.4-.69l-.09-.19C5.94 34.25 7 30.28 7 30.28a17.42 17.42 0 012.52-5.41 31.53 31.53 0 012.28-3l1 1 4.72 4.82a.54.54 0 010 .72l-4.93 5.47zm10.48 13.81a7.29 7.29 0 01-5.4-12.14c1.54-1.83 3.42-3.63 5.46-6 2.42 2.58 4 4.35 5.55 6.29a3.08 3.08 0 01.32.48 7.15 7.15 0 011.3 4.12 7.23 7.23 0 01-7.23 7.25zM35 38.14a.84.84 0 01-.67.58h-.14a1.22 1.22 0 01-.68-.55 37.77 37.77 0 00-4.28-5.31l-1.93-2-6.41-6.65a54 54 0 01-3.84-3.94 1.3 1.3 0 00-.1-.15 3.84 3.84 0 01-.51-1v-.19a3.4 3.4 0 011-3c1.24-1.24 2.49-2.49 3.67-3.79 1.3 1.44 2.69 2.82 4.06 4.19a57.6 57.6 0 017.55 8.58A16 16 0 0135.65 34a14.55 14.55 0 01-.65 4.14z"></path>
+</svg>
+    </span>
+  </span>
+</div>
+
+  </div>
+
+      </div>
+    </footer>
+
+    <div class="overlay" data-drupal-selector="overlay"></div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/81","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"klaro":{"config":{"elementId":"klaro","storageMethod":"cookie","cookieName":"klaro","cookieExpiresAfterDays":30,"cookieDomain":"","groupByPurpose":true,"acceptAll":false,"hideDeclineAll":false,"hideLearnMore":false,"learnMoreAsButton":false,"additionalClass":"","htmlTexts":false,"privacyPolicy":"\/privacy-policy","services":[{"name":"cms","default":true,"title":"Drupal CMS","description":"Store data (e.g. cookie for user session) in your browser (required to use this website).","purposes":["cms"],"callbackCode":"","cookies":[["^[SESS|SSESS]","",""]],"required":true,"optOut":false,"onlyOnce":false,"translations":{"en":{"title":"Drupal CMS"}}},{"name":"klaro","default":true,"title":"Consent manager","description":"Klaro! Cookie \u0026 Consent manager saves your consent status in the browser.","purposes":["cms"],"callbackCode":"","cookies":[["klaro","",""]],"required":true,"optOut":false,"onlyOnce":false,"translations":{"en":{"title":"Consent manager"}}},{"name":"vimeo","default":false,"title":"Vimeo","description":"Vimeo is a video sharing platform by Vimeo, LLC (USA).","purposes":["external_content"],"callbackCode":"","cookies":[],"required":false,"optOut":false,"onlyOnce":false,"translations":{"en":{"title":"Vimeo"}}},{"name":"youtube","default":false,"title":"YouTube","description":"YouTube is an online video sharing platform owned by Google.","purposes":["external_content"],"callbackCode":"","cookies":[],"required":false,"optOut":false,"onlyOnce":false,"translations":{"en":{"title":"YouTube"}}}],"translations":{"en":{"consentModal":{"title":"Use of personal data and cookies","description":"Please choose the services and 3rd party applications we would like to use.\n","privacyPolicy":{"name":"privacy policy","text":"To learn more, please read our {privacyPolicy}.\n"}},"consentNotice":{"changeDescription":"There were changes since your last visit, please update your consent.","description":"We use cookies and process personal data for the following purposes: {purposes}.\n","learnMore":"Customize","privacyPolicy":{"name":"privacy policy"}},"ok":"Accept","save":"Save","decline":"Decline","close":"Close","acceptAll":"Accept all","acceptSelected":"Accept selected","service":{"disableAll":{"title":"Toggle all services","description":"Use this switch to enable\/disable all services."},"optOut":{"title":"(opt-out)","description":"This service is loaded by default (opt-out possible)."},"required":{"title":"(always required)","description":"This service is always required."},"purposes":"Purposes","purpose":"Purpose"},"contextualConsent":{"acceptAlways":"Always","acceptOnce":"Yes (this time)","description":"Load external content supplied by {title}?"},"poweredBy":"Powered by Klaro!","privacyPolicy":{"name":"privacy policy","text":"To learn more, please read our {privacyPolicy}.\n"},"purposes":{"cms":"Functional","advertising":"Advertising and Marketing","analytics":"Analytics","livechat":"Live chat","security":"Security","styling":"Styling","external_content":"Embedded external content"}}},"styling":{"theme":["light"]}},"dialog_mode":"silent","show_toggle_button":false,"toggle_button_icon":null,"show_close_button":false,"exclude_urls":[],"disable_urls":[]},"user":{"uid":0,"permissionsHash":"188d00f62f08d205033e1277d1a0c00b96a1ce38d8fe1092e00df7083c7c13d8"}}</script>
+<script src="/sites/default/files/js/js_CfiOYniZpJmI1dHC1fOqoHFZwGR0JvjclV5P1afHckY.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=drupal_cms_olivero&amp;include=eJzLzkksytfPBpE6-TmZZalAXnpOflJijm5xSWVOZl46XDgvsSwzPbEkMz9Pt6AoMzexqBIA5UsYIQ"></script>
+
+  </drupal-big-pipe-scripts-bottom-marker></drupal-big-pipe-scripts-bottom-marker></body>
+</html>

@@ -1,0 +1,20 @@
+name: 'Tome'
+type: module
+description: 'Everything you need to do everything statically.'
+core: 8.x
+core_version_requirement: ^9 || ^10 || ^11
+package: Tome
+dependencies:
+  - tome:tome_sync
+  - tome:tome_static
+test_dependencies:
+  - redirect:redirect
+  - pathauto:pathauto
+  - token:token
+  - ctools:ctools
+  - book:book
+
+# Information added by Drupal.org packaging script on 2024-11-23
+version: '8.x-1.13'
+project: 'tome'
+datestamp: 1732382853

@@ -1,0 +1,14 @@
+name: Remote Video
+type: Drupal CMS
+description: 'Configures display options for remote video.'
+recipes:
+  - core/recipes/remote_video_media_type
+config:
+  strict: false
+  actions:
+    core.entity_form_display.media.remote_video.*:
+      hideComponents:
+        - uid
+        - langcode
+        - path
+        - created

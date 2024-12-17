@@ -1,0 +1,11 @@
+ai_content_suggestions.settings:
+  type: config_object
+  label: 'AI Content Suggestions settings'
+  mapping:
+    plugins:
+      type: sequence
+      label: Plugins
+      orderby: key
+      model:
+        type: string
+        label: Model

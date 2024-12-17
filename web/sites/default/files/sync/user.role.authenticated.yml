@@ -1,0 +1,39 @@
+uuid: 405cfce2-f828-4e07-aab5-949e23b8ce2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - dashboard.dashboard.welcome
+  module:
+    - antibot
+    - captcha
+    - coffee
+    - dashboard
+    - editoria11y
+    - file
+    - honeypot
+    - klaro
+    - media
+    - node
+    - shortcut
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access coffee'
+  - 'access content'
+  - 'access shortcuts'
+  - 'bypass honeypot protection'
+  - 'delete own files'
+  - 'mark as hidden in editoria11y'
+  - 'skip CAPTCHA'
+  - 'skip antibot'
+  - 'use klaro'
+  - 'view editoria11y checker'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view welcome dashboard'

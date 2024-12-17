@@ -1,0 +1,25 @@
+uuid: cb5c2936-9a5f-46d0-858f-47e6140c9a4b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: idEFDx1Ceqeihsw6WQZcrv11Wmrg9Qv9umeNOs3Qvp0
+label: 'User: Created - Awaiting Approval - Admin Notification'
+id: user_created_approval_admin
+param_map:
+  -
+    source: account
+    destination: field_related_user
+copied_fields:
+  from: false
+  reply_to: false
+  to: false
+  cc: false
+  bcc: false
+  subject: false
+  body_html: false
+  body_plain: false
+  attachments: false
+module: user
+key: register_pending_approval_admin
+easy_email_type: user_created_approval_admin

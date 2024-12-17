@@ -1,0 +1,4 @@
+views:
+  css:
+    theme:
+      css/components/views-exposed-form.css: { }

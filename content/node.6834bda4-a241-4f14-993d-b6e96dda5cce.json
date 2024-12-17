@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "6834bda4-a241-4f14-993d-b6e96dda5cce"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Redefining the inner\" city school\""
+        }
+    ],
+    "created": [
+        {
+            "value": "2007-09-05T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2007\/09\/05\/redefining-the-inner-city-school",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>There are schools in poor neighborhoods that are typically called \u201cinner city schools.\u201d These schools, we are told, harbor the most difficult students. These are schools that are euphemistically called diverse\u2013meaning \u201cnot white\u201d\u2013the new melting pot. These are the schools most likely to struggle to meet the federal and state mandates for adequate yearly progress\u2013or whatever the buzz word for \u201cfailing\u201d is this year.  These are the schools that have the least resources per student because of aging buildings and an indifferent tax base.<\/p><p>Only one thing stands out as a challenge to our presumptions, the schools are no longer located in the \u201cinner\u201d city.<\/p><p>These schools lie on the outer edge of the city\u2013an endless flat expanse of one story buildings, strip malls, and mid-to-late century ranch homes. This is the new \u201couter\u201d city school. Outside the boundaries of urban renewal and well inside the boundaries of urban growth are neighborhoods that are forgotten when bond measures are needed for revitalizing school buildings and restoring community centers.<\/p><p>The inner city schools in Portland, Oregon have begun the arduous process of revitalization through specialization. Nearly every school is a magnet school, or a charter school, or a focus area school. Interested in the Arts? Go to Da Vinci or Buckman. Interested in technology? You can sign up at Benson or George. Want an international education? Perhaps you will find Franklin\u2019s international baccalaureate of interest or Grant\u2019s Japanese program. Care about the environment? Sunnyside\u2019s environmental program will nurture that aspect of your child.<\/p><p>As a parent in Portland, you hear about all of these programs. Many of them cause you angst and no small amount of jealousy at the unequal treatment some children are able to receive based on the luck of the lottery or the convenient\u2013if somewhat more costly\u2013location of their home.<\/p><p>What you don\u2019t hear about as a Portland parent is the outer city schools and their programs. David Douglas is in Portland, but not the Portland Public System. So is Centennial. Both of these schools lie in the far away land called \u201cEast Portland\u201d or \u201cthe East side.\u201d  The part of Multnomah county that doesn\u2019t seem to want to vote with the rest of the urbanites come election time. The red menace in a decidedly blue landscape.<\/p><p>Why would they vote for more money in schools? Do they see this money flowing into their neighborhoods? Is there revitalization to be had in an area so far from the nearest freeway and steady middle class jobs?<\/p>",
+            "format": "content_format",
+            "processed": "<p>There are schools in poor neighborhoods that are typically called \u201cinner city schools.\u201d These schools, we are told, harbor the most difficult students. These are schools that are euphemistically called diverse\u2013meaning \u201cnot white\u201d\u2013the new melting pot. These are the schools most likely to struggle to meet the federal and state mandates for adequate yearly progress\u2013or whatever the buzz word for \u201cfailing\u201d is this year.  These are the schools that have the least resources per student because of aging buildings and an indifferent tax base.<\/p>\n<p>Only one thing stands out as a challenge to our presumptions, the schools are no longer located in the \u201cinner\u201d city.<\/p>\n<p>These schools lie on the outer edge of the city\u2013an endless flat expanse of one story buildings, strip malls, and mid-to-late century ranch homes. This is the new \u201couter\u201d city school. Outside the boundaries of urban renewal and well inside the boundaries of urban growth are neighborhoods that are forgotten when bond measures are needed for revitalizing school buildings and restoring community centers.<\/p>\n<p>The inner city schools in Portland, Oregon have begun the arduous process of revitalization through specialization. Nearly every school is a magnet school, or a charter school, or a focus area school. Interested in the Arts? Go to Da Vinci or Buckman. Interested in technology? You can sign up at Benson or George. Want an international education? Perhaps you will find Franklin\u2019s international baccalaureate of interest or Grant\u2019s Japanese program. Care about the environment? Sunnyside\u2019s environmental program will nurture that aspect of your child.<\/p>\n<p>As a parent in Portland, you hear about all of these programs. Many of them cause you angst and no small amount of jealousy at the unequal treatment some children are able to receive based on the luck of the lottery or the convenient\u2013if somewhat more costly\u2013location of their home.<\/p>\n<p>What you don\u2019t hear about as a Portland parent is the outer city schools and their programs. David Douglas is in Portland, but not the Portland Public System. So is Centennial. Both of these schools lie in the far away land called \u201cEast Portland\u201d or \u201cthe East side.\u201d  The part of Multnomah county that doesn\u2019t seem to want to vote with the rest of the urbanites come election time. The red menace in a decidedly blue landscape.<\/p>\n<p>Why would they vote for more money in schools? Do they see this money flowing into their neighborhoods? Is there revitalization to be had in an area so far from the nearest freeway and steady middle class jobs?<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "1e83a091090197765c3cb7a2beffee73",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

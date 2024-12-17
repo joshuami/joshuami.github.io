@@ -1,0 +1,10 @@
+{
+  "name": "drupal/ai_ai_provider_anthropic",
+  "description": "Anthropic provider implementation for the AI module for Drupal",
+  "type": "drupal-module",
+  "require": {
+    "drupal/ai": "^1.0.0-beta1",
+    "drupal/key": "^1.18",
+    "wpai-inc/anthropic-sdk-php": ">=0.1.0"
+  }
+}

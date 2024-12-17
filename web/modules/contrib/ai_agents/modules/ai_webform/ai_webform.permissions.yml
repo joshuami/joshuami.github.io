@@ -1,0 +1,4 @@
+create ai assisted webforms:
+  title: 'Create AI Assisted Webforms'
+  description: 'This permission allows users to create AI assisted webforms.'
+  restrict access: true

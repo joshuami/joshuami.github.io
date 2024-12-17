@@ -1,0 +1,91 @@
+{
+    "uuid": [
+        {
+            "value": "e82fb696-0b57-4719-b214-7c55699ad0f9"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "user_created_by_admin",
+            "target_type": "easy_email_type",
+            "target_uuid": "8d79f51d-a554-4260-8f30-e3747bb30e19"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-12-16T22:58:25+00:00"
+        }
+    ],
+    "revision_user": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log_message": [],
+    "label": [
+        {
+            "value": "User: Created - By Administrator"
+        }
+    ],
+    "key": [],
+    "creator_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "recipient_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "recipient_address": [
+        {
+            "value": "josh+primary@joshuami.com"
+        }
+    ],
+    "cc_uid": [],
+    "cc_address": [],
+    "bcc_uid": [],
+    "bcc_address": [],
+    "from_name": [],
+    "from_address": [],
+    "reply_to": [],
+    "subject": [
+        {
+            "value": "An administrator created an account for you at Drupal CMS"
+        }
+    ],
+    "body_html": [
+        {
+            "value": "<p>joshuami,<\/p><p>A site administrator at Drupal CMS has created an account for you. You may now log in by clicking this link:<\/p><p><a class=\"button\" href=\"\">Log in and set your password<\/a><\/p><p>This link can only be used once to log in and will lead you to a page where you can set your password.<\/p><p>After setting your password, you will be able to log in at <a href=\"https:\/\/joshuami2.ddev.site\/user\">https:\/\/joshuami2.ddev.site\/user<\/a> in the future using:<\/p><p>username: joshuami<br>password: Your password<\/p><p>-- &nbsp;Drupal CMS team<\/p>",
+            "format": "easy_email",
+            "processed": "<p>joshuami,<\/p><p>A site administrator at Drupal CMS has created an account for you. You may now log in by clicking this link:<\/p><p><a class=\"button\" href>Log in and set your password<\/a><\/p><p>This link can only be used once to log in and will lead you to a page where you can set your password.<\/p><p>After setting your password, you will be able to log in at <a href=\"https:\/\/joshuami2.ddev.site\/user\">https:\/\/joshuami2.ddev.site\/user<\/a> in the future using:<\/p><p>username: joshuami<br>password: Your password<\/p><p>-- &nbsp;Drupal CMS team<\/p>"
+        }
+    ],
+    "body_plain": [
+        {
+            "value": "joshuami,\r\n\r\nA site administrator at Drupal CMS has created an account for you. You may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n\r\n\r\nThis link can only be used once to log in and will lead you to a page where you can set your password.\r\n\r\nAfter setting your password, you will be able to log in at https:\/\/joshuami2.ddev.site\/user in the future using:\r\n\r\nusername: joshuami\r\npassword: Your password\r\n\r\n--  Drupal CMS team"
+        }
+    ],
+    "inbox_preview": [],
+    "attachment": [],
+    "attachment_path": [],
+    "created": [
+        {
+            "value": "2024-12-16T22:58:25+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T22:58:25+00:00"
+        }
+    ],
+    "sent": [
+        {
+            "value": "2024-12-16T22:58:26+00:00"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+ai_content_types.ai_assisted_generation:
+  path: '/admin/structure/types/add-ai-assisted'
+  defaults:
+    _form: '\Drupal\ai_content_types\Form\AIContentTypes'
+    _title: 'Generate Content Type with AI'
+  requirements:
+    _permission: 'create ai assisted content types'
+ai_content_types.ai_assisted_blueprint:
+  path: '/admin/structure/types/ai-blueprint'
+  defaults:
+    _form: '\Drupal\ai_content_types\Form\ContentTypeBlueprint'
+    _title: 'Confirm AI Assisted Blueprint'
+  requirements:
+    _permission: 'create ai assisted content types'

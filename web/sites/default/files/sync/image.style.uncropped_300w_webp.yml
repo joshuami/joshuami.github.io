@@ -1,0 +1,17 @@
+uuid: a727d4f2-7514-4539-be80-6a930c4a4bfd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: njEOR8ynVZy1U386BFJpsuVlWosMo0JazATSgT9Lkg0
+name: uncropped_300w_webp
+label: 'Uncropped | 300w | WebP'
+effects:
+  ac265dad-e2f4-4db8-bf22-0c4f930df865:
+    uuid: ac265dad-e2f4-4db8-bf22-0c4f930df865
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false

@@ -1,0 +1,6 @@
+ai_content_types.type_add:
+  route_name: ai_content_types.ai_assisted_generation
+  title: 'Generate with AI'
+  appears_on:
+    - entity.node_type.collection
+  weight: 100

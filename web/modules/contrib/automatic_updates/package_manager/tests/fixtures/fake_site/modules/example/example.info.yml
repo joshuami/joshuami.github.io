@@ -1,0 +1,8 @@
+# This file should be staged.
+name: Example
+type: module
+
+# Information added by Drupal.org packaging script on 2024-08-07
+version: '3.1.6'
+project: 'automatic_updates'
+datestamp: 1723058619

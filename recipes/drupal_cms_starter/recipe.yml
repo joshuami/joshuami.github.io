@@ -1,0 +1,130 @@
+name: Drupal CMS
+description: Applies all the basic Drupal CMS recipes.
+type: Site
+recipes:
+  - core/recipes/core_recommended_maintenance
+  - core/recipes/core_recommended_performance
+  - core/recipes/document_media_type
+  - drupal_cms_admin_ui
+  - drupal_cms_anti_spam
+  - drupal_cms_authentication
+  - drupal_cms_page
+  - drupal_cms_privacy_basic
+  - drupal_cms_remote_video
+  - drupal_cms_seo_basic
+  - easy_email_express
+install:
+  - automatic_updates
+  - automatic_updates_extensions
+  - dashboard
+  - drupal_cms_olivero
+  - menu_link_content
+  - olivero
+  - package_manager
+  - project_browser
+  # The rest of these are in Standard.
+  - inline_form_errors
+  - config
+  - menu_ui
+  - shortcut
+  - views_ui
+config:
+  # If the config we're importing already exists, we don't really care
+  # what it looks like.
+  strict: false
+  import:
+    drupal_cms_olivero: '*'
+    linkit:
+      - image.style.linkit_result_thumbnail
+    image:
+      - image.style.large
+      - image.style.thumbnail
+    node:
+      - views.view.content
+    olivero:
+      - core.date_format.olivero_medium
+    shortcut:
+      - shortcut.set.default
+    user:
+      # This view mode is only needed because Olivero expects it to exist
+      # in certain situations.
+      - core.entity_view_mode.user.compact
+      - views.view.user_admin_people
+  actions:
+    package_manager.settings:
+      simpleConfigUpdate:
+        additional_trusted_composer_plugins:
+          # This is indirectly added by `drupal/core-dev`.
+          - tbachert/spi
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        allowed_projects:
+          recipes:
+            - drupal_cms_events
+            - drupal_cms_blog
+            - drupal_cms_case_study
+            - drupal_cms_forms
+            - drupal_cms_news
+            - drupal_cms_person
+            - drupal_cms_project
+            - drupal_cms_seo_tools
+            - drupal_cms_accessibility_tools
+        enabled_sources:
+          - drupalorg_jsonapi
+          - recipes
+        allow_ui_install: true
+    system.site:
+      simpleConfigUpdate:
+        name: 'Drupal CMS'
+        page.front: '/home'
+    system.theme:
+      simpleConfigUpdate:
+        default: drupal_cms_olivero
+    user.role.content_editor:
+      grantPermissionsForEachMediaType:
+        - 'create %bundle media'
+        - 'delete any %bundle media'
+        - 'edit any %bundle media'
+      grantPermissions:
+        - 'access administration pages'
+        - 'access content overview'
+        - 'access contextual links'
+        - 'access media overview'
+        - 'access navigation'
+        # We need this permission because Toolbar is enabled by Gin Toolbar.
+        - 'access toolbar'
+        - 'administer url aliases'
+        - 'create url aliases'
+        - 'view own unpublished media'
+        - 'delete own files'
+        - 'revert all revisions'
+        - 'view all revisions'
+        - 'view the administration theme'
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    user.role.authenticated:
+      grantPermissions:
+        - 'access shortcuts'
+        - 'delete own files'
+        - 'view own unpublished content'
+        - 'view welcome dashboard'
+    user.settings:
+      simpleConfigUpdate:
+        verify_mail: true
+        register: admin_only
+        cancel_method: user_cancel_block
+    announcements_feed.settings:
+      simpleConfigUpdate:
+        limit: 2
+    core.menu.static_menu_link_overrides:
+      simpleConfigUpdate:
+        definitions.announcements_feed__announcement:
+          menu_name: admin
+          parent: system.admin
+          weight: 0
+          expanded: false
+          enabled: false
+    automatic_updates.settings:
+      simpleConfigUpdate:
+        allow_core_minor_updates: true

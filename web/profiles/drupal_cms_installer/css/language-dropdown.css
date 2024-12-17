@@ -1,0 +1,77 @@
+.cms-installer__language-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+
+  @media (max-width: 48em) {
+    font-size: var(--gin-font-size-s);
+  }
+
+  &::before,
+  &::after {
+    display: inline-block;
+    aspect-ratio: 1;
+    content: "";
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  &::before {
+    -webkit-mask-image: url('../images/translate.svg');
+    mask-image: url('../images/translate.svg');
+    width: 20px;
+  }
+
+  &::after {
+    -webkit-mask-image: url('../images/chevron-down.svg');
+    mask-image: url('../images/chevron-down.svg');
+    width: 14px;
+  }
+}
+
+.cms-installer__language {
+  position: relative; /* Anchor dropdown. */
+}
+
+.cms-installer__language-dropdown {
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-end: 0;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  inline-size: min(90vw, 1000px);
+  padding: var(--gin-spacing-m);
+  background: white;
+  border: solid 1px transparent;
+  border-radius: var(--gin-border-m);
+  box-shadow:  var(--gin-shadow-l2);
+  max-block-size: 80dvh;
+  overflow: auto;
+  transition: all 0.2s;
+}
+
+.cms-installer__language-button[aria-expanded="true"] + .cms-installer__language-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cms-installer__language-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20ch), 1fr));
+  gap: .5rem;
+}

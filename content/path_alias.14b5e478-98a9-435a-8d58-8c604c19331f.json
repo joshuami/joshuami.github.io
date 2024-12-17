@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "14b5e478-98a9-435a-8d58-8c604c19331f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/f7b5b15b-bd1e-4286-b932-2e5b722659ef"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/accessibility-tools-demo-page"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

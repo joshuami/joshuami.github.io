@@ -1,0 +1,26 @@
+name: 'Case studies'
+type: Drupal CMS
+description: 'Adds a case study content type that provides detailed information about a subject to the intended audience.'
+recipes:
+  - drupal_cms_content_type_base
+  - core/recipes/tags_taxonomy
+install:
+  - link
+  - pathauto
+  - shortcut
+config:
+  # Treat all field storages strictly, since they influence the database layout.
+  strict:
+    - field.storage.node.field_case_study__client_link
+    - field.storage.node.field_case_study__client_logo
+    - field.storage.node.field_case_study__client_name
+  import:
+    shortcut:
+      - shortcut.set.default
+  actions:
+    user.role.content_editor:
+      grantPermissions:
+        - 'create case_study content'
+        - 'delete case_study revisions'
+        - 'delete any case_study content'
+        - 'edit any case_study content'

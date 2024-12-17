@@ -1,0 +1,19 @@
+uuid: 9b84a120-2ea0-41ab-8343-9df194e97621
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: oeQt9s0yi1-vGFp9gbQ2782eoWzK5_vVSFcUXbsjZFg
+name: social_media_facebook
+label: 'Social media - Facebook'
+effects:
+  338d92b4-4580-4118-aa11-96fb253e343e:
+    uuid: 338d92b4-4580-4118-aa11-96fb253e343e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 630
+      crop_type: focal_point

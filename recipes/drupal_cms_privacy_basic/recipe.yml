@@ -1,0 +1,36 @@
+name: Basic Privacy
+description: Sets up a site with basic privacy features like consent management and remote content blocking.
+type: Drupal CMS
+recipes:
+  - drupal_cms_page
+install:
+  - klaro
+  - menu_link_attributes
+  - menu_link_content
+config:
+  strict: false
+  import:
+    klaro: '*'
+    system:
+      - system.menu.footer
+  actions:
+    klaro.settings:
+      simpleConfigUpdate:
+        auto_decorate_final_html: true
+        library.group_by_purpose: true
+        library.cookie_expires_after_days: 30
+    klaro.texts:
+      simpleConfigUpdate:
+        consentModal.privacyPolicy.url: 'internal:/privacy-policy'
+    klaro.klaro_app.cms:
+      simpleConfigUpdate:
+        label: 'Drupal CMS'
+    menu_link_attributes.config:
+      simpleConfigUpdate:
+        attributes.rel:
+          label: Relationship
+          description: 'The "rel" attribute specifies the relationship between the current document and the linked document.'
+    user.role.anonymous:
+      grantPermission: 'use klaro'
+    user.role.authenticated:
+      grantPermission: 'use klaro'

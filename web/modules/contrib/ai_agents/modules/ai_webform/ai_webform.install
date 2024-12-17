@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains uninstall stuff.
+ */
+
+/**
+ * Removes deprecated module and replaces with AI Agents Form Integration.
+ */
+function ai_webform_update_13001(): void {
+  $module_to_uninstall = 'ai_webform';
+
+
+  /** @var \Drupal\Core\Extension\ModuleInstallerInterface $module_installer */
+  $module_installer = \Drupal::service('module_installer');
+  $module_handler = \Drupal::moduleHandler();
+
+  // Install the replacement if it does not exist.
+  if (!$module_handler->moduleExists('ai_agents_form_integration')) {
+    $module_installer->install(['ai_agents_form_integration']);
+
+    \Drupal::messenger()->addMessage(t('AI Agents Form Integration module enabled to replace deprecated AI webform module.'));
+  }
+
+  // Uninstall the module.
+  $module_installer->uninstall([$module_to_uninstall]);
+  \Drupal::messenger()->addMessage(t('The deprecated module AI Webform module has been uninstalled.'));
+}

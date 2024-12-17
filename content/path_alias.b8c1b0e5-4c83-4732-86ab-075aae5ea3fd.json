@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "b8c1b0e5-4c83-4732-86ab-075aae5ea3fd"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/40"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/https:\/\/joshuami.com\/2016\/01\/05\/drupalorg-2015-year-in-review"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

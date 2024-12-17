@@ -1,0 +1,4 @@
+create ai assisted views:
+  title: 'Create AI Assisted Views'
+  description: 'This permission allows users to create AI assisted views.'
+  restrict access: true

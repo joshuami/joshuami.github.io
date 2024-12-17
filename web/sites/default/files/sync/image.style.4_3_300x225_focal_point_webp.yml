@@ -1,0 +1,19 @@
+uuid: ecd16b54-bdf1-4400-982f-13e825c5528b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: WgNzhTPW9yhsEIlIOpBiEDTsTKFntIFzEDm0medTrY0
+name: 4_3_300x225_focal_point_webp
+label: '4:3 | 300x225 | Focal Point | WebP'
+effects:
+  d89720e6-3767-4ce6-a282-f43cf41a063c:
+    uuid: d89720e6-3767-4ce6-a282-f43cf41a063c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 225
+      crop_type: focal_point

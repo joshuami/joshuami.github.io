@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "0deab5f4-54a0-4187-adb9-3927961be2b7"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Which OS Are You?"
+        }
+    ],
+    "created": [
+        {
+            "value": "2005-05-20T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2005\/05\/20\/which-os-are-you",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Woohoo!  I\u2019m not Windows Me!<\/p><p><a href=\"http:\/\/bbspot.com\/News\/2003\/01\/os_quiz.php\"><img src=\"http:\/\/www.bbspot.com\/Images\/News_Features\/2003\/01\/os_quiz\/redhat.jpg\" alt=\"You are Red Hat Linux. You're tops among your peers, but still get no respect from them.  It's all right with you.  You have your sights set higher.\" \/>Which OS are You?<\/a><\/p><p><a href=\"http:\/\/bbspot.com\/News\/2003\/01\/os_quiz_all.html\">See the other possibilities<\/a>.<\/p>",
+            "format": "content_format",
+            "processed": "<p>Woohoo!  I\u2019m not Windows Me!<\/p>\n<p><a href=\"http:\/\/bbspot.com\/News\/2003\/01\/os_quiz.php\"><img src=\"http:\/\/www.bbspot.com\/Images\/News_Features\/2003\/01\/os_quiz\/redhat.jpg\" alt=\"You are Red Hat Linux. You're tops among your peers, but still get no respect from them.  It's all right with you.  You have your sights set higher.\">Which OS are You?<\/a><\/p>\n<p><a href=\"http:\/\/bbspot.com\/News\/2003\/01\/os_quiz_all.html\">See the other possibilities<\/a>.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "8deb365341b87ae0886f210bd421e11e",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

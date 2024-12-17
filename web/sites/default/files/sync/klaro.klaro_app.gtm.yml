@@ -1,0 +1,24 @@
+uuid: 812225b4-fb29-495a-ac8a-e07ca6e7a249
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: YU-m0m2InQbh0ItutgOeQLS095yTOegQof72qSnyv7A
+id: gtm
+label: 'Google Tag Manager'
+description: 'Manages and deploys marketing tags.'
+default: false
+required: false
+opt_out: false
+only_once: false
+info_url: 'https://marketingplatform.google.com/intl/de/about/tag-manager/'
+privacy_policy_url: 'https://policies.google.com/privacy'
+purposes:
+  - advertising
+cookies: {  }
+callback_code: ''
+javascripts: {  }
+wrapper_identifier: {  }
+attachments:
+  - gtm
+weight: 2

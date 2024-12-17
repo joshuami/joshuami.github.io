@@ -1,0 +1,25 @@
+uuid: 161ec612-0a0f-4c9b-9a40-f7207ee851a0
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: vMEBh7T0HmYihgl-yrtSitdRFrJBTQWFZovpHAClmCg
+id: threads
+label: 'Threads by Instagram'
+description: 'Threads is a social media platform by Meta Platforms, Inc (USA).'
+default: false
+required: false
+opt_out: false
+only_once: false
+info_url: 'https://about.instagram.com/threads'
+privacy_policy_url: 'https://about.instagram.com/safety/privacy'
+purposes:
+  - external_content
+cookies: {  }
+callback_code: ''
+javascripts:
+  - www.threads.net
+wrapper_identifier:
+  - text-post-media
+attachments: {  }
+weight: 0

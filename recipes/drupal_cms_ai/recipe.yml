@@ -1,0 +1,46 @@
+name: AI Support
+type: Drupal CMS
+description: 'Adds possibility to have an admin chatbot with agents and helps with generating image alt text.'
+install:
+  - key
+  - block
+  - taxonomy
+  - ai
+  - ai_provider_openai
+  - ai_provider_anthropic
+  - ai_image_alt_text
+  - ai_assistant_api
+  - ai_chatbot
+  - ai_agents
+  - ai_simple_provider_installer
+  - menu_link_content
+recipes:
+  - core/recipes/content_editor_role
+config:
+  import:
+    ai_image_alt_text: '*'
+    ai_agents: '*'
+  actions:
+    ai_simple_provider_installer.settings:
+      simpleConfigUpdate:
+        redirect_route: 'dashboard'
+    block.block.ai_chatbot:
+      placeBlockInAdminTheme:
+        region:
+          gin: content
+          claro: content
+        default_region: content
+        plugin: ai_chatbot_block
+        settings:
+          id: ai_chatbot_block
+          label: 'Drupal Agent Chatbot'
+          label_display: '0'
+          provider: ai_chatbot
+          ai_assistant: drupal_agent_assistant
+          bot_name: 'Drupal Agent'
+          stream: 0
+          default_avatar: /core/misc/druplicon.png
+          first_message: 'Hello! How can I assist you today?'
+          show_structured_results: 1
+    user.role.content_editor:
+      grantPermission: 'generate ai alt tags'

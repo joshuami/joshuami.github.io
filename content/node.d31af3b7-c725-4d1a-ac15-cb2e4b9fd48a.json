@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "d31af3b7-c725-4d1a-ac15-cb2e4b9fd48a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Campaign Monitor strikes a chord."
+        }
+    ],
+    "created": [
+        {
+            "value": "2007-09-18T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2007\/09\/18\/campaign-monitor-strikes-a-chord",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><a href=\"http:\/\/campaignmonitor.cmail2.com\/e\/247188\/xt64iir\/\">Campaign Monitor\u2019s September 2007 Newsletter<\/a> is packed with great stuff. Besides the design gallery, which is always a treat, the newsletter highlights <a href=\"http:\/\/www.campaignmonitor.com\/blog\/archives\/2007\/09\/why_we_need_web_standards_supp_1.html\">David Griener\u2019s treatise on the state of email standards<\/a> (great read) and throws out an article on <a href=\"http:\/\/www.campaignmonitor.com\/blog\/archives\/2007\/08\/improve_your_deliverability_wi_1.html\">email authentication<\/a>\u2013which is so very timely. Don\u2019t get me started on the new suppression list feature\u2013handy\u2013and the new women\u2019s t-shirts! (Okay, so I\u2019m not really in need of the women\u2019s t-shirts, but I\u2019m sure they make someone happy.)<\/p>",
+            "format": "content_format",
+            "processed": "<p><a href=\"http:\/\/campaignmonitor.cmail2.com\/e\/247188\/xt64iir\/\">Campaign Monitor\u2019s September 2007 Newsletter<\/a> is packed with great stuff. Besides the design gallery, which is always a treat, the newsletter highlights <a href=\"http:\/\/www.campaignmonitor.com\/blog\/archives\/2007\/09\/why_we_need_web_standards_supp_1.html\">David Griener\u2019s treatise on the state of email standards<\/a> (great read) and throws out an article on <a href=\"http:\/\/www.campaignmonitor.com\/blog\/archives\/2007\/08\/improve_your_deliverability_wi_1.html\">email authentication<\/a>\u2013which is so very timely. Don\u2019t get me started on the new suppression list feature\u2013handy\u2013and the new women\u2019s t-shirts! (Okay, so I\u2019m not really in need of the women\u2019s t-shirts, but I\u2019m sure they make someone happy.)<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "8e825d81e0c7a1767779ba5eea660cd2",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

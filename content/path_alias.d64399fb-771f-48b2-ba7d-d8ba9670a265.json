@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "d64399fb-771f-48b2-ba7d-d8ba9670a265"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/55"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/https:\/\/joshuami.com\/2007\/10\/22\/busy-weekend"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

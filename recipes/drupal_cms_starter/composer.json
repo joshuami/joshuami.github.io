@@ -1,0 +1,31 @@
+{
+    "name": "drupal/drupal_cms_starter",
+    "description": "Sets up a Drupal CMS site with useful features and sample content.",
+    "type": "drupal-recipe",
+    "license": ["GPL-2.0-or-later"],
+    "require": {
+        "drupal/automatic_updates": "^3.1.6",
+        "drupal/core": ">=10.3",
+        "drupal/dashboard": "^2-beta1",
+        "drupal/drupal_cms_admin_ui": "~1.0.0-rc1",
+        "drupal/drupal_cms_anti_spam": "~1.0.0-rc1",
+        "drupal/drupal_cms_authentication": "~1.0.0-rc1",
+        "drupal/drupal_cms_olivero": "~1.0.0-rc1",
+        "drupal/drupal_cms_page": "~1.0.0-rc1",
+        "drupal/drupal_cms_privacy_basic": "~1.0.0-rc1",
+        "drupal/drupal_cms_remote_video": "~1.0.0-rc1",
+        "drupal/drupal_cms_search": "~1.0.0-rc1",
+        "drupal/drupal_cms_seo_basic": "~1.0.0-rc1",
+        "drupal/easy_email_express": "^1.0.2",
+        "drupal/pathauto": "^1.13",
+        "drupal/project_browser": "^2-alpha6"
+    },
+    "suggest": {
+        "drupal/drupal_cms_blog": "Sets up a basic blog, with tagging.",
+        "drupal/drupal_cms_case_study": "Adds a case study content type that provides detailed information about a subject to the intended audience.",
+        "drupal/drupal_cms_events": "A content type and view to help you manage events.",
+        "drupal/drupal_cms_news": "Adds a news content type with an overview page and related news items.",
+        "drupal/drupal_cms_person": "Adds a person profile content type that provides information about a person.",
+        "drupal/drupal_cms_project": "Adds a project content type that provides information about an example of work to the intended audience."
+    }
+}

@@ -1,0 +1,13 @@
+ai_webform.batch_redirect:
+  path: '/admin/webform/batch-redirect'
+  defaults:
+    _controller: '\Drupal\ai_webform\Controller\BatchRedirect::startRedirect'
+  requirements:
+    _permission: 'create ai assisted webforms'
+ai_webform.ai_assisted_blueprint:
+  path: '/admin/structure/webform/ai-blueprint'
+  defaults:
+    _form: '\Drupal\ai_webform\Form\WebformBlueprint'
+    _title: 'Confirm AI Assisted Blueprint'
+  requirements:
+    _permission: 'create ai assisted webforms'

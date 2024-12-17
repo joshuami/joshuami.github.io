@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16_9_960x540_focal_point_webp
+    - image.style.3_4_504x672_focal_point_webp
+    - image.style.3_4_708x944_focal_point_webp
+  theme:
+    - olivero
+id: hero_large
+label: 'Hero Large'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: 16_9_960x540_focal_point_webp
+    breakpoint_id: olivero.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: 3_4_708x944_focal_point_webp
+    breakpoint_id: olivero.sm
+    multiplier: 1x
+breakpoint_group: olivero
+fallback_image_style: 3_4_504x672_focal_point_webp

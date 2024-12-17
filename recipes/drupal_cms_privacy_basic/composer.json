@@ -1,0 +1,12 @@
+{
+    "name": "drupal/drupal_cms_privacy_basic",
+    "description": "Sets up a site with basic privacy features like consent management and remote content blocking.",
+    "type": "drupal-recipe",
+    "license": ["GPL-2.0-or-later"],
+    "require": {
+        "drupal/core": ">=10.3",
+        "drupal/drupal_cms_page": "~1.0.0-rc1",
+        "drupal/klaro": "^3-rc10",
+        "drupal/menu_link_attributes": "^1.5"
+    }
+}

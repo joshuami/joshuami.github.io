@@ -1,0 +1,136 @@
+uuid: 28346795-9d31-4175-8eaa-4a37e434b943
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog.body
+    - field.field.node.blog.feeds_item
+    - field.field.node.blog.field_description
+    - field.field.node.blog.field_featured_image
+    - field.field.node.blog.field_seo_description
+    - field.field.node.blog.field_seo_image
+    - field.field.node.blog.field_seo_title
+    - field.field.node.blog.field_tags
+    - node.type.blog
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          2e41f7bc-ca70-4d22-9170-baf2357d1c92:
+            uuid: 2e41f7bc-ca70-4d22-9170-baf2357d1c92
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          4e73d7d9-e495-4c50-ba1e-a71e3dcced08:
+            uuid: 4e73d7d9-e495-4c50-ba1e-a71e3dcced08
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          e02d3823-ef61-4b11-ae9b-6eec0fff3534:
+            uuid: e02d3823-ef61-4b11-ae9b-6eec0fff3534
+            region: content
+            configuration:
+              id: 'extra_field_block:node:blog:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 4
+            additional: {  }
+          47316592-c04d-4ade-975a-1a7075b4b026:
+            uuid: 47316592-c04d-4ade-975a-1a7075b4b026
+            region: content
+            configuration:
+              id: 'field_block:node:blog:field_featured_image'
+              label: 'Featured image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: 1_1_300x300_focal_point_webp
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: Rh5o2oM8aHZa6Bf-miNOAyymnfxyqEIpX15Se_5rKEg
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: small
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  body: true
+  feeds_item: true
+  field_seo_description: true
+  field_seo_image: true
+  field_seo_title: true
+  langcode: true

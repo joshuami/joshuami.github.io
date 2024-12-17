@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "75b9c157-b50e-4c25-b614-cd58be239a9d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/60"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/https:\/\/joshuami.com\/2007\/09\/25\/terms-wordpress-2-3"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

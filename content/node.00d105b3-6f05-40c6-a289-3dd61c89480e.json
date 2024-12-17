@@ -1,0 +1,101 @@
+{
+    "uuid": [
+        {
+            "value": "00d105b3-6f05-40c6-a289-3dd61c89480e"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page",
+            "target_type": "node_type",
+            "target_uuid": "9e61234e-a646-4b64-a27f-cf0e9ffe8631"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T22:52:11+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": false
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Privacy policy"
+        }
+    ],
+    "created": [
+        {
+            "value": "2024-10-17T11:25:35+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T22:52:11+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/privacy-policy",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<h2>This content needs to be edited before publishing<\/h2><p>Please note that your site requires a privacy statement.<\/p>",
+            "format": "content_format",
+            "processed": "<h2>This content needs to be edited before publishing<\/h2>\n<p>Please note that your site requires a privacy statement.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "field_description": [
+        {
+            "value": "Nothing here yet."
+        }
+    ],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

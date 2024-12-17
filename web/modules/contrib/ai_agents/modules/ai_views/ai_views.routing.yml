@@ -1,0 +1,14 @@
+ai_views.ai_assisted_generation:
+  path: '/admin/structure/views/add-ai-assisted'
+  defaults:
+    _form: '\Drupal\ai_views\Form\AiViews'
+    _title: 'Generate with AI'
+  requirements:
+    _permission: 'create ai assisted views'
+ai_views.ai_assisted_blueprint:
+  path: '/admin/structure/views/ai-blueprint'
+  defaults:
+    _form: '\Drupal\ai_views\Form\ViewsBlueprint'
+    _title: 'Confirm AI Assisted Blueprint'
+  requirements:
+    _permission: 'create ai assisted views'

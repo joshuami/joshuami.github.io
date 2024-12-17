@@ -1,0 +1,9 @@
+name: 'Package Manager Test Update'
+description: 'A module to test updates'
+type: module
+package: Testing
+
+# Information added by Drupal.org packaging script on 2024-08-07
+version: '3.1.6'
+project: 'automatic_updates'
+datestamp: 1723058619

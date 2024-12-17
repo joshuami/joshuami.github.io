@@ -1,0 +1,197 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.body
+    - field.field.node.person.field_description
+    - field.field.node.person.field_featured_image
+    - field.field.node.person.field_person__email
+    - field.field.node.person.field_person__phone_number
+    - field.field.node.person.field_person__role_job_title
+    - field.field.node.person.field_tags
+    - node.type.person
+  module:
+    - layout_builder
+    - layout_discovery
+    - media
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Content
+          context_mapping: {  }
+        components:
+          824da267-49b6-448a-92ed-4050be30b491:
+            uuid: 824da267-49b6-448a-92ed-4050be30b491
+            region: content
+            configuration:
+              id: 'field_block:node:person:field_featured_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: eager
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          4284cc23-a210-4381-8ced-00b7102010dc:
+            uuid: 4284cc23-a210-4381-8ced-00b7102010dc
+            region: content
+            configuration:
+              id: 'field_block:node:person:field_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          e53407f0-9221-46a4-b83e-3fdc66b01d03:
+            uuid: e53407f0-9221-46a4-b83e-3fdc66b01d03
+            region: content
+            configuration:
+              id: 'field_block:node:person:field_person__email'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: email_mailto
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          ef1343b2-5ab6-419d-8ab9-6800e806caa3:
+            uuid: ef1343b2-5ab6-419d-8ab9-6800e806caa3
+            region: content
+            configuration:
+              id: 'field_block:node:person:field_person__phone_number'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          ce25e6db-a33b-40dd-952e-ae5108368044:
+            uuid: ce25e6db-a33b-40dd-952e-ae5108368044
+            region: content
+            configuration:
+              id: 'field_block:node:person:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          407be3c7-f9db-40fc-a38a-142a9621ad6a:
+            uuid: 407be3c7-f9db-40fc-a38a-142a9621ad6a
+            region: content
+            configuration:
+              id: 'field_block:node:person:field_person__phone_number'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          3f9ac778-4537-4246-be45-31ee35669a36:
+            uuid: 3f9ac778-4537-4246-be45-31ee35669a36
+            region: content
+            configuration:
+              id: 'field_block:node:person:field_person__role_job_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }\
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_featured_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_person__email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_person__phone_number:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_person__role_job_title:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_description: true
+  langcode: true
+  links: true

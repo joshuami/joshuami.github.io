@@ -1,0 +1,13 @@
+{
+  "name": "drupal/ai_agents",
+  "description": "Allows agents to be used on the website.",
+  "type": "drupal-module",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/core": "^10.2 || ^11",
+    "drupal/ai": "^1.0.0-beta5"
+  }
+}

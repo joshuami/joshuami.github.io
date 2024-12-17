@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "0070c6d0-4e81-4c7a-8f81-ddd724463714"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/33"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/https:\/\/joshuami.com\/2016\/06\/08\/drupalci-continuous-integration-testing-for-drupalorg"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}
