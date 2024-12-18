@@ -877,8 +877,8 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 
 // Set the Tome directory
 
-$settings['tome_files_directory'] = '../docs';
-$settings['tome_static_directory'] = '../docs';
+$settings['tome_files_directory'] = '../html';
+$settings['tome_static_directory'] = '../html';
 $settings['config_sync_directory'] = '../config';
 
 // Automatically generated include for settings managed by ddev.
