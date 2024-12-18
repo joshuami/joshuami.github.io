@@ -1,0 +1,29 @@
+uuid: 330b9105-1c40-461d-a962-d3215e2f922f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - system
+    - views
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_views_block__blog_recent
+theme: drupal_cms_olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:blog-recent'
+settings:
+  id: 'views_block:blog-recent'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

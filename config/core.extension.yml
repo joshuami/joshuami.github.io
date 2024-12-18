@@ -100,6 +100,7 @@ module:
   trash: 0
   update: 0
   user: 0
+  views_bulk_edit: 0
   views_ui: 0
   eca_form: 1
   pathauto: 1

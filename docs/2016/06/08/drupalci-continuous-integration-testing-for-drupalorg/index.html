@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:202;--color--primary-saturation:79%;--color--primary-lightness:50">
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:164;--color--primary-saturation:16%;--color--primary-lightness:33">
   <head>
     <meta charset="utf-8">
 <noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://joshuami2.ddev.site/2016/06/08/drupalci-continuous-integration-testing-for-drupalorg">
 <meta property="og:title" content="DrupalCI - Continuous Integration Testing for Drupal.org">
 <meta property="og:description" content="Republished from Druapl.org Why test? The goal of automated testing is confidence: confidence in application stability, and confidence that new features work as intended. Continuous integration as a philosophy is about speeding the rate of change while keeping stability. As the number of contributing programmers increase, the need to have automated testing as a means to prove stability increases.">
-<meta property="og:updated_time" content="2024-12-16T15:06:46-08:00">
+<meta property="og:updated_time" content="2024-12-18T10:32:43-08:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:description" content="Republished from Druapl.org Why test? The goal of automated testing is confidence: confidence in application stability, and confidence that new features work as intended. Continuous integration as a philosophy is about speeding the rate of change while keeping stability. As the number of contributing programmers increase, the need to have automated testing as a means to prove stability increases.">
 <meta name="twitter:title" content="DrupalCI - Continuous Integration Testing for Drupal.org">
@@ -248,7 +248,7 @@
           <div class="node__meta">
               <span>
           By <span class="node__author">
-<span><span>admin</span></span>
+<span><span>joshuami</span></span>
 </span>, 8 June 2016
         </span>
         
@@ -265,28 +265,28 @@
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://www.drupal.org/drupalorg/blog/drupalci-continuous-integration-testing-for-drupalorg">Republished from Druapl.org</a></p>
-<h2 id="why-test">Why test?</h2>
+<h2>Why test?</h2>
 <p>The goal of automated testing is confidence: confidence in application stability, and confidence that new features work as intended. Continuous integration as a philosophy is about speeding the rate of change while keeping stability. As the number of contributing programmers increase, the need to have automated testing as a means to prove stability increases.</p>
 <p>This post is focused on how the automated testing infrastructure on Drupal.org works, not actually writing tests. Much more detail about how to write tests during Drupal development can be found in community documentation:</p>
 <ul>
 <li><a href="https://www.drupal.org/simpletest">Testing (D7 and D8) / SimpleTest (D6)</a></li>
 <li><a href="https://www.drupal.org/phpunit">Drupal&rsquo;s implementation of PHPUnit</a></li>
 </ul>
-<h2 id="categories-of-testing">Categories of testing</h2>
+<h2>Categories of testing</h2>
 <p>DrupalCI essentially runs two categories of tests:</p>
 <p><strong>Functional tests</strong> (also called blackbox testing) are the most common type of test run on DrupalCI hardware. These tests run assertions that test functionality by installing Drupal with a fresh database and then exercising that installation by inserting data and confirming the assertions complete. Front-end tests and behavior driven tests (BDD) tend to be functional. <em>Upgrade tests</em> are a type of functional tests that run a full installation of Drupal, then run upgrade commands.</p>
 <p><strong>Unit tests</strong> run assertions that test a unit of code and do not require a database installation. This means they execute very quickly. Because of its architecture, Drupal 8 has much more unit test coverage than Drupal 7.</p>
 <p>These test categories can be broken down further into more specific test types.</p>
-<h2 id="what-testing-means-at-the-scale-of-drupal">What testing means at the scale of Drupal</h2>
+<h2>What testing means at the scale of Drupal</h2>
 <p>Drupal 8, with its 3,000+ core contributors and 7,288 contrib developers (so far), needs testing as a means to comfortably move forward code that everyone can trust to be stable.</p>
 <p>Between January and May 2016, 90,364 test runs were triggered in DrupalCI. That is about 18,000 test runs requested per month. Maintainers set whether they want tests to run on demand, with every patch submitted, or nightly. They also determine what environments those tests will run on; there are 6 combinations of PHP and database engines available for maintainers to choose from.</p>
 <p>The majority of these test runs are Drupal 8 tests at this point. (19,599 core tests and 47,713 contrib project tests were run during those 5 months.) Each test costs about 12 cents to run on Amazon Web Services. At the time of writing this post, we averaged around $2,000 per month in testing costs for our community. (Thank you <a href="https://www.drupal.org/supporters">supporters</a>!)</p>
-<h2 id="an-overly-simple-history-of-automated-testing-for-drupal">An overly simple history of automated testing for Drupal</h2>
+<h2>An overly simple history of automated testing for Drupal</h2>
 <p>Automated testing first became a thing for Drupal contributed projects during Drupal version 4.5 with the introduction of the <a href="https://www.drupal.org/project/simpletest">SimpleTest module</a>. It was not until Drupal 6 that we started manually building out testbots and running these tests on Drupal.org hardware.</p>
 <p>In Drupal 7, SimpleTest was brought into Drupal Core. (More information about what that took can be reviewed in the <a href="https://groups.drupal.org/node/10099">SimpleTest Roadmap for Drupal 7</a>.)</p>
 <p>In Drupal 8, PHPUnit testing was added to Drupal Core. PHPUnit tests are much faster than a full functional test in SimpleTest&mdash;though runtest.sh still triggers a combination of these test types in Drupal 8.</p>
 <p>The actual implementation of automated testing was much more complicated that this history suggests. The original testbot infrastructure that ran for 7 years on Drupal.org hardware was manually managed by some fiercely dedicated volunteers. The manual nature of that maintenance led to the architecture of DrupalCI, which was meant to make it easier to test locally at first and later focused on autoscaling on powerful hardware that could plow through tests more quickly.</p>
-<h2 id="drupalcis-basic-structure">DrupalCI&rsquo;s basic structure</h2>
+<h2>DrupalCI&rsquo;s basic structure</h2>
 <p>In <a href="/2016/05/18/the-drupalorg-complexity/">The Drupal.org Complexity</a>, we could see the intricate ways that Drupal&rsquo;s code base interacts with other parts of the system.</p>
 <p><img src="/public/images/the-drupalorg-complexity.png" alt="Representation of the relationships between services and sites in the Drupal.org ecosystem."></p>
 <p>We could further break out how systems like DrupalCI are interrelated.<img src="/public/images/the-drupalorg-complexity-highlight-testing-integrations.png" alt="Highlighted relationships between testing and other services."></p>
@@ -307,19 +307,19 @@
 <p>Once per minute, Drupal.org polls the CI Dispatcher for test status. It responds with pending, running, failed or passed. Failed and passed tests are then pulled back into Drupal.org for display using the Jenkins JSON API.</p>
 <p><img src="/public/images/DrupalCI-step-3-write-status-to-drupalorg.png" alt="Drupal.org checks for test status once per minute: pending, running, failed, passed. All the results are pulled back into Drupal.org using the Jenkins' JSON API."></p>
 <p>Tests can also be run on demand at the patch, commit or branch level using the handy &ldquo;add test&rdquo; and &ldquo;retest&rdquo; links.</p>
-<h2 id="why-did-we-build-this-ourselves-why-not-use-insert-testing-platform-here">Why did we build this ourselves? Why not use [insert testing platform here]</h2>
+<h2>Why did we build this ourselves? Why not use [insert testing platform here]</h2>
 <p>Lot&rsquo;s of people have asked why we don&rsquo;t use TravisCI, CircleCI or some other hosted testing solution. The short answer is that most publicly available&nbsp;testing systems require Github authentication and&nbsp;integration.</p>
 <p>Additionally, our testing infrastructure is powerful because of its integration with our issue queues. Read the aforementioned <em><a href="/2016/05/18/the-drupalorg-complexity/">The Drupal.org Complexity</a></em> for more information.</p>
 <p>Another reason to run our own testing is scale. To get through all of the core tests for Drupal 8 in an acceptable amount of time (about 44 mins on average), we run very large testbots. These bots have 2 processors with 8 hardware cores. With hyperthreading, that means we have 32 hardware execution threads&mdash;about 88 EC2 compute units. They are not exactly super computers, but they are very performant.</p>
 <p>We average nearly 18,000 test runs per month. During our peak usage we spin up as many as 25 testbot machines&mdash;though usually we cap at 15 bots to keep costs under control. This helps us plow through our testing needs during sprints at DrupalCons and large camps.</p>
 <p>We have explored using an enterprise licensed version of either Github or CircleCI with our own hardware to tackle testing. That same consideration has been given to SauceLabs for front-end testing. Right now, there is not a cost savings to tackle this migration, but that does not rule it out in the future. Testing services continues to evolve.</p>
-<h2 id="accelerating-drupal-8">Accelerating Drupal 8</h2>
+<h2>Accelerating Drupal 8</h2>
 <p>In my first months as CTO, I was told repeatedly that the most important thing for us to work on was testing for Drupal 8. In those early days as I built out the team, we were mostly focused on catching up from the Drupal 7 upgrade and tackling technical debt issues that cropped up. In DrupalCon Austin, I had members of my team learn how to maintain the testbot infrastructure so that we could take over the process of spinning up bots and dealing with spikes in demand.</p>
 <p>By early 2015, we had optimized the old testbots as much as they were going to be optimized. We moved them to AWS so we could spin up faster machines and more bots, but there were features that were waiting on the new DrupalCI infrastructure that were blocking key development on Drupal 8.</p>
 <p>In March of 2015, we invited all the community developers that had helped with DrupalCI to the Drupal Association offices in Portland and sprinted with them to figure out the remaining implementation needs. The next couple of months involved tweaking DrupalCI&rsquo;s architecture and cutting out any nice to have features to get something launched as soon as possible.It is no coincidence that from the time of DrupalCI&rsquo;s launch until the release of Drupal 8, progress was rapidly accelerated.</p>
 <p>I am immensely proud of the work of all the community members and staff that worked directly with core maintainers to unblock Drupal 8 development and make it faster. This work was critical.</p>
 <p>Thank you to <a href="https://www.drupal.org/u/jthorson">jthorson</a>, <a href="https://www.drupal.org/u/ricardoamaro">ricardoamaro</a>, <a href="https://www.drupal.org/u/nick_schuch">nick_schuch</a>, <a href="https://www.drupal.org/u/dasrecht">dasrecht</a>,<a href="https://www.drupal.org/u/basic">basic</a>, <a href="https://www.drupal.org/u/isntall">isntall</a>, <a href="https://www.drupal.org/u/drumm">drumm</a>, <a href="https://www.drupal.org/u/mikey_p">mikey_p</a>, <a href="https://www.drupal.org/u/mixologic">mixologic</a>, <a href="https://www.drupal.org/u/hestenet">hestenet</a>, <a href="https://www.drupal.org/u/chx">chx</a>, <a href="https://www.drupal.org/u/mile23">mile23</a>, <a href="https://www.drupal.org/u/alexpott">alexpott</a>, <a href="https://www.drupal.org/u/dawehner">dawehner</a>, <a href="https://www.drupal.org/u/Shyamala">Shyamala</a>, and <a href="https://www.drupal.org/u/webchick">webchick</a>. You all made DrupalCI. (And huge apologies to all those I&rsquo;m undoubtedly leaving out.) Also thank you to anyone who chimed in on IRC or in the issue queues to help us track down bugs and improve the service.</p>
-<h2 id="whats-next-for-testing-drupal">What&rsquo;s next for testing Drupal</h2>
+<h2>What&rsquo;s next for testing Drupal</h2>
 <p>Most of the future state of testing is outlined in the <a href="https://www.drupal.org/node/2696421">Drupal.org Testing Policy for DrupalCI</a>.</p>
 <p>Key issues that we still need to solve are related to concurrent testing improvements and new test types to support. While we have PhantomJS integrated with the test runner, there are optimizations that need to happen.</p>
 <p>Testing is not an endpoint. Like much of our work, it is an ongoing effort to continuously improve Drupal by providing a tool that improves how we test, what we test, and when we test.</p>

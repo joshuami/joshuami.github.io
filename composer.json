@@ -32,6 +32,7 @@
         "drupal/drupal_cms_starter": "*",
         "drupal/feeds": "^3.0@RC",
         "drupal/tome": "^1.13",
+        "drupal/views_bulk_edit": "^3.0",
         "drush/drush": "^13"
     },
     "conflict": {
