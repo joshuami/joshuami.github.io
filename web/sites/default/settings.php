@@ -878,7 +878,6 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 // Set the Tome directory
 
 $settings['tome_files_directory'] = '../docs';
-$settings['tome_content_directory'] = '../content';
 $settings['tome_static_directory'] = '../docs';
 $settings['config_sync_directory'] = '../config';
 
