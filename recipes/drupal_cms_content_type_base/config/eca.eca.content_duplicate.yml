@@ -6,9 +6,9 @@ dependencies:
     - eca_misc
     - eca_render
 id: content_duplicate
-modeller: bpmn_io
+modeller: fallback
 label: 'Duplicate content'
-version: 0.0.0
+version: 1.0.0
 weight: 0
 events:
   Event_operations_link:

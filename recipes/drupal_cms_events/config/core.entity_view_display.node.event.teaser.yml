@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.event.body
+    - field.field.node.event.field_content
     - field.field.node.event.field_event__date
     - field.field.node.event.field_description
     - field.field.node.event.field_featured_image
@@ -23,7 +23,7 @@ targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
+  field_content:
     type: text_trimmed
     label: hidden
     settings:

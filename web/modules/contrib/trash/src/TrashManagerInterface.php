@@ -23,15 +23,15 @@ interface TrashManagerInterface {
   /**
    * Determines whether Trash integration is enabled for an entity type/bundle.
    *
-   * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
-   *   An entity type object.
+   * @param \Drupal\Core\Entity\EntityTypeInterface|string $entity_type
+   *   An entity type object or ID.
    * @param string|null $bundle
    *   (optional) The bundle name.
    *
    * @return bool
    *   TRUE if the entity type/bundle is enabled, FALSE otherwise.
    */
-  public function isEntityTypeEnabled(EntityTypeInterface $entity_type, ?string $bundle = NULL): bool;
+  public function isEntityTypeEnabled(EntityTypeInterface|string $entity_type, ?string $bundle = NULL): bool;
 
   /**
    * Gets the IDs of all entity types which can use the Trash.

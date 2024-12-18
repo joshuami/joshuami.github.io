@@ -6,7 +6,6 @@ recipes:
   - core/recipes/tags_taxonomy
 install:
   - link
-  - pathauto
   - shortcut
 config:
   # Treat all field storages strictly, since they influence the database layout.
@@ -24,3 +23,5 @@ config:
         - 'delete project revisions'
         - 'delete any project content'
         - 'edit any project content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['project']

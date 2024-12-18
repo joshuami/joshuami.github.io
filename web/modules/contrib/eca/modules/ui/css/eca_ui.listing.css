@@ -9,10 +9,10 @@ ul.eca-event-list li:nth-of-type(3) {
 ul.eca-event-list li:nth-of-type(4) {
   display: block;
   overflow: hidden;
-  line-height: 3rem;
   height: 1rem;
+  line-height: 3rem;
 }
-ul.eca-event-list li:nth-of-type(4):before {
+ul.eca-event-list li:nth-of-type(4)::before {
   display: block;
   content: "...";
   line-height: 1rem;

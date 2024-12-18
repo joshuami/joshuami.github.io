@@ -875,6 +875,13 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
 
+// Set the Tome directory
+
+$settings['tome_files_directory'] = '../docs';
+$settings['tome_content_directory'] = '../content';
+$settings['tome_static_directory'] = '../docs';
+$settings['config_sync_directory'] = '../config';
+
 // Automatically generated include for settings managed by ddev.
 if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev.php')) {
   include __DIR__ . '/settings.ddev.php';

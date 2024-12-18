@@ -5,7 +5,6 @@ recipes:
   - drupal_cms_content_type_base
   - core/recipes/tags_taxonomy
 install:
-  - pathauto
   - shortcut
   - telephone
 config:
@@ -24,3 +23,5 @@ config:
         - 'delete person revisions'
         - 'delete any person content'
         - 'edit any person content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['person']

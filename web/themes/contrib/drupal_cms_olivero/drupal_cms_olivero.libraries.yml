@@ -1,4 +1,9 @@
+global-styling:
+  css:
+    layout:
+      css/layout/layout.css: {  }
 views:
   css:
     theme:
       css/components/views-exposed-form.css: { }
+      css/components/card.css: { }

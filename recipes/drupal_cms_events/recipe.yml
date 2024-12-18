@@ -3,6 +3,7 @@ description: 'A content type and view to help you manage events.'
 type: 'Drupal CMS'
 recipes:
   - core/recipes/document_media_type
+  - core/recipes/tags_taxonomy
   - drupal_cms_content_type_base
   - drupal_cms_privacy_basic
 install:
@@ -17,7 +18,6 @@ install:
   - leaflet_views
   - menu_link_content
   - smart_date
-  - pathauto
   - shortcut
 config:
   # Treat all field storages strictly, since they influence the database layout.
@@ -41,5 +41,7 @@ config:
         - 'delete event revisions'
         - 'delete any event content'
         - 'edit any event content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['event']
     klaro.klaro_app.leaflet:
       enable: []

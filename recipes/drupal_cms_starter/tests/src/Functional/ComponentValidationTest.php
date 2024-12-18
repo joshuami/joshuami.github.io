@@ -58,34 +58,34 @@ class ComponentValidationTest extends BrowserTestBase {
   }
 
   public function test(): void {
-    $dir = dirname(__DIR__, 3);
-
     // Apply this recipe once. It is a site starter kit and therefore unlikely
     // to be applied again in the real world.
-    ['install_path' => $project_root] = InstalledVersions::getRootPackage();
-    $this->applyRecipe($project_root . '/recipes/' . basename($dir));
+    $dir = InstalledVersions::getInstallPath('drupal/drupal_cms_starter');
+    $this->applyRecipe($dir);
 
-    // Read our `composer.json` file to get the list of optional recipes.
-    $composer = file_get_contents($dir . '/composer.json');
-    $composer = json_decode($composer, TRUE, flags: JSON_THROW_ON_ERROR);
-
-    // Test that all the optional recipes can be applied on top of this one.
-    $cookbook_dir = dirname($dir);
-    $optional_recipes = $composer['suggest'] ?? [];
-    foreach (array_keys($optional_recipes) as $name) {
-      $this->applyRecipe($cookbook_dir . '/' . basename($name), [
-        '--input=drupal_cms_analytics.property_id=GTM-123456',
-      ]);
-    }
+    // The front page should be accessible to everyone.
+    $this->drupalGet('<front>');
+    $assert_session = $this->assertSession();
+    $assert_session->statusCodeEquals(200);
 
     $editor = $this->drupalCreateUser();
     $editor->addRole('content_editor')->save();
     $this->drupalLogin($editor);
 
     // The navigation should have a link to the dashboard.
-    $this->drupalGet('<front>');
-    $assert_session = $this->assertSession();
     $assert_session->elementAttributeContains('named', ['link', 'Dashboard'], 'class', 'toolbar-button--icon--navigation-dashboard');
+
+    // Read our `composer.json` file to get the list of optional recipes.
+    $composer = file_get_contents($dir . '/composer.json');
+    $composer = json_decode($composer, TRUE, flags: JSON_THROW_ON_ERROR);
+    $optional_recipes = array_keys($composer['suggest'] ?? []);
+
+    // Test that all the optional recipes can be applied on top of this one.
+    foreach ($optional_recipes as $name) {
+      $this->applyRecipe(InstalledVersions::getInstallPath($name), [
+        '--input=drupal_cms_analytics.property_id=GTM-123456',
+      ]);
+    }
 
     $node_types = $this->container->get(EntityTypeManagerInterface::class)
       ->getStorage('node_type')
@@ -111,6 +111,16 @@ class ComponentValidationTest extends BrowserTestBase {
         $assert_session->addressMatches('/\/test-page$/');
       }
     }
+    $this->drupalLogout();
+
+    // If you have permission to administer modules, you should see a dedicated
+    // tab to browse recipes.
+    $account = $this->drupalCreateUser(['administer modules']);
+    $this->drupalLogin($account);
+    $this->drupalGet('/admin/modules/browse/recipes');
+    $assert_session->statusCodeEquals(200);
+    $local_tasks = $assert_session->elementExists('css', 'h2:contains("Primary tabs") + nav > ul');
+    $assert_session->elementExists('named', ['link', 'Recommended'], $local_tasks);
   }
 
 }

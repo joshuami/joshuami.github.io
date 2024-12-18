@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.person.body
+    - field.field.node.person.field_content
     - field.field.node.person.field_description
     - field.field.node.person.field_featured_image
     - field.field.node.person.field_person__email
@@ -125,7 +125,7 @@ content:
     weight: 3
     region: content
 hidden:
-  body: true
+  field_content: true
   field_person__email: true
   field_person__phone_number: true
   field_person__role_job_title: true

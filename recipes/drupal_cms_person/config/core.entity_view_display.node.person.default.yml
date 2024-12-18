@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.person.body
+    - field.field.node.person.field_content
     - field.field.node.person.field_description
     - field.field.node.person.field_featured_image
     - field.field.node.person.field_person__email
@@ -97,7 +97,7 @@ third_party_settings:
             uuid: ce25e6db-a33b-40dd-952e-ae5108368044
             region: content
             configuration:
-              id: 'field_block:node:person:body'
+              id: 'field_block:node:person:field_content'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -144,7 +144,7 @@ targetEntityType: node
 bundle: person
 mode: default
 content:
-  body:
+  field_content:
     type: text_default
     label: hidden
     settings: {  }

@@ -49,3 +49,50 @@ tmp/*
 _drafts
 /.editorconfig
 /.gitattributes
+
+# Files and directories suggested to be ignored by Drupal
+# @see https://git.drupalcode.org/project/drupal/-/blob/9.3.x/example.gitignore
+#
+# We allow settings.php to be committed since Acquia's filesystem is read-only
+# @see https://www.drupal.org/project/drupal/issues/3257119
+docroot/core
+vendor/
+docroot/sites/*/settings.local.php
+docroot/sites/*/files
+docroot/sites/*/private
+docroot/sites/simpletest
+files-private/
+
+
+# Directories specific to this template
+docroot/libraries
+docroot/modules/contrib
+docroot/profiles/contrib
+docroot/themes/contrib
+docroot/themes/custom/xtra/build
+docroot/themes/custom/xtra/build/css
+docroot/themes/custom/xtra/build/js
+docroot/themes/custom/xtra/components/*/*.css
+docroot/themes/custom/xtra/components/*/*.css.map
+docroot/themes/custom/xtra/mix-manifest.json
+
+# Sass
+.sass-cache
+*.css.map
+
+# Local files
+local.settings.php
+local.drush.yml
+local.site.yml
+local.services.yml
+*.local
+local.blt.yml
+# env-file
+/.env*
+
+#Exports
+*.gz
+*.sql
+*.zip
+/.editorconfig
+/.gitattributes

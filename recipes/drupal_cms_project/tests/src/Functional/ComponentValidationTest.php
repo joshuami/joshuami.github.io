@@ -65,8 +65,8 @@ class ComponentValidationTest extends BrowserTestBase {
           'input type' => 'media library',
           'help text' => 'Include an image. This appears as the image in search engine results.',
         ],
-        'body' => [
-          'type' => 'text_with_summary',
+        'field_content' => [
+          'type' => 'text_long',
           'cardinality' => 1,
           'required' => FALSE,
           'translatable' => TRUE,

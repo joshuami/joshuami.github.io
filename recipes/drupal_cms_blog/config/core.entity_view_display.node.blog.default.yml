@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.blog.body
+    - field.field.node.blog.field_content
     - field.field.node.blog.field_description
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_tags
@@ -44,7 +44,7 @@ third_party_settings:
             uuid: 0e9be297-1812-4215-b940-a61b7e808025
             region: content
             configuration:
-              id: 'field_block:node:blog:body'
+              id: 'field_block:node:blog:field_content'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -96,7 +96,7 @@ targetEntityType: node
 bundle: blog
 mode: default
 content:
-  body:
+  field_content:
     type: text_default
     label: hidden
     settings: {  }

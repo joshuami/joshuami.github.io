@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.blog.body
+    - field.field.node.blog.field_content
     - field.field.node.blog.field_description
     - field.field.node.blog.field_featured_image
     - field.field.node.blog.field_tags
@@ -120,5 +120,5 @@ content:
     weight: 3
     region: content
 hidden:
-  body: true
+  field_content: true
   langcode: true

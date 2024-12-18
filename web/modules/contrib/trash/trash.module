@@ -13,6 +13,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\Form\DeleteMultipleForm;
 use Drupal\Core\Entity\Query\QueryInterface;
+use Drupal\Core\Entity\TranslatableInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\PhpStorage\PhpStorageFactory;
@@ -97,10 +98,10 @@ function trash_entity_access(EntityInterface $entity, $operation, AccountInterfa
  * Implements hook_entity_query_alter().
  */
 function trash_entity_query_alter(QueryInterface $query): void {
-  $entity_type = \Drupal::entityTypeManager()->getDefinition($query->getEntityTypeId());
+  $entity_type_id = $query->getEntityTypeId();
   /** @var \Drupal\trash\TrashManagerInterface $trash_manager */
   $trash_manager = \Drupal::service('trash.manager');
-  if (!$trash_manager->shouldAlterQueries() || !$trash_manager->isEntityTypeEnabled($entity_type)) {
+  if (!$trash_manager->shouldAlterQueries() || !$trash_manager->isEntityTypeEnabled($entity_type_id)) {
     return;
   }
 
@@ -256,6 +257,7 @@ function trash_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   }
   elseif ($is_entity_multiple_delete_form) {
     assert($form_object instanceof DeleteMultipleForm);
+    $entity = NULL;
     $entity_type_call = function () {
       // @phpstan-ignore-next-line
       return $this->entityType;
@@ -289,6 +291,41 @@ function trash_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     else {
       $entity_delete_label = t('Deleting this @label will move it to the trash.', $params);
       $entity_multiple_delete_label = t('Deleting these @label will move them to the trash.', $params);
+    }
+
+    // Prevent deleting individual translations.
+    // @todo Remove this after https://www.drupal.org/i/3376216 is fixed.
+    if ($is_entity_delete_form && $entity instanceof TranslatableInterface && $entity->isTranslatable() && !$entity->isDefaultTranslation()) {
+      $entity_delete_label = t('Deleting a translation of a @label is currently not supported by Trash. Unpublish the translation instead.', $params);
+      $form['actions']['submit']['#access'] = FALSE;
+    }
+    elseif ($is_entity_multiple_delete_form && $entity_type->isTranslatable()) {
+      $storage = \Drupal::entityTypeManager()->getStorage($entity_type->id());
+
+      $can_delete = TRUE;
+      foreach (array_keys($form['entities']['#items'] ?? []) as $item) {
+        [$id, $langcode] = explode(':', $item, 2);
+
+        // All entities have been loaded already in the static cache by the
+        // delete multiple form, so it's ok to single-load them again.
+        $entity = $storage->load($id);
+        assert($entity instanceof TranslatableInterface);
+
+        // Deleting the default translation is considered the same as deleting
+        // the entire entity. When all translations are selected, only the
+        // default langcode will show up in the selections.
+        if (!$entity->getTranslation($langcode)->isDefaultTranslation()) {
+          // If any of the selected translations are not the default translation
+          // of the entity, the multiple deletion can not proceed.
+          $can_delete = FALSE;
+          break;
+        }
+      }
+
+      if (!$can_delete) {
+        $entity_multiple_delete_label = t('Deleting translations of @label is currently not supported by Trash. Unpublish the translations instead.', $params);
+        $form['actions']['submit']['#access'] = FALSE;
+      }
     }
 
     if ($form['description']['#markup']->getUntranslatedString() === 'This action cannot be undone.') {

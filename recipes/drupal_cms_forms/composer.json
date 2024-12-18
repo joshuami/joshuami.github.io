@@ -4,7 +4,7 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/drupal_cms_anti_spam": "~1.0.0-rc1",
+        "drupal/drupal_cms_anti_spam": "~1.0.0-rc2",
         "drupal/core": ">=10.3",
         "drupal/webform": "^6.3.0-alpha1"
     }

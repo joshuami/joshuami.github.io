@@ -4,7 +4,7 @@ description: 'Provides the ability to soft-delete content entities.'
 core_version_requirement: ^10.3 | ^11
 configure: trash.settings.form
 
-# Information added by Drupal.org packaging script on 2024-11-25
-version: '3.0.9'
+# Information added by Drupal.org packaging script on 2024-12-17
+version: '3.0.10'
 project: 'trash'
-datestamp: 1732571561
+datestamp: 1734464330

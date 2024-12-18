@@ -4,31 +4,7 @@
     initialized: false
   };
 
-  Drupal.behaviors.bpmn_io_convert = {
-    attach: function (context, settings) {
-      if (Drupal.bpmn_io.modeller === undefined) {
-        return;
-      }
-
-      const [canvas] = once('bpmn-io-convert', '#bpmn-io .canvas', context);
-      if (!canvas) {
-        return;
-      }
-
-      const eventBus = Drupal.bpmn_io.modeller.get('eventBus');
-      // Create elements from config when the root (process) has been set.
-      eventBus.on('root.set', function (e) {
-        if (
-          e.element.isImplicit
-          || Drupal.bpmn_io_convert.initialized
-        ) {
-          return;
-        }
-
-        Drupal.behaviors.bpmn_io_convert.importElements(e.element);
-      });
-    },
-  };
+  Drupal.behaviors.bpmn_io_convert = {};
 
   /**
    * Import the elements.

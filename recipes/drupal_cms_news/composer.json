@@ -6,9 +6,8 @@
     "require": {
         "drupal/core": ">=10.3",
         "drupal/add_content_by_bundle": "^1.2.2",
-        "drupal/drupal_cms_content_type_base": "~1.0.0-rc1",
+        "drupal/drupal_cms_content_type_base": "~1.0.0-rc2",
         "drupal/better_exposed_filters": "^7.0",
-        "drupal/pathauto": "^1.13",
         "drupal/selective_better_exposed_filters": "^3.0"
     }
 }

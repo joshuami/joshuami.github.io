@@ -12,27 +12,35 @@ install:
   - ai_assistant_api
   - ai_chatbot
   - ai_agents
-  - ai_simple_provider_installer
   - menu_link_content
 recipes:
   - core/recipes/content_editor_role
 config:
   import:
     ai_image_alt_text: '*'
-    ai_agents: '*'
   actions:
-    ai_simple_provider_installer.settings:
+    ai_agents.settings:
       simpleConfigUpdate:
-        redirect_route: 'dashboard'
+        agent_settings:
+          field_type_agent:
+            usage_instructions: >
+              If they ask you to change an edit form, assume they want you to change the fields on a content type if they are visiting a node form.
+
+              If they ask to create an Image Field, assume they want an Media Field with the image bundle, unless they tell you not to create a media field. Specifically ask for an Entity Reference Field with Entity Type media and the bundle image. Always set the form widget to Media Library if its available and the view mode to Rendered Entity.
+            permissions:
+              authenticated: 0
+              content_editor: 0
+              administrator: 0
+            plugin_settings: {  }
     block.block.ai_chatbot:
       placeBlockInAdminTheme:
         region:
           gin: content
           claro: content
         default_region: content
-        plugin: ai_chatbot_block
+        plugin: ai_deepchat_block
         settings:
-          id: ai_chatbot_block
+          id: ai_deepchat_block
           label: 'Drupal Agent Chatbot'
           label_display: '0'
           provider: ai_chatbot

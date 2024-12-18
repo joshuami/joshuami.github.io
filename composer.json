@@ -34,16 +34,6 @@
         "drupal/tome": "^1.13",
         "drush/drush": "^13"
     },
-    "scripts": {
-        "gh-pages": "./scripts/gh-pages.sh",
-        "symlink": "./scripts/symlink.sh",
-        "post-install-cmd": [
-            "@symlink"
-        ],
-        "post-update-cmd": [
-            "@symlink"
-        ]
-    },
     "conflict": {
         "drupal/drupal": "*"
     },

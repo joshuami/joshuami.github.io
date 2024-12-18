@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.news.body
+    - field.field.node.news.field_content
     - field.field.node.news.field_description
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_tags
@@ -63,7 +63,7 @@ third_party_settings:
             uuid: ef1d88e6-4477-43a9-a9a2-23efade33853
             region: content
             configuration:
-              id: 'field_block:node:news:body'
+              id: 'field_block:node:news:field_content'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -93,7 +93,7 @@ targetEntityType: node
 bundle: news
 mode: default
 content:
-  body:
+  field_content:
     type: text_default
     label: hidden
     settings: {  }

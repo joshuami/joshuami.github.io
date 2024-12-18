@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace Drupal\Tests\drupal_cms_news\Functional;
 
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\file\Entity\File;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
+use Drupal\media\Entity\Media;
 use Drupal\Tests\BrowserTestBase;
 use Drupal\Tests\drupal_cms_content_type_base\ContentModelTestTrait;
 
@@ -65,8 +67,8 @@ class ComponentValidationTest extends BrowserTestBase {
           'input type' => 'media library',
           'help text' => 'Include an image. This appears as the image in search engine results.',
         ],
-        'body' => [
-          'type' => 'text_with_summary',
+        'field_content' => [
+          'type' => 'text_long',
           'cardinality' => 1,
           'required' => FALSE,
           'translatable' => TRUE,
@@ -98,6 +100,46 @@ class ComponentValidationTest extends BrowserTestBase {
     ]);
     $now = date('Y-m', $node->getCreatedTime());
     $this->assertStringEndsWith("/news/$now/test-news", $node->toUrl()->toString());
+  }
+
+  public function testListingPage(): void {
+    $uri = uniqid('public://') . '.png';
+    $this->getRandomGenerator()->image($uri, '600x600', '800x800');
+    $file = File::create([
+      'uri' => $uri,
+    ]);
+    $file->save();
+
+    $featured_image = Media::create([
+      'bundle' => 'image',
+      'field_media_image' => $file,
+    ]);
+    $featured_image->save();
+
+    $this->drupalCreateNode([
+      'type' => 'news',
+      'title' => 'Item 1',
+      'field_featured_image' => $featured_image,
+      'moderation_state' => 'published',
+    ]);
+    $this->drupalCreateNode([
+      'type' => 'news',
+      'title' => 'Item 2',
+      'field_featured_image' => $featured_image,
+      'moderation_state' => 'published',
+    ]);
+    $this->drupalCreateNode([
+      'type' => 'news',
+      'title' => 'Item 3',
+      'field_featured_image' => $featured_image,
+      'status' => FALSE,
+    ]);
+    $this->drupalGet('/news');
+    $assert_session = $this->assertSession();
+    $assert_session->statusCodeEquals(200);
+    $assert_session->linkExists('Item 1');
+    $assert_session->linkExists('Item 2');
+    $assert_session->linkNotExists('Item 3');
   }
 
 }

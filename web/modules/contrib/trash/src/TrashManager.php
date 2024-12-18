@@ -39,15 +39,16 @@ class TrashManager implements TrashManagerInterface {
   /**
    * {@inheritdoc}
    */
-  public function isEntityTypeEnabled(EntityTypeInterface $entity_type, ?string $bundle = NULL): bool {
+  public function isEntityTypeEnabled(EntityTypeInterface|string $entity_type, ?string $bundle = NULL): bool {
+    $entity_type_id = $entity_type instanceof EntityTypeInterface ? $entity_type->id() : $entity_type;
     $enabled_entity_types = $this->configFactory->get('trash.settings')->get('enabled_entity_types') ?? [];
-    if (!isset($enabled_entity_types[$entity_type->id()])) {
+    if (!isset($enabled_entity_types[$entity_type_id])) {
       return FALSE;
     }
-    elseif ($enabled_entity_types[$entity_type->id()] === []) {
+    elseif ($enabled_entity_types[$entity_type_id] === []) {
       return TRUE;
     }
-    elseif ($bundle === NULL || in_array($bundle, $enabled_entity_types[$entity_type->id()], TRUE)) {
+    elseif ($bundle === NULL || in_array($bundle, $enabled_entity_types[$entity_type_id], TRUE)) {
       return TRUE;
     }
 

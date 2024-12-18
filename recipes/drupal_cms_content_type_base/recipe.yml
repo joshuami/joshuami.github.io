@@ -13,6 +13,7 @@ install:
   - autosave_form
   - bpmn_io
   - ckeditor5
+  - content_moderation
   - eca_content
   - eca_misc
   - eca_render
@@ -20,10 +21,16 @@ install:
   - layout_builder
   - linkit
   - node
+  # We don't specifically use Pathauto in this recipe, but we can safely
+  # assume that content types built on our foundation will want to.
+  - pathauto
+  - scheduler
+  - scheduler_content_moderation_integration
   - shortcut
   - taxonomy
   - token
   - trash
+  - views
   # We don't have a specific use of the Options or Field UI modules in this recipe,
   # but we expect that site builders will want to add fields to their content types,
   # so install these modules anyway.
@@ -32,7 +39,7 @@ install:
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
-    - field.storage.node.body
+    - field.storage.node.field_content
     - field.storage.node.field_description
     - field.storage.node.field_featured_image
     - field.storage.node.field_tags
@@ -44,7 +51,6 @@ config:
       - core.entity_view_mode.node.full
       - core.entity_view_mode.node.rss
       - core.entity_view_mode.node.teaser
-      - field.storage.node.body
       - system.action.node_delete_action
       - system.action.node_make_sticky_action
       - system.action.node_make_unsticky_action
@@ -53,9 +59,14 @@ config:
       - system.action.node_save_action
       - system.action.node_unpromote_action
       - system.action.node_unpublish_action
+      - views.view.content
     shortcut:
       - shortcut.set.default
     trash: '*'
+    content_moderation:
+      - views.view.moderated_content
+    scheduler: "*"
+    scheduler_content_moderation_integration: "*"
   actions:
     autosave_form.settings:
       # Enable autosave for all content types.
@@ -63,8 +74,20 @@ config:
         allowed_content_entity_types:
           node:
             bundles: []
+    scheduler.settings:
+      simpleConfigUpdate:
+        hide_seconds: true
     user.role.anonymous:
       # We assume all published content should be accessible to anonymous users.
       grantPermission: 'access content'
     user.role.content_editor:
-      grantPermission: 'use text format content_format'
+      grantPermissions:
+        - 'access content overview'
+        - 'use text format content_format'
+        - 'use basic_editorial transition archive'
+        - 'use basic_editorial transition create_new_draft'
+        - 'use basic_editorial transition publish'
+        - 'use basic_editorial transition archived_published'
+        - 'schedule publishing of nodes'
+        - 'view any unpublished content'
+        - 'view scheduled content'

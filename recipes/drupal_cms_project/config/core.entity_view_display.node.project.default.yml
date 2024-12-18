@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.project.body
+    - field.field.node.project.field_content
     - field.field.node.project.field_project__client_link
     - field.field.node.project.field_project__client_logo
     - field.field.node.project.field_project__client_name
@@ -75,7 +75,7 @@ third_party_settings:
             uuid: 811ba61b-54fa-4d59-9c75-245d66da3d99
             region: first
             configuration:
-              id: 'field_block:node:project:body'
+              id: 'field_block:node:project:field_content'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -156,7 +156,7 @@ targetEntityType: node
 bundle: project
 mode: default
 content:
-  body:
+  field_content:
     type: text_default
     label: hidden
     settings: {  }

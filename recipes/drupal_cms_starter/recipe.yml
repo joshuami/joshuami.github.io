@@ -14,10 +14,13 @@ recipes:
   - drupal_cms_seo_basic
   - easy_email_express
 install:
+  - automated_cron
   - automatic_updates
   - automatic_updates_extensions
   - dashboard
   - drupal_cms_olivero
+  - eca_base
+  - eca_render
   - menu_link_content
   - olivero
   - package_manager
@@ -27,6 +30,7 @@ install:
   - config
   - menu_ui
   - shortcut
+  - token
   - views_ui
 config:
   # If the config we're importing already exists, we don't really care
@@ -75,7 +79,6 @@ config:
         allow_ui_install: true
     system.site:
       simpleConfigUpdate:
-        name: 'Drupal CMS'
         page.front: '/home'
     system.theme:
       simpleConfigUpdate:
@@ -87,7 +90,6 @@ config:
         - 'edit any %bundle media'
       grantPermissions:
         - 'access administration pages'
-        - 'access content overview'
         - 'access contextual links'
         - 'access media overview'
         - 'access navigation'

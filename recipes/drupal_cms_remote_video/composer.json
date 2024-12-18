@@ -4,6 +4,7 @@
     "description": "Configures display options for remote video.",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/core": ">=10.3"
+        "drupal/core": ">=10.3",
+        "drupal/drupal_cms_privacy_basic": "~1.0.0-rc2"
     }
 }

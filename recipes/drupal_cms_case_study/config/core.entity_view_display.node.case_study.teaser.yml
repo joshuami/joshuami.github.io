@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.case_study.body
+    - field.field.node.case_study.field_content
     - field.field.node.case_study.field_case_study__client_link
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
@@ -125,7 +125,7 @@ content:
     weight: 3
     region: content
 hidden:
-  body: true
+  field_content: true
   field_case_study__client_link: true
   field_case_study__client_logo: true
   field_case_study__client_name: true

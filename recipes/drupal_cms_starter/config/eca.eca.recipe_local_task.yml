@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_base
+    - eca_render
+id: recipe_local_task
+modeller: fallback
+label: 'Expose recipes as a menu tab'
+version: 1.0.0
+weight: 0
+events:
+  Event_alter_local_tasks:
+    plugin: 'eca_render:local_tasks'
+    label: 'Alter local tasks'
+    configuration: {  }
+    successors:
+      -
+        id: Activity_add_recipe_local_task
+        condition: Flow_path_below_extend
+      -
+        id: Activity_add_recipe_local_task
+        condition: Flow_path_is_extend
+conditions:
+  Flow_path_below_extend:
+    plugin: eca_scalar
+    configuration:
+      negate: false
+      case: false
+      left: '[current-page:url:path]'
+      right: /admin/modules/
+      operator: beginswith
+      type: value
+  Flow_path_is_extend:
+    plugin: eca_scalar
+    configuration:
+      negate: false
+      case: false
+      left: '[current-page:url:path]'
+      right: /admin/modules
+      operator: equal
+      type: value
+gateways: {  }
+actions:
+  Activity_add_recipe_local_task:
+    plugin: eca_render_link
+    label: 'Add recipe local task'
+    configuration:
+      title: Recommended
+      url: /admin/modules/browse/recipes
+      link_type: page
+      width: ''
+      display_as: anchor
+      absolute: false
+      name: ''
+      token_name: ''
+      weight: ''
+      mode: prepend
+    successors: {  }

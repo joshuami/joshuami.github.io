@@ -6,7 +6,6 @@ recipes:
   - core/recipes/tags_taxonomy
 install:
   - link
-  - pathauto
   - shortcut
 config:
   # Treat all field storages strictly, since they influence the database layout.
@@ -24,3 +23,5 @@ config:
         - 'delete case_study revisions'
         - 'delete any case_study content'
         - 'edit any case_study content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['case_study']

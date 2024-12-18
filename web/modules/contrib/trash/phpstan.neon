@@ -12,6 +12,5 @@ parameters:
   ignoreErrors:
     # new static() is a best practice in Drupal, so we cannot fix that.
     - "#^Unsafe usage of new static#"
-    - "#^Plugin definitions cannot be altered.#"
   scanDirectories:
     - ../../../../vendor/drush/drush/src-symfony-compatibility

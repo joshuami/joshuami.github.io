@@ -3,11 +3,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.news.body
+    - field.field.node.news.field_content
     - field.field.node.news.field_description
     - field.field.node.news.field_featured_image
     - field.field.node.news.field_tags
-    - image.style.medium_focal_point
     - node.type.news
   module:
     - layout_builder
@@ -36,7 +35,7 @@ third_party_settings:
                 label: hidden
                 settings:
                   image_link: ''
-                  image_style: medium_focal_point
+                  image_style: 1_1_300x300_focal_point_webp
                   image_loading:
                     attribute: lazy
                 third_party_settings: {  }
@@ -97,13 +96,11 @@ content:
     weight: 1
     region: content
   field_featured_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: medium_focal_point
-      image_loading:
-        attribute: lazy
+      view_mode: small
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -121,5 +118,5 @@ content:
     weight: 3
     region: content
 hidden:
-  body: true
+  field_content: true
   langcode: true

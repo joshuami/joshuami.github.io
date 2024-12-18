@@ -23,11 +23,13 @@ regions:
   content_below: Content Below
   footer_top: Footer Top
   footer_bottom: Footer Bottom
+libraries:
+  - drupal_cms_olivero/global-styling
 libraries-extend:
   views/views.module:
     - drupal_cms_olivero/views
 
-# Information added by Drupal.org packaging script on 2024-12-05
-version: '1.0.0-rc1'
+# Information added by Drupal.org packaging script on 2024-12-17
+version: '1.0.0-rc2'
 project: 'drupal_cms_olivero'
-datestamp: 1733423265
+datestamp: 1734461199

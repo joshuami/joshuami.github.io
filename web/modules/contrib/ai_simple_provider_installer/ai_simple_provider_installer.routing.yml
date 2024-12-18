@@ -1,8 +1,0 @@
-ai_simple_provider_installer.wizard:
-  path: '/admin/config/ai/simple_provider_wizard'
-  defaults:
-    _form: '\Drupal\ai_simple_provider_installer\Form\WizardForm'
-    _title: 'Setup AI'
-  requirements:
-    _permission: 'administer ai providers'
-

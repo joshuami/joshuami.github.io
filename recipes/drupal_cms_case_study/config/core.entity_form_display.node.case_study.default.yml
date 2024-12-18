@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.case_study.body
+    - field.field.node.case_study.field_content
     - field.field.node.case_study.field_case_study__client_link
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
@@ -10,25 +10,26 @@ dependencies:
     - field.field.node.case_study.field_featured_image
     - field.field.node.case_study.field_tags
     - node.type.case_study
+    - workflows.workflow.basic_editorial
   module:
     - link
     - media_library
     - path
     - text
+    - content_moderation
+    - scheduler
 id: node.case_study.default
 targetEntityType: node
 bundle: case_study
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
+  field_content:
+    type: text_textarea
     weight: 3
     region: content
     settings:
       rows: 9
-      summary_rows: 3
       placeholder: ''
-      show_summary: false
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -91,6 +92,12 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: -7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 13
@@ -103,6 +110,23 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: -5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_status:
+    type: scheduler_moderation
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: -6
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -136,4 +160,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: -3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  publish_state: true
+  unpublish_state: true

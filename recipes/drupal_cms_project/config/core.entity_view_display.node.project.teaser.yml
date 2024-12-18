@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.project.body
+    - field.field.node.project.field_content
     - field.field.node.project.field_project__client_link
     - field.field.node.project.field_project__client_logo
     - field.field.node.project.field_project__client_name
@@ -125,7 +125,7 @@ content:
     weight: 3
     region: content
 hidden:
-  body: true
+  field_content: true
   field_project__client_link: true
   field_project__client_logo: true
   field_project__client_name: true

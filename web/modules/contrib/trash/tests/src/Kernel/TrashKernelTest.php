@@ -63,8 +63,8 @@ class TrashKernelTest extends TrashKernelTestBase {
    * @dataProvider providerIsEntityTypeEnabled
    */
   public function testIsEntityTypeEnabled($entity_type_id, $bundle, $enabled): void {
+    $this->assertSame($enabled, $this->getTrashManager()->isEntityTypeEnabled($entity_type_id, $bundle));
     $entity_type = \Drupal::entityTypeManager()->getDefinition($entity_type_id);
-
     $this->assertSame($enabled, $this->getTrashManager()->isEntityTypeEnabled($entity_type, $bundle));
   }
 

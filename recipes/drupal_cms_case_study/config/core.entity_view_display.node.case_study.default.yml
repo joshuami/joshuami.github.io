@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.case_study.body
+    - field.field.node.case_study.field_content
     - field.field.node.case_study.field_case_study__client_link
     - field.field.node.case_study.field_case_study__client_logo
     - field.field.node.case_study.field_case_study__client_name
@@ -75,7 +75,7 @@ third_party_settings:
             uuid: 739968bb-5952-482a-a215-9a642ef92064
             region: first
             configuration:
-              id: 'field_block:node:case_study:body'
+              id: 'field_block:node:case_study:field_content'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -156,7 +156,7 @@ targetEntityType: node
 bundle: case_study
 mode: default
 content:
-  body:
+  field_content:
     type: text_default
     label: hidden
     settings: {  }

@@ -7,7 +7,6 @@ recipes:
 install:
   - add_content_by_bundle
   - menu_link_content
-  - pathauto
   - shortcut
   - selective_better_exposed_filters
 config:
@@ -24,3 +23,5 @@ config:
         - 'delete news revisions'
         - 'delete any news content'
         - 'edit any news content'
+    workflows.workflow.basic_editorial:
+      addNodeTypes: ['news']
