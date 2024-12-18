@@ -84,7 +84,7 @@
         {
             "value": "<p>I am so glad it is Friday.<\/p><p><a href=\"http:\/\/www.bbspot.com\/News\/2004\/10\/extension_quiz.php\"><img src=\"http:\/\/www.bbspot.com\/Images\/News_Features\/2004\/10\/file_extensions\/star.jpg\" \/><\/a><\/p><p>You are .*\t You are a wildcard.  You are everything to everybody.  You can\u2019t make up your mind as to what you want to be.<\/p><p>&lt;a href=\"\"http:\/\/bbspot.com\/News\/2004\/10\/extension_quiz_all.html\"\"&gt;Possible results&lt;\/a&gt;.<\/p>",
             "format": "content_format",
-            "processed": "<p>I am so glad it is Friday.<\/p>\n<p><a href=\"http:\/\/www.bbspot.com\/News\/2004\/10\/extension_quiz.php\"><\/a><\/p>\n<p>You are .*\t You are a wildcard.  You are everything to everybody.  You can\u2019t make up your mind as to what you want to be.<\/p>\n<p>&lt;a href=\"\"<a href=\"http:\/\/bbspot.com\/News\/2004\/10\/extension_quiz_all.html\">http:\/\/bbspot.com\/News\/2004\/10\/extension_quiz_all.html<\/a>\"\"&gt;Possible results&lt;\/a&gt;.<\/p>\n",
+            "processed": "<p>I am so glad it is Friday.<\/p>\n<p><a href=\"http:\/\/www.bbspot.com\/News\/2004\/10\/extension_quiz.php\"><img src=\"http:\/\/www.bbspot.com\/Images\/News_Features\/2004\/10\/file_extensions\/star.jpg\"><\/a><\/p>\n<p>You are .*\t You are a wildcard.  You are everything to everybody.  You can\u2019t make up your mind as to what you want to be.<\/p>\n<p>&lt;a href=\"\"<a href=\"http:\/\/bbspot.com\/News\/2004\/10\/extension_quiz_all.html\">http:\/\/bbspot.com\/News\/2004\/10\/extension_quiz_all.html<\/a>\"\"&gt;Possible results&lt;\/a&gt;.<\/p>\n",
             "summary": null
         }
     ],

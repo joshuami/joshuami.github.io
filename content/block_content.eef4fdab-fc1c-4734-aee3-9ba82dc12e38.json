@@ -1,0 +1,64 @@
+{
+    "uuid": [
+        {
+            "value": "eef4fdab-fc1c-4734-aee3-9ba82dc12e38"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "content",
+            "target_type": "block_content_type",
+            "target_uuid": "f89d907b-c283-4f82-88a0-25e38c6a9624"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-12-18T19:00:23+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "info": [
+        {
+            "value": "License"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T19:00:23+00:00"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>This work is licensed under a <a href=\"http:\/\/creativecommons.org\/licenses\/by\/4.0\/\">Creative Commons Attribution 4.0 International License<\/a>.<\/p>",
+            "format": "content_format",
+            "processed": "<p>This work is licensed under a <a href=\"http:\/\/creativecommons.org\/licenses\/by\/4.0\/\">Creative Commons Attribution 4.0 International License<\/a>.<\/p>\n",
+            "summary": ""
+        }
+    ]
+}

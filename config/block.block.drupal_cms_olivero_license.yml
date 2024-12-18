@@ -1,0 +1,25 @@
+uuid: 704b48cb-191f-430e-93de-04b0b2df6e1c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:content:eef4fdab-fc1c-4734-aee3-9ba82dc12e38'
+  module:
+    - block_content
+  theme:
+    - drupal_cms_olivero
+id: drupal_cms_olivero_license
+theme: drupal_cms_olivero
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:eef4fdab-fc1c-4734-aee3-9ba82dc12e38'
+settings:
+  id: 'block_content:eef4fdab-fc1c-4734-aee3-9ba82dc12e38'
+  label: License
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

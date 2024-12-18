@@ -12,7 +12,6 @@ dependencies:
     - editoria11y
     - file
     - honeypot
-    - klaro
     - media
     - node
     - shortcut
@@ -32,7 +31,6 @@ permissions:
   - 'mark as hidden in editoria11y'
   - 'skip CAPTCHA'
   - 'skip antibot'
-  - 'use klaro'
   - 'view editoria11y checker'
   - 'view media'
   - 'view own unpublished content'
