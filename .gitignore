@@ -55,26 +55,11 @@ _drafts
 #
 # We allow settings.php to be committed since Acquia's filesystem is read-only
 # @see https://www.drupal.org/project/drupal/issues/3257119
-docroot/core
 vendor/
-docroot/sites/*/settings.local.php
-docroot/sites/*/files
-docroot/sites/*/private
-docroot/sites/simpletest
 files-private/
-
-
-# Directories specific to this template
-docroot/libraries
-docroot/modules/contrib
-docroot/profiles/contrib
-docroot/themes/contrib
-docroot/themes/custom/xtra/build
-docroot/themes/custom/xtra/build/css
-docroot/themes/custom/xtra/build/js
-docroot/themes/custom/xtra/components/*/*.css
-docroot/themes/custom/xtra/components/*/*.css.map
-docroot/themes/custom/xtra/mix-manifest.json
+web/modules/contrib/
+web/themes/contrib/
+web/core
 
 # Sass
 .sass-cache
