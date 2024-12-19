@@ -1,0 +1,5 @@
+highlightjs_input_filter.settings.form:
+  title: 'highlight.js Input Filter settings'
+  description: 'Settings for the highlight.js Input Filter module.'
+  parent: system.admin_config_content
+  route_name: highlightjs_input_filter.settings.form

@@ -876,7 +876,6 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_private_path'] = '';
 
 // Set the Tome directory
-
 $settings['tome_files_directory'] = '../html';
 $settings['tome_static_directory'] = '../html';
 $settings['config_sync_directory'] = '../config';

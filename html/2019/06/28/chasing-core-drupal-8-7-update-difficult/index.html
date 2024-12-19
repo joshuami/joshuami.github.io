@@ -238,11 +238,11 @@
       <div class="block__content">
       
             <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Drupal 8.7 was released nearly two months ago and it took me that long to upgrade a complex site. Well… I should say it took me about 40 hours of research and development time. I worked on other things during the numerous local rebuilds it took. I am not proud of how long it took, but I am pretty impressed that I figured it out. I think I tried about 10 different approaches before I landed on the magic combination.</p>
-<p>So why is chasing Drupal Core to the 8.7 update so difficult? A normal update to core is as simple as composer update followed by drush updb and a cache clear (drush cr). The challenge of this upgrade comes down to three things.</p>
+<p>So why is chasing Drupal Core to the 8.7 update so difficult? A normal update to core is as simple as <code class="language-plaintext">composer update</code> followed by <code class="language-plaintext">drush updb</code> and a cache clear (<code class="language-plaintext">drush cr</code>). The challenge of this upgrade comes down to three things.</p>
 <h2>I let the configuration become too complex</h2>
 <p>It happens to all of us that work in Drupal long enough. We start a new team on a new project that is big and complex and we teach them to Drupal along the way. In the process, one developer adds a module for this and another adds a module for that.</p>
 <p>We started with Acquia Lightning, but our approach has bloated along the way to include modules like Groups (Organic Groups wasn’t ready yet), Paragraphs (Layout Builder wasn’t ready yet), Display Suite (Layout Builder doesn’t really do this), Content Lock, migrations, Solr Search API (which we have to fool composer to load a more modern version than what Acquia uses), Webform, and more.</p>
-<p>On their own, these are all amazing tools to have when building a complex site. But suddenly—as if it happened overnight, ha—our composer.json file is huge and there are patches galore.</p>
+<p>On their own, these are all amazing tools to have when building a complex site. But suddenly—as if it happened overnight, ha—our <code class="language-plaintext">composer.json</code> file is huge and there are patches galore.</p>
 <h3>Speaking of patches</h3>
 <p>It might be a good rule of thumb to limit your total patches to no more than twice the years you have worked with Drupal 8. Patches are amazing as they allow you to add a fix that is coming in the future with very little effort. The problem is that a patch is a promise of how code will be added to files in the future. Changes accepted before the patch in that future release can make the patch no longer apply.</p>
 <p>As a developer in Composer world, if you apply too many patches, you will spend a lot of time rerolling patches in the Drupal issue queue—or grabbing it from others when they beat you to it.</p>
@@ -253,10 +253,10 @@
 <h3>Composer will try to update everything</h3>
 <p>Dependency management is pretty amazing. When I built up the team at the Drupal Association to support Drupal.org, it became apparent pretty quickly that if we wanted Drupal 8 to succeed, we needed Composer integration to succeed.</p>
 <p>Composer is amazing at what it does, but I would not say that it is easy to understand all the inner workings. You have to understand semantic versioning (semver) deeply to have success with Composer.</p>
-<p>When everyone in your dependency tree is doing their job, and your composer.json is well structured, running composer update will give you all the new stuff you need from Drupal and all its dependencies as well as put your contributed dependencies into an easily understandable directory structure that sorts code from others and the code you have customized in your git repo.</p>
+<p>When everyone in your dependency tree is doing their job, and your <code class="language-plaintext">composer.json</code> is well structured, running <code class="language-plaintext">composer update</code> will give you all the new stuff you need from Drupal and all its dependencies as well as put your contributed dependencies into an easily understandable directory structure that sorts code from others and the code you have customized in your git repo.</p>
 <p>I found that this particular Drupal update needed as few concurrent upgrades running as possible. That meant pinning Lightning to the 3.x release (`composer require acquia/lightning:^3.2), as well as updating a lot of underlying modules like Entity Views Attach, Field Defaults, Easy Breadcrumb, and getting core up to the latest release of 8.6.17.</p>
-<p>If it hadn’t been for this gem of a <a href="https://www.previousnext.com.au/blog/patch-drupal-core-without-things-ending-up-corecore-or-coreb">blog post</a>, I don’t think everything would have updated cleanly to Drupal 8.6.17 because a couple of my patches were writing to core/core instead of just core.</p>
-<p>I should also note that the final build required that I <a href="https://www.drupal.org/project/lightning/issues/3056074">pin our version of Lightning Layout per a known issue</a> as well as stick Search API Page (composer require drupal/search_api_page:1.0.0-alpha12) and the Groups module (composer require drupal/group:1.0.0-rc2). It is not that either of those modules are a hard dependency, but their upgrades were failing for other reasons and I wan’t to isolate the Drupal 8.7 upgrade as much as possible.</p>
+<p>If it hadn’t been for this gem of a <a href="https://www.previousnext.com.au/blog/patch-drupal-core-without-things-ending-up-corecore-or-coreb">blog post</a>, I don’t think everything would have updated cleanly to Drupal 8.6.17 because a couple of my patches were writing to <code class="language-plaintext">core/core</code> instead of just <code class="language-plaintext">core</code>.</p>
+<p>I should also note that the final build required that I <a href="https://www.drupal.org/project/lightning/issues/3056074">pin our version of Lightning Layout per a known issue</a> as well as stick Search API Page (<code class="language-plaintext">composer require drupal/search_api_page:1.0.0-alpha12</code>) and the Groups module (<code class="language-plaintext">composer require drupal/group:1.0.0-rc2</code>). It is not that either of those modules are a hard dependency, but their upgrades were failing for other reasons and I wan’t to isolate the Drupal 8.7 upgrade as much as possible.</p>
 <h2>Core decided to add revisioning to taxonomy terms and menu links</h2>
 <p>I’m actually okay with the decision. If I had it my way, every entity in Drupal would just be an entity with all the same field and workflow options. Let me publish and unpublish all the things!</p>
 <p>The approach was solid, but the ability to apply that approach is heavily dependent on a fairly simple Drupal installation. Tests can only uncover so much. As a result, there are a significant number of sites that have struggled to upgrade with issues like:</p>
@@ -272,51 +272,51 @@
 <p>The first, <a href="https://www.drupal.org/project/drupal/issues/2953331">Add a views sort handler for sorting content by moderation state</a>, I decided we didn’t need. Sorting by moderation state is an administrative task of questionable value. You might group by moderation state or filter by moderation state, but do you really need to sort. So I removed that patch and updated the 5 administrative views with tables that were trying to sort by moderation state. These changes were all in the table settings for that view display.</p>
 <p>The next two issues, <a href="https://www.drupal.org/project/drupal/issues/2797583">Dynamically provide action plugins for every moderation state change</a> and <a href="https://www.drupal.org/project/drupal/issues/2174633">View output is not used for entityreference options</a>, were code that we needed. However, Drupal 8.6 needed the code in a different place than in Drupal 8.7. (See the patches problem statement above.) Because this update required multiple builds that ran all the way from local to multidev to dev to test to live, I had to modify the composer.json file to have a different patch when updating Lighting 3.2.x than from updating Lighting 4.0.x.</p>
 <h2>Order of operations in automated builds is very important</h2>
-<p>One of the developers on the team at the City of Portland took a zsh alias that I had set up and turned it into a really slick little bit of tooling in our lando.yml. I really pretty heavily on these Lando commands to make sure that we don’t forget a command when we are setting up a local environment for a successful build.</p>
+<p>One of the developers on the team at the City of Portland took a zsh alias that I had set up and turned it into a really slick little bit of tooling in our <code class="language-plaintext">lando.yml</code>. I really pretty heavily on these Lando commands to make sure that we don’t forget a command when we are setting up a local environment for a successful build.</p>
 <p>This upgrade was particularly challenging as it has a pretty critical list of updates that require a configuration export <strong>after</strong> the updates are complete. This made me reconsider my scripts… which I will now provide here for those that might want to incorporate this into their Drupal workflow.</p>
 <p>I also use Oh My Zsh with some Git shorthand to reduce my typing. I’ll provide the full commands alongside.</p>
 <h3>Starting a new branch from master</h3>
 <ol>
-<li>gco master (git checkout master)</li>
-<li>lando latest (The following commands run from the project root.)
+<li><code class="language-plaintext">gco master</code> (<code class="language-plaintext">git checkout master</code>)</li>
+<li><code class="language-plaintext">lando latest</code> (The following commands run from the project root.)
 <ol>
-<li>mkdir -p /app/artifacts</li>
-<li>rm -f /app/artifacts/database.tar.gz</li>
-<li>terminus backup:get portlandor.dev --element=database --to=/app/artifacts/database.tar.gz (We use Pantheon for our hosting, but all the big Drupal hosts have similar commands you can run.)</li>
-<li>database: cd /app &amp;&amp; /helpers/sql-import.sh artifacts/database.tar.gz</li>
-<li>drush cr -y</li>
+<li><code class="language-plaintext">mkdir -p /app/artifacts</code></li>
+<li><code class="language-plaintext">rm -f /app/artifacts/database.tar.gz</code></li>
+<li><code class="language-plaintext">terminus backup:get portlandor.dev --element=database --to=/app/artifacts/database.tar.gz</code> (We use Pantheon for our hosting, but all the big Drupal hosts have similar commands you can run.)</li>
+<li><code class="language-plaintext">database: cd /app &amp;&amp; /helpers/sql-import.sh artifacts/database.tar.gz</code></li>
+<li><code class="language-plaintext">drush cr -y</code></li>
 </ol>
 </li>
-<li>lando refresh (This command gives us a clean starting point with our database.)
+<li><code class="language-plaintext">lando refresh</code> (This command gives us a clean starting point with our database.)
 <ol>
-<li>composer install</li>
-<li>drush cr -y</li>
-<li>drush updb -y</li>
-<li>drush cim -y</li>
-<li>drush core:cron -y</li>
-<li>drush cr -y</li>
-<li>npm -C /app/web/themes/custom/$theme run build:dev (This last command will vary depending on whether you compile your theme with something like Webpack or Gulp.)</li>
+<li><code class="language-plaintext">composer install</code></li>
+<li><code class="language-plaintext">drush cr -y</code></li>
+<li><code class="language-plaintext">drush updb -y</code></li>
+<li><code class="language-plaintext">drush cim -y</code></li>
+<li><code class="language-plaintext">drush core:cron -y</code></li>
+<li><code class="language-plaintext">drush cr -y</code></li>
+<li><code class="language-plaintext">npm -C /app/web/themes/custom/$theme run build:dev</code> (This last command will vary depending on whether you compile your theme with something like Webpack or Gulp.)</li>
 </ol>
 </li>
 </ol>
 <p>You can see why we turned these into commands. I can’t tell you how many times I have seen one of these steps skipped and the resulting build just fails. Usually from a configuration conflict or an entity update that didn’t happen as it should.</p>
 <h3>Once you have updated your composer.json</h3>
 <ol>
-<li>lando cupex (This is kinda a goofy little shorthand I came up.)
+<li><code class="language-plaintext">lando cupex</code> (This is kinda a goofy little shorthand I came up.)
 <ol>
-<li>composer update (Yes, I just update it all and I do so pretty regularly.)</li>
-<li>drush updb -y (Runs all your update and post-update hooks which changes the database.)</li>
-<li>drush cex -y (This is the shorthand for config-export and it takes all those database changes and writes them to config.)</li>
+<li><code class="language-plaintext">composer update</code> (Yes, I just update it all and I do so pretty regularly.)</li>
+<li><code class="language-plaintext">drush updb -y</code> (Runs all your update and post-update hooks which changes the database.)</li>
+<li><code class="language-plaintext">drush cex -y</code> (This is the shorthand for config-export and it takes all those database changes and writes them to config.)</li>
 </ol>
 </li>
-<li>gaa (git add -A is my preferred way to deal with automation like this as it just grabs every change and I can see those changes in my editor.)</li>
-<li>gcmsg "My commit message" (This command is so much less verbose and easier to type than git commit -m "My commit message". We include our Jira issue IDs in the message to tie it all back to our sprint board.)</li>
-<li>git push -u origin $branch-id (I think there is shorthand for this that I just haven’t taken the time to learn. Yeah… me too.)</li>
+<li><code class="language-plaintext">gaa</code> (<code class="language-plaintext">git add -A</code> is my preferred way to deal with automation like this as it just grabs every change and I can see those changes in my editor.)</li>
+<li><code class="language-plaintext">gcmsg "My commit message"</code> (This command is so much less verbose and easier to type than <code class="language-plaintext">git commit -m "My commit message"</code>. We include our Jira issue IDs in the message to tie it all back to our sprint board.)</li>
+<li><code class="language-plaintext">git push -u origin $branch-id</code> (I think there is shorthand for this that I just haven’t taken the time to learn. Yeah… me too.)</li>
 </ol>
 <p>And here is where the magic happens and we let our GitHub and CircleCI integration take over and build our multidev environment for automated (Behat) and manual testing. QA still catches a lot, so we haven’t stopped doing it. Our CircleCI scripts are pretty much using the same set of commands to build our artifacts that get pushed to our servers on Pantheon.</p>
 <h2>It took six smaller builds to finally get to 8.7</h2>
 <p>You read that correct. I had to incrementally update a lot of “small” things and get all those patches to apply cleanly before the final build would give me a site that had no errors and passing tests. That means I had to repeat the “<em>latest</em> &gt; <em>refresh</em> &gt; <em>change some things</em> &gt; <em>cupex</em> &gt; <em>push to origin</em>” over and over. Developing in PHP is so much like developing in Javascript now! Write some recipes and compile! Sigh.</p>
-<p>Funny story… after working on this upgrade off an on for a month, and having a build that worked in our dev site, our build process was halted by a system outage upstream.  ¯\_(ツ)_/¯.</p>
+<p>Funny story… after working on this upgrade off an on for a month, and having a build that worked in our dev site, our build process was halted by a system outage upstream.  <code class="language-plaintext">¯\_(ツ)_/¯</code>.</p>
 <h2>Was it worth it</h2>
 <p>In truth, yes. I learned a lot about Drupal 8 in this process. Over the last year of this project with the City of Portland, I have learned just how much of my D7 and D6 knowledge applies and just how much does not. I am much more intimately aware of some of the subsystems now than I was before—even if I still don’t consider myself much of a true PHP developer as much as a really advanced site builder with some frontend chops.</p>
 <p>Drupal 8.7 has several cool new features that make it worth trying. In fact, on a clean install, I found a lot to love by grabbing Lightning 4—released on May 16—and adding a minimal amount of configuration.</p>

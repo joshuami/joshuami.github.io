@@ -1,0 +1,68 @@
+{
+    "uuid": [
+        {
+            "value": "77f5a369-0b2e-43ac-a3ca-3c7f0dc5553d"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "focal_point",
+            "target_type": "crop_type",
+            "target_uuid": "3852007a-d7be-4301-8282-c585600870ef"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "entity_id": [
+        {
+            "value": 11
+        }
+    ],
+    "entity_type": [
+        {
+            "value": "file"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2024-12\/perfect-score.png"
+        }
+    ],
+    "height": [],
+    "width": [],
+    "x": [
+        {
+            "value": 871
+        }
+    ],
+    "y": [
+        {
+            "value": 520
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-19T00:56:57+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ]
+}

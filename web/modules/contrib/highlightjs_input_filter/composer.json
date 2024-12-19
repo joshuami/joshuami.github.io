@@ -1,0 +1,25 @@
+{
+    "name": "drupal/highlightjs_input_filter",
+    "type": "drupal-module",
+    "description": "Provides an input filter to highlight code using highlight.js.",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "http://drupal.org/project/highlightjs_input_filter",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Nicholas Mangold",
+            "homepage": "https://nicholasmangold.com/",
+            "email": "nic.mangold@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "drupal/core": "^9.0 || ^10 || ^11"
+    }
+}
