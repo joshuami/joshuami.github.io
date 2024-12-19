@@ -98,7 +98,6 @@ module:
   tome_static: 0
   tome_sync: 0
   toolbar: 0
-  trash: 0
   update: 0
   user: 0
   views_bulk_edit: 0
