@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.card
     - field.storage.node.field_description
     - node.type.blog
     - taxonomy.vocabulary.tags
@@ -292,7 +292,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: card
       query:
         type: views_query
         options:
@@ -771,7 +771,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 4
       sorts:
         created:
           id: created
@@ -1350,9 +1350,9 @@ display:
       displays:
         block: block
         page: page
+        recent: recent
         default: '0'
         featured: '0'
-        recent: '0'
         related: '0'
     cache_metadata:
       max-age: -1
