@@ -383,10 +383,10 @@ trait LeafletSettingsElementsTrait {
     $element['zoomFiner'] = [
       '#title' => $this->t('Zoom Finer'),
       '#type' => 'number',
-      '#max' => 5,
-      '#min' => -5,
+      '#max' => 10,
+      '#min' => -10,
       '#step' => 1,
-      '#description' => $this->t('Use this selector (-5 | +5) to <u>zoom in or out on the Initial Zoom level, in case of multiple Markers/Features on the Map</u>.<br>Example: -2 will zoom out, adding padding around the markers, while 2 will zoom in, leaving out peripheral markers.<br>Note: This will still be constrained according with your Max & Min Zoom settings.'),
+      '#description' => $this->t('Use this selector (-10 | +10) to <u>zoom in or out on the Initial Zoom level, in case of multiple Markers/Features on the Map</u>.<br>Example: -2 will zoom out, adding padding around the markers, while 2 will zoom in, leaving out peripheral markers.<br>Note: This will still be constrained according with your Max & Min Zoom settings.'),
       '#default_value' => $map_position_options['zoomFiner'] ?? $this->getDefaultSettings()['map_position']['zoomFiner'],
       '#states' => [
         'invisible' => isset($force_checkbox_selector_widget) ? [

@@ -37,15 +37,6 @@ function linkit_help($route_name, RouteMatchInterface $route_match) {
 }
 
 /**
- * Implements hook_ckeditor_plugin_info_alter().
- */
-function linkit_ckeditor_plugin_info_alter(array &$plugins) {
-  if (isset($plugins['drupallink'])) {
-    $plugins['drupallink']['class'] = "Drupal\\linkit\\Plugin\\CKEditorPlugin\\LinkitDrupalLink";
-  }
-}
-
-/**
  * Implements hook_form_FORM_ID_alter().
  */
 function linkit_form_editor_link_dialog_alter(&$form, FormStateInterface $form_state, $form_id) {

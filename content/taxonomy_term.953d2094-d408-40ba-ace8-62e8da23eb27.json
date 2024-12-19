@@ -33,7 +33,13 @@
             "value": "Drupal"
         }
     ],
-    "description": [],
+    "description": [
+        {
+            "value": null,
+            "format": null,
+            "processed": ""
+        }
+    ],
     "weight": [
         {
             "value": 0
