@@ -1,4 +1,0 @@
-ai_automator_multi:
-   label: "AI Automator Multi"
-   description: "These are pseudofield to fill out multiple values at once."
-   weight: 50

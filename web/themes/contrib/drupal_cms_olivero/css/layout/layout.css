@@ -1,5 +1,0 @@
-@media (min-width: 62.5rem) {
-  .layout--content-medium, .layout--pass--content-medium > * {
-    grid-column: 2 / 14;
-  }
-}

@@ -1,4 +1,0 @@
-services:
-  friendlycaptcha.siteverify:
-    class: Drupal\friendlycaptcha\SiteVerify
-    arguments: ['@keyvalue.expirable', '@config.factory']

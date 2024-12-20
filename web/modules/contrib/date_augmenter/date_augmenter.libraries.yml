@@ -1,6 +1,0 @@
-augmenters:
-  version: VERSION
-  js:
-    js/date_augmenter.augmenters.js: {}
-  dependencies:
-    - core/drupal

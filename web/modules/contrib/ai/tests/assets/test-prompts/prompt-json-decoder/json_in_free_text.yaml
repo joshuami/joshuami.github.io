@@ -1,4 +1,0 @@
-text: |
-  This is the JSON I give back to you {"in": "free text"}, please do not lose it.
-expected_token: 2
-has_json: true

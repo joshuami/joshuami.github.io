@@ -1,5 +1,0 @@
-entity.ai_assistant.overview:
-  title: AI Assistants
-  parent: ai.admin_settings
-  description: 'List of AI Assistants to extend site functionality.'
-  route_name: entity.ai_assistant.collection

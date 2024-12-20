@@ -1,6 +1,0 @@
-text: |
-  ```yaml
-  test: this should not work
-  ```
-expected_token: 4
-has_json: false

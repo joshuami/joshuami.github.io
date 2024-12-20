@@ -1,4 +1,0 @@
-create ai assisted content types:
-  title: 'Create AI Assisted Content Types'
-  description: 'This permission allows users to create AI assisted content types.'
-  restrict access: true

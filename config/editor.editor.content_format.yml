@@ -45,41 +45,29 @@ settings:
           label: 'Plain text'
           language: plaintext
         -
-          label: C
-          language: c
+          label: YAML
+          language: yaml
         -
-          label: 'C#'
-          language: cs
-        -
-          label: C++
-          language: cpp
-        -
-          label: CSS
-          language: css
-        -
-          label: Diff
-          language: diff
-        -
-          label: HTML
-          language: html
-        -
-          label: Java
-          language: java
-        -
-          label: JavaScript
-          language: javascript
+          label: Shell
+          language: shell
         -
           label: PHP
           language: php
         -
+          label: CSS
+          language: css
+        -
+          label: HTML
+          language: html
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: Diff
+          language: diff
+        -
           label: Python
           language: python
-        -
-          label: Ruby
-          language: ruby
-        -
-          label: TypeScript
-          language: typescript
         -
           label: XML
           language: xml

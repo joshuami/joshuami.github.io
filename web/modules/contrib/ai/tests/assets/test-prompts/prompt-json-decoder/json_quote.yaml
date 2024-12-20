@@ -1,4 +1,0 @@
-text: |
-  ```json\n{"key": "value"}\n```
-expected_token: 1
-has_json: true

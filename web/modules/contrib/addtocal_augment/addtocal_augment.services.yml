@@ -1,4 +1,0 @@
-services:
-  addtocal_augment.addtocal_service:
-    class: Drupal\addtocal_augment\Plugin\DateAugmenter\AddToCal
-    arguments: ['@config.factory']

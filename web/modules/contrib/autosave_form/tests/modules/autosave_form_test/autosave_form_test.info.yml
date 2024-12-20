@@ -1,9 +1,0 @@
-name: 'Autosave Form Test Module'
-type: module
-package: Testing
-core_version_requirement: ^9 || ^10 || ^11
-
-# Information added by Drupal.org packaging script on 2024-11-04
-version: '8.x-1.7'
-project: 'autosave_form'
-datestamp: 1730728612

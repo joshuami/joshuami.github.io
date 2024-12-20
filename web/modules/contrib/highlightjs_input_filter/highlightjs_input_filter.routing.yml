@@ -1,7 +1,0 @@
-highlightjs_input_filter.settings.form:
-  path: 'admin/config/content/highlightjs_input_filter'
-  defaults:
-    _title: 'highlight.js Input Filter Settings'
-    _form: '\Drupal\highlightjs_input_filter\Form\HighlightJsInputFilterSettingsForm'
-  requirements:
-    _permission: 'administer highlightjs_input_filter settings'

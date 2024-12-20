@@ -1,5 +1,0 @@
-trash:
-  version: VERSION
-  css:
-    base:
-      css/trash.css: {}

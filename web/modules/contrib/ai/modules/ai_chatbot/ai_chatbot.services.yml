@@ -1,4 +1,0 @@
-services:
-  ai_chatbot.buttons:
-    class: Drupal\ai_chatbot\Service\MessagesButtons
-    arguments: ['@renderer', '@module_handler']
