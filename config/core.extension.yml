@@ -34,7 +34,6 @@ module:
   filter: 0
   focal_point: 0
   gin_toolbar: 0
-  highlightjs_input_filter: 0
   image: 0
   inline_form_errors: 0
   jquery_ui: 0

@@ -23,7 +23,6 @@ dependencies:
     - core.entity_view_mode.media.small
   module:
     - editor
-    - highlightjs_input_filter
     - linkit
     - media
 _core:
@@ -55,12 +54,6 @@ filters:
     provider: filter
     status: true
     weight: -47
-    settings: {  }
-  filter_highlightjs:
-    id: filter_highlightjs
-    provider: highlightjs_input_filter
-    status: true
-    weight: -41
     settings: {  }
   filter_html:
     id: filter_html
