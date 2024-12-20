@@ -18,7 +18,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2024-12-16T23:06:46+00:00"
+            "value": "2024-12-20T00:15:55+00:00"
         }
     ],
     "revision_uid": [
@@ -36,7 +36,7 @@
     "uid": [
         {
             "target_type": "user",
-            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
         }
     ],
     "title": [
@@ -51,7 +51,7 @@
     ],
     "changed": [
         {
-            "value": "2024-12-16T23:06:46+00:00"
+            "value": "2024-12-20T00:15:55+00:00"
         }
     ],
     "promote": [
@@ -85,7 +85,7 @@
             "value": "<p>In May, <a href=\"http:\/\/joshuami.com\/2016\/05\/31\/saying-goodbye\/\">I announced my departure from the Drupal Association<\/a>. Since my last day on June 10th, it has been a whirlwind of family events punctuated by conversations with organizations big and small about opportunities. There were so many cool places that I\u2019ve talked to about what makes their work special. It was not an easy decision to pick a spot to land\u2014it was even harder to end the month of extended family vacation. So much hiking and running and driving!<\/p><p>I\u2019m excited to start at Phase2 as Director of Engineering on Monday, July 18th. I\u2019ve long been a fan of Jeff and Frank and the incredible business and team culture they\u2019ve built.<\/p><p>It\u2019s always fun to start something new and get to know new coworkers. I can\u2019t wait to meet my new clients and start getting to work adding value to their technology projects.<\/p><p>And now for a last bit of funemployment with family\u2026<\/p>",
             "format": "content_format",
             "processed": "<p>In May, <a href=\"http:\/\/joshuami.com\/2016\/05\/31\/saying-goodbye\/\">I announced my departure from the Drupal Association<\/a>. Since my last day on June 10th, it has been a whirlwind of family events punctuated by conversations with organizations big and small about opportunities. There were so many cool places that I\u2019ve talked to about what makes their work special. It was not an easy decision to pick a spot to land\u2014it was even harder to end the month of extended family vacation. So much hiking and running and driving!<\/p>\n<p>I\u2019m excited to start at Phase2 as Director of Engineering on Monday, July 18th. I\u2019ve long been a fan of Jeff and Frank and the incredible business and team culture they\u2019ve built.<\/p>\n<p>It\u2019s always fun to start something new and get to know new coworkers. I can\u2019t wait to meet my new clients and start getting to work adding value to their technology projects.<\/p>\n<p>And now for a last bit of funemployment with family\u2026<\/p>\n",
-            "summary": null
+            "summary": ""
         }
     ],
     "feeds_item": [

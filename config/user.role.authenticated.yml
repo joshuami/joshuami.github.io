@@ -5,13 +5,9 @@ dependencies:
   config:
     - dashboard.dashboard.welcome
   module:
-    - antibot
-    - captcha
-    - coffee
     - dashboard
     - editoria11y
     - file
-    - honeypot
     - media
     - node
     - shortcut
@@ -23,14 +19,10 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access coffee'
   - 'access content'
   - 'access shortcuts'
-  - 'bypass honeypot protection'
   - 'delete own files'
   - 'mark as hidden in editoria11y'
-  - 'skip CAPTCHA'
-  - 'skip antibot'
   - 'view editoria11y checker'
   - 'view media'
   - 'view own unpublished content'
