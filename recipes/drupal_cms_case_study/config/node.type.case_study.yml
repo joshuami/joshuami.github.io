@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - scheduler
+    - menu_ui
 third_party_settings:
   scheduler:
     expand_fieldset: when_required
@@ -17,6 +18,9 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: true
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 name: 'Case study'
 type: case_study
 description: 'Case study content provides detailed information about a subject to the intended audience.'

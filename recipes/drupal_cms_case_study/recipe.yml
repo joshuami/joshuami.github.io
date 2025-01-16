@@ -1,12 +1,12 @@
-name: 'Case studies'
+name: Case Studies
 type: Drupal CMS
-description: 'Adds a case study content type that provides detailed information about a subject to the intended audience.'
+description: Adds a case study content type and listing page.
 recipes:
-  - drupal_cms_content_type_base
-  - core/recipes/tags_taxonomy
+  - drupal_cms_page
 install:
   - link
-  - shortcut
+  - add_content_by_bundle
+  - menu_link_content
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
@@ -14,8 +14,6 @@ config:
     - field.storage.node.field_case_study__client_logo
     - field.storage.node.field_case_study__client_name
   import:
-    shortcut:
-      - shortcut.set.default
   actions:
     user.role.content_editor:
       grantPermissions:

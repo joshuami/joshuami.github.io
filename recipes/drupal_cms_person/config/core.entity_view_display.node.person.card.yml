@@ -13,8 +13,6 @@ dependencies:
     - node.type.person
   module:
     - layout_builder
-    - media
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -25,54 +23,33 @@ targetEntityType: node
 bundle: person
 mode: card
 content:
-  field_content:
-    type: text_default
+  field_description:
+    type: basic_string
     label: hidden
     settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_featured_image:
-    type: media_thumbnail
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: eager
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_person__email:
-    type: email_mailto
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_person__phone_number:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_person__role_job_title:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_tags:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: true
     third_party_settings: {  }
     weight: 2
     region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 1_1_square_medium
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_person__role_job_title:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
-  field_description: true
-  langcode: true
+  content_moderation_control: true
+  field_content: true
+  field_person__email: true
+  field_person__phone_number: true
+  field_tags: true
   links: true

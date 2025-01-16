@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - menu_ui
     - scheduler
 third_party_settings:
   scheduler:
@@ -17,6 +18,9 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: true
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 name: 'Blog post'
 type: blog
 description: 'A simple blog entry, categorized by tags.'

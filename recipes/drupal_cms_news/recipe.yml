@@ -1,19 +1,15 @@
 name: News
 type: Drupal CMS
-description: 'Adds a news content type with an overview page and related news items.'
+description: Adds a news content type and listing page.
 recipes:
-  - drupal_cms_content_type_base
-  - core/recipes/tags_taxonomy
+  - drupal_cms_page
 install:
   - add_content_by_bundle
   - menu_link_content
-  - shortcut
   - selective_better_exposed_filters
 config:
   strict: false
   import:
-    shortcut:
-      - shortcut.set.default
     system:
       - system.menu.main
   actions:

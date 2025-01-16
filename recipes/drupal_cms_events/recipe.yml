@@ -1,10 +1,9 @@
-name: 'Events'
-description: 'A content type and view to help you manage events.'
-type: 'Drupal CMS'
+name: Events
+description: Adds an event content type and listing page.
+type: Drupal CMS
 recipes:
   - core/recipes/document_media_type
-  - core/recipes/tags_taxonomy
-  - drupal_cms_content_type_base
+  - drupal_cms_page
   - drupal_cms_privacy_basic
 install:
   - add_content_by_bundle
@@ -18,7 +17,6 @@ install:
   - leaflet_views
   - menu_link_content
   - smart_date
-  - shortcut
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
@@ -29,9 +27,7 @@ config:
     - field.storage.node.field_location_address
   import:
     geofield: '*'
-    shortcut:
-      - shortcut.set.default
-    smart_date: "*"
+    smart_date: '*'
     system:
       - system.menu.main
   actions:

@@ -1,6 +1,6 @@
-name: 'Content Basics'
+name: Content Basics
 type: Drupal CMS
-description: 'Provides basic tools for creating content.'
+description: Provides basic tools for creating content.
 recipes:
   - core/recipes/content_editor_role
   # The media library cannot be opened via CKEditor unless at least one media
@@ -26,7 +26,6 @@ install:
   - pathauto
   - scheduler
   - scheduler_content_moderation_integration
-  - shortcut
   - taxonomy
   - token
   - trash
@@ -36,6 +35,8 @@ install:
   # so install these modules anyway.
   - field_ui
   - options
+  # Allow content types to configure whether editors can easily add menu links to them.
+  - menu_ui
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
@@ -46,6 +47,8 @@ config:
     - field.storage.node.layout_builder__layout
   import:
     filter: '*'
+    linkit:
+      - image.style.linkit_result_thumbnail
     node:
       # Only import config which is also imported by the Standard profile.
       - core.entity_view_mode.node.full
@@ -60,13 +63,10 @@ config:
       - system.action.node_unpromote_action
       - system.action.node_unpublish_action
       - views.view.content
-    shortcut:
-      - shortcut.set.default
+    taxonomy: '*'
     trash: '*'
-    content_moderation:
-      - views.view.moderated_content
-    scheduler: "*"
-    scheduler_content_moderation_integration: "*"
+    scheduler: '*'
+    scheduler_content_moderation_integration: '*'
   actions:
     autosave_form.settings:
       # Enable autosave for all content types.
@@ -83,11 +83,17 @@ config:
     user.role.content_editor:
       grantPermissions:
         - 'access content overview'
+        - 'administer menu'
         - 'use text format content_format'
-        - 'use basic_editorial transition archive'
+        - 'use basic_editorial transition unpublish'
         - 'use basic_editorial transition create_new_draft'
         - 'use basic_editorial transition publish'
-        - 'use basic_editorial transition archived_published'
         - 'schedule publishing of nodes'
         - 'view any unpublished content'
         - 'view scheduled content'
+    # Disable the taxonomy and media scheduler views because they are not
+    # needed and break the navigation menu.
+    views.view.scheduler_scheduled_media:
+      disable: {}
+    views.view.scheduler_scheduled_taxonomy_term:
+      disable: {}

@@ -1,8 +1,7 @@
-name: 'Page'
-description: 'A basic content type to create simple pages.'
-type: 'Drupal CMS'
+name: Basic page
+type: Drupal CMS
+description: Adds a content type for simple pages.
 recipes:
-  - core/recipes/tags_taxonomy
   - drupal_cms_content_type_base
 config:
   strict: false

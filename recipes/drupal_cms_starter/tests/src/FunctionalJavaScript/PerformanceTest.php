@@ -41,17 +41,14 @@ class PerformanceTest extends PerformanceTestBase {
    * Check the anonymous front page with a hot cache.
    */
   protected function doTestAnonymousFrontPage(): void {
-    // Warm various caches. Drupal CMS redirects the front page to /home, so visit that directly.
-    // @todo https://www.drupal.org/project/drupal_cms/issues/3493615
-    $this->drupalGet('/home');
-    $this->drupalGet('/home');
+    $this->drupalGet('');
+    $this->drupalGet('');
 
     // Test frontpage.
     $performance_data = $this->collectPerformanceData(function () {
-      $this->drupalGet('/home');
+      $this->drupalGet('');
     }, 'drupalCMSAnonymousFrontPage');
-    $assert_session = $this->assertSession();
-    $assert_session->pageTextContains('From great ideas to great digital experiences');
+    $this->assertSession()->elementExists('css', 'article.node');
     $this->assertSame([], $performance_data->getQueries());
     $this->assertSame(0, $performance_data->getQueryCount());
     $this->assertSame(2, $performance_data->getCacheGetCount());
@@ -61,12 +58,9 @@ class PerformanceTest extends PerformanceTestBase {
     $this->assertSame(1, $performance_data->getCacheTagIsValidCount());
     $this->assertSame(0, $performance_data->getCacheTagInvalidationCount());
     $this->assertSame(2, $performance_data->getStylesheetCount());
-    $this->assertSame(2, $performance_data->getScriptCount());
-    // @todo dramatically reduce these numbers once Klaro out of the box
-    // performance is improved.
-    // @see https://www.drupal.org/project/drupal_cms/issues/3493438
-    $this->assertLessThan(95000, $performance_data->getStylesheetBytes());
-    $this->assertLessThan(240000, $performance_data->getScriptBytes());
+    $this->assertSame(1, $performance_data->getScriptCount());
+    $this->assertLessThan(75000, $performance_data->getStylesheetBytes());
+    $this->assertLessThan(16500, $performance_data->getScriptBytes());
   }
 
   /**
@@ -78,33 +72,30 @@ class PerformanceTest extends PerformanceTestBase {
     $this->drupalLogin($editor);
     // Warm various caches. Drupal CMS redirects the front page to /home, so visit that directly.
     // @todo https://www.drupal.org/project/drupal_cms/issues/3493615
-    $this->drupalGet('/home');
-    $this->drupalGet('/home');
+    $this->drupalGet('');
+    $this->drupalGet('');
 
     // Test frontpage.
     $performance_data = $this->collectPerformanceData(function () {
-      $this->drupalGet('/home');
-    }, 'drupalCMSEditorFRontPage');
+      $this->drupalGet('');
+    }, 'drupalCMSEditorFrontPage');
     $assert_session = $this->assertSession();
     $assert_session->elementAttributeContains('named', ['link', 'Dashboard'], 'class', 'toolbar-button--icon--navigation-dashboard');
-    $assert_session->pageTextContains('From great ideas to great digital experiences');
+    $assert_session->elementExists('css', 'article.node');
     // @todo assert individual queries once Coffee does not result in an
     // additional AJAX request on every request.
     // @see https://www.drupal.org/project/coffee/issues/2453585
-    $this->assertSame(59, $performance_data->getQueryCount());
-    $this->assertSame(245, $performance_data->getCacheGetCount());
+    $this->assertSame(9, $performance_data->getQueryCount());
+    $this->assertSame(86, $performance_data->getCacheGetCount());
     $this->assertSame(0, $performance_data->getCacheSetCount());
     $this->assertSame(0, $performance_data->getCacheDeleteCount());
     $this->assertSame(0, $performance_data->getCacheTagChecksumCount());
-    $this->assertSame(102, $performance_data->getCacheTagIsValidCount());
+    $this->assertSame(33, $performance_data->getCacheTagIsValidCount());
     $this->assertSame(0, $performance_data->getCacheTagInvalidationCount());
     $this->assertSame(3, $performance_data->getStylesheetCount());
-    $this->assertSame(5, $performance_data->getScriptCount());
-    // @todo dramatically reduce these numbers once Klaro out of the box
-    // performance is improved.
-    // @see https://www.drupal.org/project/drupal_cms/issues/3493438
-    $this->assertLessThan(370000, $performance_data->getStylesheetBytes());
-    $this->assertLessThan(535000, $performance_data->getScriptBytes());
+    $this->assertSame(3, $performance_data->getScriptCount());
+    $this->assertLessThan(350000, $performance_data->getStylesheetBytes());
+    $this->assertLessThan(320000, $performance_data->getScriptBytes());
   }
 
 }

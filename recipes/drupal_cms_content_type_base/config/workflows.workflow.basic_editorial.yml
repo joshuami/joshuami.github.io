@@ -8,10 +8,10 @@ label: 'Basic'
 type: content_moderation
 type_settings:
   states:
-    archived:
+    unpublished:
       published: false
       default_revision: true
-      label: "Archived / Unpublished"
+      label: Unpublished
       weight: 1
     draft:
       published: false
@@ -24,24 +24,18 @@ type_settings:
       default_revision: true
       weight: 0
   transitions:
-    archive:
-      label: "Archive / Unpublish"
+    unpublish:
+      label: Unpublish
       from:
         - published
-      to: archived
+      to: unpublished
       weight: 1
-    archived_published:
-      label: "Restore from archive"
-      from:
-        - archived
-      to: published
-      weight: 3
     create_new_draft:
       label: "Create new draft"
       to: draft
       weight: -1
       from:
-        - archived
+        - unpublished
         - draft
         - published
     publish:
@@ -51,5 +45,6 @@ type_settings:
       from:
         - draft
         - published
+        - unpublished
   default_moderation_state: draft
   entity_types: {}

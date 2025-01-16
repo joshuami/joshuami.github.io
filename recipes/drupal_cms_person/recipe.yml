@@ -1,11 +1,10 @@
-name: 'Person profiles'
+name: Person Profiles
 type: Drupal CMS
-description: 'Adds a person profile content type that provides information about a person.'
+description: Adds a person profile content type.
 recipes:
-  - drupal_cms_content_type_base
-  - core/recipes/tags_taxonomy
+  - drupal_cms_page
 install:
-  - shortcut
+  - menu_link_content
   - telephone
 config:
   # Treat all field storages strictly, since they influence the database layout.
@@ -14,8 +13,6 @@ config:
     - field.storage.node.field_person__phone_number
     - field.storage.node.field_person__role_job_title
   import:
-    shortcut:
-      - shortcut.set.default
   actions:
     user.role.content_editor:
       grantPermissions:

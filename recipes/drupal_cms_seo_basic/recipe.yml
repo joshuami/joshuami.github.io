@@ -1,30 +1,25 @@
 name: Basic SEO
-description: Configures Drupal for basic SEO best practices.
+description: Provides basic SEO best practices.
 type: Drupal CMS
 recipes:
   - core/recipes/content_editor_role
 install:
   - easy_breadcrumb
-  - language
   - node
   - pathauto
   - redirect
   - redirect_404
-  - shortcut
   - token
   - user
   - views
 config:
-  import:
-    redirect:
-      - language.content_settings.redirect.redirect
-      - system.action.redirect_delete_action
-    redirect_404: '*'
-    shortcut:
-      - shortcut.set.default
   strict:
     # For safety's sake, only treat our bundled configuration strictly.
     - pathauto.pattern.menu_path
+  import:
+    redirect:
+      - system.action.redirect_delete_action
+    redirect_404: '*'
   actions:
     easy_breadcrumb.settings:
       simpleConfigUpdate:

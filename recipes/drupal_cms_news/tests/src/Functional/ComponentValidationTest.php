@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\drupal_cms_news\Functional;
 
+use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
-use Drupal\file\Entity\File;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
-use Drupal\media\Entity\Media;
 use Drupal\Tests\BrowserTestBase;
 use Drupal\Tests\drupal_cms_content_type_base\ContentModelTestTrait;
 
@@ -27,6 +26,11 @@ class ComponentValidationTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
+  protected static $modules = ['block'];
+
+  /**
+   * {@inheritdoc}
+   */
   protected function setUp(): void {
     parent::setUp();
 
@@ -38,6 +42,41 @@ class ComponentValidationTest extends BrowserTestBase {
   }
 
   public function testContentModel(): void {
+    /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
+    $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
+
+    $form_display = $display_repository->getFormDisplay('node', 'news');
+    $this->assertFalse($form_display->isNew());
+    $this->assertNull($form_display->getComponent('url_redirects'));
+    $this->assertFieldsInOrder($form_display, [
+      'title',
+      'field_description',
+      'field_content',
+      'field_featured_image',
+      'field_tags',
+    ]);
+
+    $default_display = $display_repository->getViewDisplay('node', 'news');
+    $this->assertNull($default_display->getComponent('links'));
+    $this->assertFieldsInOrder($default_display, [
+      'field_featured_image',
+      'content_moderation_control',
+      'field_content',
+      'field_tags',
+    ]);
+    $card_display = $display_repository->getViewDisplay('node', 'news', 'card');
+    $this->assertNull($default_display->getComponent('links'));
+    $this->assertFieldsInOrder($card_display, [
+      'field_featured_image',
+      'field_description',
+    ]);
+    $teaser_display = $display_repository->getViewDisplay('node', 'news', 'card');
+    $this->assertNull($teaser_display->getComponent('links'));
+    $this->assertFieldsInOrder($teaser_display, [
+      'field_featured_image',
+      'field_description',
+    ]);
+
     $this->assertContentModel([
       'news' => [
         'title' => [
@@ -100,46 +139,6 @@ class ComponentValidationTest extends BrowserTestBase {
     ]);
     $now = date('Y-m', $node->getCreatedTime());
     $this->assertStringEndsWith("/news/$now/test-news", $node->toUrl()->toString());
-  }
-
-  public function testListingPage(): void {
-    $uri = uniqid('public://') . '.png';
-    $this->getRandomGenerator()->image($uri, '600x600', '800x800');
-    $file = File::create([
-      'uri' => $uri,
-    ]);
-    $file->save();
-
-    $featured_image = Media::create([
-      'bundle' => 'image',
-      'field_media_image' => $file,
-    ]);
-    $featured_image->save();
-
-    $this->drupalCreateNode([
-      'type' => 'news',
-      'title' => 'Item 1',
-      'field_featured_image' => $featured_image,
-      'moderation_state' => 'published',
-    ]);
-    $this->drupalCreateNode([
-      'type' => 'news',
-      'title' => 'Item 2',
-      'field_featured_image' => $featured_image,
-      'moderation_state' => 'published',
-    ]);
-    $this->drupalCreateNode([
-      'type' => 'news',
-      'title' => 'Item 3',
-      'field_featured_image' => $featured_image,
-      'status' => FALSE,
-    ]);
-    $this->drupalGet('/news');
-    $assert_session = $this->assertSession();
-    $assert_session->statusCodeEquals(200);
-    $assert_session->linkExists('Item 1');
-    $assert_session->linkExists('Item 2');
-    $assert_session->linkNotExists('Item 3');
   }
 
 }

@@ -36,12 +36,9 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
 hidden:
+  content_moderation_control: true
   field_content: true
   field_tags: true
   langcode: true
+  links: true

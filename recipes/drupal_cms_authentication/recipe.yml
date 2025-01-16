@@ -1,5 +1,5 @@
 name: Authentication Tweaks
-description: Sets up a site with useful authentication features.
+description: Adds useful authentication features.
 type: Drupal CMS
 install:
   - bpmn_io

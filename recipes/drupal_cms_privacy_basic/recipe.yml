@@ -1,5 +1,5 @@
 name: Basic Privacy
-description: Sets up a site with basic privacy features like consent management and remote content blocking.
+description: Adds basic privacy features such as consent management and remote content blocking.
 type: Drupal CMS
 recipes:
   - drupal_cms_page
@@ -23,7 +23,6 @@ config:
       simpleConfigUpdate:
         auto_decorate_final_html: true
         library.group_by_purpose: true
-        library.cookie_expires_after_days: 30
     klaro.texts:
       simpleConfigUpdate:
         consentModal.privacyPolicy.url: 'internal:/privacy-policy'

@@ -1,12 +1,12 @@
 name: Projects
 type: Drupal CMS
-description: 'Adds a project content type that provides information about an example of work to the intended audience.'
+description: Adds a project content type and listing page.
 recipes:
-  - drupal_cms_content_type_base
-  - core/recipes/tags_taxonomy
+  - drupal_cms_page
 install:
   - link
-  - shortcut
+  - add_content_by_bundle
+  - menu_link_content
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
@@ -14,8 +14,6 @@ config:
     - field.storage.node.field_project__client_logo
     - field.storage.node.field_project__client_name
   import:
-    shortcut:
-      - shortcut.set.default
   actions:
     user.role.content_editor:
       grantPermissions:

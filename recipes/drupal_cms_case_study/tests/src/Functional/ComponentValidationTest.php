@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\drupal_cms_case_study\Functional;
 
+use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
@@ -36,6 +37,47 @@ class ComponentValidationTest extends BrowserTestBase {
   }
 
   public function testContentModel(): void {
+    /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
+    $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
+
+    $form_display = $display_repository->getFormDisplay('node', 'case_study');
+    $this->assertFalse($form_display->isNew());
+    $this->assertNull($form_display->getComponent('url_redirects'));
+    $this->assertFieldsInOrder($form_display, [
+      'title',
+      'field_featured_image',
+      'field_description',
+      'field_content',
+      'field_case_study__client_name',
+      'field_case_study__client_logo',
+      'field_case_study__client_link',
+      'field_tags',
+    ]);
+
+    $default_display = $display_repository->getViewDisplay('node', 'case_study');
+    $this->assertNull($default_display->getComponent('links'));
+    $this->assertFieldsInOrder($default_display, [
+      'field_case_study__client_logo',
+      'field_featured_image',
+      'content_moderation_control',
+      'field_content',
+      'field_case_study__client_link',
+      'field_tags',
+    ]);
+    $card_display = $display_repository->getViewDisplay('node', 'case_study', 'card');
+    $this->assertNull($card_display->getComponent('links'));
+    $this->assertFieldsInOrder($card_display, [
+      'field_featured_image',
+      'field_case_study__client_name',
+      'field_description',
+    ]);
+    $teaser_display = $display_repository->getViewDisplay('node', 'case_study', 'teaser');
+    $this->assertNull($teaser_display->getComponent('links'));
+    $this->assertFieldsInOrder($teaser_display, [
+      'field_featured_image',
+      'field_description',
+    ]);
+
     $this->assertContentModel([
       'case_study' => [
         'title' => [

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\drupal_cms_page\Functional;
 
+use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
@@ -28,6 +29,41 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->applyRecipe($dir);
     // Apply it again to prove that it is idempotent.
     $this->applyRecipe($dir);
+
+    /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
+    $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
+
+    $form_display = $display_repository->getFormDisplay('node', 'page');
+    $this->assertFalse($form_display->isNew());
+    $this->assertNull($form_display->getComponent('url_redirects'));
+    $this->assertFieldsInOrder($form_display, [
+      'title',
+      'field_featured_image',
+      'field_description',
+      'field_content',
+      'field_tags',
+    ]);
+
+    $default_display = $display_repository->getViewDisplay('node', 'page');
+    $this->assertNull($default_display->getComponent('links'));
+    $this->assertFieldsInOrder($default_display, [
+      'field_featured_image',
+      'content_moderation_control',
+      'field_content',
+      'field_tags',
+    ]);
+    $card_display = $display_repository->getViewDisplay('node', 'page', 'card');
+    $this->assertNull($card_display->getComponent('links'));
+    $this->assertFieldsInOrder($card_display, [
+      'field_featured_image',
+      'field_description',
+    ]);
+    $teaser_display = $display_repository->getViewDisplay('node', 'page', 'teaser');
+    $this->assertNull($teaser_display->getComponent('links'));
+    $this->assertFieldsInOrder($teaser_display, [
+      'field_featured_image',
+      'field_description',
+    ]);
 
     $this->assertContentModel([
       'page' => [

@@ -37,7 +37,7 @@ class StandardTest extends BrowserTestBase {
     $assert_session = $this->assertSession();
     $assert_session->statusCodeEquals(200);
     $assert_session->fieldNotExists('Content');
-    $assert_session->fieldNotExists('Description');
+    $assert_session->fieldNotExists('field_description[0][value]');
     $assert_session->fieldNotExists('Featured image');
     $assert_session->fieldNotExists('Tags');
     // The Body field from Standard should be visible.

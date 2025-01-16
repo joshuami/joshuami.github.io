@@ -10,7 +10,7 @@ default:
       value: true
   title:
     -
-      value: 'Change appearance'
+      value: 'Change site appearance'
   menu_name:
     -
       value: welcome

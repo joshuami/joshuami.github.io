@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\drupal_cms_events\Functional;
 
+use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
@@ -43,6 +44,54 @@ class ComponentValidationTest extends BrowserTestBase {
   }
 
   public function testContentModel(): void {
+    /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $display_repository */
+    $display_repository = $this->container->get(EntityDisplayRepositoryInterface::class);
+
+    $form_display = $display_repository->getFormDisplay('node', 'event');
+    $this->assertFalse($form_display->isNew());
+    $this->assertNull($form_display->getComponent('url_redirects'));
+    $this->assertFieldsInOrder($form_display, [
+      'title',
+      'field_description',
+      'field_featured_image',
+      'field_content',
+      'field_event__date',
+      'field_event__location_name',
+      'field_event__location_address',
+      'field_event__file',
+      'field_event__link',
+      'field_tags',
+    ]);
+
+    $default_display = $display_repository->getViewDisplay('node', 'event');
+    $this->assertNull($default_display->getComponent('links'));
+    $this->assertFieldsInOrder($default_display, [
+      'content_moderation_control',
+      'field_featured_image',
+      'field_event__date',
+      'field_event__location_name',
+      'field_event__location_address',
+      'field_geofield',
+      'field_content',
+      'field_event__link',
+      'field_event__file',
+      'field_tags',
+    ]);
+    $card_display = $display_repository->getViewDisplay('node', 'event', 'card');
+    $this->assertNull($card_display->getComponent('links'));
+    $this->assertFieldsInOrder($card_display, [
+      'field_featured_image',
+      'field_event__date',
+      'field_description',
+    ]);
+    $teaser_display = $display_repository->getViewDisplay('node', 'event', 'teaser');
+    $this->assertNull($teaser_display->getComponent('links'));
+    $this->assertFieldsInOrder($teaser_display, [
+      'field_featured_image',
+      'field_event__date',
+      'field_description',
+    ]);
+
     $this->assertContentModel([
       'event' => [
         'title' => [

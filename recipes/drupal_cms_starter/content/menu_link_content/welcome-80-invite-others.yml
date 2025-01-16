@@ -10,7 +10,7 @@ default:
       value: true
   title:
     -
-      value: 'Invite users'
+      value: 'Invite users to collaborate'
   menu_name:
     -
       value: welcome

@@ -4,14 +4,47 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\drupal_cms_content_type_base;
 
+use Drupal\Component\Utility\SortArray;
+use Drupal\Core\Entity\Display\EntityDisplayInterface;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
-use Drupal\Core\Field\Entity\BaseFieldOverride;
-use Drupal\Core\Field\FieldDefinitionInterface;
-use Drupal\field\Entity\FieldConfig;
+use Drupal\layout_builder\Entity\LayoutEntityDisplayInterface;
 use Drupal\Tests\BrowserTestBase;
 use PHPUnit\Framework\Assert;
 
 trait ContentModelTestTrait {
+
+  protected function assertFieldsInOrder(EntityDisplayInterface $display, array $expected_order): void {
+    if ($display instanceof LayoutEntityDisplayInterface && $display->isLayoutBuilderEnabled()) {    $fields = [];
+      $components = [];
+
+      foreach ($display->getSections() as $index => $section) {
+        foreach ($section->getComponents() as $component) {
+          $plugin_id = $component->getPluginId();
+
+          if (str_starts_with($plugin_id, 'field_block:') || str_starts_with($plugin_id, 'extra_field_block:')) {
+            $this->assertSame(3, substr_count($plugin_id, ':'), "Section component plugin ID '$plugin_id' should have exactly 4 parts.");
+            [,,, $name] = explode(':', $plugin_id);
+            $components[$name] = [
+              'weight' => $component->getWeight() + ($index * 100),
+            ];
+          }
+        }
+      }
+    }
+    else {
+      $components = $display->getComponents();
+    }
+
+    uasort($components, SortArray::sortByWeightElement(...));
+    $actual_order = array_keys($components);
+
+    $missing_fields = array_diff($expected_order, $actual_order);
+    $this->assertEmpty($missing_fields, $display->getConfigDependencyName() . " is missing fields: " . implode(', ', $missing_fields));
+
+    $actual_order = array_intersect($actual_order, $expected_order);
+    $actual_order = array_values($actual_order);
+    $this->assertSame($expected_order, $actual_order);
+  }
 
   protected function assertContentModel(array $content_model): void {
     assert($this instanceof BrowserTestBase);

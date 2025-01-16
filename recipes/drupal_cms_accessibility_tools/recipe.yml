@@ -1,6 +1,6 @@
-name: Accessibility tools
+name: Accessibility Tools
 type: Drupal CMS
-description: Installs and configures tools to help authors make their content accessible.
+description: Adds automated checks to help ensure content conforms to web accessibility guidelines.
 recipes:
   - drupal_cms_page
 install:

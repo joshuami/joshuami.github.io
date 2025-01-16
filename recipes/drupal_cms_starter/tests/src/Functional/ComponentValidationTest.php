@@ -6,6 +6,7 @@ namespace Drupal\Tests\drupal_cms_starter\Functional;
 
 use Composer\InstalledVersions;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\State\StateInterface;
 use Drupal\Tests\BrowserTestBase;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
@@ -67,6 +68,8 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->drupalGet('<front>');
     $assert_session = $this->assertSession();
     $assert_session->statusCodeEquals(200);
+    // Also, the front page should be "/", instead of "/home".
+    $assert_session->addressEquals('/');
 
     $editor = $this->drupalCreateUser();
     $editor->addRole('content_editor')->save();
@@ -82,9 +85,7 @@ class ComponentValidationTest extends BrowserTestBase {
 
     // Test that all the optional recipes can be applied on top of this one.
     foreach ($optional_recipes as $name) {
-      $this->applyRecipe(InstalledVersions::getInstallPath($name), [
-        '--input=drupal_cms_analytics.property_id=GTM-123456',
-      ]);
+      $this->applyRecipe(InstalledVersions::getInstallPath($name));
     }
 
     $node_types = $this->container->get(EntityTypeManagerInterface::class)
@@ -110,8 +111,53 @@ class ComponentValidationTest extends BrowserTestBase {
         // Pages should have the expected path aliases.
         $assert_session->addressMatches('/\/test-page$/');
       }
+
+      $this->drupalCreateNode([
+        'type' => $node_type,
+        'title' => "Search for this $node_type",
+        'moderation_state' => 'published',
+      ]);
     }
     $this->drupalLogout();
+
+    // If we apply the search recipe, the content we just created in the loop
+    // above should all be searchable.
+    $dir = InstalledVersions::getInstallPath('drupal/drupal_cms_search');
+    $this->applyRecipe($dir);
+
+    // The creation of the search index should have reset the last cron run time
+    // to zero.
+    /** @var \Drupal\Core\State\StateInterface $state */
+    $state = $this->container->get(StateInterface::class);
+    $last_cron_run = $state->get('system.cron_last');
+    $this->assertSame('0', $last_cron_run);
+    $last_cron_run = intval($last_cron_run);
+
+    // Thanks to automated_cron, this request will trigger a cron run.
+    $this->drupalGet('/search');
+
+    // The cron work may outlive the HTTP request, so wait for it to finish.
+    $seconds_waited = 0;
+    while ($last_cron_run === 0) {
+      $state->resetCache();
+      $last_cron_run = (int) $state->get('system.cron_last');
+
+      // We've given it a whole minute; it should be done by now.
+      if (++$seconds_waited === 60) {
+        break;
+      }
+      else {
+        sleep(1);
+      }
+    }
+    $this->assertGreaterThan(0, $last_cron_run);
+
+    // The content we created should now be searchable.
+    foreach ($node_types as $node_type) {
+      $page->fillField('Search keywords', $node_type);
+      $page->pressButton('Find');
+      $assert_session->linkExists("Search for this $node_type");
+    }
 
     // If you have permission to administer modules, you should see a dedicated
     // tab to browse recipes.
@@ -119,8 +165,6 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->drupalLogin($account);
     $this->drupalGet('/admin/modules/browse/recipes');
     $assert_session->statusCodeEquals(200);
-    $local_tasks = $assert_session->elementExists('css', 'h2:contains("Primary tabs") + nav > ul');
-    $assert_session->elementExists('named', ['link', 'Recommended'], $local_tasks);
   }
 
 }

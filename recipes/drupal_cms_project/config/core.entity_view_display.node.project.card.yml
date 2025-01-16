@@ -10,13 +10,9 @@ dependencies:
     - field.field.node.project.field_project__client_logo
     - field.field.node.project.field_project__client_name
     - field.field.node.project.field_tags
-    - image.style.uncropped_500w_webp
     - node.type.project
   module:
     - layout_builder
-    - link
-    - media
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -27,64 +23,35 @@ targetEntityType: node
 bundle: project
 mode: card
 content:
-  field_content:
-    type: text_default
+  field_description:
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_featured_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: eager
+      view_mode: 16_9_medium
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
-  field_project__client_link:
-    type: link
-    label: inline
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: '0'
-      target: _blank
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_project__client_logo:
-    type: media_thumbnail
-    label: inline
-    settings:
-      image_link: ''
-      image_style: uncropped_500w_webp
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 5
-    region: content
   field_project__client_name:
     type: string
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_tags:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: true
     third_party_settings: {  }
     weight: 1
     region: content
 hidden:
-  field_description: true
+  content_moderation_control: true
+  field_content: true
+  field_project__client_link: true
+  field_project__client_logo: true
+  field_tags: true
   langcode: true
   links: true
