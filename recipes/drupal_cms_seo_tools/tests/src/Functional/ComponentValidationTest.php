@@ -42,6 +42,23 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertIsArray($field_settings);
     $this->assertSame('default:media', $field_settings['handler']);
     $this->assertContains('image', $field_settings['handler_settings']['target_bundles']);
+
+    // Check sitemap works as expected for anonymous users.
+    $this->checkSitemap();
+
+    // Check sitemap works as expected for authenticated users too.
+    $authenticated = $this->createUser();
+    $this->drupalLogin($authenticated);
+    $this->checkSitemap();
+  }
+
+  /**
+   * Checks the sitemap is accessible.
+   */
+  private function checkSitemap(): void {
+    $this->drupalGet('/sitemap');
+    $this->assertSession()->statusCodeEquals(200);
+    $this->assertSession()->linkByHrefNotExists('/rss.xml');
   }
 
 }

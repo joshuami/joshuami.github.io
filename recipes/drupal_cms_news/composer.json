@@ -9,5 +9,6 @@
         "drupal/drupal_cms_page": "~1.0.0",
         "drupal/better_exposed_filters": "^7",
         "drupal/selective_better_exposed_filters": "^3"
-    }
+    },
+    "version": "1.0.1"
 }

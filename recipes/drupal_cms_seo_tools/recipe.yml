@@ -206,7 +206,7 @@ config:
           weight: 0
           settings:
             title: 'Front page'
-            rss: /rss.xml
+            rss: null
           id: frontpage
           provider: sitemap
         plugins.menu:main:
@@ -225,3 +225,7 @@ config:
         # Ensure CSS and JS are preprocessed.
         css.preprocess: true
         js.preprocess: true
+    user.role.anonymous:
+      grantPermission: 'access sitemap'
+    user.role.authenticated:
+      grantPermission: 'access sitemap'

@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.card
     - node.type.person
   module:
+    - add_content_by_bundle
     - node
     - user
 id: person_profiles
@@ -178,7 +179,21 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
+      header:
+        add_content_by_bundle:
+          id: add_content_by_bundle
+          table: views
+          field: add_content_by_bundle
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: add_content_by_bundle
+          label: 'Add a person profile'
+          empty: true
+          bundle: person
+          class: button
+          target: ''
+          width: 600
       footer: {  }
       display_extenders: {  }
     cache_metadata:

@@ -4,6 +4,7 @@ dependencies:
   config:
     - image.style.uncropped_500w_webp
     - image.style.uncropped_600w_webp
+    - image.style.uncropped_720w_webp
   theme:
     - olivero
 id: uncropped_medium
@@ -16,6 +17,7 @@ image_style_mappings:
       sizes_image_styles:
         - uncropped_500w_webp
         - uncropped_600w_webp
+        - uncropped_720w_webp
     breakpoint_id: olivero.sm
     multiplier: 1x
 breakpoint_group: olivero

@@ -4,6 +4,7 @@ description: Adds a person profile content type.
 recipes:
   - drupal_cms_page
 install:
+  - add_content_by_bundle
   - menu_link_content
   - telephone
 config:

@@ -4,6 +4,7 @@ dependencies:
   config:
     - image.style.1_1_500x500_focal_point_webp
     - image.style.1_1_600x600_focal_point_webp
+    - image.style.1_1_720x720_focal_point_webp
   theme:
     - olivero
 id: 1_1_medium
@@ -16,6 +17,7 @@ image_style_mappings:
       sizes_image_styles:
         - 1_1_500x500_focal_point_webp
         - 1_1_600x600_focal_point_webp
+        - 1_1_720x720_focal_point_webp
     breakpoint_id: olivero.sm
     multiplier: 1x
 breakpoint_group: olivero

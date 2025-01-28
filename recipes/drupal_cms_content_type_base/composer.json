@@ -7,7 +7,7 @@
         "drupal/autosave_form": "^1.7",
         "drupal/bpmn_io": "^2.0.3",
         "drupal/core": ">=10.4",
-        "drupal/drupal_cms_image": "~1.0.0",
+        "drupal/drupal_cms_image": "~1.0.1",
         "drupal/eca": "^2.1",
         "drupal/linkit": "^7",
         "drupal/pathauto": "^1.13",
@@ -15,5 +15,6 @@
         "drupal/trash": "^3",
         "drupal/scheduler": "^2.2",
         "drupal/scheduler_content_moderation_integration": "^3"
-    }
+    },
+    "version": "1.0.1"
 }

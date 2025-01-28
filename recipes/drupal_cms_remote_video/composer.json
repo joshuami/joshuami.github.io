@@ -6,5 +6,6 @@
     "require": {
         "drupal/core": ">=10.4",
         "drupal/drupal_cms_privacy_basic": "~1.0.0"
-    }
+    },
+    "version": "1.0.1"
 }

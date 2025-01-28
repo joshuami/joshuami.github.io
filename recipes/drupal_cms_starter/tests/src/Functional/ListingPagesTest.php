@@ -41,6 +41,7 @@ class ListingPagesTest extends BrowserTestBase {
    *   ["drupal/drupal_cms_events", "event", "Events", "/events", "Add an event"]
    *   ["drupal/drupal_cms_news", "news", "News", "/news", "Add a news item"]
    *   ["drupal/drupal_cms_project", "project", "Projects", "/projects", "Add a project"]
+   *   ["drupal/drupal_cms_person", "person", "People", "/people", "Add a person profile"]
    */
   public function testListingPages(string $recipe, string $content_type, string $link_text, string $url, string $create_link_text): void {
     $dir = InstalledVersions::getInstallPath($recipe);
