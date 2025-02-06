@@ -15,7 +15,7 @@ dependencies:
     - eca_config
     - eca_content
 id: front_page_redirect_hotfix
-modeller: fallback
+modeller: bpmn_io
 label: 'Front page redirect hotfix'
 version: 1.0.0
 weight: 0

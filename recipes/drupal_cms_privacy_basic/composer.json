@@ -10,5 +10,6 @@
         "drupal/drupal_cms_page": "~1.0.0",
         "drupal/klaro": "^3",
         "drupal/menu_link_attributes": "^1.5"
-    }
+    },
+    "version": "1.0.1"
 }

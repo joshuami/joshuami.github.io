@@ -122,7 +122,7 @@ class ContentMetaTagsTest extends BrowserTestBase {
       $assert_session->elementAttributeContains('css', 'meta[property="og:image:alt"]', 'content', $alt_text);
       $assert_session->elementAttributeContains('css', 'meta[property="og:image:width"]', 'content', (string) $facebook_dimensions['width']);
       $assert_session->elementAttributeContains('css', 'meta[property="og:image:height"]', 'content', (string) $facebook_dimensions['height']);
-      $assert_session->elementAttributeContains('css', 'meta[property="og:image:type"]', 'content', $file->getMimeType());
+      $assert_session->elementAttributeContains('css', 'meta[property="og:image:type"]', 'content', 'image/webp');
       $assert_session->elementAttributeContains('css', 'meta[name="twitter:image"]', 'content', $name);
       $assert_session->elementAttributeContains('css', 'meta[name="twitter:image:alt"]', 'content', $alt_text);
     };

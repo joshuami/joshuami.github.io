@@ -4,17 +4,17 @@
     "type": "drupal-recipe",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "drupal/autosave_form": "^1.7",
-        "drupal/bpmn_io": "^2.0.3",
+        "drupal/autosave_form": "^1.10",
+        "drupal/bpmn_io": "^2.0.6",
         "drupal/core": ">=10.4",
-        "drupal/drupal_cms_image": "~1.0.1",
+        "drupal/drupal_cms_image": "~1.0.2",
         "drupal/eca": "^2.1",
         "drupal/linkit": "^7",
         "drupal/pathauto": "^1.13",
         "drupal/token": "^1",
         "drupal/trash": "^3",
         "drupal/scheduler": "^2.2",
-        "drupal/scheduler_content_moderation_integration": "^3"
+        "drupal/scheduler_content_moderation_integration": "^3.0.4"
     },
-    "version": "1.0.1"
+    "version": "1.0.2"
 }

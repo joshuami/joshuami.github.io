@@ -8,7 +8,7 @@ use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
 use Drupal\Tests\BrowserTestBase;
 
 /**
- * @group drupal_cms_admin_theme
+ * @group drupal_cms_admin_ui
  */
 class ComponentValidationTest extends BrowserTestBase {
 
@@ -35,6 +35,14 @@ class ComponentValidationTest extends BrowserTestBase {
     $footer = $assert_session->elementExists('css', 'nav > h3:contains("Administrative toolbar footer")')
       ->getParent();
     $assert_session->elementNotExists('named', ['link', 'Help'], $footer);
+
+    $this->drupalLogout();
+    // Ensure that there are no broken blocks in the navigation (or anywhere
+    // else). We need to test this with the root user because they have all
+    // permissions, and therefore any broken blocks in the navigation will be
+    // obvious to them.
+    $this->drupalLogin($this->rootUser);
+    $assert_session->pageTextNotContains('This block is broken or missing.');
   }
 
 }

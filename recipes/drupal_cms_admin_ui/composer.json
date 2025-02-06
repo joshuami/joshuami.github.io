@@ -6,7 +6,9 @@
     "require": {
         "drupal/coffee": "^2",
         "drupal/core": ">=10.3",
+        "drupal/dashboard": "^2",
         "drupal/gin": "^4",
         "drupal/sam": "^1.2"
-    }
+    },
+    "version": "1.0.2"
 }

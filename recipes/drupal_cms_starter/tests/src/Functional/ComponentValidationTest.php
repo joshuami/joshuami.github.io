@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\drupal_cms_starter\Functional;
 
+use Behat\Mink\Element\NodeElement;
 use Composer\InstalledVersions;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\State\StateInterface;
@@ -70,6 +71,16 @@ class ComponentValidationTest extends BrowserTestBase {
     $assert_session->statusCodeEquals(200);
     // Also, the front page should be "/", instead of "/home".
     $assert_session->addressEquals('/');
+    // The privacy policy page isn't published, so it should respond with a
+    // 404, not 403.
+    $this->drupalGet('/privacy-policy');
+    $assert_session->statusCodeEquals(404);
+    // A non-existing page should also respond with a 404.
+    $this->drupalGet('/node/999999');
+    $assert_session->statusCodeEquals(404);
+    // A non-permitted page should respond with a 403.
+    $this->drupalGet('/admin');
+    $assert_session->statusCodeEquals(403);
 
     $editor = $this->drupalCreateUser();
     $editor->addRole('content_editor')->save();
@@ -159,12 +170,32 @@ class ComponentValidationTest extends BrowserTestBase {
       $assert_session->linkExists("Search for this $node_type");
     }
 
-    // If you have permission to administer modules, you should see a dedicated
-    // tab to browse recipes.
+    // Ensure that the Project Browser local tasks work as expected.
     $account = $this->drupalCreateUser(['administer modules']);
     $this->drupalLogin($account);
-    $this->drupalGet('/admin/modules/browse/recipes');
-    $assert_session->statusCodeEquals(200);
+    $this->drupalGet('/admin/modules');
+    // Get the Project Browser local tasks.
+    $elements = $assert_session->elementExists('css', 'h2:contains("Primary tabs") + nav')
+      ->findAll('css', 'ul li a');
+    $local_tasks = [];
+    /** @var \Behat\Mink\Element\NodeElement $element */
+    foreach ($elements as $element) {
+      $link_text = $element->getText();
+      $local_tasks[$link_text] = $element->getAttribute('data-drupal-link-system-path');
+    }
+    // The first task should go to core's regular modules page.
+    $this->assertSame('admin/modules', reset($local_tasks));
+    // Ensure the Project Browser tasks are in the expected order, have the
+    // expected link text, and link to the expected place.
+    $project_browser_tasks = preg_grep('|admin/modules/browse/.+|', $local_tasks);
+    $this->assertSame(['Recommended', 'Browse modules'], array_keys($project_browser_tasks));
+    $this->assertStringEndsWith('/recipes', $project_browser_tasks['Recommended']);
+    $this->assertStringEndsWith('/drupalorg_jsonapi', $project_browser_tasks['Browse modules']);
+    // We should have access to all Project Browser tasks.
+    foreach ($project_browser_tasks as $path) {
+      $this->drupalGet($path);
+      $assert_session->statusCodeEquals(200);
+    }
   }
 
 }

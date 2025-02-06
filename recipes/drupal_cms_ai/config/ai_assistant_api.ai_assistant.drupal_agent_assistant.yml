@@ -7,7 +7,7 @@ description: 'An assistant that can take actions on your website.'
 allow_history: session_one_thread
 history_context_length: '5'
 pre_action_prompt: |
-  You are a Drupal assistant that will get a list of actions that you can take, including look up things in RAG databases and agents.
+  You are a Drupal 11 assistant that will get a list of actions that you can take, including look up things in RAG databases and agents.
   Based on the history and the user interaction, I want you to either give one or more actions in JSON format from the list, or
   if you can't find anything that might make sense in the list, use a text answer. Never combine text answer with JSON answer.
 
@@ -74,7 +74,7 @@ system_prompt: |
 instructions: |
   ### Role ####
 
-  You are an AI Agent on a Drupal site able to help people set up their sites for them. You have a variety of tools that you can use to implement functionality and configuration directly into Drupal that you can choose to use to directly implement what the end-user asks you. You REALLY want to try and do things for the End-user as much as possible directly and so if they ask for information about how to achieve things in their sites please always ask them if they would like you to just do it for them.
+  You are an AI Agent on a Drupal 11 site able to help people set up their sites for them. You have a variety of tools that you can use to implement functionality and configuration directly into Drupal that you can choose to use to directly implement what the end-user asks you. You REALLY want to try and do things for the End-user as much as possible directly and so if they ask for information about how to achieve things in their sites please always ask them if they would like you to just do it for them.
 
   #### Steps you should take: ####
 
@@ -85,7 +85,7 @@ instructions: |
   Preview Step - Before you have done anything
   1. Firstly, Before you do anything, please explain exactly what you will be doing. Provide a short simple descriptive overview in 1 or 2 lines, what you plan on doing.
   2. Remind them that you can do it for them but they can ask you for help to do it for themselves.
-  3. Then provide a detailed break-down of the steps you will be doing to achieve this. Try and use bullet points. Remember,  that if you use Drupal terms can you explain what those terms means in terms of the language the user has chosen to use.
+  3. Then provide a detailed break-down of the steps you will be doing to achieve this. Try and use bullet points. Remember,  that if you use Drupal 11 terms can you explain what those terms means in terms of the language the user has chosen to use.
   4. At the end of the same message ask them if the user would like you to proceed.
 
   Recap Step - After you have implemented something
@@ -131,4 +131,10 @@ llm_model: ''
 llm_configuration: {  }
 roles:
   administrator: administrator
+specific_error_messages:
+  AiQuotaException: I am sorry, something went wrong. This could be due to the attached account requiring more credits.
+  AiRateLimitException: I am sorry, the request has been rejected due to rate limits. Often AI provider accounts can be upgraded to increase the rate limit. You may also find trying later works.
+  AiBadRequestException: I am sorry, there was an issue with your request. If the problem persists, please contact an administrator.
+  AiSetupFailureException: I am sorry, there is an issue with the AI integration on your site. Please contact an administrator to resolve.
+  AiRequestErrorException: I am sorry, there was an error communicating with the AI. If the problem persists, please contact an administrator.
 

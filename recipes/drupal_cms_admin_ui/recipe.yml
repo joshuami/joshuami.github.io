@@ -3,6 +3,7 @@ type: Drupal CMS
 description: Sets up a nice administrative theme and navigation.
 install:
   - coffee
+  - dashboard
   - contextual
   - gin
   - gin_toolbar
