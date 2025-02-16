@@ -15,5 +15,6 @@
     "drupal/leaflet": "^10.2.33",
     "drupal/smart_date": "^4.2.1",
     "geocoder-php/nominatim-provider": "^5.7"
-  }
+  },
+  "version": "1.0.2"
 }
