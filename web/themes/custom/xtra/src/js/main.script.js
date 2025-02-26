@@ -4,14 +4,14 @@
 
 // Import site-wide libraries.
 import './_bootstrap.js';
-import './light.js';
-import './solid.js';
-import './fontawesome.js';
+// import './light.js';
+// import './solid.js';
+// import './fontawesome.js';
 
 // Import components
-import './_alert.js';
+// import './_alert.js';
 import './_back-to-top.js';
-import './_table.js';
+// import './_table.js';
 
 // import { Toast, Tooltip } from './_bootstrap';
 // (() => {

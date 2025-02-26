@@ -15,6 +15,7 @@
     "/components/page-content/page-content.css": "/components/page-content/page-content.css",
     "/components/offcanvas/_offcanvas.css": "/components/offcanvas/_offcanvas.css",
     "/components/node/node.css": "/components/node/node.css",
+    "/components/navbar/navbar.css": "/components/navbar/navbar.css",
     "/components/navbar-brand/navbar-brand.css": "/components/navbar-brand/navbar-brand.css",
     "/components/nav/nav.css": "/components/nav/nav.css",
     "/components/local-tasks/local-tasks.css": "/components/local-tasks/local-tasks.css",
