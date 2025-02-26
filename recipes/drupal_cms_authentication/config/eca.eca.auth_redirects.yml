@@ -4,7 +4,7 @@ dependencies:
   module:
     - eca_user
 id: auth_redirects
-modeller: fallback
+modeller: bpmn_io
 label: 'Authentication redirects'
 version: 1.0.0
 weight: 0

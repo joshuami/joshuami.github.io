@@ -1,0 +1,65 @@
+// Facets
+.facets-widget {
+  &-checkbox {
+    padding: $spacer;
+    background: $gray-300;
+
+    h2 {
+      margin-top: -$spacer;
+      margin-left: -$spacer;
+      margin-right: -$spacer;
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: $spacer;
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+}
+
+.facet-item {
+  @extend .form-check;
+  margin-bottom: calc($spacer / 2);
+
+  ul {
+    margin-top: calc($spacer / 2);
+  }
+}
+
+.facet-item label {
+  display: inline-block;
+  margin: 0;
+  --acumin-wght: 400;
+}
+
+.facet-item input.facets-checkbox {
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: -$spacer * 1.25;
+}
+
+.facet-empty {
+  display: none;
+}
+
+.facet-active,
+.facet-inactive {
+  margin-bottom: 1.25rem;
+
+  .facets-widget-checkbox {
+    border: 1px solid $gray-300;
+    border-radius: 4px;
+  }
+
+  h2 {
+    color: #fff;
+    --acumin-wght: 700;
+    text-align: left;
+    font-size: 1.125rem;
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Template for rendering a user profile.
+ *
+ * Available variables:
+ * - view_mode: View mode; for example, "full", "teaser".
+ * - content: All content renderable arrays for the user.
+ * - user_utility_classes: (optional) An array of additional classes for design or styling requirements.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+{%
+  set classes = [
+    'user',
+    'user--' ~ view_mode|clean_class,
+  ]|merge(user_utility_classes ?: [])
+%}
+
+<div{{attributes.addClass(classes)}}>
+  {% block content %}
+   
+    {% if view_mode|clean_class != "full" %}
+    <div class="card my-3">
+      <div class="row">
+        <div class="col-9">
+          <div class="card-body">
+            <h2 class="h4"><a href="{{ path('entity.user.canonical', {'user': user.id}, {}) }}">{{ user.displayname }}</a></h2>
+            {{ content|without('field_image') }}
+          </div>
+        </div>
+        <div class="col-3">
+          {{- content.field_image -}}
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="row row-cols-1 row-cols-md-2 my-3">
+      <div class="col">
+        {{ content|without('field_image') }}
+      </div>
+      <div class="col">
+        {{- content.field_image -}}
+      </div>
+    </div>
+    {% endif %}
+
+  {% endblock %}
+</div>

@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Page Content
+status: experimental
+description: 'The main content component of a page, including a header section and main content area.'
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      description: 'HTML attributes for the main content area of the page.'
+    page_main_utility_classes:
+      type: array
+      items:
+        type: string
+      description: 'Additional utility classes added to the main content area of the page.'
+slots:
+  page_header:
+    type: array
+    title: Page Header
+    description: 'The header section of the main content area.'
+  page_content:
+    type: array
+    title: Page Content
+    description: 'The actual content within the main content area.'
+  page_sidebar:
+    type: array
+    title: Page Sidebar
+    description: 'The actual content within the sidebar content area.'

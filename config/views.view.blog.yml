@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
+    - core.entity_view_mode.node.teaser
     - field.storage.node.field_description
     - node.type.blog
     - taxonomy.vocabulary.tags
@@ -78,7 +79,7 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: full
         options:
           offset: 0
           pagination_heading_level: h4
@@ -88,6 +89,8 @@ display:
           tags:
             next: ››
             previous: ‹‹
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -96,6 +99,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -288,11 +292,15 @@ display:
             group_items: {  }
       style:
         type: default
+        options:
+          row_class: mb-4
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: card
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -302,6 +310,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: ''
       use_ajax: false
       link_display: page
       link_url: ''
@@ -771,7 +780,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 4
       sorts:
         created:
           id: created
@@ -789,12 +798,30 @@ display:
             field_identifier: ''
           exposed: false
           granularity: second
+      style:
+        type: grid
+        options:
+          uses_fields: false
+          columns: 10
+          automatic_width: false
+          alignment: horizontal
+          row_class_custom: 'row row-cols-1 row-cols-xl-2 g-4 mb-4'
+          row_class_default: false
+          col_class_custom: col
+          col_class_default: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
       defaults:
         title: false
         pager: false
         use_more: false
         use_more_always: false
         use_more_text: false
+        style: false
+        row: false
         sorts: false
       display_description: ''
       use_more: true
@@ -911,10 +938,28 @@ display:
           validate_options: {  }
           break_phrase: false
           not: true
+      style:
+        type: grid
+        options:
+          uses_fields: false
+          columns: 10
+          automatic_width: false
+          alignment: horizontal
+          row_class_custom: 'row row-cols-1 row-cols-xl-2 g-4'
+          row_class_default: false
+          col_class_custom: col
+          col_class_default: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       defaults:
         empty: false
         title: false
         pager: false
+        style: false
+        row: false
         arguments: false
       display_description: ''
       display_extenders: {  }

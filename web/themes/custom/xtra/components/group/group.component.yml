@@ -1,0 +1,85 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Group
+status: experimental
+description: 'A component template for rendering group entities in Drupal.'
+props:
+  type: object
+  properties:
+    title_attributes:
+      type: Drupal\Core\Template\Attribute
+      description: 'This is used to add custom HTML attributes to the group title.'
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      description: 'This is used to add custom HTML attributes to the group container.'
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      description: 'This is used to add custom HTML attributes to the group content area.'
+    title_prefix:
+      type: array
+      title: 'Title prefix'
+      description: 'An array of additional output that may be displayed before the main title tag.'
+    title_suffix:
+      type: array
+      title: 'Title suffix'
+      description: 'An array of additional output that may be displayed after the main title tag.'
+    display_submitted:
+      type: boolean
+      description: 'A flag to control the visibility of the author and date information.'
+    author_picture:
+      type: string
+      description: 'The URL or the path for the author picture.'
+    author_name:
+      type: string
+      description: 'The name of the author.'
+    date:
+      type: string
+      description: 'The submission date.'
+    metadata:
+      type: string
+      description: 'Metadata associated with the group.'
+    label:
+      type: string
+      description: 'The label of the group.'
+    url:
+      type: string
+      description: 'The URL to the group.'
+    group_classes:
+      type: array
+      items:
+        type: string
+      title: Classes
+      description: 'An array of classes to be added to the group container.'
+    group_content_classes:
+      type: array
+      items:
+        type: string
+      title: Content Classes
+      description: 'An array of classes to be added to the group content area.'
+    group_utility_classes:
+      type: array
+      items:
+        type: string
+      title: group Utility Classes
+    author_utility_classes:
+      type: array
+      items:
+        type: string
+      title: Author Utility Classes
+    group_content_utility_classes:
+      type: array
+      items:
+        type: string
+      title: group Content Utility Classes      
+slots:
+  group_title:
+    title: 'Title'
+    description: 'The title of the group.'
+  group_metadata:
+    title: 'Metadata'
+    description: 'The metadata of the group.'
+  group_content:
+    title: 'Content'
+    description: 'The main content block.'
+  content:
+    title: 'Content'
+    description: 'The main contents of the group.'

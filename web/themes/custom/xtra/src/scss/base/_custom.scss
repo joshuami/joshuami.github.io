@@ -1,0 +1,11 @@
+// Make all images responsive
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  padding: 2rem;
+  background-color: $black;
+  border: 1px solid $gray-300;
+}

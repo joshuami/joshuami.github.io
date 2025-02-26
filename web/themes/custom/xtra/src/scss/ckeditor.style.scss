@@ -1,0 +1,261 @@
+// ------------------------------------------------------------------------------------------
+// Westy CSS overrides for CKEditor 5
+//
+// This stylesheet is applied to admin pages with a CKEditor 5 WYSIWYG editor. Use it to set
+// or override styles of content within the editor.
+// ------------------------------------------------------------------------------------------
+
+@import url(https://use.typekit.net/cze3ejm.css);
+
+// ------------------------------------------------------------------------------------------
+// Import all the functions and variables.
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+
+@import '~bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+@import 'base/variables';
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '~bootstrap/scss/variables';
+
+// 4. Include any default map overrides here
+// We don't have any in Westy
+
+// 5. Include remainder of required parts
+@import '~bootstrap/scss/maps';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/utilities';
+// @import "media/embedded"; Intentionally left out media for ckeditor overrides below.
+
+// ------------------------------------------------------------------------------------------
+// Preface all Westy styles with .ck-content to restrict them to the content within CKEditor
+// Only components that may render in the body content region need to be imported.
+.ck-content {
+
+  // 6. Optionally include any other parts as needed
+  // We've chosen to comment out includes not in use.
+  @import '~bootstrap/scss/reboot';
+  @import '~bootstrap/scss/type';
+  @import '~bootstrap/scss/images';
+  @import '~bootstrap/scss/containers';
+  @import '~bootstrap/scss/grid';
+  @import '~bootstrap/scss/tables';
+  @import '~bootstrap/scss/buttons';
+  @import '~bootstrap/scss/nav';
+  @import '~bootstrap/scss/card';
+  @import '~bootstrap/scss/accordion';
+  @import '~bootstrap/scss/badge';
+  @import '~bootstrap/scss/alert';
+  @import "~bootstrap/scss/helpers";
+
+  // Xtra CSS/JS Global Components that appear in CKEditor
+  // -----------------------------------------------------------------------------
+  // @import 'components/alert';
+  // @import 'components/back-to-top';
+  @import 'components/button';
+  // @import 'components/facet';
+  // @import 'components/form';
+  @import 'components/list';
+  // @import 'components/media';
+  // @import 'components/nav';
+  @import 'components/table';
+
+  // Xtra Base
+  // ------------------------------------------------------------------------------
+  @import 'base/custom';
+
+  // Reset the font-family inside .ck-content
+
+  * {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  }
+
+  // Override CKEditor list styles with the default bullet styles
+  &.ck ul {
+    list-style-type: disc;
+    ul {
+      list-style-type: '-  ';
+      ul {
+        list-style-type: circle;
+      }
+    }
+  }
+
+  // Override Clarro list margins with Bootstrap reset.css values
+  ol,
+  ul {
+    margin: inherit;
+    margin-bottom: 1rem;
+  }
+
+  // Fix checkbox-list styling
+  &.ck ul.checkbox-list .ck-list-bogus-paragraph {
+    display: inline-block;
+  }
+
+  // Allow selection of text within buttons
+  &.ck .btn {
+    user-select: text;
+  }
+
+  // Overwrite the CKEditor link background color for primary button style
+  .btn.btn-primary.ck-link_selected {
+    border: 1px solid $primary;
+  }
+
+  // Claro's link styles overwrite Westy so restore the link underline
+  a:hover {
+    text-decoration: underline;
+  }
+
+  // Prevent embedded document links, videos, and iframes from navigating/receiving focus when clicked
+  .embed-document a,
+  .embed-video iframe,
+  .media--type-iframe iframe {
+    pointer-events: none;
+  }
+
+  // Captions in the editor use the <figcaption> element, so style it like our original Westy <caption> styles
+  &.ck .drupal-media figcaption.ck-editor__editable {
+    padding: 0;
+    caption-side: bottom;
+    font-size: inherit;
+    text-align: left;
+    color: #6c757d;
+    background-color: inherit;
+  }
+
+  // Overwrite the appearance of table captions in CKEditor to match Bootstrap.
+  &.ck .table>figcaption {
+    caption-side: bottom;
+    background-color: transparent;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  // Overwrite the table heading background applied by CKEditor to match Bootstrap.
+  &.ck .table table th {
+    background-color: transparent;
+  }
+
+  // Type around widget SVG needs some help to stay visible.
+  &.ck .ck-widget__type-around__button svg{
+    padding: 0 !important;
+    background-color: transparent;
+  }
+  // Editing embedded images
+  .media--type-image {
+    position: relative;
+    .media-edit {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 2px;
+      background-color: rgba(255,255,255,.8);
+      z-index: 2;
+    }
+  }
+  .media-edit a:link {
+    pointer-events: visible;
+  }
+
+  // Embedded videos
+  &.ck .drupal-media-style-align-left,
+  &.ck .drupal-media-style-align-right,
+  &.ck .drupal-media-style-align-center {
+    width: 50%
+  }
+
+  // Overrides the drupal media CSS that uses inline block by adding a width.
+  &.ck .media--type-video.media--view-mode-full-width {
+    width: 100%;
+  }
+
+  &.ck figure.drupal-media {
+    display: block;
+    figcaption {
+      display: block;
+      clear: both;
+    }
+    img {
+      min-width: 0;
+    }
+  }
+
+  // Align link-to-fullsize icon within CKEditor
+
+  .img-fullsize .fs-icon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+  }
+
+  // Helpers for CKEditor Templates
+  .row {
+    border: 2px dashed #caabcb;
+  }
+
+  .col,
+  .col-12 {
+    border: 1px dotted #9ac4b3;
+  }
+
+  // Unset stretched link in CKEditor so that cards can be edited.
+  .stretched-link::after {
+    position: relative !important;
+    z-index: 0 !important;
+  }
+
+  // External links
+  span.ext {
+    &:after {
+      padding-left: ($spacer * 0.5);
+    }
+  }
+
+  span.mailto::before {
+    background: none;
+  }
+
+  // Hide the extra spans when printing.
+  @media print {
+    span.ext,
+    span.mailto {
+      display: none;
+      padding: 0;
+    }
+  }
+
+  // Editor Warnings
+  h1, h2, h3, h4, h5, h6 {
+    strong, b {
+      padding: 1rem;
+
+      &:before, &:after {
+        color: #fff;
+        background-color: $red;
+        --acumin-wght: 400;
+        padding: 3px 10px;
+      }
+
+      &:before {
+        content: "Headings should not be bolded -->";
+      }
+
+      &:after {
+        content: "<--";
+      }
+    }
+  }
+}
+// 7. Optionally include utilities API last to generate classes based on the
+// Sass map in `_utilities.scss`
+@import '~bootstrap/scss/utilities/api';
+

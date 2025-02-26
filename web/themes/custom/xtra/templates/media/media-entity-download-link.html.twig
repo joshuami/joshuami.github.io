@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a media entity download link.
+ *
+ * Available variables:
+ * - media_entity: Full media entity object.
+ * - link: The default full link render array.
+ * - url: The link URL.
+ * - title: The link title.
+ * - options: The link options.
+ *
+ * @see DownloadLinkFieldFormatter.php
+ *
+ * @ingroup themeable
+ */
+#}
+{% block media_entity_download_link %}
+  {{ url }}
+{% endblock media_entity_download_link %}

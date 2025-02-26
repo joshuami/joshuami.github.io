@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Custom theme hooks.
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function xtra_preprocess_page(&$variables) {
+  $variables['route_name'] = \Drupal::routeMatch()->getRouteName();
+}

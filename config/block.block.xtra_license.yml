@@ -1,0 +1,25 @@
+uuid: 5167c2e2-d241-46fb-8c8f-42b5687ba834
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:content:eef4fdab-fc1c-4734-aee3-9ba82dc12e38'
+  module:
+    - block_content
+  theme:
+    - xtra
+id: xtra_license
+theme: xtra
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:eef4fdab-fc1c-4734-aee3-9ba82dc12e38'
+settings:
+  id: 'block_content:eef4fdab-fc1c-4734-aee3-9ba82dc12e38'
+  label: License
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

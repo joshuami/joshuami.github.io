@@ -1,0 +1,20 @@
+uuid: 102ca41a-9afb-4949-9f77-3960513bdfb5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - xtra
+_core:
+  default_config_hash: uUHOtPNPJohle_Mz1dRPWBWrmzFUiKnxXqUvdHEshdU
+id: xtra_page_title
+theme: xtra
+region: header
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

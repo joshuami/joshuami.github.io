@@ -1,0 +1,13 @@
+// Typography overrides and helpers.
+
+// -----------------------------------------------------------------------------
+
+// Variable font settings needs to be in typography.scss instead of
+// _variables.scss they are not loaded for CKEditor to avoid Claro
+// overrides. System fonts are used within CKEditor.
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+  

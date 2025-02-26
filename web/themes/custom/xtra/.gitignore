@@ -1,0 +1,12 @@
+# Ignore SASS files
+/.sass-cache
+.DS_Store
+*.codekit
+.idea
+node_modules
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

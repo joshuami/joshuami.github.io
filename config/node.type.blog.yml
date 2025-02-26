@@ -1,7 +1,14 @@
 uuid: 5e1cc3ac-5c8f-4194-a7db-a96757398273
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: ViNDDNDNGxuSS_Fsd8pOCTEQZ9zPDajPy820iR7GmtQ
 name: 'Blog post'
@@ -10,4 +17,4 @@ description: 'A simple blog entry, categorized by tags.'
 help: null
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

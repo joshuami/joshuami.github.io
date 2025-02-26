@@ -1,0 +1,20 @@
+{%
+  set classes = [
+    'media',
+    'media--type-' ~ media.bundle()|clean_class,
+    not media.isPublished() ? 'media--unpublished',
+    view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+    'mb-3',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+  {% if content %}
+    {{ content }}
+    {% if user.hasPermission('edit any video media') %}
+      <span class="media-edit small">
+        <a href="{{ path('entity.media.canonical', {'media': media.id}) }}/edit" target="_blank">Edit</a>
+      </span>
+    {% endif %}
+  {% endif %}
+</div>

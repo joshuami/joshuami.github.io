@@ -1,0 +1,94 @@
+// Variables
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and
+// $modal-content-box-shadow-xs.
+
+// To customize
+// - Copy paste the variable from node_modules/bootstrap/scss/_variables.scss
+// @see: https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+// - Change the value and remove the !default flag.
+// e.g.
+// $body-bg: #000;
+// $body-color: $gray-100;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 720px,
+  xl: 720px,
+  xxl: 720px
+);
+
+$enable-dark-mode:            true;
+
+$spacer:                      1rem;
+
+// scss-docs-end font-variables
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      $spacer;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-weight:         normal;
+// scss-docs-end display-headings
+
+// scss-docs-start type-variables
+$lead-font-weight:            normal;
+$legend-font-weight:          null;
+$dt-font-weight:              normal;
+
+$blockquote-margin-y:         $spacer;
+
+$hr-margin-y:                 $spacer;
+$hr-color:                    inherit;
+
+$hr-border-color:             null; // Allows for inherited colors
+$hr-opacity:                  1;
+// scss-docs-end type-variables
+
+// scss-docs-start table-variables
+$table-th-font-weight:        null;
+// scss-docs-end table-variables
+
+// scss-docs-start badge-variables
+$badge-font-weight:           normal;
+// scss-docs-end badge-variables
+
+// scss-docs-start alert-variables
+$alert-link-font-weight:      normal;
+// scss-docs-end alert-variables
+
+$link-hover-decoration:       underline;
+
+// scss-docs-start breadcrumb-variables
+$breadcrumb-divider:                quote(">");
+// scss-docs-end breadcrumb-variables
+
+// scss-docs-start nav-variables
+$nav-pills-border-radius:           0;
+$nav-underline-gap:                 2rem;
+// scss-docs-end nav-variables
+
+// scss-docs-start navbar-variables
+$navbar-padding-x:            1rem;
+// scss-docs-end navbar-variables
+
+// scss-docs-start border-radius-variables
+$border-radius:               .25rem;
+// scss-docs-end border-radius-variables
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+// scss-docs-start input-btn-variables
+$input-btn-padding-y:         .6rem;
+$input-btn-padding-x:         .75rem;
+// scss-docs-end input-btn-variables
+
+// Navs
+
+// scss-docs-start nav-variables
+$nav-link-padding-y:                .7rem;
+// scss-docs-end nav-variables

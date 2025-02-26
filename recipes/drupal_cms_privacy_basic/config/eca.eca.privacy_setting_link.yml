@@ -7,7 +7,7 @@ dependencies:
     - eca_content
     - eca_user
 id: privacy_setting_link
-modeller: fallback
+modeller: bpmn_io
 label: 'Show link to privacy settings'
 version: 1.0.0
 weight: 0

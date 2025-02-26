@@ -12,10 +12,15 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "npm-asset": {
+          "type": "composer",
+          "url": "https://asset-packagist.org"
         }
     },
     "require": {
         "composer/installers": "^2.3",
+        "drupal/components": "^3.1",
         "drupal/core-composer-scaffold": "^11.1",
         "drupal/core-recommended": "^11.1",
         "drupal/drupal_cms_accessibility_tools": "*",
@@ -30,12 +35,17 @@
         "drupal/drupal_cms_project": "*",
         "drupal/drupal_cms_seo_tools": "*",
         "drupal/drupal_cms_starter": "*",
+        "drupal/eva": "^3.1",
         "drupal/feeds": "^3.0@RC",
         "drupal/highlightjs_input_filter": "^1.1",
+        "drupal/link_attributes": "^2.1",
+        "drupal/radix": "^6.0",
         "drupal/subpathauto": "^1.4",
         "drupal/tome": "^1.13",
+        "drupal/twig_tweak": "^3.4",
         "drupal/views_bulk_edit": "^3.0",
-        "drush/drush": "^13"
+        "drush/drush": "^13",
+        "oomphinc/composer-installers-extender": "^2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -46,12 +56,14 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true
         },
         "sort-packages": true,
         "optimize-autoloader": true
     },
     "extra": {
+        "installer-types": ["bower-asset","npm-asset"],
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -59,7 +71,7 @@
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/{$name}": ["type:drupal-library","type:bower-asset","type:npm-asset"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
@@ -69,5 +81,18 @@
             "recipes/{$name}": ["type:drupal-recipe"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         }
+    },
+    "scripts": {
+      "drupal:test": "phpunit",
+      "npm:install": "cd web/themes/custom/xtra && npm ci",
+      "npm:prod": "cd web/themes/custom/xtra && npm run production",
+      "npm:watch": "cd web/themes/custom/xtra && npm run watch"
+    },
+    "scripts-aliases": {
+      "drupal:test": ["dt"],
+      "drupal:uli": ["uli"],
+      "npm:install": ["ni"],
+      "npm:prod": ["np"],
+      "npm:watch": ["nw"]
     }
 }

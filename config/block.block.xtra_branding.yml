@@ -1,0 +1,25 @@
+uuid: 3cb62bb6-b30e-4dd7-8ab4-15c7e1744788
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - xtra
+_core:
+  default_config_hash: dlIIhwmejz2KhPqh7wxG4EXdw0RbWGNkzle8MvzR6Hc
+id: xtra_branding
+theme: xtra
+region: navbar_branding
+weight: -1
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

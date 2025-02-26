@@ -1,0 +1,209 @@
+// Captions and helpers
+// -----------------------------------------------------------------------------
+
+figure.caption {
+    display: table;
+  }
+  
+  figure:not(.align-right):not(.align-left) {
+    width: 100%;
+  }
+  
+  figure.caption figcaption {
+      display: table-caption;
+      caption-side: bottom;
+      font-size: none;
+      border-top: none;
+      color: #6c757d; // TODO: Replace with theme color.
+      padding: .5rem 0 0 0;
+  }
+  
+  // Every embed needs a little margin bottom.
+  .embed-image .field, .embed-image .field .field__item, .embed-video .field, .embed-video .field .field__item {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  // Images within a card should not have margin.
+  .card .embed-image .field, .embed-image .field .field__item{
+    margin-bottom: 0 !important;
+  }
+  
+  // Override default blockquote and pre styles when captioned.
+  .caption-pre > pre,
+  .caption-blockquote > blockquote {
+    margin: 0;
+  }
+  .caption-blockquote > figcaption::before {
+    content: "— ";
+  }
+  .caption-blockquote > figcaption {
+    text-align: left; /* LTR */
+  }
+  [dir="rtl"] .caption-blockquote > figcaption {
+    text-align: right;
+  }
+  
+  // Embedded images
+  // -----------------------------------------------------------------------------
+  
+  .align-center {
+    margin-right: auto;
+    margin-left: auto;
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  figure.align-left,
+  .align-left.media--type-image {
+    margin-right: $spacer !important;
+    margin-left: 0;
+    float: left;
+  }
+  
+  figure.align-right,
+  .align-right.media--type-image {
+    margin-left: $spacer !important;
+    margin-right: 0;
+    float: right;
+  }
+  
+  figure.align-center .media--type-image,
+  figure.align-center .media--type-image + figcaption {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  // Constrain max-width of narrow-width
+  .media--view-mode-narrow-width,
+  .media--view-mode-narrow-width + figcaption {
+    max-width: 325px;
+  }
+  
+  // Constrain max-width of half-width
+  
+  .media--view-mode-half-width,
+  .media--view-mode-half-width + figcaption {
+    max-width: 483px;
+  }
+  
+  @include media-breakpoint-down(lg) {
+    .media--view-mode-half-width,
+    .media--view-mode-half-width + figcaption {
+      max-width: 400px;
+    }
+  }
+  
+  .img-fullsize .fs-icon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+  }
+  
+  .img-fullsize:hover{
+    border-color: #000 !important;
+  }
+  
+  // Full width images should always be 100% wide
+  .media--view-mode-full-width {
+    width: 100%;
+    display: block !important;
+    clear: both;
+  }
+  
+  // Add margin bottom for embedded media not in a figure
+  .media--view-mode-narrow-width,
+  .media--view-mode-half-width,
+  .media--view-mode-full-width {
+    margin-bottom: $spacer;
+  }
+  
+  figure {
+    // Remove margin from media div within a figure
+    .media--view-mode-narrow-width,
+    .media--view-mode-half-width,
+    .media--view-mode-full-width {
+      margin-bottom: 0;
+    }
+    // Half width images need to fill their container
+    .media--view-mode-half-width {
+      img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .media--view-mode-narrow-width {
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  
+  // All images at sm and down are full width
+  @include media-breakpoint-down(sm) {
+    figure.align-left,
+    .align-left,
+    figure.align-right,
+    .align-right,
+    figure.align-center,
+    .align-center,
+    .media--view-mode-narrow-width,
+    .media--view-mode-half-width,
+    .media--view-mode-narrow-width + figcaption,
+    .media--view-mode-half-width + figcaption,
+    .align-left.media--type-image,
+    .align-right.media--type-image,
+    .align-center.media--type-image {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 100%;
+      float: none;
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  
+  // Additional video ratio helper in
+  // field--media--field-media-oembed-video.html.twig
+  
+  // Embedded documents
+  // -----------------------------------------------------------------------------
+  
+  .embed-document {
+    margin-bottom: $spacer;
+  }
+  
+  li .embed-document {
+    margin-bottom: 0;
+  }
+  
+  .embed-document .description {
+    font-size: 90%;
+  }
+  
+  // Editing embedded images
+  // -----------------------------------------------------------------------------
+  
+  .media--type-image,
+  .media--type-video {
+    position: relative;
+    .media-edit {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 2px;
+      background-color: rgba(255,255,255,.8);
+      z-index: 2;
+    }
+  }
+  

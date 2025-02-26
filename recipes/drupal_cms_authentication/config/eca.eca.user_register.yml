@@ -5,7 +5,7 @@ dependencies:
     - eca_base
     - eca_form
 id: user_register
-modeller: fallback
+modeller: bpmn_io
 label: 'User registration'
 version: 1.0.0
 weight: 0

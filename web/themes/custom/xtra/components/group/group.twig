@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Template for a group.
+ */
+#}
+
+{%
+  set classes = [
+    'group',
+    'group--' ~ view_mode|clean_class,
+  ]|merge(user_utility_classes ?: [])
+%}
+
+<div{{attributes.addClass(classes)}}>
+  {% block content %}
+   
+    {% if view_mode|clean_class != "full" %}
+    <div class="card my-3">
+      <div class="row">
+        <div class="col">
+          <div class="card-body">
+            <h2 class="h4"><a href="{{ url }}">{{ label }}</a></h2>
+            {{ content|without('field_featured_image') }}
+          </div>
+        </div>
+        <div class="col-print-4 col-md-4 order-md-2 p-0 p-md-3 ms-print-3 d-flex align-items-center justify-content-center">
+          {{- content.field_featured_image -}}
+        </div>
+      </div>
+    </div>
+    {% else %}
+      {{ content|without('field_featured_image') }}
+    {% endif %}
+
+  {% endblock %}
+</div>

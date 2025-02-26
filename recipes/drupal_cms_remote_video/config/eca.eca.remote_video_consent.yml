@@ -9,7 +9,7 @@ dependencies:
     - eca_content
     - eca_user
 id: remote_video_consent
-modeller: fallback
+modeller: bpmn_io
 label: 'Enable consent management for remote video'
 version: 1.0.0
 weight: 0

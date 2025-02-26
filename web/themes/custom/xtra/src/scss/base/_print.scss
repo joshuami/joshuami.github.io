@@ -1,0 +1,231 @@
+/*
+** Print-Specific Styles
+*/
+
+// TODO: [POWR-3227] Improve print styles
+
+@media print {
+
+  // Chrome doesn't properly handle transitions
+  // https://stackoverflow.com/questions/26011254/chrome-print-preview-different-than-in-devtools
+  * {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+
+  html {
+    font-size: 10pt;
+  }
+
+  h1 {
+    font-size: 16pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+    page-break-after: avoid-page !important;
+  }
+
+  h3 {
+    font-size: 11pt;
+  }
+
+  h4 {
+    font-size: 9pt;
+  }
+
+  h5 {
+    font-size: 9pt;
+  }
+
+  h6 {
+    font-size: 9pt;
+  }
+
+  .page__content {
+    display: block;
+    width: 100%;
+  }
+
+  .page__side {
+    display: block;
+    width: 100%;
+  }
+
+  @page {
+    size: letter;
+  }
+
+  body {
+    min-width: 650px !important;
+    padding-top: 0 !important;
+  }
+
+  .container {
+    min-width: 650px !important;
+  }
+
+  .page__footer,
+  .toc-js,
+  #back-to-top,
+  .diff-header,
+  .diff-controls,
+  .block--westy-primary-local-tasks,
+  .block--westy-main-menu,
+  #nav-container-right,
+  #nav-translate,
+  #toolbar-administration,
+  .media-edit,
+  .legacy-path-block,
+  .block--sitemap-groups,
+  .block--sitemap,
+  .ed11y-wrapper,
+  .ed11y-panel-wrapper,
+  .ed11y-shut,
+  .ed11y-pass,
+  #ed11y-toggle,
+  .ed11y-shut .toggle-count,
+  .ed11y-buttonbar,
+  .content-edit,
+  .toggle-accordion,
+  .facets-widget-checkbox {
+    display: none !important;
+  }
+
+  .field--name-field-body {
+    p,
+    blockquote,
+    hr,
+    ul,
+    ol {
+      max-width: 100% !important;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    position: relative;
+    display: block;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: avoid-page;
+    page-break-after: avoid;
+    margin-bottom: 0px !important;
+  }
+
+  h2::after,
+  h3::after,
+  h4::after,
+  h5::after {
+    content: "";
+    display: block;
+    height: 100px;
+    margin-bottom: -100px;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .table-responsive {
+    overflow: visible !important;
+  }
+
+  a {
+    text-decoration: underline !important;
+  }
+
+  .badge {
+    border: 1px solid $gray-300;
+  }
+
+  .contact-item h2 {
+    color: #000000;
+  }
+
+  .contact-item .card-body,
+  .block--views-block--translation-block-translations .card-header,
+  .block--views-block--translation-block-translations .card-body,
+  .card-header.bg-dark-gray,
+  .card.bg-faded-gray,
+  .card-header,
+  .card-body {
+    color: #000000 !important;
+    padding: 0;
+    margin-bottom: 1rem;
+    background-color: transparent !important;
+  }
+
+  .card {
+    border: none;
+  }
+
+  .collapse,
+  .ckeditor-accordion-conatiner dt,
+  .ckeditor-accordion-container dd {
+    display: block !important;
+    height: auto !important;
+  }
+
+  .field--type-entity-reference .row,
+  .views-view-grid .row {
+    display: block
+  }
+
+  table.table-card tr td .table-value-name {
+    font-size: 10pt !important;
+  }
+
+  body.sheriff .btn.btn-primary,
+  body.emc .btn.btn-primary {
+    background-color: transparent !important;
+    color: #000000 !important;
+  }
+
+  body.take5 .bg-faded-blue,
+  body.emcwc .bg-faded-blue,
+  body.emc .bg-faded-blue,
+  body.sheriff .bg-faded-blue,
+  .nav-tabs .nav-link.active, 
+  .nav-tabs .nav-item.show .nav-link,
+  .breadcrumb a,
+  .breadcrumb .breadcrumb-item + .active {
+    background-color: transparent !important;
+    color: #000000 !important;
+  }
+
+  body.sheriff .homepage-news-updates-block {
+    .more-link,
+    .more-link a,
+    .more-link a i.gg-arrow-right:before,
+    .homepage-promo .card a {
+      color: $primary !important;
+    }
+  }
+
+  // Print columns
+  @for $i from 1 through 12 {
+    @if $i != 1 {
+      .col-print-#{$i} {
+        flex: 0 0 auto;
+        width: percentage(calc($i / 12));
+      }
+    }
+  }
+
+  // Make print logos smaller
+  .site-branding {
+    img {
+      height: 50px;
+    }
+  }
+  .col-print-4 {
+    order: 2 !important;
+  }
+  // Custom margin start print class for search results.
+  .ms-print-3 {
+    margin-left: 2rem !important;
+  }
+}

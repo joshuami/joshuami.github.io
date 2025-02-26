@@ -1,0 +1,11 @@
+style:
+  version: 1.0.0
+  css:
+    theme:
+      build/css/main.style.css:
+        minified: true
+  js:
+    build/js/main.script.js:
+      minified: true
+  dependencies:
+    - core/drupal

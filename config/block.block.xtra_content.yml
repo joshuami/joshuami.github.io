@@ -1,0 +1,22 @@
+uuid: efe7a6ed-18ad-44fc-83b5-5f14ae957140
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - xtra
+_core:
+  default_config_hash: OCjkwYz-kqGeu9YwE0grWsH5gU9GGj7bi-51wKVSrvA
+id: xtra_content
+theme: xtra
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,32 @@
+name: xtra
+screenshot: screenshot.png
+'alt text': 'radix_starterkit theme screenshot'
+core_version_requirement: ^10 || ^11
+engine: twig
+type: theme
+'base theme': radix
+starterkit: true
+dependencies:
+  - 'drupal:serialization'
+'interface translation project': xtra
+'interface translation server pattern': themes/custom/xtra/translations/%language.po
+regions:
+  alerts: Alerts
+  navbar_branding: 'Navbar branding'
+  navbar_left: 'Navbar left'
+  navbar_right: 'Navbar right'
+  preheader: Preheader
+  header: Header
+  featured_image: 'Featured image'
+  content: Content
+  sidebar: Sidebar
+  page_bottom: 'Page bottom'
+  footer: Footer
+libraries:
+  - xtra/style
+  - xtra/ckeditor
+ckeditor5-stylesheets:
+  - build/css/ckeditor.style.css
+components:
+  namespaces:
+    xtra: components

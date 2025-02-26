@@ -45,6 +45,7 @@ content:
     region: content
 hidden:
   body: true
+  content_dates_eva_content_dates: true
   feeds_item: true
   field_seo_description: true
   field_seo_image: true

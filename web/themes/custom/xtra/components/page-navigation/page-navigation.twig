@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Template for a Page Navigation component.
+ *
+#}
+{% apply spaceless %}
+
+{%
+  embed 'xtra:navbar' with {
+    container: 'fixed',
+    navbar_theme: 'dark',
+    navbar_utility_classes: [
+      'justify-content-between',
+      'border',
+      'border-primary',
+      'border-0',
+      'border-bottom',
+      'border-4',
+    ],
+  }
+%}
+  {% block branding %}
+    {% if page.navbar_branding %}
+      {{ page.navbar_branding }}
+    {% endif %}
+  {% endblock %}
+
+  {% block left %}
+    {% if page.navbar_left %}
+      <div class="me-auto">
+        {{ page.navbar_left }}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block right %}
+    {% if page.navbar_right %}
+      <div class="ms-auto">
+        {{ page.navbar_right }}
+      </div>
+    {% endif %}
+  {% endblock %}
+{% endembed %}
+
+{% endapply %}

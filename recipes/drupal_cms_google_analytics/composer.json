@@ -9,5 +9,6 @@
     },
     "conflict": {
         "drupal/project_browser": "<2-alpha7"
-    }
+    },
+    "version": "1.0.2"
 }

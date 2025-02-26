@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Override of Radix Figure component.
+ *
+ * Available config:
+ * - utility_classes: An array of utility classes.
+ * - align: left|right|center
+ * - responsive: true|false
+ */
+#}
+{% set classes = [
+  'caption',
+]|merge(utility_classes ? utility_classes : []) %}
+
+<figure role="group" {{attributes.addClass(classes)}}>
+	{{ image }}
+	<figcaption>{{ caption }}</figcaption>
+</figure>
+

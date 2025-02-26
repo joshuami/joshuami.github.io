@@ -14,122 +14,40 @@
 
 <span><span>joshuami</span></span>
 
-<span>Wed, 1 Jan 2025 - 18:00
+<span>
+Wed, 1 Jan 2025 - 6:00 pm
 </span>
-  
-    
-      
-
 
   
     
-      
-      
-
-
-      <h3 class="field__label field--tags__label">Tags</h3>
-    <ul class="links field__items field--tags__items">
-          <li class="field--tags__item"><a href="https://joshuami2.ddev.site/tags/drupal" hreflang="en">Drupal</a></li>
-          <li class="field--tags__item"><a href="https://joshuami2.ddev.site/tags/starshot" hreflang="en">Starshot</a></li>
-      </ul>
-
-
-    
-  
-
-
 
   
-    
-      
-      
-            <p>Given my recent migration of my blog and the planned launch of Drupal CMS on January 15th, I thought it might be a good time to dig in and see what's currently included in this milestone re-packaging of Drupal.&nbsp;</p>
-<p>In this post, I'm not going to dive into every feature—though I hope to add some specific feature reviews in future posts. Instead, I would like to talk about how I think Drupal CMS will fit into the type of work that I do for clients, the type of work that isn't really supported by Drupal at the moment, and what future planned initiatives might mean for both.</p>
-<p>With just a couple weeks to go until a stable release, and following the <a href="https://dri.es/state-of-drupal-presentation-december-2024">December 2024 Driesnote in Singapore</a>, it feels like what will be included in Starshot 1.0 is coming into focus. If you are interested in seeing what tracks have been kicked off and which are in proposal, I recommend browsing through <a href="https://www.drupal.org/project/drupal_cms/issues/3454529">[META] Drupal CMS work tracks</a> or Dries's slides. That said, even if you dig deep into those tracks, you'll likely miss quite a few features that have made it into the latest release candidate.&nbsp;</p>
-<h2>Drupal CMS versus core install profiles</h2>
-<p>Drupal CMS includes a lot of functionality by default in a stark difference to the standard install profile or even the Umami demo profile. The standard install profile was really a tiny set of best practices and a very basic theme that would work for the simplest of sites. I know of a fair number of developers that find even the standard profile too opinionated and only start a new project using the minimal profile. (Sometime in the last year, I remember running across a module that failed to install based on minimal profile dependency because it expected configuration that is in Standard. Your experience may vary.)&nbsp;</p>
-<p>Umami was never intended to be a starting point for a website, but it's purpose was to show what could be created with Drupal. Similar to Drupal CMS, it was very opinionated. Unlike Drupal CMS, Umami was not opinionated as a starting point for a new site and was difficult to install—though <a href="https://www.drupal.org/node/3432357">uninstalling a profile became possible in Drupal 10.3</a>.</p>
-<p>Drupal CMS is a bit more than just an install profile or a distribution. It includes a new launch experience that allows choices in what features are included. It also represents a new way of adding features after installation with the ability to apply recipes from directly within the new project browser.</p>
-<h2>How should I use Drupal CMS?</h2>
-<p>In the <a href="https://dri.es/files/drupal-starshot-product-strategy-1.pdf">Drupal CMS Strategy Document</a> that Dries shared in August 2024, the strategy was summarized as such:</p>
-<blockquote><p>Drupal Starshot aims to empower marketers to create exceptional digital experiences without relying on developers, setting the gold standard for no-code website building.</p>
-<p>&nbsp;Drupal Starshot is a code name for an initiative that aims to revolutionize the way we build and maintain websites using Drupal. The final name of the product is yet to be determined.&nbsp;</p>
-<p>The initiative seeks to expand Drupal's reach by targeting content creators and marketers, as well as appealing to a wider range of budgets.&nbsp;</p>
-<p>The ultimate goal is to increase adoption and solidify Drupal's position as a leading CMS solution while championing an open, accessible internet.</p>
-</blockquote>
-<p>I don't think version 1.0 will fully realize these goals. I would be impressed if it did. That's a lot to accomplish in eight months.</p>
-<p>I do think version 1.0 will be a pretty complete demo of common Drupal features rather than a true starting point that every new Drupal site will use.<br><br>So if you are a sales or solutions engineer in an agency or a Drupal lead within an organization, you should install Drupal CMS at least once to see everything that has been added. If Drupal CMS is in any way successful, it represents an tested set of modules that are either well-supported or will be more supported due to their inclusion in this packaging of Drupal.</p>
-<p>Think of Drupal CMS as a reference point for more broadly adopted best practices. I think most seasoned developers are going to agree with 80 – 90% of the choices—and likely be dissatisfied with the rest. That's actually pretty good if you considered the breadth and depth of the choices included in Drupal CMS.</p>
-<blockquote><p>I think Drupal CMS will get much closer to the stated strategy over the next year.&nbsp;</p>
-</blockquote>
-<p>If I were creating a new blog—or migrating one such as this site—it's not a bad starting point to build upon. If I were a <em>marketer trying to create an exceptional experience without a developer</em>, I would be out of luck just installing Drupal CMS, but I might be impressed enough to explore further.</p>
-<p>There is a very important reason why a marketer wouldn't be able to achieve that goal just yet.</p>
-<p>Drupal CMS will need both a successful experience builder and a better base theme that works with experience builder to truly break a web marketer free of the need for a developer.</p>
-<h2>Experience Builder (coming soon)</h2>
-<p>The Drupal community, at least those paying attention to core development, sees a lot of exciting possibilities in the <a href="https://www.drupal.org/about/starshot/initiatives/experience-builder">Experience Builder Initiative</a>—even though it is not a part of the first release of Drupal CMS. Community members are also likely a bit scared by it because of the scope of the change it represents. I'm excited to see how far we can get between now and the anticipated first release of Experience Builder in late 2025 as part of Drupal CMS 2.0.</p>
-<p>Back-porting any existing site to use Experience Builder is likely to be extremely challenging. Even if all of the stated migration goals for sites using Layout Builder and/or Paragraphs are achieved, like every big Drupal change, this one will require a fair number of developer hours.</p>
-<p>That said, new Drupal sites, Experience Builder could be a radical way to grow adoption. As long as previous techniques for layout continue to work, the growth could still fuel a lot of positive change in Drupal.</p>
-<p>Experience Builder is trying to solve a problem as old as <a href="https://en.wikipedia.org/wiki/Adobe_Dreamweaver">Dreamweaver</a>—well, really older than Dreamweaver.&nbsp;</p>
-<blockquote><p>People (who don't know how to code) want to create a website that matches their aesthetic vision.&nbsp;</p>
-</blockquote>
-<p>Web developers hated Dreamweaver because it created atrocious code that was difficult to read and bloated. Some designers loved it because it let them create the thing they wanted without a pesky expert telling them they were doing it wrong. Neither of those viewpoints are wrong, but the best websites still require a team of experts applying their craft to achieve ambitious goals.</p>
-<h2>Empowering marketers (and small business owners)</h2>
-<p>Modern web teams for most robust CMS-driven websites (managed or SaaS) have a combination of roles that range from backend developer, frontend developer, visual designer, user experience designer, content strategist, quality assurance testers, SEO analysts, and more.</p>
-<p>Building really big websites, typically with teams of 4 to 10 web specialists (sometimes more), is what I do, but it's not the only kind of website.</p>
-<p>Those teams are expensive, which is why so much downward pressure on cost has been created by outsourcing website development from areas where those costs are highest to areas where those costs are less. Small to medium-sized organizations who want brochure-quality (relatively simple) websites, want them for the least cost possible.&nbsp;</p>
-<p>As the complexity of the product, cause, or service being sold by a website increases, the cost of that larger team becomes easier to justify to ensure higher quality and conversion rates. Up until now, I would argue that modern Drupal is much easier to adopt in organizations that require significant complexity and integration.</p>
-<p>Drupal CMS wants to change the size and complexity of websites that are a good fit for Drupal.</p>
-<p>Drupal CMS has a (paraphrased) strategy that as a <em>marketer wanting to build an ambitious website you don't need a team</em>. This strategy may help gain market share, and increase profits for hosts that figure out the margins on hosting these new small-to-mid-market Drupal sites.&nbsp;</p>
-<blockquote><p>The strategy will also increase the number of poorly built websites on Drupal—for better or worse.&nbsp;</p>
-</blockquote>
-<p>That's not to say that there are not poorly build websites on Drupal currently, but I don't think ambitious content models that power complex enterprise sites and applications are suddenly going to only require a team of one person.</p>
-<p>So maybe the "marketer" referred to in the strategy is really a small-to-medium-size-business owner, or their marketing department of one, that is empowered to build a less ambitious content model, but still a compelling web presence, that lets them use the host of their choice instead of a site building tool like Squarespace or Wix—or another open source project like Wordpress that has its own issues with vendor lock-in in its plug-in ecosystem.</p>
-<p>For Drupal CMS to meet its strategic goals with this sort of marketer, it needs to have Experience Builder. That said, I do think there is room for Drupal CMS to grow adoption, and succeed, without a new ambitious page building experience, but it will need better themes.</p>
-<h2>Olivero (the default) and the theme ecosystem</h2>
-<p>One of the strategy document's stated "must have capabilities" is "easy to implement custom brand and design." I do not see how Drupal CMS will have this capability with version 1.0.</p>
-<p>Olivero is great for so many reasons. It shows that the Drupal community can build a highly-accessible, clean, simple, and attractive out-of-the-box theme. It supports all the best parts of Drupal from the point of installation, such as translation and performance settings. It has great test coverage—and contributed modules can count on it for stable test coverage with their libraries. It looks so much more modern than Bartik. (Okay, that last one is reaching a little. It is a very low bar to look more modern than a theme that was released in 2011 as part of Drupal 7.)</p>
-<p>Olivero was not really built to be a flexible theme for page building. It supports Layout Builder, which was already in core when Olivero made its way into core, but it doesn't really account for the idea of designing within the browser that Experience Builder is supposed to achieve.</p>
-<p>Drupal CMS 1.0 will ship with an enabled <em>Olivero for Drupal CMS</em> theme. This theme is mostly to adds bug fixes to make some of the contributed modules included in Drupal CMS work better. It should allow for development that is faster than core, but it's still a custom sub-theme at heart.</p>
-<p>So Olivero, at least in its current state, is not going to be viable for an ambitious "marketer", at least not one without some significant web skills who is "designing" a website without developers or designers.</p>
-<p>That's why there was a call for proposals for a new design system for Experience Builder and Drupal CMS. (<a href="https://www.drupal.org/about/starshot/blog/announcing-the-selected-partner-for-the-new-design-system-for-experience-builder-and-drupal-cms">Happy Christmas Mediacurrent</a>! You have some challenging work ahead.)&nbsp;</p>
-<p>In theory, the result of that project should be a design system that helps define a solid set of starter components that most sites could use to kickstart a project to match a custom brand and design. I'm assuming this is going to also include a new theme for Drupal CMS in addition to Olivero. (Or maybe they'll extend Olivero for Drupal CMS further, that's still not clear.)</p>
-<p>It looks likely Experience Builder will support single directory components (SDC). A SDC allows you to include the Twig template, CSS, and Javascript in a single directory that is registered in a theme or modules libraries and loads only when used in a rendered page. In practice, you want to tie components to a unified design system in most projects. Design systems tend to be created by designers in tools that are focused on visual creation combined with a detained technical specification—Figma seems to lead the pack these days. There are also many design systems that are based on well-established, utility-class frameworks, such as Bootstrap or Tailwind.</p>
-<p>I've found SDCs tricky to implement with utility-class frameworks. The idea with those frameworks is that you can reuse the utility and component classes to create new components. When done well, you should rarely need to add classes for anything other than truly original components. So SDC implementation of a common framework is often only twig templates and no new classes.</p>
-<p>For custom design systems, you are defining all your components based on classes you create, so the match with SDC is a bit easier to implement. Except... most design system maintainers are not necessarily enamored with Twig as their templating language if the design system is going to be used multiple frontend technologies. A headless site with React or Vue or Next.js for the frontend with Drupal providing the data doesn't seem like a clear match to the SDC model. Though maybe we'll get <a href="https://www.drupal.org/project/experience_builder/issues/3454519">support for component types other than SDC</a>.</p>
-<p>All that to say, theming in Drupal is challenging for those without experience in the Twig and at least some sort of CSS compiling. The same can be said for headless theming. I'm still a little unsure how Experience Builder fixes these issues within this space. It definitely provides another option, but it doesn't make the underlying challenges easier to tackle.</p>
-<p>I've long felt it would be great for Drupal to have a "default" frontend framework that was well-documented outside of the Drupal community that could serve as a basis for most themes. That would be so very difficult to get the community to agree upon. I don't see that happening anytime soon, which likely means Experience Builder is going to have the same theming challenges of Layout Builder and Paragraphs.&nbsp;</p>
-<p>I hope I'm wrong and this all comes together in a demonstrable way in the next year. There are so many approaches to page/layout building in Drupal that I worry a little bit. A "new way" that is "the way" could lead to a lot of legacy code that people feel they need to refactor. All of this thinking leads me to wonder if we are only supporting "marketers without developers for new Drupal sites and not existing". How is that going to work?</p>
-<h2>Marketers without developers (or designers?)</h2>
-<p>If you are reading this, you likely have some interest in Drupal. Right now, that likely means you are either a web professional that works with Drupal and are trying to figure out what Drupal CMS means to you or you are one of those rare folks reviewing Drupal to see if it meets your needs.&nbsp;</p>
-<p>In the strategy document, the term "marketer" seems to be the placeholder for someone reviewing Drupal to see if it will help them achieve their website needs or perhaps a plucky site builder that wants to quickly stand up a website to get the word out about "something" (product, cause, service, etc.).</p>
-<p>If you are a "marketer", I hope you understand that you are likely going to fail if you try and build a solution with any platform based solely on your own biases. "You can do this alone" is the fallacy of the site generator sales pitch.&nbsp;</p>
-<p>Yes, a large percentage of the web is made up of sites built on Squarespace, Wix, Shopify, and even Wordpress. How many of those sites do you visit even once per year? For every success story (likely less than a percent), there are so many more website failures (most websites ever).</p>
-<p>Even with a healthy does of pessimism, I can see some advantages to Drupal competing in space that builds a lot of throw aways websites.&nbsp;</p>
-<p>A site built with Drupal CMS <strong>should</strong> be:</p>
-<ul>
-<li>more accessible out of the box because it has a better base structure and teams of contributors ensuring things like link target size, color contrast, and even built-in accessibility checking with tools like <a href="https://www.drupal.org/project/edtoria11y">Editoria11y</a> are included.</li>
-<li>search engine optimized because tools like <a href="https://www.drupal.org/project/pathauto">pathauto</a>, <a href="https://www.drupal.org/project/metatag">Metatag</a>, and <a href="https://www.drupal.org/project/simple_sitemap">Simple XML Sitemap</a> are included.</li>
-<li>easier to translate because Drupal core does this so well.</li>
-<li>so much more structured than a site generator (Squarespace, Wix, etc.).</li>
-<li>free to move from the host of your choice to the host of your choice—no vendor lock-in.</li>
-</ul>
-<p>To take advantage of all of those amazing traits, marketers are going to need a hosting option as turnkey as Wordpress.com. I'm curious which Drupal hosts are going to reach that market first. It should be a great time to be a Drupal hosting provider if you can figure out that experience.</p>
-<h2>How I might use Drupal CMS this year</h2>
-<p>I am optimistic for Drupal CMS even if I'm not that optimistic for agencies focused on web projects in the coming year. Based on the number of developer job posts and RFPs for Drupal-specfiic projects, 2024 seems to have been a pretty significant market contraction. I think the artificial intelligence hype cycle was part of the issue. While I have had some pretty successful moments using AI as a coding partner over the past year, I've been depressed by the reduced quality of content across the web over the last time.&nbsp;</p>
-<p>As the AI hype cycle wears down a little, and people realize they need to publish content on a website to train AI, I'm hopeful that 2025 will see a bit of a rebound in new projects and growing digital teams.&nbsp;</p>
-<p>My business has been focused on mentoring and coaching teams of developers, designers, and content strategists (often in government) showing them best practices creating enterprise digital solutions using agile product management.&nbsp;</p>
-<p>To start the year, I think the biggest change to my approach will be using Drupal CMS to show these teams the direction that the Drupal project as a whole is taking with the features it includes. Some of those technical approaches are nearly identical to the content models and feature implementations I have been using throughout my modern Drupal journey—but they are all so much faster to implement by applying a recipe!&nbsp;</p>
-<p>So in the short term, I think a lot of the proof-of-concept feature demos that I've put together over the years are either going to be replaced by a Drupal CMS recipe, a contrib recipe, or are going to be turned into a recipe. (Now we're cookin'!)</p>
-<p>Over the rest of the year, I'm going to be following hosting options closely. It has been decades since I worked on small-to-medium-sized projects, I think I'll have to consider adding a few smaller clients to test the waters a bit.&nbsp;</p>
-<p>I have also started a list of smaller government and higher education websites that are are on legacy Drupal versions, Wordpress, or proprietary platforms. These sites would not have been a good fit for modern Drupal before Drupal CMS. The risk to reward ratio for a project less than $30,000 USD was just too great when starting from scratch. That said, these smaller organizations represent a key area of growth for Drupal as we lead up to the <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">DOJ Accessibility ruling deadlines in 2026 through 2027</a>.</p>
-<p>Do you have a project or team that needs some expert help? Do you just want to chat about Drupal CMS and what it might mean to your organization? <a href="https://www.linkedin.com/in/joshuami">Connect with me on LinkedIn</a> or reach out to me on Drupal Slack (@joshuami).</p>
-
-      
-    
   
 
     
+      
+    <span class="field-content"><p class="my-3">Posted on 
+1 Jan 2025 - 6:00 pm
+</p></span>
   
+  
+  
+
+  
+  
+
+  
+  
+
+Given my recent migration of my blog and the planned launch of Drupal CMS on January 15th, I thought it might be a good time to dig in and see what's currently included in this milestone re-packaging of Drupal.
+
+
+  <a href="https://joshuami2.ddev.site/tags/drupal" class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover">Drupal</a>
+
+
+
+  <a href="https://joshuami2.ddev.site/tags/starshot" class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover">Starshot</a>
+
 ]]></description>
   <pubDate>Thu, 02 Jan 2025 02:00:00 +0000</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -143,330 +61,52 @@
 
 <span><span>joshuami</span></span>
 
-<span>Wed, 18 Dec 2024 - 11:01
+<span>
+Wed, 18 Dec 2024 - 11:01 am
 </span>
-  
-    
-      
-
 
   
     
-      
-      
-
-
-      <h3 class="field__label field--tags__label">Tags</h3>
-    <ul class="links field__items field--tags__items">
-          <li class="field--tags__item"><a href="https://joshuami2.ddev.site/tags/drupal" hreflang="en">Drupal</a></li>
-          <li class="field--tags__item"><a href="https://joshuami2.ddev.site/tags/starshot" hreflang="en">Starshot</a></li>
-          <li class="field--tags__item"><a href="https://joshuami2.ddev.site/tags/ddev" hreflang="en">DDev</a></li>
-          <li class="field--tags__item"><a href="https://joshuami2.ddev.site/tags/tome" hreflang="en">Tome</a></li>
-          <li class="field--tags__item"><a href="https://joshuami2.ddev.site/tags/github" hreflang="en">Github</a></li>
-      </ul>
-
-
-    
-  
-
-
 
   
-    
-      
-      
-            <p>In 2015, <a href="https://joshuami2.ddev.site/2015/07/08/keeping-sharp-with-jekyll-blogging-tool" data-entity-type="node" data-entity-uuid="518cf2ec-31ed-4a72-81f1-80249e33bfe6" data-entity-substitution="canonical">I moved this site to Github Pages</a> from a Drupal 7 installation. I had several reasons for this move, but my biggest concern was security. I was—and still am—a busy professional with clients that need me to keep my attention on their sites when significant security announcements or releases land in the Drupal world. When I made the move, I was much more concerned with keeping <a href="https://www.drupal.org/">Drupal.org</a> secure and stable than a personal blog.</p>
-<p>I was also keen to use markdown for editing my blog—which I've since become less enamored with due to the excellent markdown autocompletion support <a href="https://support.google.com/docs/answer/12014036?hl=en">built into tools like Google Docs</a> and even <a href="https://www.drupal.org/node/3389141">Drupal's CKEditor implementation</a>.&nbsp;</p>
-<p>After years of setting up ambitious editorial experiences in modern Drupal, I wanted to be able to experience those improvements in my own blogging. Heck, maybe it will get me writing a bit more.</p>
-<p>So with a little spare time this holiday season, I've decided to give a new approach a try.&nbsp;</p>
-<p>This site was built using Drupal CMS (currently 1.0.0-rc2), DDev, Tome (a static site generator for Drupal), and Github Pages using a Github Action to deploy the Tome-generated artifact. Technically, the site is also delivered via Cloudflare using a free-tier account. The Cloudflare setup was a throwback to the days when Github Pages did not support HTTPS. I've kept it for the analytics the Cloudflare dashboard. With this current setup, I spend $0 on hosting—though there are a few drawbacks that I'll explain below.</p>
-<h2>Getting Started with DDev</h2>
-<p>A few days ago, <a href="https://www.drupal.org/u/drubb">drubb</a> posted <a href="https://drupal.slack.com/archives/C072BF486FN/p1733943130041509">instructions for trying Drupal CMS using Lando</a>. While I used <a href="https://lando.dev/">Lando</a> for quite a few years on the <a href="https://www.portland.gov/">Portland.gov</a> project, and I'm quite fond of its approach to tooling, I pretty much exclusively use <a href="https://ddev.com/">DDev</a> these days for local development. It is faster and has options for Docker management like Rancher Desktop. It's fast on Mac ARM processors and it just works—it also feels like the <a href="https://www.drupal.org/docs/getting-started/installing-drupal/install-drupal-using-ddev">community is standardizing on DDev a bit as a "recommended" local development tool</a>. So I thought, huh, I wonder if I can match that Lando example.</p>
-<p>30 minutes later, because of a couple of wrong turns, I had a working copy of Drupal CMS.</p>
-<p>Here are the steps assuming you already have <a href="https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/">DDev installed</a>.</p>
-<p>Create your project directory and open it.</p>
-<pre><code class="language-shell">mkdir drupalcms &amp;&amp; cd drupalcms</code></pre><p>Configure DDev. Feel free to update your project name and webroot.</p>
-<pre><code class="language-shell">ddev config --auto --project-name=drupalcms --docroot=web --project-type=drupal</code></pre><p>Use DDev to create your composer project within your project directory. Installing Composer is not required as it will use Composer in the container.</p>
-<pre><code class="language-shell">ddev composer create drupal/cms --ignore-platform-reqs --stability dev</code></pre><p>Launch your site and use the site installer. You won't need to enter database credentials as DDev takes care of this for you.</p>
-<pre><code class="language-shell">ddev launch</code></pre><p>Assuming you didn't change the project name, it will open the resulting site at <a href="https://drupalcms.ddev.site/">https://drupalcms.ddev.site/</a> and you'll see the new Drupal CMS installer.&nbsp;</p>
-<p>It's worth noting that <a href="https://www.drupal.org/u/phenaproxima">phenaproxima</a>, who is a big part of architecting how Drupal CMS is composed, suggested that there are no guarantees that the above will continue to work through the first stable release even if that is the goal.</p>
-<h2>Drupal CMS (Starshot) as a Starting Point</h2>
-<p>I plan to do a more detailed write up on my thoughts regarding Starshot. I've followed it pretty closely since DrupalCon Portland when it was announced. It has a lot of promise to give a more complete Drupal experience from the point of installation. It is also very opionnated. I'm pretty opinionated as well, at least about my Drupal approaches, so I'm on the fence regarding some of the choices in Drupal CMS, but I wanted this initial release of my blog to be as close to the based installation as possible.</p>
-<p>Keep in mind, all of what I'm showing below is subject to change between now and 15 January 2025 when Drupal CMS is scheduled for its first stable release. That said, with less than a month, I wouldn't expect huge changes from what I'm seeing at this point. They might remove a bit more, but I doubt a lot will get added.</p>
-<p>To get started, I selected just the "blog" content type, clicked next.</p>
-
-  
-      
-  
-    Image
-                  
-                  
-                  
-
-  
-
-
-          
-
-  
-<p>The next few screens will walk you through naming your site and creating the first user.</p>
-
-  
-      
-  
-    Image
-                  
-                  
-                  
-
-  
-
-
-          
-
-  
-<p>Incidentally, it automatically names this first user "admin" (opinionated remember) so you may want to consider this initial account a service account rather than the account you'll regularly use to publish content on a site like a personal blog.</p>
-
-  
-      
-  
-    Image
-                  
-                  
-                  
-
-  
-
-
-          
-
-  
-<p>The first thing I noticed was just how many modules Drupal CMS has in its default install—even when all I've added is the blog content type—so very opinionated at this point.</p>
-<p>Now that the install is complete, your fresh new user will land on a fresh new dashboard.</p>
-
-  
-      
-  
-    Image
-                  
-                  
-                  
-
-  
-
-
-          
-
-  
-<p>The combination of the Gin admin theme, the new navigation layout, and this simple dashboard is a significant change for anyone with much of a history with Drupal.</p>
-<p>Clicking "Create" in the new side navigation will immediately give you a little sense of just how much is included by default in with just the blog content type enabled.</p>
-
-  
-      
-  
-    Image
-                  
-                  
-                  
-
-  
-
-
-          
-
-  
-<p>The options for basic page, blog post (enabled as part of the install) as well as document, image, and user all make sense as sane defaults. That said, I was shocked at some of hte enabled modules in this initial install. In addition to core modules, the following is in this the standard profile:</p>
-<ul>
-<li>Autosave Form</li>
-<li>ECA
-<ul>
-<li>BPMN.iO for ECA</li>
-<li>ECA base</li>
-<li>ECA BPMN</li>
-<li>ECA Content</li>
-<li>ECA Core</li>
-<li>ECA Form</li>
-<li>ECA Miscellaneous</li>
-<li>ECA Render</li>
-<li>ECA UI</li>
-<li>ECA User</li>
-</ul>
-</li>
-<li>Simple Add More</li>
-<li>JQuery UI</li>
-<li>JQuery UI Resizeable</li>
-<li>Drupal Symphony Mailer Lite</li>
-<li>Easy Email</li>
-<li>Easy Email Overrides</li>
-<li>Focal Point</li>
-<li>SVG Image</li>
-<li>Easy Breadcrumb</li>
-<li>Automatic Updates (which will be part of core one day)</li>
-<li>Automatic Updates Extensions</li>
-<li>Coffee (though I hear this might be removed for performance reasons)</li>
-<li>Gin Toolbar</li>
-<li>Login with email or username</li>
-<li>Menu Link Attributes</li>
-<li>Package Manager</li>
-<li>Pathauto</li>
-<li>Project Browser</li>
-<li>Redirect</li>
-<li>Redirect 404</li>
-<li>Token</li>
-<li>Trash</li>
-<li>Antibot</li>
-<li>CAPTCHA</li>
-<li>Friendly Captcha</li>
-<li>Honeypot</li>
-<li>Klaro Cookie &amp; Consent Manager</li>
-<li>Linkit</li>
-<li>Add Content by Bundle</li>
-<li>Better Exposed Filters</li>
-<li>Selective Better Exposed Filters</li>
-</ul>
-<p>Wow. Did I mention Drupal CMS will be a bit opinionated? This isn't even a complete list of what has been added to the composer dependencies for the project. There are quite a few additional modules included in that dependency tree that you'll likely find yourself using on many projects.</p>
-<p>While I've used a fair number of these modules, I was surprised with quite a few that I had not hear of before Drupal CMS. When I get around to a more thorough review, I'll give my thoughts on which of these I feel like I'll be pruning from nearly every install.</p>
-<p>It's also worth noting that there is so much more in Drupal CMS than just contrib modules and related recipes. For example, Drupal CMS has 53 image styles and 29 responsive image styles. Drupal CMS also enables some features by default that I have not used on every Drupal project like Layout Builder—which I've never used without installing a lot of <a href="https://www.drupal.org/docs/8/core/modules/layout-builder/additional-modules">other layout builder contrib modules</a>. This choice has huge implications for future Drupal architectural approaches.</p>
-<h2>Importing Old Posts into Drupal CMS</h2>
-<p>Drupal has powerful migration tools to get content into its database. If you haven't seen the <a href="https://www.youtube.com/watch?v=nhPiL4g972A">demo from DrupalCon Barcelona</a> where Dries talks about the possibilty of AI importers, I highly recommend it. That said, I wasn't keen on writing all the prompts to pull in 59 blog posts. (Did I mention I want to write more?)</p>
-<p>Jekyll has a templating language, Liquid, that is quite similar to the Twig used by Drupal. I spent a little time to create a template that would generate a CSV file with my posts and used the <a href="https://www.drupal.org/project/feeds">Feeds</a> module to create an import process in a couple hours.</p>
-<p>Alternatively, I could have used the migration framework and written a script to use a contrib module like <a href="https://www.drupal.org/project/migrate_source_csv">Migrate Source CSV</a>. I highly recommend the migration framework for complex migrations that need to be rerun multiple times against large content models.</p>
-<h2>Configuring Tome and Github Pages</h2>
-<p><a href="https://www.drupal.org/project/tome">Tome</a> is a static site generator for Drupal. The <a href="https://tome.fyi/docs/">documentation for Tome</a> is pretty solid with guides for several different hosting options.</p>
-<p>Adding Tome is simple:</p>
-<pre><code class="language-shell">composer require drupal/tome
-drush en tome</code></pre><p>You'll need to let Drupal know where Tome should place its artifacts by adding some values to <code>settings.php</code>. The defaults in Tome's documentation look like this:</p>
-<pre><code class="language-php">$settings['tome_files_directory'] = '../files';
-$settings['tome_content_directory'] = '../content';
-$settings['tome_static_directory'] = '../html';
-$config_directories['sync'] = '../config';</code></pre><p>I chose to put my files in the same directory as the generated static content.</p>
-<pre><code class="language-php">$settings['tome_files_directory'] = '../html';</code></pre><p>This allowed me to keep some images from my Jekyll installation in the same site relative location as it copied them from what was the Jekyll root into the new Tome static directory.</p>
-<p>Running your first export is straightforward.</p>
-<pre><code class="language-shell">drush tome:export -y</code></pre><p>Just before you commit your changes, you'll want to generate your static site with the production URI. For my site, I ran this.</p>
-<pre><code class="language-shell">drush tome:static --uri=https://joshuami.com</code></pre><p>I now have a completely static site in the <code>html</code> directory of my repo.</p>
-<p>To get those files deployed, I made some small changes in my approach to hosting on Github Pages. In the <a href="https://tome.fyi/docs/hosting/github-pages/">official Tome approach to hosting on Github</a>, these is an example shell script that can be run via a composer script that will replace your root repo with the static asset generated by Tome.&nbsp;</p>
-<p>Personally, I wanted my repo to have a copy of my Drupal code rather than just the artifacts. Github Pages has an option to use Github Actions to deploy the artifacts from any artifact directory, this was perfect for my needs.</p>
-
-  
-      
-  
-    Image
-                  
-                  
-                  
-
-  
-
-
-          
-
-  
-<p>You'll be prompted to create an workflow from a standard static site templatet that lives at <code>.github/workflows/static.yml</code> within your repo.</p>
-<p>My static.yml looks like this.</p>
-<pre><code class="language-yaml"># Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: 'html'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 </code></pre><p>The only bit I had to change in their example file was to change the <code>path</code> from <code>.</code> to <code>html</code> where my artifact is located.</p>
-<p>After committing the workflow definition, the resulting build replaced my static Jekyll generated site with my new Tome generated site.</p>
-<h2>A Couple of Gotchas and Changes</h2>
-<p>Compared to authoring markdown for Jekyll, the Drupal editor experience is so much more satisfying.</p>
-<p>I did experience a couple of gotchas in my first attempt at publication.</p>
-<ol>
-<li>Drupal CMS includes a user account menu block that displays a login link to anonymous users. The login form is useless in a static site and returned a page not found—just needed to remove the block.</li>
-<li>Drupal CMS installs Klaro for cookie management which I disabled to avoid static asset errors.</li>
-<li>The view created for my blog archive had AJAX enabled by default. That needed to be turned off to properly render the paginated results as static HTML.</li>
-</ol>
-<p>I also added a little to my default installation in addition to Tome.&nbsp;</p>
-<ul>
-<li>I realized that I forgot to change to authored by user to a new "joshuami" account rather than "admin", so I installed Views Bulk Edit and updated all the posts in one edit.</li>
-<li>I wanted to add license information to the footer, so I installed Block Content (from core) and placed a content block in the footer.</li>
-<li>As mostly a technology blog, I wanted to format my code snippets a bit so I added Highlight.js Input Filter.</li>
-<li>From Drupal CMS, I installed both the SEO Tools and Accessibility Tools recipes from the project browser.</li>
-<li>I didn't want the "Learn more" link on every blog post for accessibility reasons, so I removed that field from the teaser display.</li>
-<li>I noticed that the teasers were kinda blah, so I enabled a Card display mode and used the <code>drupal_cms_olivero</code> template for <code>node--card.html.twig</code>, which is now included in the latest release of Drupal CMS.</li>
-</ul>
-<p>So far, those are my only additions, but there will be more to come.</p>
-<h2>Some Drawbacks</h2>
-<p>With any technology choice there will be some tradeoffs.</p>
-<p>I was surprised to see that my new site does not score as well on Lighthouse.</p>
-
-
-  
-      
-  
-    Image
-                  
-                  
-                  
-
-  
-
-
-          
-
-  
-
-Before the migration, I had a site that had a perfect Lighthouse score—complete with confetti!
-
-
-  
-      
-  
-    Image
-                  
-                  
-                  
-
-  
-
-
-          
-
-  
-<p>I have not yet had a chance to debug the render blocking CSS and unused javascript that reduces the performance score. I was surprised to see that the Olivero theme would result in less than perfect accessibility. It is specifically dinged for links that rely on color to be distinguishable—they need some underlines on hover or other decoration to meet the goal.</p>
-<p>While I appreciate all the amazing work to get Olivero into Drupal core, it is not my favorite theme—even for a simple blog. I'll be figuring out my theming approach in a follow up. I've considered trying TailwindCSS or similar for the experience.</p>
-<p>I'm also thinking that I may need a more traditional host to store backups of the database. While a static site is great for security, it is a trade off for disaster recovery when the content is stored in an ephemeral container in my local development environment. This wasn't a concern with Jekyll as the data was all stored in markdown and committed to git. I'll have to give that a bit more thought before I generate to many more posts.</p>
-
-      
-    
   
 
     
+      
+    <span class="field-content"><p class="my-3">Posted on 
+18 Dec 2024 - 11:01 am
+</p></span>
   
+  
+  
+
+  
+  
+
+  
+  
+
+Way back in 2015, I moved my blog to a static implementation using Jekyll and Github Pages. While I was very involved in Drupal, I also was very aware of my limited time to keep a Drupal installation up to date. I simply wanted/needed the security a static site ensured. Drupal CMS—and a little extra holiday free time—led me to test a new approach using a Starshot installation while keeping the site static using Tome and  Github Pages.
+
+
+  <a href="https://joshuami2.ddev.site/tags/drupal" class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover">Drupal</a>
+
+
+
+  <a href="https://joshuami2.ddev.site/tags/starshot" class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover">Starshot</a>
+
+
+
+  <a href="https://joshuami2.ddev.site/tags/ddev" class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover">DDev</a>
+
+
+
+  <a href="https://joshuami2.ddev.site/tags/tome" class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover">Tome</a>
+
+
+
+  <a href="https://joshuami2.ddev.site/tags/github" class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover">Github</a>
+
 ]]></description>
   <pubDate>Wed, 18 Dec 2024 19:01:04 +0000</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -480,153 +120,36 @@ Before the migration, I had a site that had a perfect Lighthouse score—complet
 
 <span><span>joshuami</span></span>
 
-<span>Fri, 27 Oct 2023 - 00:00
+<span>
+Fri, 27 Oct 2023 - 12:00 am
 </span>
-  
-    
-      
-
 
   
     
-      
-      
-
-
-      <h3 class="field__label field--tags__label">Tags</h3>
-    <ul class="links field__items field--tags__items">
-          <li class="field--tags__item"><a href="https://joshuami2.ddev.site/tags/drupal" hreflang="en">Drupal</a></li>
-      </ul>
-
-
-    
-  
-
-
 
   
-    
-      
-      
-            <p>Update: The contents of this post were presented at DrupalCon Portland 2024.</p>
-<p><a href="https://docs.google.com/presentation/d/1uwVCpYfdQfFZmubVOL6tGhtOscoRFbskrOEIbZ2wvJ4/edit?usp=sharing">View the presentation slides with notes</a></p>
-<p><a href="https://www.youtube.com/watch?v=SCQFVqZ1zzQ&amp;list=PLpeDXSh4nHjThszrEoBfJ8sY2NYif0k6b">Watch the video on YouTube</a></p>
-<p>When working with large organizations—whether in private enterprise, governmental organizations, or nonprofits—editorial responsibility is often spread across multiple sub-organizations. Depending on the type of organization, those subdivisions can look very different:</p>
-<ul>
-<li>Department &gt; division &gt; section or program</li>
-<li>Bureau &gt; program &gt; project or team</li>
-<li>Brand &gt; product line &gt; product</li>
-</ul>
-<p>In all of the above structures, there is some hierarchy and some cross-organizational oversight to the editorial process combined with the overall administration of the website.</p>
-<p>Organizational structure for a site can also significantly differ for publicly-accessed content versus employee intranets versus membership-based websites.</p>
-<p>Drupal.org has somewhat-outdated documentation for a Comparison and Overview of Access Control modules. The documentation in question was created for Drupal 7, updated somewhat for Drupal 8—it hasn’t been maintained for Drupal 9 and 10.</p>
-<p>While this overview outlines a long list of access control modules, it doesn’t speak much to the “<em>why”</em> or “<em>how does this module work”</em>. With this post, I hope to outline some approaches to access control in Drupal and talk about why you might want to take one approach over another.</p>
-<p>We’ll cover:</p>
-<ul>
-<li>What’s in Drupal core to handle access control?</li>
-<li>The simplest approach: trust more and verify</li>
-<li>The Group module</li>
-<li>Workbench suite of modules</li>
-<li>Taxonomy Access Control Lite</li>
-<li>What about Organic Groups (OG)?</li>
-</ul>
-<h2>What’s in Drupal core to handle access control?</h2>
-<p>One of Drupal’s most powerful features is its roles and permissions architecture. Out of the box, you have anonymous, authenticated, and administrator roles. You can then create any named role you site needs. While adjusting permissions for a role can become a bit burdensome at scale—due to the enormous number of checkboxes on the administer permissions page—the power of setting these permissions from a single administrative interface is hard to deny.</p>
-<p>For each content type created in Drupal, there are permissions associated with creating, editing, and deleting that content type. If revisions are enabled, you can further add permissions for the ability to view, revert, and delete these revisions. If workflows are enabled, you can grant the ability to move content from one moderation state to the next.</p>
-<p>For sites with a limited number of roles and a clear permissions model, Drupal core can be more than sufficient to keep the editorial process in order.</p>
-<h2>The simplest approach: trust but verify</h2>
-<p>This leads us to the simplest approach to an enterprise-ready content access model that I call “trust and verify”.</p>
-<p>Often organizations will assume they need robust access control to prevent employees from doing what they shouldn’t:</p>
-<ul>
-<li>deleting someone else’s content</li>
-<li>changing someone else’s content</li>
-<li>adding content they shouldn’t</li>
-<li>putting content in the wrong organizational structure</li>
-</ul>
-<p>While all of these could be valid issues in organizations with hundreds of editors, the question should be asked, “why did you give these people access if you can’t trust them to do their job?”</p>
-<p>It seems simple, doesn’t it?</p>
-<p>Still, there are many managers and executives that want a bit more assurance. Even out of the box, without additional modules, you can configure Drupal so that it requires a bit of verification for the most destructive actions.</p>
-<h3>Status versus state</h3>
-<p>All content in Drupal has the option for a published status. This status is either published or not (unpublished) with default permissions that do not allow anonymous public users to see the content that is not published.</p>
-<p>With core’s Content Moderation module, this can be expanded to add additional states that can be published or unpublished and default or not. The default state is referring to the publish status presented to users when they visit the canonical URL for the content.</p>
-<p>While most developers I’ve met usually pick up on the concept of <em>default state</em> pretty quickly, I’ve found many editors are a bit confused that “published” and “unpublished” are both a status (on/off or true/false) as well as a moderation state (step in the workflow).</p>
-<h3>The recipe for verifying editor actions</h3>
-<h4>Moderation states</h4>
-<p>Moderation states are steps in a workflow that an editor can use to convey the intent of the state of the revision being saved.</p>
-<p>The following are a good starting point for a <em>trust but verify</em> permission model:</p>
-<ul>
-<li><strong>Draft</strong> - unpublished revision that is not a default current state</li>
-<li><strong>In review</strong> - unpublished revision (not default) with the intent that content in this state should be reviewed by someone with the authority to approve the revision and publish it</li>
-<li><strong>Published</strong> - published default revision that can be viewed by anonymous users</li>
-<li><strong>Unpublished</strong> - unpublished default revision that removes visibility to the content</li>
-<li><strong>Marked for deletion</strong> (optional) - unpublished default revision for identifying content that is intended for deletion that can be reviewed by a more advanced role for removal from the system.</li>
-</ul>
-<p>It is important that your editors understand the meaning of “revision” and that revisions can be unpublished. Draft, in review, unpublished, and marked for deletion are all unpublished revisions that the public cannot access. If a user without the permission to see these revisions visits the URL for the content, they will get an access denied error by default.</p>
-<h4>Roles</h4>
-<p>Roles in Drupal are assigned permission. Role assignments are additive. To put that another way, your permissions are the sum of all the roles to which you are assigned. While this can mean fine-grain control over permissions by content type, that level of role and permission definition is a bit excessive for simpler site structures.</p>
-<p>To avoid complexity, I usually start with a trio of roles that are best assigned exclusively:</p>
-<ul>
-<li><strong>Editor (or author)</strong> - can create and edit content, but they cannot move that content to a published state</li>
-<li><strong>Publisher</strong> - can do everything an editor can do and can also move content to a published/unpublished state</li>
-<li><strong>Administrator</strong> - can do everything an editor or publisher can do, and can administer the site</li>
-</ul>
-<p>That’s pretty much all many sites need. With this model, you are trusting your trained editors (you are training them, right?) with the ability to create and edit as they need, but verifying the content is ready for publication with an additional review by a publisher.</p>
-<p>With the optional <em>marked for deletion</em> state, you are also trusting your publishers to unpublish content that should be deleted with the intent that administrators will double check their choices.</p>
-<h3>Making trust more and verify work with groups</h3>
-<p>A key aspect of large, enterprise websites is the notion of grouping content by a sub-organization. Groups provide hierarchy and information architecture to the site that often is used for the path alias (URL) of the content, the breadcrumb navigation, and menu navigation. I often call this sub-organization a “group” for the purpose of content modeling, but you could name it “organization” or “site” if preferred.</p>
-<p>Groups could be a content type or it could be a subtype of content denoted through a field on a more basic content type. (For example, <em>page</em> of the subtype of <em>group</em>, <em>department</em>, etc.)</p>
-<p>For the purpose of demonstration, let’s say you have a content type called “group” that represents the departments, divisions, and sections for a county (local governmental organization in the United States).</p>
-<p>Editors and publishers for the site are assigned to groups for the purpose of determining which groups appear on their personalized dashboard. Content created within the site is assigned to groups via a “belongs to” or “displayed in” field.</p>
-<h3>To achieve group content ownership and user group membership, you need the following:</h3>
-<ul>
-<li>Content type called group</li>
-<li>Content that belongs to groups (for example pages or news) have a field for Display in group</li>
-<li>Users have a field called Groups to which you can assign groups within the organization to the user</li>
-<li>Use views to create lists of my groups and my content with a contextual argument of the logged in user and with relationships that join the groups and its content to show a list of the content the user should be responsible for editing</li>
-</ul>
-<p>While the permissions for these users will still be sitewide, the list views serve the purpose of showing the content the user should edit—rather than all content they could edit.</p>
-<p>A bonus side effect of this fairly open approach is that editors and publishers can rely on other users of the system to provide coverage for events like personal leave without an administrator having to explicitly get involved.</p>
-<p>Paired with a <em>reviewers</em> entity reference field on content that should be reviewed—and perhaps some custom or contributed code to trigger a reviewer email message as needed—a trust more and verify approach can be quite robust and effective.</p>
-<h2>The “Group” module</h2>
-<p>The somewhat ambiguously named <a href="https://www.drupal.org/project/group">Group</a> module represents the more complex end of the access control spectrum.</p>
-<p>Group is undergoing an extensive rewrite between version 8.x-1.x (version 1 for Drupal 8/9) and versions 2 and 3. Versions 2 and 3 are essentially the same, but version 2 is the upgrade path for sites that are on version 8.x-1x. If you are just getting started with Group version 3 in Drupal 9 or 10, start with version 3.</p>
-<p>For the purpose of this post, Group is far too complex to describe everything it can do or how to fully configure Group for your content model, but hopefully the described scenario below may help you understand one possible use case for large sites divided into sub-organizations (groups) for access control.</p>
-<p>First, you need to consider how many unique group types you need. For a public-facing website, you likely can get by with a single group type, but you may find yourself needing multiple access control models for intranets and extranets that have both open and restricted group types.</p>
-<p>Once you have your group types defined, you can set roles per group type in addition to the sitewide roles provided by Drupal. Group also has the ability to set permissions to groups according to sitewide roles. This can be helpful for setting the ability for a sitewide administrator role to see all created groups.</p>
-<p>After enabling the Group Node submodule, you can enable content plugins for the group and set permissions for each of your roles for what content that group role can create, edit, and delete.</p>
-<p>Group defines all of the association between content and a group or a user and a group through what is called a Group relation entity. This entity serves as the glue between the different entity types—and is even fieldable for complex relationships. There is a small trade off with this complexity in that every group-based view needs group relationships (joins in the database query) for the results to be rendered. This can be very confusing to someone new to the group ecosystem.</p>
-<p>While the group relationship entity and the permissions defined by the content plugin covers the basics of content access, creation, updates, and deletion, many organizations will need a bit more robust editorial workflow provided by the Content Moderation module from Drupal core. Unfortunately, or maybe fortunately given the complexity it would represent, Group is not aware of moderation states in workflows. To handle this, I typically have a sitewide role for granting publisher permissions and roles for group admin and editor within the group roles.</p>
-<p>Having two layers of permissioning is complex, but it is the best option I’ve found to date for providing a high level of control to site administrators that need to assign strict permissions to users on their site.</p>
-<p>A benefit of group-specific permissions to delete content, is that unlike the trust more and verify approach, you can assign the ability to delete content to a more trusted group administrative role rather than centralizing that capability at a sitewide administrator role.</p>
-<p>Group can be extended by the Group Media and Subgroup modules. Group Media provides group relationships for media entities—allowing media to be “owned” by a group with permissions for creating and editing the media within a group. The Subgroups module allows permissions to be inherited up and down a hierarchy of groups.</p>
-<h2>Workbench</h2>
-<p><a href="https://www.drupal.org/project/workbench">Workbench</a> is a suite of modules that make it easier for an editor to edit content they created. Much of the Workbench experience is essentially pre-made views that can be overridden with additional customizations.</p>
-<p><a href="https://www.drupal.org/project/workbench_moderation">Workbench Moderation</a> is a module that in many ways led to much of the functionality in the Content Moderation modules in core—and as such Workbench Moderation is deprecated as of Drupal 9 and not recommended for new sites on Drupal 9 or 10.</p>
-<p><a href="https://www.drupal.org/project/workbench_access">Workbench Access</a> provides another layer of permissions that can be applied to sitewide roles through an access schema based on either menu or taxonomy hierarchies. And it’s fairly easy to retrofit a site with the “trust but verify” approach mentioned above.</p>
-<p>Choosing between a menu and taxonomy access schema has some important considerations. Both menu and taxonomy have hierarchy (parent to child relationships). Hierarchy allows the site to be divided into sections and for users to be assigned to a section where their sitewide roles and permissions are applied. Per the module maintainers, “Note that the module only controls access to content editing. It does not provide any content filtering of access restrictions for users trying to view that content.”</p>
-<p>Taxonomy hierarchy is limited to within a specific vocabulary. Taxonomy terms can be a rendered entity at a particular page path or a view that takes the contextual argument of a term ID. With a little configuration, term view pages or term pages with block views receiving a contextual argument could make a decent “landing page” for a group. However, taxonomy terms are missing some of the base fields that content types have such as author and revisions that are displayed in a revisions administrative view. (Under the hood, terms have had revisions since Drupal 10.1, <a href="https://www.drupal.org/project/drupal/issues/2936995">but at the time of this writing, the UI for taxonomy terms has not made it into core</a>.)</p>
-<p>Menu hierarchy is the relationship between menu items. Menu item entities can point to any other Drupal entity with a rendered page path (for example, nodes, taxonomy terms, user profiles, custom entities) you can also create a menu item entity for views with a page display. Menu hierarchy is a little more flexible than taxonomy hierarchy, but the Menu UI (either the administrative page or per node) is a bit cumbersome with very large menus. I’ve worked around this in the past with a combination of the <a href="https://www.drupal.org/project/bigmenu">Big Menu</a> and <a href="https://www.drupal.org/project/cshs">Client Side Hierarchical Select</a> modules.</p>
-<h2>Taxonomy Access Control Lite</h2>
-<p><a href="https://www.drupal.org/project/tac_lite">Taxonomy Access Control Lite</a> is the successor to Taxonomy Access Control (which was only maintained until Drupal 7). “This node_access module governs access to nodes based on the taxonomy terms applied to the nodes. A simple scheme based on taxonomy, roles and users controls which content is visible.” It adds no new tables, but has similar limitations to Workbench Access’s taxonomy access schema without the hierarchical inheritance within the concept of a “section”. For simpler site structures, this may be sufficient to grant needed access levels.</p>
-<h2>What about Organic Groups (OG)?</h2>
-<p>In Drupal 6 and 7, Organic Groups was my go to solution for group-based access control. It had a much simpler permission structure than the Group module—but it was still quite robust. Organic Groups allowed content types to be marked as either a group or a type that could be owned by groups.</p>
-<p>The advantage of a group being a typical content type is evident when you are creating views that need to show groups alongside other content. It also means that your group content types have all the workflow and revision capabilities of all other content types. (Early in the development of the Group module, the group entity type could not be revisioned or assigned to a workflow. This is no longer the case, but it was a huge drawback for the first four years I found myself using Group.) OG also had a simpler relationship model, an entity reference field for both content and users.</p>
-<p>Organic Groups was the backbone for Drupal Groups (<a href="https://groups.drupal.org">https://groups.drupal.org</a>) as well as Acquia’s Commons distribution that was popular throughout the Drupal 6 and 7 lifecycle. It could be used for creating just about any permission structure that needed membership and roles to define content access and editing.</p>
-<p>With so much going for it, Organic Groups did not make a clean jump to Drupal 8. The development of Organic Groups was moved off of Drupal.org prior to the release of a Drupal 8 version. The rewrite that was undertaken for the Drupal 8 version of Organic Groups involved a huge amount of code deletion and slow progress in restoring the functionality that made it popular for D7 and D8 sites. Despite work on the D8 version as far back as 2014, there is still no stable release on Drupal.org. That’s not to say it is completely unused. Development has trickled along during that time, and those that are ready to take on a fair amount of custom code, can essentially write their own administrative interface for OG, but it takes very deep knowledge of OG to maintain it for a customer.</p>
-<p>I no longer recommend Organic Groups for new projects because I don’t feel I could hand off the work after launch to make the product fully operationalized.</p>
-<h2>What solution is best for your use case?</h2>
-<p>Choosing how complex to make your access controls on a Drupal website is largely about the needs for governance and distribution of permissions to users that can create and edit content.</p>
-<p><strong>If your site is small</strong>, say a blog or a marketing site managed by a small group of editors, you can probably just <strong>configure core roles and permissions</strong>.</p>
-<p><strong>If you have many editors for different segments of your organization</strong>, perhaps in a small government or educational website, use either a <strong>trust but verify content moderation workflow</strong> or a <strong>simple access control scheme with Workbench Access or Taxonomy Access Control Lite</strong>.</p>
-<p><strong>If you have a very large number of editors or need strict access control policies to both create/edit and to access content</strong>, such as in the intranet of a large company or a social media solution for developer portal, then the best solution is likely <strong>the Group module with group types and group-specific roles and permissions</strong>.</p>
-<p>Before you settle on the solution for your site, take the time to think through the value of added functionality versus the added complexity and maintenance. Larger more complex sites with more Drupal modules and configuration cost more to maintain, but that cost can be worth the improved features and functionality in many larger organizations.</p>
-
-      
-    
   
 
     
+      
+    <span class="field-content"><p class="my-3">Posted on 
+27 Oct 2023 - 12:00 am
+</p></span>
   
+  
+  
+
+  
+  
+
+  
+  
+
+When working with large organizations—whether in private enterprise, government, higher education, or non-profits—editorial responsibility is often spread across multiple sub-organizations. Set your editors up for success by choosing an access control strategy that works best for the organizational objectives.
+
+
+  <a href="https://joshuami2.ddev.site/tags/drupal" class="link-light link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover">Drupal</a>
+
 ]]></description>
   <pubDate>Fri, 27 Oct 2023 07:00:00 +0000</pubDate>
     <dc:creator>joshuami</dc:creator>

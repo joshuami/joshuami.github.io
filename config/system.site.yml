@@ -4,7 +4,7 @@ langcode: en
 uuid: 6c0d20e1-fd79-48de-9149-0e141ace4358
 name: Joshuami
 mail: no-reply@joshuami.com
-slogan: 'Weblog of Josh Mitchell—a technology leader, architect of enterprise solutions, and builder of high performing teams.'
+slogan: 'Maker of web platforms and products'
 page:
   403: /user/login
   404: ''

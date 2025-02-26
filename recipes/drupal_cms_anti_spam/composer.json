@@ -9,5 +9,6 @@
         "drupal/friendlycaptcha": "^1.1",
         "drupal/friendly_captcha_challenge": "^0.9",
         "drupal/honeypot": "^2.1"
-    }
+    },
+    "version": "1.0.2"
 }

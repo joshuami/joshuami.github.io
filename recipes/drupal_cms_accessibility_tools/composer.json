@@ -7,5 +7,6 @@
         "drupal/core": ">=10.3",
         "drupal/drupal_cms_page": "~1.0.0",
         "drupal/editoria11y": "^2.2"
-    }
+    },
+    "version": "1.0.2"
 }

@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set mime_type = content.field_mime_type.0['#context']['value']|mime_map %}
+
+{%
+  set classes = [
+    'embed-document'
+  ]
+%}
+
+{% if content %}
+
+  {% set media_url = content.field_media_file.0|render|striptags|trim %}
+
+  {# If display name or data-title exists, over name value #}
+  {% if content.field_display_name|render|striptags|trim %}
+    {% set media_title = content.field_display_name|render|striptags|trim|replace({'&#039;': "'", '&quot;': '"'}) %}
+  {% elseif attributes['data-title'] is not empty %}
+    {% set media_title = attributes['data-title']|replace({'&#039;': "'", '&quot;': '"'}) %}
+  {% else %}
+    {% set media_title = name %}
+  {% endif %}
+
+  <div{{ attributes.addClass(classes).removeClass('align-center') }}>
+      <a href="{{ media_url }}" class="pb-3"><i class="gg-file-{{ mime_type|lower }}"></i>{{ media_title }} <span class="media-properties">({{ mime_type }} {{ content.field_file_size.0|render|striptags|format_size }})</span></a>
+      {% if user.hasPermission('edit any document media') %}
+        <span class="media-edit ms-2 small">
+          <a href="{{ path('entity.media.canonical', {'media': media.id}) }}/edit" target="_blank">Edit</a>
+        </span>
+      {% endif %}
+      {% if (content.field_description) and (attributes['data-description'] == "1") or ('description' in view_mode|clean_class) %}
+        <div id="{{ name|clean_class }}" class="description">{{ content.field_description.0 }}</div>
+      {% endif %}
+      {# If EVA is not in display, this won't output anything #}
+      {# data-hide-translations = "1" was the legacy method used for CKE4 #}
+      {% if attributes['data-hide-translations'] != "1" %}
+        {{ content.media_with_context_eva_translations_for_document }}
+      {% endif %}
+  </div>
+
+{% endif %}

@@ -1,0 +1,20 @@
+uuid: 4b9716a9-d1e4-40df-9d6d-e40967f54c70
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - xtra
+id: xtra_poweredbydrupal
+theme: xtra
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

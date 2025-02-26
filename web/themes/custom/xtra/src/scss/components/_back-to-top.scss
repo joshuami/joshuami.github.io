@@ -1,0 +1,13 @@
+#back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: $zindex-fixed;
+}
+
+// Hide back to top for logged in users to prevent overlap of Editoria11y.
+body.toolbar-fixed {
+  #back-to-top {
+    display: none;
+  }
+}
