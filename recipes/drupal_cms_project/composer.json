@@ -6,7 +6,7 @@
     "require": {
         "drupal/core": ">=10.4",
         "drupal/add_content_by_bundle": "^1.2.2",
-        "drupal/drupal_cms_page": "~1.0.0"
+        "drupal/drupal_cms_page": "~1.1.0"
     },
-    "version": "1.0.2"
+    "version": "1.1.0"
 }

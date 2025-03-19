@@ -50,13 +50,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_tags:
-    type: entity_reference_autocomplete_tags
+    type: tagify_entity_reference_autocomplete_widget
     weight: 9
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   langcode:

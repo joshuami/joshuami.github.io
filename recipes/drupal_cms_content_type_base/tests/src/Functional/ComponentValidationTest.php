@@ -87,6 +87,12 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertFalse($unpublished->isPublished());
     $this->drupalGet("/admin/content/moderated");
     $assert_session->linkExists($unpublished->getTitle());
+
+    // The trash should be accessible to content editors.
+    $this->drupalGet('/admin/content/trash');
+    $assert_session->statusCodeEquals(200);
+    $this->drupalGet('/admin/content/trash/node');
+    $assert_session->statusCodeEquals(200);
   }
 
 }

@@ -10,11 +10,11 @@
     "drupal/ai_image_alt_text": "^1",
     "drupal/ai_provider_anthropic": "^1",
     "drupal/ai_provider_openai": "^1",
-    "drupal/drupal_cms_privacy_basic": "~1.0.0",
+    "drupal/drupal_cms_privacy_basic": "~1.1.0",
     "league/commonmark": "^2.4"
   },
   "conflict": {
     "drupal/project_browser": "<2-alpha7"
   },
-  "version": "1.0.2"
+  "version": "1.1.0"
 }

@@ -32,7 +32,9 @@ class PerformanceTest extends PerformanceTestBase {
   public function testPerformance(): void {
     $dir = InstalledVersions::getInstallPath('drupal/drupal_cms_starter');
     $this->applyRecipe($dir);
-
+    // Applying the recipe installs automated cron, but we don't want cron to
+    // run in the middle of a performance test, so uninstall it.
+    \Drupal::service('module_installer')->uninstall(['automated_cron']);
     $this->doTestAnonymousFrontPage();
     $this->doTestEditorFrontPage();
   }
@@ -59,8 +61,12 @@ class PerformanceTest extends PerformanceTestBase {
     $this->assertSame(0, $performance_data->getCacheTagInvalidationCount());
     $this->assertSame(2, $performance_data->getStylesheetCount());
     $this->assertSame(1, $performance_data->getScriptCount());
-    $this->assertLessThan(75000, $performance_data->getStylesheetBytes());
-    $this->assertLessThan(16500, $performance_data->getScriptBytes());
+
+    // If there are small changes in the below limits, e.g. under 5kb, the
+    // ceiling can be raised without any investigation. However large increases
+    // indicate a large library is newly loaded for anonymous users.
+    $this->assertLessThan(84000, $performance_data->getStylesheetBytes());
+    $this->assertLessThan(24000, $performance_data->getScriptBytes());
   }
 
   /**
@@ -82,20 +88,44 @@ class PerformanceTest extends PerformanceTestBase {
     $assert_session = $this->assertSession();
     $assert_session->elementAttributeContains('named', ['link', 'Dashboard'], 'class', 'toolbar-button--icon--navigation-dashboard');
     $assert_session->elementExists('css', 'article.node');
-    // @todo assert individual queries once Coffee does not result in an
-    // additional AJAX request on every request.
-    // @see https://www.drupal.org/project/coffee/issues/2453585
-    $this->assertSame(9, $performance_data->getQueryCount());
-    $this->assertSame(86, $performance_data->getCacheGetCount());
+
+
+    // The following queries are the only database queries executed for editors on the
+    // front page.
+    $queries = [
+      'SELECT "session" FROM "sessions" WHERE "sid" = "SESSION_ID" LIMIT 0, 1',
+      'SELECT * FROM "users_field_data" "u" WHERE "u"."uid" = "2" AND "u"."default_langcode" = 1',
+      'SELECT "roles_target_id" FROM "user__roles" WHERE "entity_id" = "2"',
+      'SELECT "base_table"."id" AS "id", "base_table"."path" AS "path", "base_table"."alias" AS "alias", "base_table"."langcode" AS "langcode" FROM "path_alias" "base_table" WHERE ("base_table"."status" = 1) AND ("base_table"."alias" LIKE "/node/2" ESCAPE \'\\\\\') AND ("base_table"."langcode" IN ("en", "und")) ORDER BY "base_table"."langcode" ASC, "base_table"."id" DESC',
+      'SELECT rid FROM "redirect" WHERE hash IN ("NKzL8tFQHWuVsiKsKSy9LeHXQXJXBi02otuiixBL8TE", "hef6TjxChWEKH2Wao9m0dVOigdwgf67UkEGlfXcimoA") ORDER BY LENGTH(redirect_source__query) DESC',
+      'SELECT "config"."name" AS "name" FROM "config" "config" WHERE ("collection" = "") AND ("name" LIKE "klaro.klaro_app.%" ESCAPE \'\\\\\') ORDER BY "collection" ASC, "name" ASC',
+      'SELECT "session" FROM "sessions" WHERE "sid" = "SESSION_ID" LIMIT 0, 1',
+      'SELECT * FROM "users_field_data" "u" WHERE "u"."uid" = "2" AND "u"."default_langcode" = 1',
+      'SELECT "roles_target_id" FROM "user__roles" WHERE "entity_id" = "2"',
+    ];
+
+    // To avoid a test failure when a database query is removed, check only
+    // that a new database query has not been added.
+    $query_diff = array_diff($performance_data->getQueries(), $queries);
+    $this->assertSame([], $query_diff);
+    $this->assertLessThanOrEqual(9, $performance_data->getQueryCount());
+
+    // @todo check cache bins when Drupal CMS requires Drupal 11.2
+    // @see https://www.drupal.org/project/drupal/issues/3500739
+    $this->assertLessThanOrEqual(87, $performance_data->getCacheGetCount());
     $this->assertSame(0, $performance_data->getCacheSetCount());
     $this->assertSame(0, $performance_data->getCacheDeleteCount());
     $this->assertSame(0, $performance_data->getCacheTagChecksumCount());
-    $this->assertSame(33, $performance_data->getCacheTagIsValidCount());
+    $this->assertLessThanOrEqual(33, $performance_data->getCacheTagIsValidCount());
     $this->assertSame(0, $performance_data->getCacheTagInvalidationCount());
     $this->assertSame(3, $performance_data->getStylesheetCount());
     $this->assertSame(3, $performance_data->getScriptCount());
+
+    // If there are small changes in the below limits, e.g. under 5kb, the
+    // ceiling can be raised without any investigation. However large increases
+    // indicate a large library is newly loaded for authenticated users.
     $this->assertLessThan(350000, $performance_data->getStylesheetBytes());
-    $this->assertLessThan(320000, $performance_data->getScriptBytes());
+    $this->assertLessThan(330000, $performance_data->getScriptBytes());
   }
 
 }

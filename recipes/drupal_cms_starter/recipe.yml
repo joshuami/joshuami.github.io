@@ -31,6 +31,7 @@ install:
   - olivero
   - package_manager
   - project_browser
+  - update
   # The rest of these are in Standard.
   - inline_form_errors
   - config
@@ -140,3 +141,6 @@ config:
           type: string_textfield
           weight: -1
           region: content
+    update.settings:
+      simpleConfigUpdate:
+        check.disabled_extensions: true

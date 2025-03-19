@@ -9,6 +9,7 @@ use Composer\InstalledVersions;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\State\StateInterface;
 use Drupal\Tests\BrowserTestBase;
+use Drupal\Tests\drupal_cms_content_type_base\ContentModelTestTrait;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
 
@@ -16,6 +17,8 @@ use Symfony\Component\Process\Process;
  * @group drupal_cms_starter
  */
 class ComponentValidationTest extends BrowserTestBase {
+
+  use ContentModelTestTrait;
 
   /**
    * {@inheritdoc}
@@ -64,6 +67,8 @@ class ComponentValidationTest extends BrowserTestBase {
     // to be applied again in the real world.
     $dir = InstalledVersions::getInstallPath('drupal/drupal_cms_starter');
     $this->applyRecipe($dir);
+
+    $this->ensureFileExists('05439bd3-1c60-4e1a-8719-e9da071e88e4');
 
     // The front page should be accessible to everyone.
     $this->drupalGet('<front>');

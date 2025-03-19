@@ -18,7 +18,10 @@ events:
   Event_write_config:
     plugin: 'config:save'
     label: 'Write config'
-    configuration: {  }
+    configuration:
+      config_name: ''
+      sync_mode: ''
+      write_mode: ''
     successors:
       -
         id: Gateway_and_1

@@ -26,7 +26,10 @@ events:
   Event_save_config:
     plugin: 'config:save'
     label: 'Save config'
-    configuration: {  }
+    configuration:
+      config_name: ''
+      sync_mode: ''
+      write_mode: ''
     successors:
       -
         id: Activity_and_1

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\drupal_cms_events\Functional;
 
+use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
@@ -15,6 +16,7 @@ use Drupal\Tests\drupal_cms_content_type_base\ContentModelTestTrait;
  */
 class ComponentValidationTest extends BrowserTestBase {
 
+  use ArraySubsetAsserts;
   use ContentModelTestTrait;
   use RecipeTestTrait;
 
@@ -35,6 +37,8 @@ class ComponentValidationTest extends BrowserTestBase {
     // Apply it again to prove that it is idempotent.
     $this->applyRecipe($dir);
 
+    $this->ensureFileExists('601c1f74-4633-4069-ae90-57c645568b1c');
+
     // The privacy settings should be available to anonymous users.
     $this->drupalPlaceBlock('system_menu_block:footer', ['label' => 'Footer']);
     $this->drupalGet('<front>');
@@ -52,14 +56,14 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertNull($form_display->getComponent('url_redirects'));
     $this->assertFieldsInOrder($form_display, [
       'title',
-      'field_description',
       'field_featured_image',
-      'field_content',
       'field_event__date',
       'field_event__location_name',
       'field_event__location_address',
-      'field_event__file',
+      'field_description',
+      'field_content',
       'field_event__link',
+      'field_event__file',
       'field_tags',
     ]);
 
@@ -77,6 +81,8 @@ class ComponentValidationTest extends BrowserTestBase {
       'field_event__file',
       'field_tags',
     ]);
+    $this->assertSharedFieldsInSameOrder($form_display, $default_display);
+
     $card_display = $display_repository->getViewDisplay('node', 'event', 'card');
     $this->assertNull($card_display->getComponent('links'));
     $this->assertFieldsInOrder($card_display, [
@@ -84,6 +90,12 @@ class ComponentValidationTest extends BrowserTestBase {
       'field_event__date',
       'field_description',
     ]);
+    $this->assertArraySubset([
+      'field_featured_image' => [
+        'type' => 'entity_reference_entity_view',
+      ],
+    ], $card_display->getComponents());
+
     $teaser_display = $display_repository->getViewDisplay('node', 'event', 'teaser');
     $this->assertNull($teaser_display->getComponent('links'));
     $this->assertFieldsInOrder($teaser_display, [
@@ -181,7 +193,7 @@ class ComponentValidationTest extends BrowserTestBase {
           'required' => FALSE,
           'translatable' => FALSE,
           'label' => 'Tags',
-          'input type' => 'text',
+          'input type' => 'tagify',
           'help text' => 'Include tags for relevant topics.',
         ],
       ],

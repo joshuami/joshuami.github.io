@@ -6,10 +6,10 @@
     "require": {
         "drupal/bpmn_io": "^2.0.6",
         "drupal/core": ">=10.4",
-        "drupal/eca": "^2.1",
-        "drupal/drupal_cms_page": "~1.0.0",
+        "drupal/eca": "^2.1.4",
+        "drupal/drupal_cms_page": "~1.1.0",
         "drupal/klaro": "^3",
         "drupal/menu_link_attributes": "^1.5"
     },
-    "version": "1.0.2"
+    "version": "1.1.0"
 }

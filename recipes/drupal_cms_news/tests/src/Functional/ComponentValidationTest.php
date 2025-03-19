@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\drupal_cms_news\Functional;
 
+use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Drupal\Core\Entity\EntityDisplayRepositoryInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\FunctionalTests\Core\Recipe\RecipeTestTrait;
@@ -15,6 +16,7 @@ use Drupal\Tests\drupal_cms_content_type_base\ContentModelTestTrait;
  */
 class ComponentValidationTest extends BrowserTestBase {
 
+  use ArraySubsetAsserts;
   use ContentModelTestTrait;
   use RecipeTestTrait;
 
@@ -39,6 +41,8 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->applyRecipe($dir);
     // Apply it again to prove that it is idempotent.
     $this->applyRecipe($dir);
+
+    $this->ensureFileExists('f57ca5cc-9336-44d5-b847-b24876ffd1f6');
   }
 
   public function testContentModel(): void {
@@ -50,9 +54,9 @@ class ComponentValidationTest extends BrowserTestBase {
     $this->assertNull($form_display->getComponent('url_redirects'));
     $this->assertFieldsInOrder($form_display, [
       'title',
+      'field_featured_image',
       'field_description',
       'field_content',
-      'field_featured_image',
       'field_tags',
     ]);
 
@@ -64,12 +68,20 @@ class ComponentValidationTest extends BrowserTestBase {
       'field_content',
       'field_tags',
     ]);
+    $this->assertSharedFieldsInSameOrder($form_display, $default_display);
+
     $card_display = $display_repository->getViewDisplay('node', 'news', 'card');
     $this->assertNull($default_display->getComponent('links'));
     $this->assertFieldsInOrder($card_display, [
       'field_featured_image',
       'field_description',
     ]);
+    $this->assertArraySubset([
+      'field_featured_image' => [
+        'type' => 'entity_reference_entity_view',
+      ],
+    ], $card_display->getComponents());
+
     $teaser_display = $display_repository->getViewDisplay('node', 'news', 'card');
     $this->assertNull($teaser_display->getComponent('links'));
     $this->assertFieldsInOrder($teaser_display, [
@@ -121,7 +133,7 @@ class ComponentValidationTest extends BrowserTestBase {
           'required' => FALSE,
           'translatable' => FALSE,
           'label' => 'Tags',
-          'input type' => 'text',
+          'input type' => 'tagify',
           'help text' => 'Include tags for relevant topics.',
         ],
       ],

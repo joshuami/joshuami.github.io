@@ -41,7 +41,7 @@ input:
         question: 'If you want to use OpenAI, enter your OpenAI API key. Otherwise, you can leave this empty:'
     form:
       '#type': 'textfield'
-      '#description': 'Your OpenAI API key.'
+      '#description': 'Enter your OpenAI API key.<br>You can find your API keys in <a href="https://platform.openai.com/settings/organization/api-keys" target="_blank">your OpenAI account settings (opens new window)</a>.<br><strong>Note:</strong> A paid OpenAI plan is required for AI features to function.'
       '#title': 'API Key'
       '#required': false
       '#maxlength': 256
@@ -64,7 +64,7 @@ input:
         question: 'If you want to use Anthropic, enter your Anthropic API key. Otherwise, you can leave this empty:'
     form:
       '#type': 'textfield'
-      '#description': 'Your Anthropic API key.'
+      '#description': 'Enter your Anthropic API key.<br>You can find your API keys in <a href="https://console.anthropic.com/settings/keys" target="_blank">your Anthropic account settings (opens new window)</a>.<br><strong>Note:</strong> A paid Anthropic plan is required for AI features to function.'
       '#title': 'API Key'
       '#required': false
       '#maxlength': 256
