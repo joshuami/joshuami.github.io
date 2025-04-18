@@ -12,12 +12,12 @@ _core:
 id: blog_content
 label: 'Blog content'
 type: 'canonical_entities:node'
-pattern: '/blog/[node:created:html_month]/[node:title]'
+pattern: '/blog/[node:created:html_year]/[node:title]'
 selection_criteria:
-  484783df-5ed0-4f01-bff4-c6497c0d6751:
+  af5ccd8e-f2f4-4055-a8f8-9481a35aafc0:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 484783df-5ed0-4f01-bff4-c6497c0d6751
+    uuid: af5ccd8e-f2f4-4055-a8f8-9481a35aafc0
     context_mapping:
       node: node
     bundles:
