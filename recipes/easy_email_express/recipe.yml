@@ -1,6 +1,6 @@
 name: 'Easy Email: Express Mail'
 description: 'Easy Email configuration that replaces all core emails with HTML formatted emails.'
-type: 'Site'
+type: 'Easy Email'
 recipes:
   - easy_email_standard
   - easy_email_types_core

@@ -1,6 +1,6 @@
 name: 'Easy Email: Standard Mail'
 description: 'Easy Email module and theme for sending HTML emails from Drupal.'
-type: 'Site'
+type: 'Easy Email'
 install:
   - file
   - mailsystem

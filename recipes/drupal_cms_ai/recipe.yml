@@ -79,6 +79,7 @@ input:
       source: value
       value: ''
 config:
+  strict: false
   import:
     ai_image_alt_text: '*'
   actions:
@@ -104,6 +105,7 @@ config:
         key_value: ${openai_api_key}
         key_name: openai_api_key
         key_label: 'OpenAI API Key'
+        env_var: openai_api_key
         provider: openai
       simpleConfigUpdate:
         moderation: true
@@ -112,6 +114,7 @@ config:
         key_value: ${anthropic_api_key}
         key_name: anthropic_api_key
         key_label: 'Anthropic API Key'
+        env_var: anthropic_api_key
         provider: anthropic
       simpleConfigUpdate:
         openai_moderation: false

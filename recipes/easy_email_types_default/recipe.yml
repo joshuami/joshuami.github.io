@@ -1,6 +1,6 @@
 name: 'Easy Email: Default Template'
 description: 'A default Easy Email template configured to override all emails sent from the site.'
-type: 'Site'
+type: 'Easy Email'
 recipes:
   - easy_email_text_format
 install:

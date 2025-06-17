@@ -20,11 +20,12 @@ install:
 config:
   # Treat all field storages strictly, since they influence the database layout.
   strict:
-    - field.storage.node.field_date
-    - field.storage.node.field_file
+    - field.storage.node.field_event__date
+    - field.storage.node.field_event__file
+    - field.storage.node.field_event__link
+    - field.storage.node.field_event__location_address
+    - field.storage.node.field_event__location_name
     - field.storage.node.field_geofield
-    - field.storage.node.field_link
-    - field.storage.node.field_location_address
   import:
     geofield: '*'
     smart_date: '*'

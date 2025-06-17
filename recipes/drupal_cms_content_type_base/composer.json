@@ -6,7 +6,7 @@
     "require": {
         "drupal/autosave_form": "^1.10",
         "drupal/bpmn_io": "^2.0.6",
-        "drupal/core": ">=10.4",
+        "drupal/core": "^10.4 || ^11",
         "drupal/drupal_cms_image": "~1.1.0",
         "drupal/eca": "^2.1.4",
         "drupal/linkit": "^7",
@@ -17,5 +17,5 @@
         "drupal/scheduler_content_moderation_integration": "^3.0.4",
         "drupal/tagify": "^1.2"
     },
-    "version": "1.1.0"
+    "version": "1.1.1"
 }

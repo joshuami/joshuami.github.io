@@ -21,3 +21,4 @@ live_h_inherit: ''
 live_h2: 'form[id^="node-"] #edit-body-wrapper .ck-content'
 live_h3: ''
 live_h4: ''
+ck5_table_headers: row

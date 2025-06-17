@@ -1,6 +1,6 @@
 name: 'Easy Email: Text Format'
 description: 'Text format and editor config for editing HTML body of Easy Email templates.'
-type: 'Site'
+type: 'Easy Email'
 install:
   - filter
   - editor
