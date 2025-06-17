@@ -1,0 +1,42 @@
+{% if content.field_short_title %}
+  {% set title = content.field_short_title.0 %}
+{% else %}
+  {% set title = label.0 %}
+{% endif %}
+
+{% if node.bundle == "resource" %}
+  {% if node.field_resource_url.0.url.external %}
+    {% set destination = node.field_resource_url.uri	%}
+  {% else %}
+    {% set destination = path(node.field_resource_url.0.url.routeName, node.field_resource_url.0.url.routeParameters) %}
+  {% endif %}
+{% else %}
+  {% set destination = url %}
+{% endif %}
+
+{%
+  set link_classes = [
+  'stretched-link',
+  node.bundle|clean_class,
+]
+%}
+
+<div class="card border-2 rounded-0 h-100">
+  {% if content.field_featured_image|render %}
+  <div class="img-fluid text-center" style="object-fit: cover;">
+    {{ content.field_featured_image }}
+  </div>
+  {% else %}
+  <div class="img-fluid text-center d-none d-sm-none d-md-block" style="object-fit: cover;">
+    {{ drupal_entity('media', 77891, 'featured') }}
+  </div>
+  {% endif %}
+  <div class="card-body">
+    <h3 class="card-title h5 mb-1 text-primary">
+      <a href="{{ destination }}"{{ attributes.addClass(link_classes).removeClass('contextual-region') }}>{{ title }}</a>
+    </h3>
+    <div class="card-text">
+      {{ content|without('field_short_title','field_featured_image','field_resource_url') }}
+    </div>
+  </div>
+</div>

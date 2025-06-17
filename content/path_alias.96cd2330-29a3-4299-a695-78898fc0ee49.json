@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "96cd2330-29a3-4299-a695-78898fc0ee49"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/89352d69-2e6d-41a9-bbe4-845d347fbc65"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2025\/doj-accessibility-ruling"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

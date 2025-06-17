@@ -1,0 +1,82 @@
+{#
+/**
+ * @file
+ * Template for content rendered by search.
+ */
+#}
+{% if content.field_short_title %}
+  {% set title = content.field_short_title.0 %}
+{% else %}
+  {% set title = label.0 %}
+{% endif %}
+
+{% if content.field_resource_url %}
+  {% set destination = content.field_resource_url.0 %}
+{% else %}
+  {% set destination = url %}
+{% endif %}
+{%
+  set classes = [
+  'node',
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  node.bundle|clean_class,
+  view_mode|clean_class,
+  node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  'card',
+  'my-3',
+  'position-relative',
+]
+%}
+{%
+  set title_classes = [
+  'h4'
+]
+%}
+{% set rendered_status = content.field_status|render %}
+{% set rendered_type = content.field_type|render %}
+{% set rendered_topic = content.field_topic|render %}
+{% set rendered_group = content.field_group|render %}
+{% set rendered_flag = content.flag_follow|render %}
+<article{{ attributes.addClass(classes) }}>
+  <div class="row g-0">
+    {% if content.field_featured_image|render %}
+    <div class="col-print-4 col-md-4 order-md-2 p-0 p-md-3 ms-print-3 d-flex align-items-center justify-content-center">
+      {{ content.field_featured_image }}
+    </div>
+    {% endif %}
+		<div class="col">
+      <div class="card-body">
+        <h2{{ title_attributes.addClass(title_classes) }}>
+          <a href="{{ destination }}" class="stretched-link {{ node.bundle|clean_class }}">{{ title }}</a>
+          {% if rendered_flag|trim %}
+            {{ content.flag_follow }}
+          {% endif %}
+        </h2>
+        <div class="mb-2">
+          {{ content|without('search_api_excerpt','field_type','field_topic','field_status','field_group','field_resource_url','field_featured_image','flag_follow') }}
+        </div>
+        {% if content.search_api_excerpt %}
+          {# Page is the only content type that outputs search excerpt at this time. #}
+          <div class="excerpt mb-2">
+            {{ content.search_api_excerpt }}
+          </div>
+        {% endif %}
+        <div class="badge-list d-flex flex-wrap">
+          {% if rendered_status|trim %}
+            {{ content.field_status }}
+          {% endif %}
+          {% if rendered_type|trim %}
+            {{ content.field_type }}
+          {% endif %}
+          {% if rendered_topic|trim %}
+            {{ content.field_topic }}
+          {% endif %}
+          {% if rendered_group|trim %}
+            {{ content.field_group }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+</article>

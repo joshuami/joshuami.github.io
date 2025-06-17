@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "d60c9cf2-131d-4471-b511-73c1dd1d7f26"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/44468209-ac0d-4498-9c4f-fb213df7ad8a"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2025-02\/drupal-cms-modules-we-know-and-love"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

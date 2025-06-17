@@ -116,7 +116,3 @@ local.blt.yml
 *.zip
 /.editorconfig
 /.gitattributes
-
-# Tome
-content
-content/*

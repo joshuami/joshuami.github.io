@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "8873c0c2-4253-4b32-871d-9f9de05b59be"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/10"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/ai"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

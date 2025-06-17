@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "143c8b91-196a-4d9c-8f6b-655d4ec0ddd4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-03-19T22:09:09+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "feature-branch-git-flow.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "A git workflow with three branches: main, wc-1, and wc-2. The flow shows how wc-1 and wc-2 stay in sync with main through fetches and either a rebase or merge of the main branch before being merged back into main.",
+            "title": null,
+            "width": 2582,
+            "height": 730,
+            "target_type": "file",
+            "target_uuid": "5c1d5a3f-7f8f-4692-91dc-acfbfe0846cb"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-03-19T22:09:09+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-03-19T22:09:09+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "A git workflow with three branches: main, wc-1, and wc-2. The flow shows how wc-1 and wc-2 stay in sync with main through fetches and either a rebase or merge of the main branch before being merged back into main.",
+            "title": "",
+            "width": 2582,
+            "height": 730,
+            "target_type": "file",
+            "target_uuid": "5c1d5a3f-7f8f-4692-91dc-acfbfe0846cb"
+        }
+    ]
+}

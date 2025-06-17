@@ -1,0 +1,30 @@
+{%
+  set classes = [
+  'alert',
+  node.bundle|clean_class == 'alert' ? 'alert-success' : 'alert-light',
+  'alert-dismissible',
+  'fade',
+  'show',
+  'mb-0',
+  'rounded-0',
+]
+%}
+
+{% set alert_uid = node.id  ~ '-' ~ node.changed.value|date("U") %}
+
+
+<div id="alert-{{ alert_uid }}" {{ attributes.addClass(classes) }} role="alert">
+	<div class="h5 mb-1" id="alert-{{ node.id }}">
+		<i class="fa-light fa-triangle-exclamation flex-shrink-0 me-2"></i>
+		{{ label }}
+	</div>
+	<div aria-labelledby="alert-{{ node.id }}" class="alert-content">
+		{{ content }}
+		{% if (user.hasPermission('edit any alert content')) or (user.hasPermission('edit any notfication content')) %}
+		<span class="content-edit small">
+			<a href="{{ path('entity.node.canonical', {'node': node.id}) }}/edit" target="_blank">Edit</a>
+		</span>
+		{% endif %}
+	</div>
+	<button type="button" data-alert="alert-{{ alert_uid }}" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>

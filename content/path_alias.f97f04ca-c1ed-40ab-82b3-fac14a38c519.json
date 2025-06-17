@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "f97f04ca-c1ed-40ab-82b3-fac14a38c519"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/user\/94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/joshuami"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

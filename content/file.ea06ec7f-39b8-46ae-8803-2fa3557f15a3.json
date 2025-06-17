@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "ea06ec7f-39b8-46ae-8803-2fa3557f15a3"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "filename": [
+        {
+            "value": "drupal-cms-installer-blog-selected.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2024-12\/drupal-cms-installer-blog-selected.png",
+            "url": "\/sites\/default\/files\/2024-12\/drupal-cms-installer-blog-selected.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 269792
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2024-12-18T23:04:57+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T23:05:18+00:00"
+        }
+    ]
+}

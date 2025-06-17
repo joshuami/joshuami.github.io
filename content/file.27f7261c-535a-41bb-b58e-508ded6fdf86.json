@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "27f7261c-535a-41bb-b58e-508ded6fdf86"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "filename": [
+        {
+            "value": "github-pages-build-and-deployment.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2024-12\/github-pages-build-and-deployment.png",
+            "url": "\/sites\/default\/files\/2024-12\/github-pages-build-and-deployment.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 111955
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2024-12-19T00:28:15+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-19T00:28:46+00:00"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "d23a20c8-6e48-4f05-b0a8-c3bb34e43dde"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/9cecb0f0-3e2f-49eb-9566-961d2812fae6"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2007\/10\/21\/from-the-mouths-of-babes"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

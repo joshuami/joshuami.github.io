@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "628f3a87-59c9-4349-837d-0ec97fe06793"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "React's Switch to the MIT License is Important"
+        }
+    ],
+    "created": [
+        {
+            "value": "2017-09-27T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T18:32:43+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2017\/09\/27\/why-react-mit-license-is-important",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Kudos to Facebook for listening to their community!<\/p><p>Just this past week, Facebook decided to <a href=\"https:\/\/code.facebook.com\/posts\/300798627056246\/relicensing-react-jest-flow-and-immutable-js\/\">relicense React, Jest, and Immutable.js<\/a> to use the MIT license instead of the BSD derivative with troubling patent clauses that was their licensing choice only a few weeks prior.<\/p><p>There were likely a couple of different actions in the open source world that triggered this decision.<\/p><p>First, in August, the Apache Software Foundation categorized the Facebook BSD+Patents license as a Category-X license. Essentially, they were declaring it incompatible with Apache licensing because of the patent clauses.<\/p><p>Second, and probably much more impactful, was the <a href=\"https:\/\/ma.tt\/2017\/09\/on-react-and-wordpress\/\">decision by the Wordpress project to move away from React due to its licensing<\/a>. I\u2019m curious to see if that leads to the Wordpress community sticking with React in the Calypso and Guttenberg projects. It would certainly save a lot of rework, but in watching the <a href=\"https:\/\/www.drupal.org\/node\/2645250\">Drupal community struggle with the decision to include a javascript framework<\/a>, I can imagine that there will still be a strong push for projects like Vue, Preact, or Polymer to get included.<\/p><p>A while back, I published a series of posts on open source licensing. In <a href=\"https:\/\/www.phase2technology.com\/blog\/open-source-licensing-part-3-which-license-should-i-choose\/\">part 3 of that series<\/a>, I tried to direct people to possible licenses for their project. I am particularly keen on MIT.<\/p><blockquote>  <p>I think MIT is the simplest and easiest license in terms of readability. MIT is a copyright statement and 3 paragraphs of simple legal text to allow people to use your code as they see fit so long as they provide some attribute back and do not hold you liable. It is the most used license on Github and is preferred by most Node projects. Technically, \u201cMIT license\u201d is a little ambiguous. For clarity, I\u2019m referring to what some call the \u201cExpat License\u201d because it doesn\u2019t include a trademark statement making it slightly more permissive and allowing it to be as compatible with other licenses as possible.<\/p><\/blockquote><p>I still think that the MIT expat license is the most human readable\u2014as opposed to lawyer readable\u2014of the open source licenses. It pretty much just states that people are free to use your code without a lot of fuss about what you plan to do with it or how you distribute it afterwards.<\/p><p>The MIT license is simple enough that it does not scare away businesses looking to keep a handle on their open source software portfolio. It lacks the aggressiveness of protective copyleft licenses like the GPLv3 that many businesses seek to avoid. Whether a business needs to avoid the GPLv3 for fear of losing rights on proprietary software they have created is not an issue one wants to confront when trying to build a great solution for your client or organization.<\/p><p>Facebook made a good choice for the communities of developers that use their code\u2014even if that decision may have left their lawyers with concerns about petty litigation. It is heartening to see open source market forces work out for the greater good.<\/p>",
+            "format": "content_format",
+            "processed": "<p>Kudos to Facebook for listening to their community!<\/p>\n<p>Just this past week, Facebook decided to <a href=\"https:\/\/code.facebook.com\/posts\/300798627056246\/relicensing-react-jest-flow-and-immutable-js\/\">relicense React, Jest, and Immutable.js<\/a> to use the MIT license instead of the BSD derivative with troubling patent clauses that was their licensing choice only a few weeks prior.<\/p>\n<p>There were likely a couple of different actions in the open source world that triggered this decision.<\/p>\n<p>First, in August, the Apache Software Foundation categorized the Facebook BSD+Patents license as a Category-X license. Essentially, they were declaring it incompatible with Apache licensing because of the patent clauses.<\/p>\n<p>Second, and probably much more impactful, was the <a href=\"https:\/\/ma.tt\/2017\/09\/on-react-and-wordpress\/\">decision by the Wordpress project to move away from React due to its licensing<\/a>. I\u2019m curious to see if that leads to the Wordpress community sticking with React in the Calypso and Guttenberg projects. It would certainly save a lot of rework, but in watching the <a href=\"https:\/\/www.drupal.org\/node\/2645250\">Drupal community struggle with the decision to include a javascript framework<\/a>, I can imagine that there will still be a strong push for projects like Vue, Preact, or Polymer to get included.<\/p>\n<p>A while back, I published a series of posts on open source licensing. In <a href=\"https:\/\/www.phase2technology.com\/blog\/open-source-licensing-part-3-which-license-should-i-choose\/\">part 3 of that series<\/a>, I tried to direct people to possible licenses for their project. I am particularly keen on MIT.<\/p>\n<blockquote><p>I think MIT is the simplest and easiest license in terms of readability. MIT is a copyright statement and 3 paragraphs of simple legal text to allow people to use your code as they see fit so long as they provide some attribute back and do not hold you liable. It is the most used license on Github and is preferred by most Node projects. Technically, \u201cMIT license\u201d is a little ambiguous. For clarity, I\u2019m referring to what some call the \u201cExpat License\u201d because it doesn\u2019t include a trademark statement making it slightly more permissive and allowing it to be as compatible with other licenses as possible.<\/p>\n<\/blockquote>\n<p>I still think that the MIT expat license is the most human readable\u2014as opposed to lawyer readable\u2014of the open source licenses. It pretty much just states that people are free to use your code without a lot of fuss about what you plan to do with it or how you distribute it afterwards.<\/p>\n<p>The MIT license is simple enough that it does not scare away businesses looking to keep a handle on their open source software portfolio. It lacks the aggressiveness of protective copyleft licenses like the GPLv3 that many businesses seek to avoid. Whether a business needs to avoid the GPLv3 for fear of losing rights on proprietary software they have created is not an issue one wants to confront when trying to build a great solution for your client or organization.<\/p>\n<p>Facebook made a good choice for the communities of developers that use their code\u2014even if that decision may have left their lawyers with concerns about petty litigation. It is heartening to see open source market forces work out for the greater good.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "de661cb9df25096ea6e8207f9a881f84",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

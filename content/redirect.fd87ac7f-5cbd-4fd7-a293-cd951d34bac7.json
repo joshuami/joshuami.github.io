@@ -1,0 +1,51 @@
+{
+    "uuid": [
+        {
+            "value": "fd87ac7f-5cbd-4fd7-a293-cd951d34bac7"
+        }
+    ],
+    "hash": [
+        {
+            "value": "98G9wZIdXpZjO8Gp_kWO-Cnfjng10XNKU7Owdh8RoSI"
+        }
+    ],
+    "type": [
+        {
+            "value": "redirect"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "redirect_source": [
+        {
+            "path": "blog\/2025\/what-us-department-justice-accessibility-ruling-means-your-organization",
+            "query": []
+        }
+    ],
+    "redirect_redirect": [
+        {
+            "uri": "internal:\/node\/142",
+            "title": null,
+            "options": []
+        }
+    ],
+    "language": [
+        {
+            "value": "en"
+        }
+    ],
+    "status_code": [
+        {
+            "value": 301
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-04-15T21:33:51+00:00"
+        }
+    ]
+}

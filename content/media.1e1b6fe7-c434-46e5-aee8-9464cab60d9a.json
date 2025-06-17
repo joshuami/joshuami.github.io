@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "1e1b6fe7-c434-46e5-aee8-9464cab60d9a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-02-28T01:14:56+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "DALL\u00b7E 2025-02-27 17.13.45 - A futuristic heart blending organic and digital aesthetics. The heart is composed of smooth, biomechanical textures intertwined with glowing circuit p.webp"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "A futuristic heart blending organic and digital aesthetics. The heart is composed of smooth, biomechanical textures intertwined with glowing circuits.",
+            "title": null,
+            "width": 1024,
+            "height": 1024,
+            "target_type": "file",
+            "target_uuid": "6473a675-b7e1-4d1b-8e58-6335929c057a"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-02-28T01:14:56+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-02-28T01:14:56+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "A futuristic heart blending organic and digital aesthetics. The heart is composed of smooth, biomechanical textures intertwined with glowing circuits.",
+            "title": "",
+            "width": 1024,
+            "height": 1024,
+            "target_type": "file",
+            "target_uuid": "6473a675-b7e1-4d1b-8e58-6335929c057a"
+        }
+    ]
+}

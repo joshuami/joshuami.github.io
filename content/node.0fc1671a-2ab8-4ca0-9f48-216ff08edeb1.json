@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "0fc1671a-2ab8-4ca0-9f48-216ff08edeb1"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "Drupal.org Response to Heartbleed Security Incident"
+        }
+    ],
+    "created": [
+        {
+            "value": "2014-04-08T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T18:32:43+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2014\/04\/08\/drupalorg-response-to-heartbleed",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><a href=\"https:\/\/www.drupal.org\/news\/2014-04-08-security-update\">Reposted from Drupal.org<\/a><\/p><p>You may have heard that a vulnerability in the OpenSSL cryptographic library called Heartbleed or formally called CVE-2014-0160 has been disclosed and that it represents a potential security threat to a large number of websites. Using this vulnerability, malicious individuals could access sensitive information submitted by people actively visiting a website including usernames, passwords and credit card numbers. Users across the Internet should be especially aware of suspicious activity on their accounts.<\/p><p>We want to communicate a couple pieces of information about this news with regard to Drupal.org.<\/p><p>Members of the Drupal Association staff, Drupal Security Team and Drupal Infrastructure Team have reviewed Drupal.org\u2019s potential exposure to the vulnerability.<\/p><p>As of now, we have no indication that Drupal.org was attacked using this vulnerabililty. That said, the nature of the vulnerability makes an attack difficult to detect and we prefer to be cautious.<\/p><p>We have taken steps to protect users of Drupal.org, including a forced password reset for users with administrative access or access to code repositories for projects. While we have only forced the password reset for some users, we recommend that all of our users change their passwords.<\/p><p>We have taken the following steps to protect Drupal.org account holders:<\/p><ul>  <li>Installed new SSL certificates based on a new private key<\/li>  <li>Revoked the old SSL certificates<\/li>  <li>Replaced the private strings (drupal_private_key and drupal_hash_salt) which are used for a variety of security related purposes in all Drupal sites<\/li>  <li>Replaced the private key used by the \u201cbakery\u201d single-sign-on system on Drupal.org<\/li>  <li>Removed all active sessions<\/li>  <li>Verified the email addresses in use today match those in use a week ago<\/li>  <li><strong>Required that all Drupal.org users with administrative or project repository access to reset their passwords<\/strong><\/li><\/ul><p>Also, we simply want to help create awareness about the vulnerability and encourage people to review their sites for exposure. For more information, please see https:\/\/web.nvd.nist.gov\/view\/vuln\/detail?vulnId=CVE-2014-0160<\/p><p>Feel free to comment on the post with any questions. Thank you!<\/p>",
+            "format": "content_format",
+            "processed": "<p><a href=\"https:\/\/www.drupal.org\/news\/2014-04-08-security-update\">Reposted from Drupal.org<\/a><\/p>\n<p>You may have heard that a vulnerability in the OpenSSL cryptographic library called Heartbleed or formally called CVE-2014-0160 has been disclosed and that it represents a potential security threat to a large number of websites. Using this vulnerability, malicious individuals could access sensitive information submitted by people actively visiting a website including usernames, passwords and credit card numbers. Users across the Internet should be especially aware of suspicious activity on their accounts.<\/p>\n<p>We want to communicate a couple pieces of information about this news with regard to Drupal.org.<\/p>\n<p>Members of the Drupal Association staff, Drupal Security Team and Drupal Infrastructure Team have reviewed Drupal.org\u2019s potential exposure to the vulnerability.<\/p>\n<p>As of now, we have no indication that Drupal.org was attacked using this vulnerabililty. That said, the nature of the vulnerability makes an attack difficult to detect and we prefer to be cautious.<\/p>\n<p>We have taken steps to protect users of Drupal.org, including a forced password reset for users with administrative access or access to code repositories for projects. While we have only forced the password reset for some users, we recommend that all of our users change their passwords.<\/p>\n<p>We have taken the following steps to protect Drupal.org account holders:<\/p>\n<ul>\n<li>Installed new SSL certificates based on a new private key<\/li>\n<li>Revoked the old SSL certificates<\/li>\n<li>Replaced the private strings (drupal_private_key and drupal_hash_salt) which are used for a variety of security related purposes in all Drupal sites<\/li>\n<li>Replaced the private key used by the \u201cbakery\u201d single-sign-on system on Drupal.org<\/li>\n<li>Removed all active sessions<\/li>\n<li>Verified the email addresses in use today match those in use a week ago<\/li>\n<li><strong>Required that all Drupal.org users with administrative or project repository access to reset their passwords<\/strong><\/li>\n<\/ul>\n<p>Also, we simply want to help create awareness about the vulnerability and encourage people to review their sites for exposure. For more information, please see <a href=\"https:\/\/web.nvd.nist.gov\/view\/vuln\/detail?vulnId=CVE-2014-0160\">https:\/\/web.nvd.nist.gov\/view\/vuln\/detail?vulnId=CVE-2014-0160<\/a><\/p>\n<p>Feel free to comment on the post with any questions. Thank you!<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "d340aa73a2b2818bfaa8d54c2968bc48",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

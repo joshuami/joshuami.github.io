@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "842a3038-50c5-42af-8ff8-edb8524ae660"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "state-and-local-government-accessiblity-response.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-04\/state-and-local-government-accessiblity-response.png",
+            "url": "\/sites\/default\/files\/2025-04\/state-and-local-government-accessiblity-response.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 267620
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-04-15T21:26:19+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-04-15T21:26:53+00:00"
+        }
+    ]
+}

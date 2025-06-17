@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "930856d3-0fff-455c-819d-2c74e01cff3d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-12-16T22:52:21+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "name": [
+        {
+            "value": "drupal-cms-logo.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Drupal CMS logo",
+            "title": null,
+            "width": 823,
+            "height": 201,
+            "target_type": "file",
+            "target_uuid": "47b880a9-c2a4-4ed6-844d-95c6d6677004"
+        }
+    ],
+    "created": [
+        {
+            "value": "2024-12-04T05:45:05+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-16T22:52:21+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Drupal CMS logo",
+            "title": "",
+            "width": 823,
+            "height": 201,
+            "target_type": "file",
+            "target_uuid": "47b880a9-c2a4-4ed6-844d-95c6d6677004"
+        }
+    ]
+}

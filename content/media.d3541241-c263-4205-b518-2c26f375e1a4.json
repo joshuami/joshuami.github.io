@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "d3541241-c263-4205-b518-2c26f375e1a4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2024-12-19T00:56:36+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "name": [
+        {
+            "value": "perfect-score.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "A perfect lighthouse score!",
+            "title": null,
+            "width": 1742,
+            "height": 1040,
+            "target_type": "file",
+            "target_uuid": "11c6d8b4-92fa-4646-8760-fdb21349acca"
+        }
+    ],
+    "created": [
+        {
+            "value": "2024-12-19T00:56:36+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-19T00:56:36+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "A perfect lighthouse score!",
+            "title": "",
+            "width": 1742,
+            "height": 1040,
+            "target_type": "file",
+            "target_uuid": "11c6d8b4-92fa-4646-8760-fdb21349acca"
+        }
+    ]
+}

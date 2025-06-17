@@ -1,0 +1,101 @@
+{
+    "uuid": [
+        {
+            "value": "e939b485-ca10-4061-9036-3d6d394d7214"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page",
+            "target_type": "node_type",
+            "target_uuid": "9e61234e-a646-4b64-a27f-cf0e9ffe8631"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2025-03-07T21:08:52+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "About Josh Mitchell"
+        }
+    ],
+    "created": [
+        {
+            "value": "2024-04-26T22:22:06+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-03-07T21:08:52+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/about-josh-mitchell",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Josh Mitchell is the founder and principal consultant of M6L, a full-stack consultancy.&nbsp;<\/p><p>What's a \"full-stack\" consultancy?&nbsp;<\/p><p>Glad you asked. I coach teams to use continuous integration and agile best practices to build great software, usually websites or web-based applications. In my career, I've been a designer, developer, project manager, and a CTO. I've kinda played all the roles and can help fill gaps in your team.<\/p><p>If you think I can help your project\/product\/program, <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\/\">hit me up on LinkedIn<\/a>.<\/p><p>If you are reading this blog, you probably share one or more of my interests.<\/p><p>I'm a software architect. I build big, complex websites. I'm particularly fond of government websites because they help people get stuff done. I've done a lot of work with Drupal. (I was even the CTO of the Drupal Association for a bit around the launch of Drupal 8.)<\/p><p>I'm a musician. I play the guitar, ukulele, mandolin. I'm a singer\/songwriter as well.<\/p><p>I'm into the outdoors. I run, hike, bike, and ski. My wife and I have a camper van and frequent parks around the Pacific Northwest throughout the year.<\/p>",
+            "format": "content_format",
+            "processed": "<p>Josh Mitchell is the founder and principal consultant of M6L, a full-stack consultancy.&nbsp;<\/p>\n<p>What's a \"full-stack\" consultancy?&nbsp;<\/p>\n<p>Glad you asked. I coach teams to use continuous integration and agile best practices to build great software, usually websites or web-based applications. In my career, I've been a designer, developer, project manager, and a CTO. I've kinda played all the roles and can help fill gaps in your team.<\/p>\n<p>If you think I can help your project\/product\/program, <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\/\">hit me up on LinkedIn<\/a>.<\/p>\n<p>If you are reading this blog, you probably share one or more of my interests.<\/p>\n<p>I'm a software architect. I build big, complex websites. I'm particularly fond of government websites because they help people get stuff done. I've done a lot of work with Drupal. (I was even the CTO of the Drupal Association for a bit around the launch of Drupal 8.)<\/p>\n<p>I'm a musician. I play the guitar, ukulele, mandolin. I'm a singer\/songwriter as well.<\/p>\n<p>I'm into the outdoors. I run, hike, bike, and ski. My wife and I have a camper van and frequent parks around the Pacific Northwest throughout the year.<\/p>\n",
+            "summary": ""
+        }
+    ],
+    "field_description": [
+        {
+            "value": "Josh Mitchell is a technology leader, architect of enterprise solutions, and builder of high performing teams."
+        }
+    ],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

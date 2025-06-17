@@ -1,0 +1,16 @@
+{% set has_children = content.group_menu_eva_nested_menu|render|striptags|trim|length > 0 %}
+{% set is_current_page_trail = url in path('<current>') %}
+
+{% if content.field_short_title %}
+  {% set title = content.field_short_title.0 %}
+{% else %}
+  {% set title = label.0 %}
+{% endif %}
+
+<a href="{{ url }}" class="mb-2">{{ content.field_short_title.0 }}{% if not node.isPublished() %} <span class="badge badge-sm bg-danger ms-2">Unpublished</span>{% endif %}</a> 
+{% if (user.hasPermission('update any group nodepage entity')) or (user.hasPermission('update any group noderesource entity')) %}
+<span class="small text-bg-light ms-2 p-1 rounded-pill" title="Sort weight is {{ content.field_menu_sort_weight.0 }}">{{ content.field_menu_sort_weight.0 }}</span>
+<a href="{{ url }}/edit" class="btn btn-sm btn-primary ms-2">Edit</a>
+{% endif %}
+{# Show children of the current node #}
+{{ content|without('field_short_title','field_parent','field_resource_url','field_menu_sort_weight' ) }}

@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "9dd1f318-87f7-412c-a2d2-fc0d15db7474"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "Saying goodbye"
+        }
+    ],
+    "created": [
+        {
+            "value": "2016-05-31T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T18:32:43+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2016\/05\/31\/saying-goodbye",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><a href=\"https:\/\/www.drupal.org\/drupalorg\/blog\/saying-goodbye\">Reposted from Drupal.org<\/a><\/p><p>When I started on the last day of March 2014, I could never have guessed at how challenging and rewarding this role would be. That is why it is incredibly hard to say that my last day with the Drupal Association will be June 10th.<\/p><p>For more details read, <em><a href=\"https:\/\/assoc.drupal.org\/blog\/megansanicki\/reorganizing-for-drupal\">Reorganizing for a changing Drupal<\/a><\/em>.<\/p><p>In looking at our structure with the leadership team, Holly, Matt and I saw that our roles did not fit in a smaller, more focused Drupal Association. It is no easy decision to include yourself in proposed cuts. I can\u2019t say how proud I am to be part of a group willing to make that sort of sacrifice for something in which they believe.<\/p><h2 id=\"drupal-is-a-strong-community\">Drupal is a strong community<\/h2><p>Drupal.org is a complex site and with a reduced engineering team, they will need to focus on mission critical services and find new ways to work with the community to continue to make the site great for contributors and evaluators.<\/p><p>With help from the rest of the team, I wrote a post called <em><a href=\"http:\/\/joshuami.com\/2016\/05\/18\/the-drupalorg-complexity\/\">The Drupal.org Complexity<\/a><\/em> that tries to take all of the complexity that surrounds our Git repositories and their integration with projects and issues on Drupal.org and describe it in a way that begins to show just how amazing our tools are. (I have yet to find a project with more total contributors to a single version of the code.)<\/p><p>Our smaller team is going to need to focus on sustaining services like testing, packaging, security updates, etc. They will be updating the <a href=\"https:\/\/www.drupal.org\/drupalorg\/roadmap\">Drupal.org roadmap<\/a> with a more narrow focus.<\/p><p>I personally believe in the power of Drupal as an engine for amazing. And so much great stuff is still in store for the community.<\/p><h2 id=\"thank-you\">Thank you<\/h2><p>Firstly, thanks to my family for putting up with the crazy hours, and travel that required bedtime calls at 6 in the morning\u2014at least we had fewer pager calls in the middle of the night. Even when there were challenges, I always had your support. (And I\u2019m looking forward to a little summer vacation together.)<\/p><p>Thank you to the board of directors for giving me this chance to help a project I love strengthen its home. Drupal.org is more professionalized and easier to maintain while continuing to scale up to the needs of the community. You took on tough discussions\u2014and helped us make even tougher decisions. Being a board member is a huge commitment that you all took seriously while still being a blast to hang out with during and after each board meeting.<\/p><p>Thank you to my leadership teammates (Holly, Megan, Matt\u2026 and Joe too). The were some great times and some hard times. We weathered so much together with a commitment to making the best choices we could with the information we had. I can\u2019t put into words how much I appreciated being surrounded by such a great team.<\/p><p>Thank you to my engineering staff, or tech team, or Drupal.org team\u2014whatever we are calling ourselves this week. You\u2019ve taught me a ton every day. I loved sharing technical challenges with you all. I\u2019m confident this was one of the smartest teams I will ever have the chance to lead. Every single one of you have admiration. Thank you for letting me be your \u201cumbrella\u201d for a bit. I hope our careers cross paths again and again.<\/p><p>The entire staff at the Drupal Association is such a phenomenal group of humans! You\u2019ve made going to work each day fun and exciting. You showed what it means to have passion and lived the values of a great community.<\/p><p>Lastly, I also want to thank the Drupal community members I was able to meet both in-person and virtually over the past two years. You are truly committed and passionate. Thank you for being patient and accepting and generous.<\/p><p>Thank you.<\/p><h2 id=\"whats-next\">What\u2019s next?<\/h2><p>In the next two weeks, I\u2019ll be documenting systems to help with the transition. Specifically, the team and I will write additional posts about our testing infrastructure (DrupalCI) and our new Composer endpoints.<\/p><p>I\u2019ll also be working very hard to help staff that are impacted by the layoffs land softly at new opportunities. If you have opportunities at your company or organization, please contact me if you are interested in some of the best Drupal talent on the market. I\u2019m confident they won\u2019t be available for long.<\/p><p>I hope to announce my own next steps shortly. I plan to keep involved in the community. Drupal has been a big part of my career, but it is not the only technology that has shaped it. Drupal will continue to be an important part of my toolkit for helping companies, governments, and organizations of all types delivering solutions that are complex and need to scale.<\/p>",
+            "format": "content_format",
+            "processed": "<p><a href=\"https:\/\/www.drupal.org\/drupalorg\/blog\/saying-goodbye\">Reposted from Drupal.org<\/a><\/p>\n<p>When I started on the last day of March 2014, I could never have guessed at how challenging and rewarding this role would be. That is why it is incredibly hard to say that my last day with the Drupal Association will be June 10th.<\/p>\n<p>For more details read, <em><a href=\"https:\/\/assoc.drupal.org\/blog\/megansanicki\/reorganizing-for-drupal\">Reorganizing for a changing Drupal<\/a><\/em>.<\/p>\n<p>In looking at our structure with the leadership team, Holly, Matt and I saw that our roles did not fit in a smaller, more focused Drupal Association. It is no easy decision to include yourself in proposed cuts. I can\u2019t say how proud I am to be part of a group willing to make that sort of sacrifice for something in which they believe.<\/p>\n<h2>Drupal is a strong community<\/h2>\n<p>Drupal.org is a complex site and with a reduced engineering team, they will need to focus on mission critical services and find new ways to work with the community to continue to make the site great for contributors and evaluators.<\/p>\n<p>With help from the rest of the team, I wrote a post called <em><a href=\"http:\/\/joshuami.com\/2016\/05\/18\/the-drupalorg-complexity\/\">The Drupal.org Complexity<\/a><\/em> that tries to take all of the complexity that surrounds our Git repositories and their integration with projects and issues on Drupal.org and describe it in a way that begins to show just how amazing our tools are. (I have yet to find a project with more total contributors to a single version of the code.)<\/p>\n<p>Our smaller team is going to need to focus on sustaining services like testing, packaging, security updates, etc. They will be updating the <a href=\"https:\/\/www.drupal.org\/drupalorg\/roadmap\">Drupal.org roadmap<\/a> with a more narrow focus.<\/p>\n<p>I personally believe in the power of Drupal as an engine for amazing. And so much great stuff is still in store for the community.<\/p>\n<h2>Thank you<\/h2>\n<p>Firstly, thanks to my family for putting up with the crazy hours, and travel that required bedtime calls at 6 in the morning\u2014at least we had fewer pager calls in the middle of the night. Even when there were challenges, I always had your support. (And I\u2019m looking forward to a little summer vacation together.)<\/p>\n<p>Thank you to the board of directors for giving me this chance to help a project I love strengthen its home. Drupal.org is more professionalized and easier to maintain while continuing to scale up to the needs of the community. You took on tough discussions\u2014and helped us make even tougher decisions. Being a board member is a huge commitment that you all took seriously while still being a blast to hang out with during and after each board meeting.<\/p>\n<p>Thank you to my leadership teammates (Holly, Megan, Matt\u2026 and Joe too). The were some great times and some hard times. We weathered so much together with a commitment to making the best choices we could with the information we had. I can\u2019t put into words how much I appreciated being surrounded by such a great team.<\/p>\n<p>Thank you to my engineering staff, or tech team, or Drupal.org team\u2014whatever we are calling ourselves this week. You\u2019ve taught me a ton every day. I loved sharing technical challenges with you all. I\u2019m confident this was one of the smartest teams I will ever have the chance to lead. Every single one of you have admiration. Thank you for letting me be your \u201cumbrella\u201d for a bit. I hope our careers cross paths again and again.<\/p>\n<p>The entire staff at the Drupal Association is such a phenomenal group of humans! You\u2019ve made going to work each day fun and exciting. You showed what it means to have passion and lived the values of a great community.<\/p>\n<p>Lastly, I also want to thank the Drupal community members I was able to meet both in-person and virtually over the past two years. You are truly committed and passionate. Thank you for being patient and accepting and generous.<\/p>\n<p>Thank you.<\/p>\n<h2>What\u2019s next?<\/h2>\n<p>In the next two weeks, I\u2019ll be documenting systems to help with the transition. Specifically, the team and I will write additional posts about our testing infrastructure (DrupalCI) and our new Composer endpoints.<\/p>\n<p>I\u2019ll also be working very hard to help staff that are impacted by the layoffs land softly at new opportunities. If you have opportunities at your company or organization, please contact me if you are interested in some of the best Drupal talent on the market. I\u2019m confident they won\u2019t be available for long.<\/p>\n<p>I hope to announce my own next steps shortly. I plan to keep involved in the community. Drupal has been a big part of my career, but it is not the only technology that has shaped it. Drupal will continue to be an important part of my toolkit for helping companies, governments, and organizations of all types delivering solutions that are complex and need to scale.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "646941aa2cb503367a17e7a992e1b724",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

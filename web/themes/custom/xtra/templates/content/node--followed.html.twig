@@ -1,0 +1,22 @@
+{% set title = label.0 %}
+
+{% if node.bundle == "resource" %}
+  {% if node.field_resource_url.0.url.external %}
+    {% set destination = node.field_resource_url.uri	%}
+  {% else %}
+    {% set destination = path(node.field_resource_url.0.url.routeName, node.field_resource_url.0.url.routeParameters) %}
+  {% endif %}
+{% else %}
+  {% set destination = url %}
+{% endif %}
+{% if content.flag_follow %}
+  <div class="float-end pt-2 me-2">
+    {{ content.flag_follow }}
+  </div>
+{% endif %}
+<a href="{{ destination }}" class="d-flex flex-grow-1 align-items-center text-break nav-link{% if path('<current>') == destination %} active disabled fw-bold{% endif %}">
+{{ title }}
+{% if not node.isPublished() %}
+  <span class="badge badge-sm bg-danger ms-2">Unpublished</span>
+{% endif %}
+</a>

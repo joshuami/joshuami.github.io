@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "ec63a921-38ce-4497-8bfe-9ede12421c0d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "council-document-to-agenda-workflow.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-03\/council-document-to-agenda-workflow.png",
+            "url": "\/sites\/default\/files\/2025-03\/council-document-to-agenda-workflow.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 711018
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-03-20T00:23:09+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-03-20T00:24:37+00:00"
+        }
+    ]
+}

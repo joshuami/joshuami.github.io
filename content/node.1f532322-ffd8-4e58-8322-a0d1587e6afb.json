@@ -1,0 +1,110 @@
+{
+    "uuid": [
+        {
+            "value": "1f532322-ffd8-4e58-8322-a0d1587e6afb"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "Portland.gov Project Overview"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-05-05T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T18:32:43+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2019\/05\/05\/portlandgov-project-overview",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>At DrupalCon Seattle, I presented <a href=\"https:\/\/events.drupal.org\/seattle2019\/sessions\/content-structures-government-websites-build-plan-portlandgov\">Architecting government websites: migrating Portland.gov to Drupal 8<\/a>. Unfortunately, the 90-minute sessions were not recorded this year. I have had a lot of requests for more information about the project with Portland and the <a href=\"https:\/\/events.drupal.org\/sites\/default\/files\/slides\/Migrating%20Portlandgov%20DrupalCon%20Seattle2019%20compressed.pdf\">slides from the presetation<\/a>.<\/p><p>We posted an overview of the project on our beta site. <a href=\"https:\/\/beta.portland.gov\/powr\/about\">About the POWR project<\/a>\u2014we do love our acronyms in government. This overview takes a high-level walk through the project and its objectives. A migration of this scale is <strong>not a small project<\/strong>, but the eGovernment team at the City of Portland have been amazing\u2014and a ton of progress has been made. The hardest part of an effort like this is the wrangling of stakeholders across over 30 offices and hundreds of existing editors.<\/p><p>It still feels like we are on track for a 2019 switchover of <a href=\"https:\/\/www.portlandoregon.gov\/\">PortlandOregon.gov<\/a> over to the new <a href=\"https:\/\/portland.gov\/\">Portland.gov<\/a>. I cannot wait to see how the public responds to the new site when we start marketing the switch!<\/p>",
+            "format": "content_format",
+            "processed": "<p>At DrupalCon Seattle, I presented <a href=\"https:\/\/events.drupal.org\/seattle2019\/sessions\/content-structures-government-websites-build-plan-portlandgov\">Architecting government websites: migrating Portland.gov to Drupal 8<\/a>. Unfortunately, the 90-minute sessions were not recorded this year. I have had a lot of requests for more information about the project with Portland and the <a href=\"https:\/\/events.drupal.org\/sites\/default\/files\/slides\/Migrating%20Portlandgov%20DrupalCon%20Seattle2019%20compressed.pdf\">slides from the presetation<\/a>.<\/p>\n<p>We posted an overview of the project on our beta site. <a href=\"https:\/\/beta.portland.gov\/powr\/about\">About the POWR project<\/a>\u2014we do love our acronyms in government. This overview takes a high-level walk through the project and its objectives. A migration of this scale is <strong>not a small project<\/strong>, but the eGovernment team at the City of Portland have been amazing\u2014and a ton of progress has been made. The hardest part of an effort like this is the wrangling of stakeholders across over 30 offices and hundreds of existing editors.<\/p>\n<p>It still feels like we are on track for a 2019 switchover of <a href=\"https:\/\/www.portlandoregon.gov\/\">PortlandOregon.gov<\/a> over to the new <a href=\"https:\/\/portland.gov\/\">Portland.gov<\/a>. I cannot wait to see how the public responds to the new site when we start marketing the switch!<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "7103a76255bed7a04070e9b9df8c353a",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [
+        {
+            "value": "For a little over a year, I have been consulting with the City of Portland, Oregon to transform their website into a place where services and information are easy to find, access, and understand."
+        }
+    ],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

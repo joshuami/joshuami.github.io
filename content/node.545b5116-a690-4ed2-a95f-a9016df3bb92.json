@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "545b5116-a690-4ed2-a95f-a9016df3bb92"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "A busy weekend"
+        }
+    ],
+    "created": [
+        {
+            "value": "2007-10-22T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T18:32:43+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2007\/10\/22\/busy-weekend",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>So the weekend started off with a leisurely Saturday morning\u2014we slept in until 7:15, woohoo\u2014but it quickly degraded.<\/p><p>First there was the startled cry from Diana to inform me that the wall in our daughters bedroom was leaking. We had some pretty hard rains over the last few days leading up to the weekend. Saturday was the culmination of that storm, but the weakening of the wall started a long time ago.<\/p><p>The previous owners thought it would be nice to replace the aluminum windows in the back of the house with vinyl. A wise decision, but their method left me with a mess. They never removed the old aluminum frames. The just took out the glass, cut a couple of pieces of the frame off, and installed the vinyl up against the aluminum. The vinyl window frame was actually sitting against plaster on the top and sides. Plaster is not a material that can be sealed so there was some mold growth in those areas.<\/p><p>I am sure this installation method saved the previous owners money.<\/p><p>The result of this shoddy installation was a small lip where water could collect between the aluminum and vinyl frames. Water has some amazing physical properties\u2014it will find weakness and penetrate it.<\/p><p>Over time water was slowly seeping into the cracks between the two frames and down into the outer wall. It was also finding its way into the inner wall through lathe and plaster about two inches to the right and four inches down from the right corner of the window. The result was a patch of mushy plaster that we had noticed last winter\u00e2\u20ac\u201dthough at the time we thought it was being caused from condensation and a small leak that some silicon in the spring was to have fixed.<\/p><p>So what\u2019s the damage? Well, I managed to put up a tarp to stop the rain from continuing to soak the frame around the window. I then proceeded to remove the window and inspect the damage. The studs and bottom frame are in surprisingly good  shape. The plywood exterior behind my aluminum siding is not. It was completely rotted out in a two foot patch. I only know this because I removed enough of the drywall to inspect from the inside. (Yes, I can see the back of my siding from inside my house right now.) I was able to remove enough plaster to rebuild the frame with some filler 3\/4\u201d stock and reinstall the window.So I don\u2019t have a whole in my house\u2013for now. The next step is going to involve removing the siding from the back corner of the house and replacing the plywood exterior and rewrapping it in Tyvek.<\/p><p>So do you think this was all I did this weekend? Nope, it is not even close. We also fit in pumpkin carving, buying my wife a new phone (the Samsung Juke, more to follow on that), getting some desperately needed new shoes (Keens of course), a frantic call from a client (freelance gig) to set me off onto a search for why my host decided to change DNS for a mirror domain, and my first ever complete installation of Drupal.<\/p><p>Yeah, what did you do this weekend?<\/p>",
+            "format": "content_format",
+            "processed": "<p>So the weekend started off with a leisurely Saturday morning\u2014we slept in until 7:15, woohoo\u2014but it quickly degraded.<\/p>\n<p>First there was the startled cry from Diana to inform me that the wall in our daughters bedroom was leaking. We had some pretty hard rains over the last few days leading up to the weekend. Saturday was the culmination of that storm, but the weakening of the wall started a long time ago.<\/p>\n<p>The previous owners thought it would be nice to replace the aluminum windows in the back of the house with vinyl. A wise decision, but their method left me with a mess. They never removed the old aluminum frames. The just took out the glass, cut a couple of pieces of the frame off, and installed the vinyl up against the aluminum. The vinyl window frame was actually sitting against plaster on the top and sides. Plaster is not a material that can be sealed so there was some mold growth in those areas.<\/p>\n<p>I am sure this installation method saved the previous owners money.<\/p>\n<p>The result of this shoddy installation was a small lip where water could collect between the aluminum and vinyl frames. Water has some amazing physical properties\u2014it will find weakness and penetrate it.<\/p>\n<p>Over time water was slowly seeping into the cracks between the two frames and down into the outer wall. It was also finding its way into the inner wall through lathe and plaster about two inches to the right and four inches down from the right corner of the window. The result was a patch of mushy plaster that we had noticed last winter\u00e2\u20ac\u201dthough at the time we thought it was being caused from condensation and a small leak that some silicon in the spring was to have fixed.<\/p>\n<p>So what\u2019s the damage? Well, I managed to put up a tarp to stop the rain from continuing to soak the frame around the window. I then proceeded to remove the window and inspect the damage. The studs and bottom frame are in surprisingly good  shape. The plywood exterior behind my aluminum siding is not. It was completely rotted out in a two foot patch. I only know this because I removed enough of the drywall to inspect from the inside. (Yes, I can see the back of my siding from inside my house right now.) I was able to remove enough plaster to rebuild the frame with some filler 3\/4\u201d stock and reinstall the window.So I don\u2019t have a whole in my house\u2013for now. The next step is going to involve removing the siding from the back corner of the house and replacing the plywood exterior and rewrapping it in Tyvek.<\/p>\n<p>So do you think this was all I did this weekend? Nope, it is not even close. We also fit in pumpkin carving, buying my wife a new phone (the Samsung Juke, more to follow on that), getting some desperately needed new shoes (Keens of course), a frantic call from a client (freelance gig) to set me off onto a search for why my host decided to change DNS for a mirror domain, and my first ever complete installation of Drupal.<\/p>\n<p>Yeah, what did you do this weekend?<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "675b6858bf6b1d59e0ca7a3ea71056d0",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}
