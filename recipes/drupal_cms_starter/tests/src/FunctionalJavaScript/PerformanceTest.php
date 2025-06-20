@@ -50,23 +50,22 @@ class PerformanceTest extends PerformanceTestBase {
     $performance_data = $this->collectPerformanceData(function () {
       $this->drupalGet('');
     }, 'drupalCMSAnonymousFrontPage');
-    $this->assertSession()->elementExists('css', 'article.node');
-    $this->assertSame([], $performance_data->getQueries());
-    $this->assertSame(0, $performance_data->getQueryCount());
-    $this->assertSame(2, $performance_data->getCacheGetCount());
-    $this->assertSame(0, $performance_data->getCacheSetCount());
-    $this->assertSame(0, $performance_data->getCacheDeleteCount());
-    $this->assertSame(0, $performance_data->getCacheTagChecksumCount());
-    $this->assertSame(1, $performance_data->getCacheTagIsValidCount());
-    $this->assertSame(0, $performance_data->getCacheTagInvalidationCount());
-    $this->assertSame(2, $performance_data->getStylesheetCount());
-    $this->assertSame(1, $performance_data->getScriptCount());
 
-    // If there are small changes in the below limits, e.g. under 5kb, the
-    // ceiling can be raised without any investigation. However large increases
-    // indicate a large library is newly loaded for anonymous users.
-    $this->assertLessThan(84000, $performance_data->getStylesheetBytes());
-    $this->assertLessThan(24000, $performance_data->getScriptBytes());
+    $expected = [
+      'QueryCount' => 0,
+      'CacheGetCount' => 2,
+      'CacheSetCount' => 0,
+      'CacheTagLookupQueryCount' => 1,
+      // If there are small changes in the below limits, e.g. under 5kb, the
+      // ceiling can be raised without any investigation. However large increases
+      // indicate a large library is newly loaded for anonymous users.
+      'StylesheetCount' => 2,
+      'StylesheetBytes' => 80000,
+      'ScriptCount' => 1,
+      'ScriptBytes' => 23000,
+    ];
+    $this->assertMetrics($expected, $performance_data);
+    $this->assertSession()->elementExists('css', 'article.node');
   }
 
   /**
@@ -76,10 +75,12 @@ class PerformanceTest extends PerformanceTestBase {
     $editor = $this->drupalCreateUser();
     $editor->addRole('content_editor')->save();
     $this->drupalLogin($editor);
-    // Warm various caches. Drupal CMS redirects the front page to /home, so visit that directly.
-    // @todo https://www.drupal.org/project/drupal_cms/issues/3493615
+    // Warm various caches.
     $this->drupalGet('');
+    // Allow one second for post response tasks to write caches.
+    sleep(1);
     $this->drupalGet('');
+    sleep(1);
 
     // Test frontpage.
     $performance_data = $this->collectPerformanceData(function () {
@@ -88,7 +89,6 @@ class PerformanceTest extends PerformanceTestBase {
     $assert_session = $this->assertSession();
     $assert_session->elementAttributeContains('named', ['link', 'Dashboard'], 'class', 'toolbar-button--icon--navigation-dashboard');
     $assert_session->elementExists('css', 'article.node');
-
 
     // The following queries are the only database queries executed for editors on the
     // front page.
@@ -110,22 +110,20 @@ class PerformanceTest extends PerformanceTestBase {
     $this->assertSame([], $query_diff);
     $this->assertLessThanOrEqual(9, $performance_data->getQueryCount());
 
-    // @todo check cache bins when Drupal CMS requires Drupal 11.2
-    // @see https://www.drupal.org/project/drupal/issues/3500739
-    $this->assertLessThanOrEqual(87, $performance_data->getCacheGetCount());
-    $this->assertSame(0, $performance_data->getCacheSetCount());
-    $this->assertSame(0, $performance_data->getCacheDeleteCount());
-    $this->assertSame(0, $performance_data->getCacheTagChecksumCount());
-    $this->assertLessThanOrEqual(33, $performance_data->getCacheTagIsValidCount());
-    $this->assertSame(0, $performance_data->getCacheTagInvalidationCount());
-    $this->assertSame(3, $performance_data->getStylesheetCount());
-    $this->assertSame(3, $performance_data->getScriptCount());
-
-    // If there are small changes in the below limits, e.g. under 5kb, the
-    // ceiling can be raised without any investigation. However large increases
-    // indicate a large library is newly loaded for authenticated users.
-    $this->assertLessThan(350000, $performance_data->getStylesheetBytes());
-    $this->assertLessThan(330000, $performance_data->getScriptBytes());
+    $expected = [
+      'QueryCount' => 9,
+      'CacheGetCount' => 70,
+      'CacheSetCount' => 0,
+      'CacheTagLookupQueryCount' => 9,
+      // If there are small changes in the below limits, e.g. under 5kb, the
+      // ceiling can be raised without any investigation. However large increases
+      // indicate a large library is newly loaded for authenticated users.
+      'StylesheetCount' => 3,
+      'StylesheetBytes' => 218000,
+      'ScriptCount' => 4,
+      'ScriptBytes' => 244800,
+    ];
+    $this->assertMetrics($expected, $performance_data);
   }
 
 }

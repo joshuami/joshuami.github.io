@@ -136,6 +136,7 @@ display:
               responsive: ''
           default: '-1'
           empty_table: true
+          class: ''
       row:
         type: fields
       fields:
@@ -596,7 +597,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -635,7 +635,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
             reduce: false
           is_grouped: false
           group_info:

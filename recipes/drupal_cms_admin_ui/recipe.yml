@@ -24,6 +24,7 @@ config:
       - block.block.gin_secondary_local_tasks
     navigation:
       - system.menu.content
+      - system.menu.navigation-user-links
     claro:
       - block.block.claro_breadcrumbs
       - block.block.claro_content

@@ -82,6 +82,7 @@ config:
   strict: false
   import:
     ai_image_alt_text: '*'
+    ai_agents: '*'
   actions:
     ai_agents.settings:
       simpleConfigUpdate:
@@ -130,9 +131,10 @@ config:
           label: 'Drupal Agent Chatbot'
           label_display: '0'
           provider: ai_chatbot
-          ai_assistant: drupal_agent_assistant
+          ai_assistant: drupal_cms_assistant
           bot_name: 'Drupal Agent'
           stream: 0
+          verbose_mode: true
           default_avatar: /core/misc/druplicon.png
           first_message: 'I am a Drupal AI Assistant, I can help you set up your Drupal site. I can give you instructions and I can also do some functions.'
     klaro.klaro_app.deepchat:

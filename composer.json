@@ -21,8 +21,8 @@
     "require": {
         "composer/installers": "^2.3",
         "drupal/components": "^3.1",
-        "drupal/core-composer-scaffold": "^11.1",
-        "drupal/core-recommended": "^11.1",
+        "drupal/core-composer-scaffold": "^11.2",
+        "drupal/core-recommended": "^11.2",
         "drupal/diff": "^1.8",
         "drupal/drupal_cms_accessibility_tools": "*",
         "drupal/drupal_cms_ai": "*",

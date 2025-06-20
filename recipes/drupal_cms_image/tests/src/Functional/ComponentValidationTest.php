@@ -28,10 +28,21 @@ class ComponentValidationTest extends BrowserTestBase {
     // Apply it again to prove that it is idempotent.
     $this->applyRecipe($dir);
 
-    // Ensure all image styles convert to WebP.
-    $image_styles = ImageStyle::loadMultiple();
-    foreach ($image_styles as $id => $image_style) {
-      $this->assertSame('webp', $image_style->getDerivativeExtension('png'), "The '$id' image style does not convert to WebP.");
+    // Ensure all image styles convert to the expected format.
+    $avif_styles = [
+      'large',
+      'media_library',
+      'medium',
+      'thumbnail',
+    ];
+    foreach (ImageStyle::loadMultiple() as $id => $image_style) {
+      $expected_extension = in_array($id, $avif_styles, TRUE) ? 'avif' : 'webp';
+
+      $this->assertSame(
+        $expected_extension,
+        $image_style->getDerivativeExtension('png'),
+        "The '$id' image style does not convert to '$expected_extension'.",
+      );
     }
   }
 
