@@ -69,5 +69,5 @@
 #}
 {% extends "xtra:node" %}
 {% block node_content %}
-    {{ content|without('field_summary','field_featured_image') }}
+    {{ content|without('field_summary') }}
 {% endblock %}

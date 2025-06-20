@@ -18,7 +18,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2025-06-17T19:16:04+00:00"
+            "value": "2025-06-20T19:52:03+00:00"
         }
     ],
     "revision_uid": [
@@ -51,7 +51,7 @@
     ],
     "changed": [
         {
-            "value": "2025-06-17T19:16:04+00:00"
+            "value": "2025-06-20T19:52:03+00:00"
         }
     ],
     "promote": [
@@ -69,11 +69,7 @@
             "value": true
         }
     ],
-    "revision_translation_affected": [
-        {
-            "value": true
-        }
-    ],
+    "revision_translation_affected": [],
     "path": [
         {
             "alias": "\/about-josh-mitchell",

@@ -32,21 +32,13 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
-    region: content
-  field_featured_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: 16_9_small
-      link: false
-    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   body: true
   content_dates_eva_content_dates: true
   feeds_item: true
+  field_featured_image: true
   field_seo_description: true
   field_seo_image: true
   field_seo_title: true
