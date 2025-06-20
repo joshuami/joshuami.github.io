@@ -1,6 +1,0 @@
----
-layout: null
----
-id,title,URL,date,description,content
-{% for post in site.posts %}"{{ post.id }}","{{ post.title }}","https://joshuami.com{{ post.url }}","{{ post.date | date_to_xmlschema }}","{{ post.description | replace: '"', '""' }}","{{ post.content | strip_newlines | replace: '"', '""' }}"
-{% endfor %}
