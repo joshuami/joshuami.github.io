@@ -28,7 +28,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Blog
+      title: Joshuami
       fields:
         title:
           id: title
@@ -1356,7 +1356,7 @@ display:
       style:
         type: rss
         options:
-          uses_fields: false
+          grouping: {  }
           description: 'Subscribe to our RSS feed to stay up to date with our latest blog posts.'
       row:
         type: rss_fields
@@ -1374,6 +1374,7 @@ display:
       display_description: ''
       display_extenders: {  }
       path: blog/feed
+      sitename_title: false
       displays:
         block: block
         page: page
