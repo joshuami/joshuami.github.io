@@ -16,7 +16,11 @@ settings:
       - heading
       - bold
       - italic
+      - strikethrough
       - blockQuote
+      - subscript
+      - superscript
+      - specialCharacters
       - link
       - horizontalLine
       - bulletedList
