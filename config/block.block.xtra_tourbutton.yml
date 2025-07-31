@@ -1,0 +1,25 @@
+uuid: e4ea2b98-6689-46eb-9ae6-547e29dd598c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - tour
+  theme:
+    - xtra
+id: xtra_tourbutton
+theme: xtra
+region: content
+weight: -2
+provider: null
+plugin: tour_button_block
+settings:
+  id: tour_button_block
+  label: 'Tour button'
+  label_display: '0'
+  provider: tour
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/144

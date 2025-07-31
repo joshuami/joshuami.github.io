@@ -1,0 +1,10 @@
+# Default configuration for joshuami module.
+auto_tour_enabled: true
+auto_tour_routes:
+  - 'user.login'
+  - 'user.register'
+  - 'node.add'
+  - 'system.admin_content'
+  - 'system.admin'
+show_on_first_visit: true
+debug_mode: false 

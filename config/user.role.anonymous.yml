@@ -5,6 +5,7 @@ dependencies:
   module:
     - media
     - system
+    - tour
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -13,4 +14,5 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'access tour'
   - 'view media'

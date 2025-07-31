@@ -1,0 +1,7 @@
+joshuami.settings:
+  path: '/admin/config/system/joshuami'
+  defaults:
+    _form: '\Drupal\joshuami\Form\JoshuamiSettingsForm'
+    _title: 'Joshuami Settings'
+  requirements:
+    _permission: 'administer site configuration' 

@@ -1,0 +1,47 @@
+uuid: 26a5a263-6efe-4072-81f9-6e329edbe5b5
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - ''
+id: taking_a_tour
+label: 'Taking a Tour'
+routes:
+  -
+    route_name: entity.node.canonical
+    route_params:
+      node: '144'
+tips:
+  getting_started:
+    id: getting_started
+    plugin: text
+    label: 'Getting started'
+    weight: -10
+    position: auto
+    selector: ''
+    body: 'The Tour module can help you create guided content that walks new users through your site or application. Think of it as just in time training that can guide you through a user interface.'
+  the_tour_button:
+    id: the_tour_button
+    plugin: text
+    label: 'The Tour Button'
+    weight: -10
+    position: bottom-start
+    selector: .tour-button
+    body: "For a tour to be available on a page, the route for that page has to be added to the tour and a tour button needs to appear on the page for a user. The button will appear in admin toolbar or top navigation bar in Drupal's default admin theme Claro. Newer installations using the popular Gin toolbar may need to place the button as a block. (There is an open issue for adding the tour button to newer versions of Gin navigation.)"
+  automatically_starting_tours:
+    id: automatically_starting_tours
+    plugin: text
+    label: 'Automatically Starting Tours'
+    weight: -10
+    position: auto
+    selector: ''
+    body: 'This tour should have automatically started when you opened this post in your browser. At the time of writing, there was not built in functionality to automatically start tours, but there is an open issue to add this functionality.'
+  start_reading:
+    id: start_reading
+    plugin: text
+    label: 'Start Reading'
+    weight: -10
+    position: auto
+    selector: ''
+    body: 'You probably are ready to read the blog post. When you click "End Tour" below, you can dive in.'

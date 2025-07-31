@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for joshuami module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_page_bottom().
+ */
+function joshuami_page_bottom(array &$page_bottom) {
+  $build = [];
+  
+  // Get configuration
+  $config = \Drupal::config('joshuami.settings');
+  
+  // Only show tours for anonymous users if enabled
+  if (\Drupal::currentUser()->isAnonymous() && $config->get('auto_tour_enabled')) {
+    $tour_helper = \Drupal::service('tour.helper');
+    
+    // Get current tours for this page
+    $route_match = \Drupal::routeMatch();
+    $tour_entities = $tour_helper->loadTourEntities();
+    
+    // Check if there are any tours available on this page
+    if (!empty($tour_entities)) {
+      // For anonymous users, we'll show tours based on configuration
+      $should_open = _joshuami_should_open_tour_for_anonymous($route_match, $config);
+      
+      if ($should_open) {
+        // Let the client know whether it should pop open the tour window
+        $build['#attached']['drupalSettings']['joshuami_tour_auto']['should_open'] = $should_open;
+        $build['#attached']['library'][] = 'joshuami/joshuami-tour-auto';
+
+        // Add debugging information for administrators if debug mode is enabled
+        if ($config->get('debug_mode') && \Drupal::currentUser()->hasPermission('administer site configuration')) {
+          $build['#attached']['drupalSettings']['joshuami_tour_auto']['debug'] = [
+            'route' => $route_match->getRouteName(),
+            'tour_count' => count($tour_entities),
+            'should_open' => $should_open,
+            'available_tours' => $tour_entities,
+            'config_enabled' => $config->get('auto_tour_enabled'),
+            'show_on_first_visit' => $config->get('show_on_first_visit'),
+          ];
+        }
+      }
+    }
+  }
+
+  // Cache the results based on the current page and user
+  $build['#cache'] = $page_bottom['tour']['#cache'] ?? [];
+  $build['#cache']['contexts'][] = 'user';
+  $build['#cache']['contexts'][] = 'route';
+
+  $page_bottom['joshuami_tour_auto'] = $build;
+}
+
+/**
+ * Helper function to determine if tours should open for anonymous users.
+ *
+ * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+ *   The current route match.
+ * @param \Drupal\Core\Config\Config $config
+ *   The joshuami configuration.
+ *
+ * @return bool
+ *   TRUE if tours should open, FALSE otherwise.
+ */
+function _joshuami_should_open_tour_for_anonymous(RouteMatchInterface $route_match, $config) {
+  $route_name = $route_match->getRouteName();
+  
+  // Get configured routes where tours should automatically open
+  $auto_tour_routes = $config->get('auto_tour_routes') ?? [];
+  
+  // Check if current route is in the auto-tour list
+  if (in_array($route_name, $auto_tour_routes)) {
+    return TRUE;
+  }
+  
+  // Check if tours should show on first visit
+  if ($config->get('show_on_first_visit')) {
+    $session = \Drupal::service('session');
+    $first_visit = $session->get('joshuami_first_visit', TRUE);
+    
+    if ($first_visit) {
+      $session->set('joshuami_first_visit', FALSE);
+      return TRUE;
+    }
+  }
+  
+  return FALSE;
+} 

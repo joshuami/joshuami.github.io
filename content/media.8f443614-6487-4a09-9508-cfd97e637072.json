@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "8f443614-6487-4a09-9508-cfd97e637072"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-07-21T22:58:09+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "configure-tour.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Navigate to Configuration, User interface, Tours",
+            "title": null,
+            "width": 1044,
+            "height": 1184,
+            "target_type": "file",
+            "target_uuid": "d13b5bbf-e25f-43b6-8d4e-f437ae011297"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-21T22:58:09+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-21T22:58:09+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Navigate to Configuration, User interface, Tours",
+            "title": "",
+            "width": 1044,
+            "height": 1184,
+            "target_type": "file",
+            "target_uuid": "d13b5bbf-e25f-43b6-8d4e-f437ae011297"
+        }
+    ]
+}

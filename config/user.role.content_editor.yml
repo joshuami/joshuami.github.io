@@ -16,12 +16,10 @@ dependencies:
     - file
     - filter
     - media
-    - navigation
     - node
     - path
     - redirect
     - system
-    - toolbar
 _core:
   default_config_hash: g-zSnaBXJnH7VoimReFb6KcLjIgHCU-hisiShtZ9hjQ
 id: content_editor
@@ -33,8 +31,6 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access media overview'
-  - 'access navigation'
-  - 'access toolbar'
   - 'administer redirects'
   - 'administer url aliases'
   - 'create blog content'

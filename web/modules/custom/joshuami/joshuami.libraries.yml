@@ -1,0 +1,6 @@
+joshuami-tour-auto:
+  js:
+    js/joshuami-tour-auto.js: {}
+  dependencies:
+    - core/once
+    - tour/tour 

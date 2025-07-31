@@ -1,0 +1,23 @@
+uuid: 9fbcb9f7-e177-40f8-a1cd-a7322f440605
+langcode: en
+status: false
+dependencies:
+  enforced:
+    module:
+      - ''
+id: touring_the_tour_module
+label: 'Touring the Tour Module'
+routes:
+  -
+    route_name: entity.node.canonical
+    route_params:
+      node: '144'
+tips:
+  touring_the_tour_module_start:
+    id: touring_the_tour_module_start
+    plugin: text
+    label: 'Touring the Tour Module'
+    weight: -10
+    position: auto
+    selector: ''
+    body: "Ever wanted to create a guided tour to help people understand your site's overall user interface? There is a module for that."
