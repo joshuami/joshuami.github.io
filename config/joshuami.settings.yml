@@ -1,11 +1,7 @@
 _core:
   default_config_hash: 7yb0MWs_cDAt_QEHLAN_06bqq4Cni5avqjEBFFUU2SQ
-auto_tour_enabled: true
+auto_tour_enabled: 1
 auto_tour_routes:
-  - user.login
-  - user.register
-  - node.add
-  - system.admin_content
-  - system.admin
-show_on_first_visit: true
-debug_mode: false
+  - node/144
+show_on_first_visit: 1
+debug_mode: 0

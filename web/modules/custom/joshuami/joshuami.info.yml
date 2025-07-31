@@ -1,0 +1,5 @@
+name: Joshuami
+type: module
+description: 'Provides custom functionality for the joshuami website including automatic tour functionality for anonymous users.'
+core_version_requirement: ^9 || ^10 || ^11
+package: Custom 

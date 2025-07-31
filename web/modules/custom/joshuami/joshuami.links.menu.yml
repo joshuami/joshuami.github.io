@@ -1,0 +1,6 @@
+joshuami.settings:
+  title: 'Joshuami Settings'
+  description: 'Configure automatic tour settings for anonymous users.'
+  route_name: joshuami.settings
+  parent: system.admin_config_system
+  weight: 100 
