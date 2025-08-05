@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://joshuami.ddev.site/">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://joshuami.com/">
   <channel>
     <title>Joshuami</title>
-    <link>https://joshuami.ddev.site/</link>
+    <link>https://joshuami.com/</link>
     <description>Subscribe to our RSS feed to stay up to date with our latest blog posts.</description>
     <language>en</language>
     
     <item>
   <title>Taking a Tour of the Tour Module</title>
-  <link>https://joshuami.ddev.site/blog/2025/tour-module</link>
+  <link>https://joshuami.com/blog/2025/tour-module</link>
   <description>Tour was deprecated in Drupal 10 and removed in Drupal 11.0. I was fine with that as I had not used it before, but I recently needed a tour for an upcoming launch of an intranet. Tour kinda blew my mind with its easy setup and out of the box look and feel.</description>
   <pubDate>Wed, 30 Jul 2025 19:05:00 -0700</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -16,7 +16,7 @@
     </item>
 <item>
   <title>Recipe Unpack: This Blog Is No Longer on Drupal CMS, and That's a Good Thing</title>
-  <link>https://joshuami.ddev.site/blog/2025/recipe-unpack-blog-no-longer-drupal-cms-and-thats-good-thing</link>
+  <link>https://joshuami.com/blog/2025/recipe-unpack-blog-no-longer-drupal-cms-and-thats-good-thing</link>
   <description>With the release of Drupal 11.2, the Recipes feature gets an important new capability. You can now "unpack" recipes after they are run so that your composer.json will have the direct dependencies from the recipe rather than a dependency on the recipe itself.</description>
   <pubDate>Fri, 20 Jun 2025 14:00:00 -0700</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -24,7 +24,7 @@
     </item>
 <item>
   <title>Some Thoughts About How AI Could Reshape CMS Platforms</title>
-  <link>https://joshuami.ddev.site/blog/2025-03/some-thoughts-about-how-ai-could-reshape-cms-platforms</link>
+  <link>https://joshuami.com/blog/2025-03/some-thoughts-about-how-ai-could-reshape-cms-platforms</link>
   <description>Dries post and AI and CMS platforms covers a lot, but I want to take a deeper dive into the two strategic priorities he outlines.</description>
   <pubDate>Wed, 19 Mar 2025 13:12:40 -0700</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -32,7 +32,7 @@
     </item>
 <item>
   <title>Drupal CMS Modules We Know and Love</title>
-  <link>https://joshuami.ddev.site/blog/2025-02/drupal-cms-modules-we-know-and-love</link>
+  <link>https://joshuami.com/blog/2025-02/drupal-cms-modules-we-know-and-love</link>
   <description>Drupal CMS is filled with modules that are considered best practice for most websites. </description>
   <pubDate>Thu, 27 Feb 2025 15:13:59 -0800</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -40,7 +40,7 @@
     </item>
 <item>
   <title>Drupal CMS Modules I Had Not Used Before</title>
-  <link>https://joshuami.ddev.site/blog/2025-02/drupal-cms-modules-i-had-not-used</link>
+  <link>https://joshuami.com/blog/2025-02/drupal-cms-modules-i-had-not-used</link>
   <description>Drupal CMS is packed with surprises. This post will cover a few of those as part of a series of posts on the new release of Drupal that is drastically changing the way we use Drupal to create websites.</description>
   <pubDate>Wed, 26 Feb 2025 17:01:37 -0800</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -48,7 +48,7 @@
     </item>
 <item>
   <title>A Few Thoughts About Drupal CMS (Starshot) After Exploring the Release Candidate</title>
-  <link>https://joshuami.ddev.site/blog/2025-01/few-thoughts-about-drupal-cms-starshot-after-exploring-release-candidate</link>
+  <link>https://joshuami.com/blog/2025-01/few-thoughts-about-drupal-cms-starshot-after-exploring-release-candidate</link>
   <description>Given my recent migration of my blog and the planned launch of Drupal CMS on January 15th, I thought it might be a good time to dig in and see what's currently included in this milestone re-packaging of Drupal.</description>
   <pubDate>Wed, 01 Jan 2025 18:00:00 -0800</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -56,7 +56,7 @@
     </item>
 <item>
   <title>This Blog is on Drupal CMS (Starshot)... Kinda... for Now</title>
-  <link>https://joshuami.ddev.site/blog/2024-12/blog-drupal-cms-starshot-kinda-now</link>
+  <link>https://joshuami.com/blog/2024-12/blog-drupal-cms-starshot-kinda-now</link>
   <description>Way back in 2015, I moved my blog to a static implementation using Jekyll and Github Pages. While I was very involved in Drupal, I also was very aware of my limited time to keep a Drupal installation up to date. I simply wanted/needed the security a static site ensured. Drupal CMS—and a little extra holiday free time—led me to test a new approach using a Starshot installation while keeping the site static using Tome and  Github Pages.</description>
   <pubDate>Wed, 18 Dec 2024 11:01:04 -0800</pubDate>
     <dc:creator>joshuami</dc:creator>
@@ -64,7 +64,7 @@
     </item>
 <item>
   <title>Access Control Strategies for Enterprise Drupal Websites</title>
-  <link>https://joshuami.ddev.site/2023/10/27/access-control-strategies-for-enterprise-drupal-websites</link>
+  <link>https://joshuami.com/2023/10/27/access-control-strategies-for-enterprise-drupal-websites</link>
   <description>When working with large organizations—whether in private enterprise, government, higher education, or non-profits—editorial responsibility is often spread across multiple sub-organizations. Set your editors up for success by choosing an access control strategy that works best for the organizational objectives.</description>
   <pubDate>Fri, 27 Oct 2023 00:00:00 -0700</pubDate>
     <dc:creator>joshuami</dc:creator>

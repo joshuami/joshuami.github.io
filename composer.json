@@ -20,6 +20,7 @@
     },
     "require": {
         "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^1.7",
         "drupal/add_content_by_bundle": "^1.2.2",
         "drupal/address": "^2",
         "drupal/addtocal_augment": "^1.2.3",
@@ -40,6 +41,7 @@
         "drupal/core-recipe-unpack": "^11.2",
         "drupal/core-recommended": "^11.2",
         "drupal/dashboard": "^2",
+        "drupal/devel": "^5.4",
         "drupal/diff": "^1.8",
         "drupal/easy_breadcrumb": "^2.0.9",
         "drupal/eca": "^2.1.4",
@@ -85,6 +87,7 @@
         "drupal/token": "^1.15",
         "drupal/token_or": "^2.2",
         "drupal/tome": "^1.13",
+        "drupal/tour": "^2.0",
         "drupal/trash": "^3.0.13",
         "drupal/twig_tweak": "^3.4",
         "drupal/views_bulk_edit": "^3.0",
@@ -102,10 +105,11 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
+            "drupal/core-recipe-unpack": true,
             "oomphinc/composer-installers-extender": true,
-            "php-http/discovery": true,
-            "drupal/core-recipe-unpack": true
+            "php-http/discovery": true
         },
         "sort-packages": true,
         "optimize-autoloader": true
@@ -128,19 +132,30 @@
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
             "recipes/{$name}": ["type:drupal-recipe"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/tour": {
+                "3539631: Better mobile support:": "patches/3539631.patch"
+            }
         }
     },
     "scripts": {
       "drupal:test": "phpunit",
       "npm:install": "cd web/themes/custom/xtra && npm ci",
       "npm:prod": "cd web/themes/custom/xtra && npm run production",
-      "npm:watch": "cd web/themes/custom/xtra && npm run watch"
+      "npm:watch": "cd web/themes/custom/xtra && npm run watch",
+      "static": "drush tome:static -l --uri=https://joshuami.com"
     },
     "scripts-aliases": {
       "drupal:test": ["dt"],
       "drupal:uli": ["uli"],
       "npm:install": ["ni"],
       "npm:prod": ["np"],
-      "npm:watch": ["nw"]
+      "npm:watch": ["nw"],
+      "static": ["ts"]
     }
 }
