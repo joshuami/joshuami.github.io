@@ -18,7 +18,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2025-08-27T18:06:17+00:00"
+            "value": "2025-08-27T18:21:16+00:00"
         }
     ],
     "revision_uid": [
@@ -51,7 +51,7 @@
     ],
     "changed": [
         {
-            "value": "2025-08-27T18:06:17+00:00"
+            "value": "2025-08-27T18:21:16+00:00"
         }
     ],
     "promote": [
@@ -100,9 +100,22 @@
             "target_uuid": "633b0b12-f60b-48ba-87cb-2e6fd7397cf8"
         }
     ],
-    "field_seo_description": [],
-    "field_seo_image": [],
-    "field_seo_title": [],
+    "field_seo_description": [
+        {
+            "value": "I've now presented the content of my 10 Best Practices for Translating Government Websites post twice in recorded sessions: 2025 Drupal GovCon and 2024 Pacific Northwest Drupal Summit.\r\n\r\nI've picked up a few more bits of knowledge that distilled into these presentations since originally writing this post. Needless to say, I have more than 10 recommendations at this point. To that end, I'm revisiting this important topic as of August 2025."
+        }
+    ],
+    "field_seo_image": [
+        {
+            "target_type": "media",
+            "target_uuid": "633b0b12-f60b-48ba-87cb-2e6fd7397cf8"
+        }
+    ],
+    "field_seo_title": [
+        {
+            "value": "Revisiting Best Practices for Translating Government Websites in 2025"
+        }
+    ],
     "field_tags": [
         {
             "target_type": "taxonomy_term",

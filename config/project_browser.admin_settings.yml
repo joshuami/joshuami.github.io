@@ -1,6 +1,6 @@
 enabled_sources:
-  - drupalorg_jsonapi
-  - recipes
+  drupalorg_jsonapi: {  }
+  recipes: {  }
 allow_ui_install: true
 allowed_projects:
   recipes:
