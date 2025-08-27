@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "015961df-497a-4325-9e28-47af218506ce"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "washco-residential-collection-service-rates.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-08\/washco-residential-collection-service-rates.png",
+            "url": "\/sites\/default\/files\/2025-08\/washco-residential-collection-service-rates.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 60458
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-25T23:21:40+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-25T23:22:11+00:00"
+        }
+    ]
+}

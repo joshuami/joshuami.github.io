@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "5e8b621f-6c2b-476b-a4b0-7ff2f3ee829b"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "washco-example-of-mixed-translation.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-08\/washco-example-of-mixed-translation.png",
+            "url": "\/sites\/default\/files\/2025-08\/washco-example-of-mixed-translation.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 138181
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-25T23:17:49+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-25T23:18:09+00:00"
+        }
+    ]
+}

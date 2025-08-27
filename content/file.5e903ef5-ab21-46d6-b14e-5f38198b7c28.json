@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "5e903ef5-ab21-46d6-b14e-5f38198b7c28"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "drupal-translate-using-ai.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-08\/drupal-translate-using-ai.png",
+            "url": "\/sites\/default\/files\/2025-08\/drupal-translate-using-ai.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 362821
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-27T17:40:50+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-27T17:41:09+00:00"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "f038b8ef-56aa-4420-aa52-225a1cd7d5ea"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/15"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/multilingual"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "b6134f47-8d1d-4d03-b030-3f990b1660af"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "portlandgov-translation-search.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-08\/portlandgov-translation-search.png",
+            "url": "\/sites\/default\/files\/2025-08\/portlandgov-translation-search.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 145006
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-25T23:16:08+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-25T23:16:27+00:00"
+        }
+    ]
+}
