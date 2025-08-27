@@ -33,7 +33,13 @@
             "value": "Multilingual"
         }
     ],
-    "description": [],
+    "description": [
+        {
+            "value": null,
+            "format": null,
+            "processed": ""
+        }
+    ],
     "weight": [
         {
             "value": 0
@@ -61,8 +67,7 @@
     ],
     "path": [
         {
-            "alias": null,
-            "pid": null,
+            "alias": "\/tags\/multilingual",
             "langcode": "en"
         }
     ]
