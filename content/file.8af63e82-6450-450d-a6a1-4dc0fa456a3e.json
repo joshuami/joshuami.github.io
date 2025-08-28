@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "8af63e82-6450-450d-a6a1-4dc0fa456a3e"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "getting-rid-of-unused-media-with-the-entity-usage-module.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-08\/getting-rid-of-unused-media-with-the-entity-usage-module.png",
+            "url": "\/sites\/default\/files\/2025-08\/getting-rid-of-unused-media-with-the-entity-usage-module.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 1768117
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-28T16:12:36+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-28T16:12:53+00:00"
+        }
+    ]
+}

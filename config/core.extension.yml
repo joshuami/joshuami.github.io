@@ -17,6 +17,7 @@ module:
   crop: 0
   dashboard: 0
   dblog: 0
+  decorative_images: 0
   devel: 0
   diff: 0
   dynamic_page_cache: 0
@@ -26,6 +27,7 @@ module:
   eca_ui: 0
   editor: 0
   editoria11y: 0
+  entity_usage: 0
   eva: 0
   feeds: 0
   field: 0

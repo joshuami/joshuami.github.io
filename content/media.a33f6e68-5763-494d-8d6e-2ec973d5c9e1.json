@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "a33f6e68-5763-494d-8d6e-2ec973d5c9e1"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-08-28T16:04:38+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "entity_usage_enabled_tracking_plugins.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Configuring tracking plugins.",
+            "title": null,
+            "width": 1304,
+            "height": 1498,
+            "target_type": "file",
+            "target_uuid": "559d89a4-7332-4b82-a865-178aa75b4902"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-28T16:04:38+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-28T16:04:38+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Configuring tracking plugins.",
+            "title": "",
+            "width": 1304,
+            "height": 1498,
+            "target_type": "file",
+            "target_uuid": "559d89a4-7332-4b82-a865-178aa75b4902"
+        }
+    ]
+}

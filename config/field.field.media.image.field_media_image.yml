@@ -6,10 +6,15 @@ dependencies:
     - field.storage.media.field_media_image
     - media.type.image
   module:
+    - decorative_images
     - image
   enforced:
     module:
       - media
+third_party_settings:
+  decorative_images:
+    decorative_enabled: 1
+    decorative_or_alternative_required: 1
 _core:
   default_config_hash: P7CkVOgjDXiN26Fm2hniNei-XPK3iuZTlcBGqreTbJ0
 id: media.image.field_media_image
@@ -35,7 +40,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
