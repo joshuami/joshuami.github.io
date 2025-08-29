@@ -697,7 +697,18 @@ display:
           admin_label: author
           plugin_id: standard
           required: true
-      show_admin_links: false
+      show_admin_links: true
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
       display_extenders: {  }
     cache_metadata:
       max-age: 0

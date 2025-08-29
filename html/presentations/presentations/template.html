@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Your Presentation Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Reveal.js base styles -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  
+  <!-- Custom reveal.js theme based on site design -->
+  <link rel="stylesheet" href="theme-joshuami.css">
+  
+  <style>
+    /* Additional custom styles for your presentation can go here */
+    /* The main styling is handled by theme-joshuami.css */
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Slide -->
+      <section>
+        <h1>Your Presentation Title</h1>
+        <p>Subtitle or description</p>
+        <p>Your Name – Date</p>
+      </section>
+
+      <!-- Content Slides -->
+      <section>
+        <h2>Slide Title</h2>
+        <ul>
+          <li>Point 1</li>
+          <li>Point 2</li>
+          <li>Point 3</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Code Example</h2>
+        <pre><code data-trim data-noescape>
+// Your code here
+function example() {
+  return "Hello, World!";
+}
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Vertical Slides</h2>
+        <p>Use arrow keys to navigate</p>
+        
+        <section>
+          <h3>Sub-slide 1</h3>
+          <p>Content for sub-slide 1</p>
+        </section>
+        
+        <section>
+          <h3>Sub-slide 2</h3>
+          <p>Content for sub-slide 2</p>
+        </section>
+      </section>
+
+      <!-- Conclusion Slide -->
+      <section>
+        <h2>Thank You</h2>
+        <p>Questions?</p>
+        <p>Contact: your.email@example.com</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- Reveal.js JavaScript -->
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/zoom/zoom.js"></script>
+  
+  <script>
+    Reveal.initialize({
+      // Display presentation control arrows
+      controls: true,
+      
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      help: true,
+      
+      // Determines where controls appear, "edges" or "corners"
+      controlsTutorial: true,
+      
+      // Determines if the presentation is running in an embedded mode,
+      // i.e. contained within a limited portion of the screen
+      embedded: false,
+      
+      // Flags if we should show a help overlay when the questionmark
+      // key is pressed
+      help: true,
+      
+      // Number of milliseconds between automatically proceeding to the
+      // next slide, disabled when set to 0, this value can be overwritten
+      // by using a data-autoslide attribute on your slides
+      autoSlide: 0,
+      
+      // Stop auto-sliding after user input
+      autoSlideStoppable: true,
+      
+      // Enable slide navigation via mouse wheel
+      mouseWheel: false,
+      
+      // Apply a 3D roll to links on hover
+      previewLinks: false,
+      
+      // Transition style
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      
+      // Transition speed
+      transitionSpeed: 'default', // default/fast/slow
+      
+      // Transition style for full page slide backgrounds
+      backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+      
+      // Parallax scrolling
+      parallaxBackgroundImage: '',
+      parallaxBackgroundSize: '',
+      
+      // Number of slides away from the current that are visible
+      viewDistance: 3,
+      
+      // The display mode that will be used to show slides
+      display: 'block',
+      
+      // Enable hash navigation
+      hash: true,
+      
+      // Show slide numbers
+      slideNumber: true,
+      
+      // Push each slide change to the browser history
+      history: false,
+      
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+      
+      // Enable touch navigation for devices with touch input
+      touch: true,
+      
+      // Loop the presentation
+      loop: false,
+      
+      // Change the presentation direction to be RTL
+      rtl: false,
+      
+      // Randomizes the order of slides each time the presentation loads
+      shuffle: false,
+      
+      // Turns fragments on and off globally
+      fragments: true,
+      
+      // Flags whether to include the current fragment in the URL,
+      // so that reloading brings you to the same fragment position
+      fragmentInURL: false,
+      
+      // Flags if the presentation is running in an embedded mode,
+      // i.e. contained within a limited portion of the screen
+      embedded: false,
+      
+      // Flags if we should show a help overlay when the questionmark
+      // key is pressed
+      help: true,
+      
+      // Number of milliseconds between automatically proceeding to the
+      // next slide, disabled when set to 0, this value can be overwritten
+      // by using a data-autoslide attribute on your slides
+      autoSlide: 0,
+      
+      // Stop auto-sliding after user input
+      autoSlideStoppable: true,
+      
+      // Enable slide navigation via mouse wheel
+      mouseWheel: false,
+      
+      // Apply a 3D roll to links on hover
+      previewLinks: false,
+      
+      // Focus body on page load to allow keyboard shortcuts
+      focusBodyOnPageVisibilityChange: true,
+      
+      // Used when there are no fragments
+      hideInactiveCursor: true,
+      
+      // Hide cursor if inactive
+      hideCursorTime: 5000,
+      
+      // Plugins
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+    });
+  </script>
+</body>
+</html>
