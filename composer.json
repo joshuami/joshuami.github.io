@@ -154,7 +154,7 @@
         "drush tome:static -l --uri=https://joshuami.com",
         "@copy-presentations"
       ],
-      "copy-presentations": "cp -r web/presentations html/presentations"
+      "copy-presentations": "rm -rf html/presentations && cp -r web/presentations html/presentations"
     },
     "scripts-aliases": {
       "drupal:test": ["dt"],
