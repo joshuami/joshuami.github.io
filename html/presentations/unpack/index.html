@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Recipe Unpack: This Blog Is No Longer on Drupal CMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../theme-joshuami.css">
+  
+  <!-- Minimal overrides for specific issues -->
+  <style>
+    /* Ensure slides are left-aligned by default */
+    .reveal .slides section {
+      text-align: left !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <section class="title-slide">
+        <div class="title-content">
+          <h1>Recipe Unpack</h1>
+          <p>Leaving Drupal CMS is what your supposed to do...</p>
+        </div>
+      </section>
+
+      <!-- Slide 2 -->
+      <section>
+        <h2>About Josh Mitchell</h2>
+        <div class="slide-layout-two-column">
+          <div>
+            <ul>
+              <li>Founder of M6L</li>
+              <li>Full stack consultancy</li>
+              <li>20 years Drupal experience</li>
+              <li>Musician and outdoor enthusiast</li>
+              <li>Connect: <a href="https://www.linkedin.com/in/joshuami/">LinkedIn</a> or Drupal Slack</li>
+            </ul>
+          </div>
+          <div>
+            <img src="/public/images/cooking-with-josh.gif" alt="Josh Mitchell" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section>
+        <h2>What are Drupal Recipes?</h2>
+        <ul>
+          <li>Recipes introduced in Drupal 10.3</li>
+          <li>They provide a <strong>standardized way</strong> to install and configure Drupal sites</li>
+          <li>Recipes can include <strong>modules, themes, configuration, and content</strong></li>
+          <li>They're <strong>composable</strong> - you can combine multiple recipes</li>
+          <li>Examples: "Standard" recipe, "Umami" demo recipe, "Minimal" recipe</li>
+        </ul>
+      </section>
+
+      <!-- Slide 4 -->
+      <section>
+        <h2>What's New in Drupal 11.2</h2>
+        <p>The Recipe Unpack feature now allows dependencies to be injected into your project, replacing reliance on recipe packages.</p>
+      </section>
+
+      <!-- Slide 5 -->
+      <section>
+        <h2>Getting Started: Step-by-Step</h2>
+        <ol>
+          <li>Upgrade to Drupal 11.2 (or with plugin, even Drupal 10.3+).</li>
+          <li><code>composer update drupal/core-* --with-all-dependencies</code></li>
+          <li><code>composer require drupal/core-recipe-unpack</code></li>
+          <li><code>composer config allow-plugins.drupal/core-recipe-unpack true</code></li>
+          <li><code>composer drupal:recipe-unpack</code></li>
+        </ol>
+      </section>
+
+      <!-- Slide 6 -->
+      <section>
+        <h2>Automating Future Unpacking</h2>
+        <p>New recipes unpack automatically—unless you disable with:</p>
+        <pre><code class="language-json">{
+  "extra": {
+    "drupal-recipe-unpack": {
+      "on-require": false
+    }
+  }
+}</code></pre>
+      </section>
+
+      <!-- Slide 7 -->
+      <section>
+        <h2>Caveats & Considerations</h2>
+        <ul>
+          <li>Requires manual unpacking for <code>require-dev</code> dependencies.</li>
+          <li>May need adjustments in complex existing dependency setups.</li>
+        </ul>
+      </section>
+
+      <!-- Slide 8 -->
+      <section>
+        <h2>Live demonstration!</h2>
+      </section>
+
+      <!-- Slide 9 -->
+      <section>
+        <h2>Wrapping Up</h2>
+        <p>Streamlined workflow and dependency management via recipe unpack feature.</p>
+        <ul>
+            <li>Composer require a recipe.</li>
+            <li>Unpack plugin adds the dependencies to your composer.json.</li>
+            <li>Run the recipe to install the new dependencies and related content/config.</li>
+            <li>Profit!</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html>

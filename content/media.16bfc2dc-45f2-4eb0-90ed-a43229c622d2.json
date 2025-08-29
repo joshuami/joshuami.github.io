@@ -18,7 +18,7 @@
     ],
     "revision_created": [
         {
-            "value": "2025-08-28T16:15:16+00:00"
+            "value": "2025-08-29T20:56:24+00:00"
         }
     ],
     "revision_user": [
@@ -61,7 +61,7 @@
     ],
     "changed": [
         {
-            "value": "2025-08-28T16:15:16+00:00"
+            "value": "2025-08-29T20:56:24+00:00"
         }
     ],
     "default_langcode": [
@@ -83,7 +83,7 @@
     ],
     "field_media_image": [
         {
-            "alt": "Decorative.",
+            "alt": "",
             "title": "",
             "width": 1536,
             "height": 1024,

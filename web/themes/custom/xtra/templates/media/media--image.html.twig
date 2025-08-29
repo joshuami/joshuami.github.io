@@ -7,25 +7,12 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_suffix.contextual_links }}
   {% if content %}
-    {# Check for Non-Standard Media Images (Ex. Placeholder, Gallery Images) #}
-{% if view_mode != 'release' and view_mode != 'image_gallery_thumbnail' and view_mode != 'output_url' and media.id != 21 %}
-      {% if attributes['data-fullsize'] == "1" or content.field_link_to_fullsize|render|striptags|trim == "On" %}
-        <a title="View full sized image." class="position-relative img-fullsize d-block border border-2 border-primary p-1" href="{{ path('entity.media.canonical', {'media': media.id}) }}">
-          <div class="fs-icon"><i class="fal fa-arrow-up-right-and-arrow-down-left-from-center"></i></div>
-          {{ content|without('field_link_to_fullsize') }}
-        </a>
-      {% else %}
-        {{ content|without('field_link_to_fullsize') }}
-      {% endif %}
+      {{ content }}
       {% if user.hasPermission('edit any image media') %}
         <div class="media-edit small m-1">
           <a href="{{ path('entity.media.canonical', {'media': media.id}) }}/edit" target="_blank">Edit</a>
         </div>
       {% endif %}
-    {% else %}
-      {{ content|without('field_link_to_fullsize') }}
-    {% endif %}
   {% endif %}
 </div>

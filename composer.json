@@ -150,7 +150,11 @@
       "npm:install": "cd web/themes/custom/xtra && npm ci",
       "npm:prod": "cd web/themes/custom/xtra && npm run production",
       "npm:watch": "cd web/themes/custom/xtra && npm run watch",
-      "static": "drush tome:static -l --uri=https://joshuami.com"
+      "static": [
+        "drush tome:static -l --uri=https://joshuami.com",
+        "@copy-presentations"
+      ],
+      "copy-presentations": "cp -r web/presentations html/presentations"
     },
     "scripts-aliases": {
       "drupal:test": ["dt"],
