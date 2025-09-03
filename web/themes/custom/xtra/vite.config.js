@@ -65,7 +65,7 @@ export default defineConfig({
     // Generate source maps
     sourcemap: true,
     // Enable minification for production builds
-    minify: true,
+    minify: 'esbuild',
     // Copy assets to component directories after build
     copyPublicDir: false,
     rollupOptions: {

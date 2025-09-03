@@ -10,7 +10,7 @@
 !/web/sites/*/services.yml
 
 # Ignore paths that contain user-generated content.
-# /web/sites/*/files # Remove when moved from static to Drupal hosting.
+/web/sites/*/files # Remove when moved from static to Drupal hosting.
 /web/sites/*/private
 
 # Ignore SimpleTest multi-site environment.

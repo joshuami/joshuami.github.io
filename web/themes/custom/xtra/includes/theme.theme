@@ -11,3 +11,16 @@
 function xtra_preprocess_page(&$variables) {
   $variables['route_name'] = \Drupal::routeMatch()->getRouteName();
 }
+
+/**
+ * Implements hook_js_alter().
+ */
+function xtra_js_alter(array &$javascript) {
+  // Prevent aggregation of the theme's main bundle to avoid redeclaration
+  // conflicts when Drupal aggregates multiple libraries.
+  foreach ($javascript as &$script) {
+    if (!empty($script['data']) && strpos($script['data'], 'build/js/main.script.js') !== FALSE) {
+      $script['preprocess'] = FALSE;
+    }
+  }
+}
