@@ -18,3 +18,11 @@ blockquote {
   padding: 2rem;
   border-left: 4px solid $gray-300;
 }
+
+.more-link {
+  margin-bottom: $spacer*1.5;
+}
+
+.container {
+  max-width: 720px;
+}

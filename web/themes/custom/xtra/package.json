@@ -10,16 +10,16 @@
 	"license": "MIT",
 	"scripts": {
 		"postinstall": "find node_modules/ -name '*.info' -type f -delete",
-		"dev": "mix",
-		"watch": "mix watch",
+		"dev": "vite",
+		"watch": "vite build --watch",
 		"biome:format": "biome format --write src/ components/",
 		"biome:lint": "biome lint --apply src/ components/",
 		"biome:check": "biome check --apply src/ components/",
 		"stylint": "npx stylelint '**/*.scss'",
 		"stylint-fix": "npx stylelint '**/*.scss' --fix",
-		"watch-poll": "mix watch -- --watch-options-poll=1000",
-		"hot": "mix watch --hot",
-		"production": "mix --production"
+		"watch-poll": "vite build --watch --force",
+		"hot": "vite",
+		"production": "vite build"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.4.1",
@@ -29,16 +29,14 @@
 		"cross-env": "^7.0.3",
 		"dotenv": "^16.3.1",
 		"drupal-radix-cli": "^1.0.7",
-		"laravel-mix": "^6.0.3",
-		"laravel-mix-copy-watched": "^2.3.1",
-		"laravel-mix-stylelint": "^1.0.0",
+		"glob": "^10.3.10",
+		"postcss": "^8.4.31",
 		"postcss-scss": "^4.0.2",
 		"sass": "1.77.6",
-		"sass-loader": "^13.0.2",
 		"stylelint": "^14.1.0",
 		"stylelint-config-prettier": "^9.0.3",
 		"stylelint-config-recess-order": "^3.0.0",
 		"stylelint-config-standard-scss": "^6.1.0",
-		"stylelint-webpack-plugin": "^3.1.0"
+		"vite": "^5.0.0"
 	}
 }

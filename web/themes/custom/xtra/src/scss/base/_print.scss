@@ -141,23 +141,6 @@
     border: 1px solid $gray-300;
   }
 
-  .contact-item h2 {
-    color: #000000;
-  }
-
-  .contact-item .card-body,
-  .block--views-block--translation-block-translations .card-header,
-  .block--views-block--translation-block-translations .card-body,
-  .card-header.bg-dark-gray,
-  .card.bg-faded-gray,
-  .card-header,
-  .card-body {
-    color: #000000 !important;
-    padding: 0;
-    margin-bottom: 1rem;
-    background-color: transparent !important;
-  }
-
   .card {
     border: none;
   }
@@ -172,37 +155,6 @@
   .field--type-entity-reference .row,
   .views-view-grid .row {
     display: block
-  }
-
-  table.table-card tr td .table-value-name {
-    font-size: 10pt !important;
-  }
-
-  body.sheriff .btn.btn-primary,
-  body.emc .btn.btn-primary {
-    background-color: transparent !important;
-    color: #000000 !important;
-  }
-
-  body.take5 .bg-faded-blue,
-  body.emcwc .bg-faded-blue,
-  body.emc .bg-faded-blue,
-  body.sheriff .bg-faded-blue,
-  .nav-tabs .nav-link.active, 
-  .nav-tabs .nav-item.show .nav-link,
-  .breadcrumb a,
-  .breadcrumb .breadcrumb-item + .active {
-    background-color: transparent !important;
-    color: #000000 !important;
-  }
-
-  body.sheriff .homepage-news-updates-block {
-    .more-link,
-    .more-link a,
-    .more-link a i.gg-arrow-right:before,
-    .homepage-promo .card a {
-      color: $primary !important;
-    }
   }
 
   // Print columns
