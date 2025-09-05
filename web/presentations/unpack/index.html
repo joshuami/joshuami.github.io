@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <title>Recipe Unpack: This Blog Is No Longer on Drupal CMS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="../theme-joshuami.css">
   
   <!-- Minimal overrides for specific issues -->
   <style>
@@ -14,6 +12,9 @@
       text-align: left !important;
     }
   </style>
+  <link rel="stylesheet" href="../dist/assets/reveal-entry-BM7nhOpr.css">
+  <link rel="stylesheet" href="../theme-joshuami.css">
+  <script type="module" src="../dist/assets/reveal-entry-B-sVstDz.js"></script>
 </head>
 <body>
   <div class="reveal">
@@ -116,15 +117,16 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
-  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
-  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
-  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
   <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    // Override the default configuration for this specific presentation
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.Reveal) {
+        Reveal.configure({
+          hash: true,
+          slideNumber: true,
+          plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        });
+      }
     });
   </script>
 </body>

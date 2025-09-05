@@ -122,3 +122,10 @@ local.blt.yml
 *.zip
 /.editorconfig
 /.gitattributes
+
+# Node.js dependencies and build output
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/web/presentations/dist/

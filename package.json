@@ -1,0 +1,27 @@
+{
+  "name": "joshuami-presentations",
+  "version": "1.0.0",
+  "description": "Reveal.js presentations for joshuami.github.io",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rimraf web/presentations/dist"
+  },
+  "keywords": [
+    "reveal.js",
+    "presentations",
+    "slides",
+    "vite"
+  ],
+  "author": "Joshua Mitchell",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "vite": "^7.1.4"
+  },
+  "dependencies": {
+    "reveal.js": "^4.6.1"
+  }
+}
