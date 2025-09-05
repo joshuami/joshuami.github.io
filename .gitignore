@@ -10,7 +10,9 @@
 !/web/sites/*/services.yml
 
 # Ignore paths that contain user-generated content.
-/web/sites/*/files # Remove when moved from static to Drupal hosting.
+/web/sites/*/files/*
+/web/sites/*/files
+/web/sites/*/private/*
 /web/sites/*/private
 
 # Ignore SimpleTest multi-site environment.
@@ -19,6 +21,10 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Ignore database backups
+/backups/*
+/backups
 
 # Icon must end with two \r
 Icon
