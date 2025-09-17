@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "d03600f6-3720-43c0-953a-8659c7bfb1d8"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "Daring Fireball - Translation From PR-Speak to English of Selected Portions of Adobe's 'FAQ' Regarding Their Acquisition of Macromedia"
+        }
+    ],
+    "created": [
+        {
+            "value": "2005-04-22T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T18:32:43+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2005\/04\/22\/translation-from-pr-speak",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><a href=\"http:\/\/daringfireball.net\/2005\/04\/adobe_translation\">Daring Fireball: Translation From PR-Speak to English of Selected Portions of Adobe\u2019s \u2018FAQ\u2019 Regarding Their Acquisition of Macromedia<\/a> - Made me laugh.  I wish all legalese could be translated with such acumen.  Did I mention I\u2019m buying a house?<\/p>",
+            "format": "content_format",
+            "processed": "<p><a href=\"http:\/\/daringfireball.net\/2005\/04\/adobe_translation\">Daring Fireball: Translation From PR-Speak to English of Selected Portions of Adobe\u2019s \u2018FAQ\u2019 Regarding Their Acquisition of Macromedia<\/a> - Made me laugh.  I wish all legalese could be translated with such acumen.  Did I mention I\u2019m buying a house?<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "c860f8d6e06576e12859b220f85ac3bb",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

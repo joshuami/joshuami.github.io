@@ -1,0 +1,120 @@
+{
+    "uuid": [
+        {
+            "value": "2b72871b-268b-479f-89c6-df008272bdd9"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2025-09-05T21:21:11+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "Vibe Coding a Blog Post into Session Slides for BADcamp"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-09-05T21:20:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-09-05T21:21:11+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/blog\/2025\/vibe-coding-blog-post-session-slides-badcamp",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><a href=\"\/node\/143\" data-entity-type=\"node\" data-entity-uuid=\"fab7cdd4-2251-4dc7-9df1-35d108b5aceb\" data-entity-substitution=\"canonical\">A couple months back I wrote about the new recipe unpacking feature in Drupal<\/a>. The post received a fair bit of attention and was requested as a session at the Bay Area Drupal Camp (BADcamp). I continue to look for ways to leverage AI for something useful, so I decided to ask it to help me create Reveal.js slides.<\/p><p>I started the process with ChatGPT:<\/p><blockquote><p>Can you help me create a Reveal.js presentation based on the blog post I wrote at https:\/\/joshuami.com\/blog\/2025\/recipe-unpack-blog-no-longer-drupal-cms-and-thats-good-thing\/<\/p><\/blockquote><p>ChatGPT promptly responded with the following:<\/p><blockquote><p>Great\u2014I've pulled up your blog post titled <strong>\"Recipe Unpack: This Blog Is No Longer on Drupal CMS, and That's a Good Thing\"<\/strong>, published June 20, 2025 Joshuami.<\/p><p>Here\u2019s a plan to convert it into a sleek Reveal.js presentation. I\u2019ll outline slide structure, include talking points, and provide full Reveal.js markup to get you started.<\/p><\/blockquote><p>So far so good, the resulting presentation was a bit on the wordy side\u2014especially for how like to present\u2014but the nine slides provided were a good start. I copied the files into <code>web\/presentations<\/code> of my DDev instance and the resulting slides were functional but a bit boring.<\/p><p>For the next step, I decided to move back into my current IDE of choice, Cursor AI. (I say current because I'm not always happy with its autocomplete suggestions. It feels like it gets in the way of my own typing at times. For now, it's agentic chat with a diff of the changes being made appearing in editable tabs is mostly intuitive.&nbsp;<\/p><p>I was able to systematically update the theme of my newly created presentation to look a bit like my blog theme. (Dark mode FTW!) There were definitely a few missteps and misunderstandings, but in general, it did a passable first draft.<\/p><p>I trimmed down the loquaciousness that AI churned out\u2014it was a bit absurd at the start. (I have an English degree and have been using words like loquacious since high school AP English. So chill. It seems appropriate to use big words when talking about LLMs.)<\/p><p><a href=\"\/presentations\/unpack\">View the presentation<\/a><\/p><p>I may make a few more changes before I present this at 4 p.m. Pacific at <a href=\"https:\/\/www.badcamp.org\">BADcamp<\/a> on September 26, 2025. I hope to see you there and hear what you think. I love it when folks come with great questions!<\/p><hr><p>Trying to figure out what you can build with AI that might be actually useful? <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\">Connect with me on LinkedIn<\/a> or reach out to me on Drupal Slack (@joshuami).<\/p>",
+            "format": "content_format",
+            "processed": "<p><a href=\"\/blog\/2025\/recipe-unpack-blog-no-longer-drupal-cms-and-thats-good-thing\" data-entity-type=\"node\" data-entity-uuid=\"fab7cdd4-2251-4dc7-9df1-35d108b5aceb\" data-entity-substitution=\"canonical\">A couple months back I wrote about the new recipe unpacking feature in Drupal<\/a>. The post received a fair bit of attention and was requested as a session at the Bay Area Drupal Camp (BADcamp). I continue to look for ways to leverage AI for something useful, so I decided to ask it to help me create Reveal.js slides.<\/p>\n<p>I started the process with ChatGPT:<\/p>\n<blockquote><p>Can you help me create a Reveal.js presentation based on the blog post I wrote at <a href=\"https:\/\/joshuami.com\/blog\/2025\/recipe-unpack-blog-no-longer-drupal-cms-and-thats-good-thing\/\">https:\/\/joshuami.com\/blog\/2025\/recipe-unpack-blog-no-longer-drupal-cms-\u2026<\/a><\/p>\n<\/blockquote>\n<p>ChatGPT promptly responded with the following:<\/p>\n<blockquote><p>Great\u2014I've pulled up your blog post titled <strong>\"Recipe Unpack: This Blog Is No Longer on Drupal CMS, and That's a Good Thing\"<\/strong>, published June 20, 2025 Joshuami.<\/p>\n<p>Here\u2019s a plan to convert it into a sleek Reveal.js presentation. I\u2019ll outline slide structure, include talking points, and provide full Reveal.js markup to get you started.<\/p>\n<\/blockquote>\n<p>So far so good, the resulting presentation was a bit on the wordy side\u2014especially for how like to present\u2014but the nine slides provided were a good start. I copied the files into <code>web\/presentations<\/code> of my DDev instance and the resulting slides were functional but a bit boring.<\/p>\n<p>For the next step, I decided to move back into my current IDE of choice, Cursor AI. (I say current because I'm not always happy with its autocomplete suggestions. It feels like it gets in the way of my own typing at times. For now, it's agentic chat with a diff of the changes being made appearing in editable tabs is mostly intuitive.&nbsp;<\/p>\n<p>I was able to systematically update the theme of my newly created presentation to look a bit like my blog theme. (Dark mode FTW!) There were definitely a few missteps and misunderstandings, but in general, it did a passable first draft.<\/p>\n<p>I trimmed down the loquaciousness that AI churned out\u2014it was a bit absurd at the start. (I have an English degree and have been using words like loquacious since high school AP English. So chill. It seems appropriate to use big words when talking about LLMs.)<\/p>\n<p><a href=\"\/presentations\/unpack\">View the presentation<\/a><\/p>\n<p>I may make a few more changes before I present this at 4 p.m. Pacific at <a href=\"https:\/\/www.badcamp.org\">BADcamp<\/a> on September 26, 2025. I hope to see you there and hear what you think. I love it when folks come with great questions!<\/p>\n<hr>\n<p>Trying to figure out what you can build with AI that might be actually useful? <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\">Connect with me on LinkedIn<\/a> or reach out to me on Drupal Slack (@joshuami).<\/p>\n",
+            "summary": ""
+        }
+    ],
+    "feeds_item": [],
+    "field_description": [
+        {
+            "value": "A couple months back I wrote about the new recipe unpacking feature in Drupal. The post received a fair bit of attention and was requested as a session at the Bay Area Drupal Camp (BADcamp). I continue to look for ways to leverage AI for something useful, so I decided to ask it to help me create Reveal.js slides."
+        }
+    ],
+    "field_featured_image": [
+        {
+            "target_type": "media",
+            "target_uuid": "fa709d1b-4864-457f-98c0-b12621cdfdb9"
+        }
+    ],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": [
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "953d2094-d408-40ba-ace8-62e8da23eb27"
+        },
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "35d0631e-9343-402b-86f1-364e1df101f3"
+        },
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "eb4652ac-de57-4208-be14-b3caa3927d24"
+        }
+    ]
+}

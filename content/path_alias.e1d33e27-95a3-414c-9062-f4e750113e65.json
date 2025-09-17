@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "e1d33e27-95a3-414c-9062-f4e750113e65"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/d03600f6-3720-43c0-953a-8659c7bfb1d8"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2005\/04\/22\/translation-from-pr-speak"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

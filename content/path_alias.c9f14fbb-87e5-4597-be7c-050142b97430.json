@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "c9f14fbb-87e5-4597-be7c-050142b97430"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/12"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/accessibility"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

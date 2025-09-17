@@ -1,0 +1,68 @@
+{
+    "uuid": [
+        {
+            "value": "2ba0aa0b-120a-4ca2-bc00-effc523240ed"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "focal_point",
+            "target_type": "crop_type",
+            "target_uuid": "3852007a-d7be-4301-8282-c585600870ef"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "entity_id": [
+        {
+            "value": 18
+        }
+    ],
+    "entity_type": [
+        {
+            "value": "file"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-03\/common-editorial-workflow.png"
+        }
+    ],
+    "height": [],
+    "width": [],
+    "x": [
+        {
+            "value": 1358
+        }
+    ],
+    "y": [
+        {
+            "value": 592
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2025-03-19T22:33:56+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "revision_log": [],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ]
+}

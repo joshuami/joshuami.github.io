@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "7f474372-bb28-4f2c-8ced-2862619c6a2f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-08-25T23:16:08+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "portlandgov-translation-search.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Portland.gov has an excellent search experience in any language.",
+            "title": null,
+            "width": 960,
+            "height": 540,
+            "target_type": "file",
+            "target_uuid": "b6134f47-8d1d-4d03-b030-3f990b1660af"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-25T23:16:08+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-25T23:16:08+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Portland.gov has an excellent search experience in any language.",
+            "title": "",
+            "width": 960,
+            "height": 540,
+            "target_type": "file",
+            "target_uuid": "b6134f47-8d1d-4d03-b030-3f990b1660af"
+        }
+    ]
+}

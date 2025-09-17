@@ -1,0 +1,94 @@
+{
+    "uuid": [
+        {
+            "value": "16bfc2dc-45f2-4eb0-90ed-a43229c622d2"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-08-29T20:56:24+00:00"
+        }
+    ],
+    "revision_user": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "getting-rid-of-unused-media-with-the-entity-usage-module.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Replace.",
+            "title": null,
+            "width": 1536,
+            "height": 1024,
+            "target_type": "file",
+            "target_uuid": "8af63e82-6450-450d-a6a1-4dc0fa456a3e"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-28T16:12:36+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-29T20:56:24+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "",
+            "title": "",
+            "width": 1536,
+            "height": 1024,
+            "target_type": "file",
+            "target_uuid": "8af63e82-6450-450d-a6a1-4dc0fa456a3e"
+        }
+    ]
+}

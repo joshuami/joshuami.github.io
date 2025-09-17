@@ -1,0 +1,68 @@
+{
+    "uuid": [
+        {
+            "value": "2e235a7b-260b-4b63-94b2-e046b03576f0"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "focal_point",
+            "target_type": "crop_type",
+            "target_uuid": "3852007a-d7be-4301-8282-c585600870ef"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "entity_id": [
+        {
+            "value": 27
+        }
+    ],
+    "entity_type": [
+        {
+            "value": "file"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-06\/recipe-unpack-box.webp"
+        }
+    ],
+    "height": [],
+    "width": [],
+    "x": [
+        {
+            "value": 600
+        }
+    ],
+    "y": [
+        {
+            "value": 315
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2025-06-20T20:55:18+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "revision_log": [],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ]
+}

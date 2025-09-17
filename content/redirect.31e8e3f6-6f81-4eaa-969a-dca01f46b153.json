@@ -1,0 +1,56 @@
+{
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "uuid": [
+        {
+            "value": "31e8e3f6-6f81-4eaa-969a-dca01f46b153"
+        }
+    ],
+    "hash": [
+        {
+            "value": "rn1mA7tp1Di8t0FSPbIjYuM4EyTCcCt2LzhM-XqgX3s"
+        }
+    ],
+    "type": [
+        {
+            "value": "redirect"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "redirect_source": [
+        {
+            "path": "blog\/2025\/blog-no-longer-drupal-cms-and-thats-good-thing",
+            "query": []
+        }
+    ],
+    "redirect_redirect": [
+        {
+            "uri": "internal:\/node\/143",
+            "title": null,
+            "options": []
+        }
+    ],
+    "language": [
+        {
+            "value": "en"
+        }
+    ],
+    "status_code": [
+        {
+            "value": 301
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-06-20T20:08:41+00:00"
+        }
+    ]
+}

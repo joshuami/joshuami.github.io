@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "45ec6470-2d00-49bd-9c19-741ad84a9100"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/18"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/speaking"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

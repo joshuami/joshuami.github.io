@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "47b031bd-c166-4749-9b88-6bf1bf603169"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-07-29T15:38:25+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "add-tips.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Adding a tip.",
+            "title": null,
+            "width": 1714,
+            "height": 862,
+            "target_type": "file",
+            "target_uuid": "f91cb480-698c-4e94-bca2-957e092b84c2"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-29T15:38:25+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-29T15:38:25+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Adding a tip.",
+            "title": "",
+            "width": 1714,
+            "height": 862,
+            "target_type": "file",
+            "target_uuid": "f91cb480-698c-4e94-bca2-957e092b84c2"
+        }
+    ]
+}

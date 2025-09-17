@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "f426e30b-68f5-4660-893c-f59448d08ebf"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/bc568c0d-9271-484d-ae1c-653c505738a0"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2016\/05\/18\/the-drupalorg-complexity"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

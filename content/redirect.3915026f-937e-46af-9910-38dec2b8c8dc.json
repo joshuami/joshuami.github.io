@@ -1,0 +1,56 @@
+{
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3915026f-937e-46af-9910-38dec2b8c8dc"
+        }
+    ],
+    "hash": [
+        {
+            "value": "PeioZWEEY0jeU1VXt_27KKiQd4Y4-0-E003Rkz5cOYg"
+        }
+    ],
+    "type": [
+        {
+            "value": "redirect"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "redirect_source": [
+        {
+            "path": "blog\/2025\/tracking-media-usage-scale",
+            "query": []
+        }
+    ],
+    "redirect_redirect": [
+        {
+            "uri": "internal:\/node\/146",
+            "title": null,
+            "options": []
+        }
+    ],
+    "language": [
+        {
+            "value": "en"
+        }
+    ],
+    "status_code": [
+        {
+            "value": 301
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-28T16:11:51+00:00"
+        }
+    ]
+}

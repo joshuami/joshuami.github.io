@@ -1,0 +1,116 @@
+{
+    "uuid": [
+        {
+            "value": "442214ae-6553-48df-9560-31586f851580"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2025-08-29T23:32:01+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "Getting Rid of Unused Media with the Entity Usage Module"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-28T16:25:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-29T23:32:01+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [],
+    "path": [
+        {
+            "alias": "\/blog\/2025\/getting-rid-unused-media-entity-usage-module",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>You may be familiar with the <a href=\"https:\/\/www.drupal.org\/project\/entity_usage\">Entity Usage<\/a> module. It's been around since early 2018 for modern Drupal sites to track content, media, taxonomy terms, blocks... really any entity type.<\/p><p>Once enabled, you can configure these entity types to be a source or a target and define whether it has a \"Usage\" local task.&nbsp;<\/p><drupal-media data-entity-type=\"media\" data-entity-uuid=\"e5ceb6c7-500c-4b07-92d3-342f82ef5239\" data-view-mode=\"small\" data-align=\"center\">&nbsp;<\/drupal-media><p>Several types of tracking plugins allow you to check and see if an entity is in use as an embed in CKEditor, referenced by field, or within a layout builder relationship.&nbsp;<\/p><drupal-media data-entity-type=\"media\" data-entity-uuid=\"a33f6e68-5763-494d-8d6e-2ec973d5c9e1\" data-view-mode=\"small\" data-align=\"center\">&nbsp;<\/drupal-media><p>The usage tab will show you these references even letting the editor know if the usage is in a previous revision or translation of the source entity.<\/p><drupal-media data-entity-type=\"media\" data-entity-uuid=\"555e0f8d-94c7-441b-8ec9-16979c227c42\" data-view-mode=\"small\" data-align=\"center\">&nbsp;<\/drupal-media><p>For many clients, I've configured entity delete forms to warn an editor if the entity they are deleting is used by another source entity. This is great for ensuring unexpected broken links.<\/p><drupal-media data-entity-type=\"media\" data-entity-uuid=\"1deeee1b-c7b5-4a38-a4e0-20d4a2ddf70c\" data-view-mode=\"small\" data-align=\"center\">&nbsp;<\/drupal-media><p>A recent project needed to audit a number of documents (mostly PDFs) that were unexpectedly appearing in Google search results. The easiest way to identify documents that needed to be archived was to review unused media.<\/p><p>I took a two-prong approach to showing usage and attempting to show unused media on the site.<\/p><p>First, I added <a href=\"https:\/\/www.drupal.org\/project\/entity_usage_views_field\">Entity Usage Views Field<\/a> so that I could add a simple count to views like the administrative media view. This does not require any relationships to be added to the view.<\/p><p>A limitation of this field is that it does not allow you to filter by the usage count.<\/p><p>To get around this for a special \"Unused media\" view, I added the media usage relationship and then used aggregation to sum the usage count and group media titles. This aggregated value could also be used as a filter by looking to see if the usage count was null.<\/p><drupal-media data-entity-type=\"media\" data-entity-uuid=\"de2aefd5-c694-49c8-845a-ecaae1e963f6\" data-view-mode=\"large\">&nbsp;<\/drupal-media><drupal-media data-entity-type=\"media\" data-entity-uuid=\"6c989ec9-b41f-4389-990f-3d632adfe382\" data-view-mode=\"large\">&nbsp;<\/drupal-media><drupal-media data-entity-type=\"media\" data-entity-uuid=\"61ee19d3-1800-4595-b079-4e5cc20d7434\" data-align=\"center\">&nbsp;<\/drupal-media><p>For media that was appropriately embedded within the site, this worked great. However, I have a saying, \"editors gonna edit.\" It turns out that our editors had done thinks like copying the media download link and pasting an absolute URL into a link with CKEditor instead of embedding documents. Further, we discovered that some editors had access to upload files directly to Amazon's S3 file service and were linking to these PDFs directly.<\/p><p>To solve for these edge cases\u2014which were relatively rare\u2014we created an administrative view to audit our content and look in the body field using group of filters matching the various patterns we knew would need auditing.<\/p><p>The end result was shocking. For a site that only launched three years ago, there were over 14,000 PDF documents that had been created and just over 7,000 of those PDFs were not embedded anywhere on the site. Archiving these documents no only will free up a considerable amount of disk storage, it also helps reduce the burden of auditing those documents for accessibility as a part of the site's 2026 deadline for meeting WCAG AA compliance.<\/p><hr><p>Does media tracking sound like a problem you need help solving? <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\/\">Connect with me on LinkedIn<\/a> and let's talk.<\/p>",
+            "format": "content_format",
+            "processed": "<p>You may be familiar with the <a href=\"https:\/\/www.drupal.org\/project\/entity_usage\">Entity Usage<\/a> module. It's been around since early 2018 for modern Drupal sites to track content, media, taxonomy terms, blocks... really any entity type.<\/p>\n<p>Once enabled, you can configure these entity types to be a source or a target and define whether it has a \"Usage\" local task.&nbsp;<\/p>\n<div class=\"align-center media media--type-image media--view-mode-small\">\n        \t    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/uncropped_300w_webp\/public\/2025-08\/entity_usage_settings_local_tasks.png?itok=7ktxSG5G 1x\" media=\"all and (min-width: 500px)\" type=\"image\/png\" width=\"300\" height=\"347\">\n                  <img src=\"\/sites\/default\/files\/styles\/uncropped_300w_webp\/public\/2025-08\/entity_usage_settings_local_tasks.png?itok=7ktxSG5G\" alt=\"Configuring local tasks.\" title width=\"300\" height=\"347\" loading=\"lazy\" data-component-id=\"xtra:image\" class=\"img-fluid\">\n  <\/picture>\n\n\n\n              <div class=\"media-edit small m-1\">\n          <a href=\"\/media\/42\/edit\" target=\"_blank\">Edit<\/a>\n        <\/div>\n        <\/div>\n<p>Several types of tracking plugins allow you to check and see if an entity is in use as an embed in CKEditor, referenced by field, or within a layout builder relationship.&nbsp;<\/p>\n<div class=\"align-center media media--type-image media--view-mode-small\">\n        \t    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/uncropped_300w_webp\/public\/2025-08\/entity_usage_enabled_tracking_plugins.png?itok=wW0jLqJe 1x\" media=\"all and (min-width: 500px)\" type=\"image\/png\" width=\"300\" height=\"345\">\n                  <img src=\"\/sites\/default\/files\/styles\/uncropped_300w_webp\/public\/2025-08\/entity_usage_enabled_tracking_plugins.png?itok=wW0jLqJe\" alt=\"Configuring tracking plugins.\" title width=\"300\" height=\"345\" loading=\"lazy\" data-component-id=\"xtra:image\" class=\"img-fluid\">\n  <\/picture>\n\n\n\n              <div class=\"media-edit small m-1\">\n          <a href=\"\/media\/43\/edit\" target=\"_blank\">Edit<\/a>\n        <\/div>\n        <\/div>\n<p>The usage tab will show you these references even letting the editor know if the usage is in a previous revision or translation of the source entity.<\/p>\n<div class=\"align-center media media--type-image media--view-mode-small\">\n        \t    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/uncropped_300w_webp\/public\/2025-08\/entity_usage_tab_on_content.png?itok=P9-wMoSn 1x\" media=\"all and (min-width: 500px)\" type=\"image\/png\" width=\"300\" height=\"270\">\n                  <img src=\"\/sites\/default\/files\/styles\/uncropped_300w_webp\/public\/2025-08\/entity_usage_tab_on_content.png?itok=P9-wMoSn\" alt=\"The usage tab on content.\" title width=\"300\" height=\"270\" loading=\"lazy\" data-component-id=\"xtra:image\" class=\"img-fluid\">\n  <\/picture>\n\n\n\n              <div class=\"media-edit small m-1\">\n          <a href=\"\/media\/44\/edit\" target=\"_blank\">Edit<\/a>\n        <\/div>\n        <\/div>\n<p>For many clients, I've configured entity delete forms to warn an editor if the entity they are deleting is used by another source entity. This is great for ensuring unexpected broken links.<\/p>\n<div class=\"align-center media media--type-image media--view-mode-small\">\n        \t    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/uncropped_300w_webp\/public\/2025-08\/entity_usage_warning_on_delete.png?itok=pEIq9fDD 1x\" media=\"all and (min-width: 500px)\" type=\"image\/png\" width=\"300\" height=\"196\">\n                  <img src=\"\/sites\/default\/files\/styles\/uncropped_300w_webp\/public\/2025-08\/entity_usage_warning_on_delete.png?itok=pEIq9fDD\" alt=\"Configuring the warning on the delete form.\" title width=\"300\" height=\"196\" loading=\"lazy\" data-component-id=\"xtra:image\" class=\"img-fluid\">\n  <\/picture>\n\n\n\n              <div class=\"media-edit small m-1\">\n          <a href=\"\/media\/45\/edit\" target=\"_blank\">Edit<\/a>\n        <\/div>\n        <\/div>\n<p>A recent project needed to audit a number of documents (mostly PDFs) that were unexpectedly appearing in Google search results. The easiest way to identify documents that needed to be archived was to review unused media.<\/p>\n<p>I took a two-prong approach to showing usage and attempting to show unused media on the site.<\/p>\n<p>First, I added <a href=\"https:\/\/www.drupal.org\/project\/entity_usage_views_field\">Entity Usage Views Field<\/a> so that I could add a simple count to views like the administrative media view. This does not require any relationships to be added to the view.<\/p>\n<p>A limitation of this field is that it does not allow you to filter by the usage count.<\/p>\n<p>To get around this for a special \"Unused media\" view, I added the media usage relationship and then used aggregation to sum the usage count and group media titles. This aggregated value could also be used as a filter by looking to see if the usage count was null.<\/p>\n<div class=\"media media--type-image media--view-mode-large\">\n        \t    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/uncropped_500w_webp\/public\/2025-08\/unused-media-view-add-relationship.png.webp?itok=ZhKIMkwe 500w, \/sites\/default\/files\/styles\/uncropped_700w_webp\/public\/2025-08\/unused-media-view-add-relationship.png.webp?itok=SF5dMolb 700w, \/sites\/default\/files\/styles\/uncropped_960w_webp\/public\/2025-08\/unused-media-view-add-relationship.png.webp?itok=fisNN4w2 960w\" media=\"all and (min-width: 500px)\" type=\"image\/webp\" sizes=\"100vw\" width=\"960\" height=\"749\">\n                  <img src=\"\/sites\/default\/files\/styles\/uncropped_500w_webp\/public\/2025-08\/unused-media-view-add-relationship.png.webp?itok=ZhKIMkwe\" alt=\"Add the relationship to media usage.\" title width=\"500\" height=\"390\" loading=\"lazy\" data-component-id=\"xtra:image\" class=\"img-fluid\">\n  <\/picture>\n\n\n\n              <div class=\"media-edit small m-1\">\n          <a href=\"\/media\/46\/edit\" target=\"_blank\">Edit<\/a>\n        <\/div>\n        <\/div>\n<div class=\"media media--type-image media--view-mode-large\">\n        \t    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/uncropped_500w_webp\/public\/2025-08\/unused-media-view-use-aggregation.png.webp?itok=5W603gno 500w, \/sites\/default\/files\/styles\/uncropped_700w_webp\/public\/2025-08\/unused-media-view-use-aggregation.png.webp?itok=X2-eGN7q 700w, \/sites\/default\/files\/styles\/uncropped_960w_webp\/public\/2025-08\/unused-media-view-use-aggregation.png.webp?itok=Qfz7_f4a 960w\" media=\"all and (min-width: 500px)\" type=\"image\/webp\" sizes=\"100vw\" width=\"960\" height=\"749\">\n                  <img src=\"\/sites\/default\/files\/styles\/uncropped_500w_webp\/public\/2025-08\/unused-media-view-use-aggregation.png.webp?itok=5W603gno\" alt=\"Turn on aggregation.\" title width=\"500\" height=\"390\" loading=\"lazy\" data-component-id=\"xtra:image\" class=\"img-fluid\">\n  <\/picture>\n\n\n\n              <div class=\"media-edit small m-1\">\n          <a href=\"\/media\/47\/edit\" target=\"_blank\">Edit<\/a>\n        <\/div>\n        <\/div>\n<div class=\"align-center media media--type-image media--view-mode-medium\">\n        \t    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/uncropped_500w_webp\/public\/2025-08\/usage-information-field-filter.png.webp?itok=aZOz5W9c 500w, \/sites\/default\/files\/styles\/uncropped_600w_webp\/public\/2025-08\/usage-information-field-filter.png.webp?itok=d9bCGtno 600w\" media=\"all and (min-width: 500px)\" type=\"image\/webp\" sizes=\"100vw\" width=\"600\" height=\"103\">\n                  <img src=\"\/sites\/default\/files\/styles\/uncropped_500w_webp\/public\/2025-08\/usage-information-field-filter.png.webp?itok=aZOz5W9c\" alt=\"Add the aggregated usage information as a summed up field and filter.\" title width=\"500\" height=\"86\" loading=\"lazy\" data-component-id=\"xtra:image\" class=\"img-fluid\">\n  <\/picture>\n\n\n\n              <div class=\"media-edit small m-1\">\n          <a href=\"\/media\/48\/edit\" target=\"_blank\">Edit<\/a>\n        <\/div>\n        <\/div>\n<p>For media that was appropriately embedded within the site, this worked great. However, I have a saying, \"editors gonna edit.\" It turns out that our editors had done thinks like copying the media download link and pasting an absolute URL into a link with CKEditor instead of embedding documents. Further, we discovered that some editors had access to upload files directly to Amazon's S3 file service and were linking to these PDFs directly.<\/p>\n<p>To solve for these edge cases\u2014which were relatively rare\u2014we created an administrative view to audit our content and look in the body field using group of filters matching the various patterns we knew would need auditing.<\/p>\n<p>The end result was shocking. For a site that only launched three years ago, there were over 14,000 PDF documents that had been created and just over 7,000 of those PDFs were not embedded anywhere on the site. Archiving these documents no only will free up a considerable amount of disk storage, it also helps reduce the burden of auditing those documents for accessibility as a part of the site's 2026 deadline for meeting WCAG AA compliance.<\/p>\n<hr>\n<p>Does media tracking sound like a problem you need help solving? <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\/\">Connect with me on LinkedIn<\/a> and let's talk.<\/p>\n",
+            "summary": ""
+        }
+    ],
+    "feeds_item": [],
+    "field_description": [
+        {
+            "value": "A client recently needed to audit a number of documents (mostly PDFs) that were unexpectedly appearing in Google search results. The easiest way to identify documents that needed to be archived was to review unused media. Media that was not referenced by field or embedding."
+        }
+    ],
+    "field_featured_image": [
+        {
+            "target_type": "media",
+            "target_uuid": "16bfc2dc-45f2-4eb0-90ed-a43229c622d2"
+        }
+    ],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": [
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "953d2094-d408-40ba-ace8-62e8da23eb27"
+        },
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "40764afd-2d95-47c6-9ac1-60fafbeffd82"
+        },
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "0bcac048-b941-49c2-afd0-a7ddbbc5f5ad"
+        }
+    ]
+}

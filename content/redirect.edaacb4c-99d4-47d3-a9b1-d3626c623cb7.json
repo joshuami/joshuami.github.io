@@ -1,0 +1,56 @@
+{
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "uuid": [
+        {
+            "value": "edaacb4c-99d4-47d3-a9b1-d3626c623cb7"
+        }
+    ],
+    "hash": [
+        {
+            "value": "YV6LtAFZYZ0AnxV23ipWQcLB8z1DIIBiCFkOw6TL9Mk"
+        }
+    ],
+    "type": [
+        {
+            "value": "redirect"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "redirect_source": [
+        {
+            "path": "blog\/2024-12\/thinking-critically-about-drupal-cms-starshot-release-candidates",
+            "query": []
+        }
+    ],
+    "redirect_redirect": [
+        {
+            "uri": "internal:\/node\/138",
+            "title": null,
+            "options": []
+        }
+    ],
+    "language": [
+        {
+            "value": "en"
+        }
+    ],
+    "status_code": [
+        {
+            "value": 301
+        }
+    ],
+    "created": [
+        {
+            "value": "2024-12-31T00:50:09+00:00"
+        }
+    ]
+}

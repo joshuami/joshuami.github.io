@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "1e4b7f35-fca1-4aaa-ba23-5dc45ac64e6d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/d328af4f-57f0-462e-9daf-d718eddcb14f"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2014\/11\/03\/strategic-initiatives-for-drupalorg-2015"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

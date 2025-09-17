@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "5ab4e8f4-d40d-410a-aeb0-7784ecb5dcdb"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/3ad8abac-9c27-465f-aa18-6d8bfcdd1611"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2016\/02\/18\/my-introduction-to-fiware"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "c070292c-d0ee-4ed6-83f5-e595be8acc1e"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/387d478b-8aad-4b77-a172-be2d0e356f7b"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2024-12\/blog-drupal-cms-starshot-kinda-now"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "22d7a2c0-a0b8-41d6-8dbd-3c8ddf25c010"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/996d9940-f997-4f33-a393-45914caa83ec"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2025-03\/some-thoughts-about-how-ai-could-reshape-cms-platforms"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

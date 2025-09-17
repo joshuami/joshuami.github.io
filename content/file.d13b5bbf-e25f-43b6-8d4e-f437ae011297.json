@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "d13b5bbf-e25f-43b6-8d4e-f437ae011297"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "configure-tour.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-07\/configure-tour.png",
+            "url": "\/sites\/default\/files\/2025-07\/configure-tour.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 147439
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-21T22:58:09+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-07-21T22:58:59+00:00"
+        }
+    ]
+}

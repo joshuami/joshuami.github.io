@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "de2aefd5-c694-49c8-845a-ecaae1e963f6"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-08-28T16:07:57+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "unused-media-view-add-relationship.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Add the relationship to media usage.",
+            "title": null,
+            "width": 3108,
+            "height": 2424,
+            "target_type": "file",
+            "target_uuid": "708d6d47-e018-42ef-99d6-7fcd7bc50e39"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-28T16:07:57+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-28T16:07:57+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Add the relationship to media usage.",
+            "title": "",
+            "width": 3108,
+            "height": 2424,
+            "target_type": "file",
+            "target_uuid": "708d6d47-e018-42ef-99d6-7fcd7bc50e39"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "1f9161f3-f8f1-4d62-ab34-8f456171a75e"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/2f83ca22-e450-4b47-9a9c-a5c952cc4fbb"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2025\/revisiting-best-practices-translating-government-websites-2025"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

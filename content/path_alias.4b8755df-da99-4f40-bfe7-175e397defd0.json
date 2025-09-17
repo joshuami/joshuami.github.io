@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "4b8755df-da99-4f40-bfe7-175e397defd0"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/5512b368-16c0-4757-9452-0201757ce7b6"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2007\/09\/25\/terms-wordpress-2-3"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

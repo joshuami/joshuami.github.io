@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "3e8add9d-4851-4323-adb8-2a8cf4d24a07"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/17"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/entity-usage"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

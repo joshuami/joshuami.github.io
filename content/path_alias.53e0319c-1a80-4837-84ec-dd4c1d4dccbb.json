@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "53e0319c-1a80-4837-84ec-dd4c1d4dccbb"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/58266042-d0b5-4d6b-b3d6-5bd73d2c331c"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2015\/11\/16\/drupalorg-migrates-content-and-file-delivery-to-fastly"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

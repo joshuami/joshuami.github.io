@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "63c8dc29-b0ed-4868-ab17-5d559f9faa3f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "What Would Boxes and Arrows Do? (WWBAD)"
+        }
+    ],
+    "created": [
+        {
+            "value": "2008-02-24T08:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T18:32:43+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2008\/02\/24\/what-would-boxes-and-arrows-do",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>In the course of handing off a project to another company, I just had the opportunity to say \u201cjust build them <a href=\"http:\/\/www.boxesandarrows.com\/\">Boxes and Arrows<\/a> on <a href=\"https:\/\/www.drupal.org\/\">Drupal<\/a> and they\u2019ll be thrilled.\u201d While I was merely using hyperbole to make a point, it got be thinking. What do they use to deliver their content?<\/p><p>The answer is <a href=\"http:\/\/publicsquarehq.com\">PublicSquare<\/a>. This is a subscription-based service for creating an online magazine with a community component. I\u2019ve always like the layout and general functionality of Boxes and Arrows and now I know what they use to serve up their content.<\/p><p>I plan to look into this a bit more as the idea of a subscription-based magazine CMS intruiges me. I would have signed up for an account today, but it turns out that they have an expired security certificate on their account sign up page. I wonder if they know that?\u00a0 (It expired on December 6, 2007.)<\/p>",
+            "format": "content_format",
+            "processed": "<p>In the course of handing off a project to another company, I just had the opportunity to say \u201cjust build them <a href=\"http:\/\/www.boxesandarrows.com\/\">Boxes and Arrows<\/a> on <a href=\"https:\/\/www.drupal.org\/\">Drupal<\/a> and they\u2019ll be thrilled.\u201d While I was merely using hyperbole to make a point, it got be thinking. What do they use to deliver their content?<\/p>\n<p>The answer is <a href=\"http:\/\/publicsquarehq.com\">PublicSquare<\/a>. This is a subscription-based service for creating an online magazine with a community component. I\u2019ve always like the layout and general functionality of Boxes and Arrows and now I know what they use to serve up their content.<\/p>\n<p>I plan to look into this a bit more as the idea of a subscription-based magazine CMS intruiges me. I would have signed up for an account today, but it turns out that they have an expired security certificate on their account sign up page. I wonder if they know that?&nbsp; (It expired on December 6, 2007.)<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "6cef2ee2a010eb0f3325dd8cb41467bc",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}

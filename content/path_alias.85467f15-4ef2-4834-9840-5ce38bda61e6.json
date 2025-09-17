@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "85467f15-4ef2-4834-9840-5ce38bda61e6"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/518cf2ec-31ed-4a72-81f1-80249e33bfe6"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/2015\/07\/08\/keeping-sharp-with-jekyll-blogging-tool"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

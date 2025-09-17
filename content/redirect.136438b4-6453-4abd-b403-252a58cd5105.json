@@ -1,0 +1,56 @@
+{
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "uuid": [
+        {
+            "value": "136438b4-6453-4abd-b403-252a58cd5105"
+        }
+    ],
+    "hash": [
+        {
+            "value": "_NL06ZsgHoobdDm2q5SMZRFnNNBbTofjQPiXhWyFADI"
+        }
+    ],
+    "type": [
+        {
+            "value": "redirect"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "redirect_source": [
+        {
+            "path": "blog\/2025\/taking-tour-tour-module",
+            "query": []
+        }
+    ],
+    "redirect_redirect": [
+        {
+            "uri": "internal:\/node\/144",
+            "title": null,
+            "options": []
+        }
+    ],
+    "language": [
+        {
+            "value": "en"
+        }
+    ],
+    "status_code": [
+        {
+            "value": 301
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-07-29T15:23:36+00:00"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "0ddcbc81-c6ca-442b-9917-d22523923379"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/4"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/ddev"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "b4ff368a-44cb-4844-8391-d5ccf333f92d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "entity_usage_tab_on_content.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-08\/entity_usage_tab_on_content.png",
+            "url": "\/sites\/default\/files\/2025-08\/entity_usage_tab_on_content.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 29042
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-08-28T16:05:45+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-08-28T16:06:23+00:00"
+        }
+    ]
+}

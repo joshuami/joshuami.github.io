@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "7487165f-da7f-42ba-84a9-c5c2d80d54c3"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2024-12-16T23:06:46+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "Which File Extension Are You?"
+        }
+    ],
+    "created": [
+        {
+            "value": "2005-05-20T07:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2024-12-18T18:32:43+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/2005\/05\/20\/which-file-extension-are-you",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>I am so glad it is Friday.<\/p><p><a href=\"http:\/\/www.bbspot.com\/News\/2004\/10\/extension_quiz.php\"><img src=\"http:\/\/www.bbspot.com\/Images\/News_Features\/2004\/10\/file_extensions\/star.jpg\" \/><\/a><\/p><p>You are .*\t You are a wildcard.  You are everything to everybody.  You can\u2019t make up your mind as to what you want to be.<\/p><p>&lt;a href=\"\"http:\/\/bbspot.com\/News\/2004\/10\/extension_quiz_all.html\"\"&gt;Possible results&lt;\/a&gt;.<\/p>",
+            "format": "content_format",
+            "processed": "<p>I am so glad it is Friday.<\/p>\n<p><a href=\"http:\/\/www.bbspot.com\/News\/2004\/10\/extension_quiz.php\"><img src=\"http:\/\/www.bbspot.com\/Images\/News_Features\/2004\/10\/file_extensions\/star.jpg\"><\/a><\/p>\n<p>You are .*\t You are a wildcard.  You are everything to everybody.  You can\u2019t make up your mind as to what you want to be.<\/p>\n<p>&lt;a href=\"\"<a href=\"http:\/\/bbspot.com\/News\/2004\/10\/extension_quiz_all.html\">http:\/\/bbspot.com\/News\/2004\/10\/extension_quiz_all.html<\/a>\"\"&gt;Possible results&lt;\/a&gt;.<\/p>\n",
+            "summary": null
+        }
+    ],
+    "feeds_item": [
+        {
+            "imported": "2024-12-16T23:06:46+00:00",
+            "guid": null,
+            "hash": "26cad2a414fce0956a24a2dc7a0b247f",
+            "target_type": "feeds_feed",
+            "target_uuid": "ede5cec9-4a3f-4def-a896-6a22b335f811"
+        }
+    ],
+    "field_description": [],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": []
+}
