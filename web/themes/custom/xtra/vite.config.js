@@ -50,7 +50,11 @@ export default defineConfig({
             }
             return null;
           }
-        ]
+        ],
+        // Suppress deprecation warnings from dependencies (like Bootstrap)
+        quietDeps: true,
+        // Silence deprecation warnings
+        silenceDeprecations: ['import', 'global-builtin', 'color-functions']
       }
     },
     postcss: {

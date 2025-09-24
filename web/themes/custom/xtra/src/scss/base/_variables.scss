@@ -1,3 +1,5 @@
+@use "sass:string";
+
 // Variables
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and
@@ -54,7 +56,7 @@ $alert-link-font-weight:      normal;
 $link-hover-decoration:       underline;
 
 // scss-docs-start breadcrumb-variables
-$breadcrumb-divider:                quote(">");
+$breadcrumb-divider:                string.quote(">");
 // scss-docs-end breadcrumb-variables
 
 // scss-docs-start nav-variables
