@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+          
+        <meta charset="utf-8" />
+<meta name="description" content="Drupal&#039;s image manipulation options with image styles, responsive image styles, and image toolkits (GD and Imagemagick) are hard to beat. Have you ever wanted a different image style for landscape versus portrait featured images? Want a custom background fill? Need to make all your images grayscale? Drupal can do that and more. Learn what&#039;s possible with image effects to create consistent and performant images." />
+<link rel="canonical" href="https://joshuami.com/blog/2025/image-manipulation-creative-control-aspect-switcher-and-cropping-techniques" />
+<link rel="shortlink" href="https://joshuami.com/" />
+<meta name="rights" content="Copyright ©2025 All rights reserved." />
+<meta name="referrer" content="unsafe-url" />
+<meta property="og:site_name" content="Joshuami" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joshuami.com/blog/2025/image-manipulation-creative-control-aspect-switcher-and-cropping-techniques" />
+<meta property="og:title" content="Image Manipulation for Creative Control: Aspect Switcher and Cropping Techniques" />
+<meta property="og:description" content="Drupal&#039;s image manipulation options with image styles, responsive image styles, and image toolkits (GD and Imagemagick) are hard to beat. Have you ever wanted a different image style for landscape versus portrait featured images? Want a custom background fill? Need to make all your images grayscale? Drupal can do that and more. Learn what&#039;s possible with image effects to create consistent and performant images." />
+<meta property="og:updated_time" content="2025-10-13T19:43:58-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Drupal&#039;s image manipulation options with image styles, responsive image styles, and image toolkits (GD and Imagemagick) are hard to beat. Have you ever wanted a different image style for landscape versus portrait featured images? Want a custom background fill? Need to make all your images grayscale? Drupal can do that and more. Learn what&#039;s possible with image effects to create consistent and performant images." />
+<meta name="twitter:title" content="Image Manipulation for Creative Control: Aspect Switcher and Cropping Techniques" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://joshuami.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Joshuami",
+            "item": "https://joshuami.com/blog"
+        }
+    ]
+}</script>
+<link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Image Manipulation for Creative Control: Aspect Switcher and Cropping Techniques | Joshuami</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_0kguRsWrlnln3iHO7vAmQ-UYsKm-AG6EzjOZnMxkI0Y.css?delta=0&amp;language=en&amp;theme=xtra&amp;include=eJwrriwuSc3VT0osTtUpy0wtL9YHk3q5-SmlOak6FSVFifrFJZU5qQBTdRAm" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_fedh1io9XB2Vtrnb5LywuKocMJkZo6Kmfpzvwbh30kI.css?delta=1&amp;language=en&amp;theme=xtra&amp;include=eJwrriwuSc3VT0osTtUpy0wtL9YHk3q5-SmlOak6FSVFifrFJZU5qQBTdRAm" />
+
+    
+          
+      </head>
+  <body  class="node-150 node-type--blog path-node language--en" data-component-id="xtra:html" data-bs-theme="dark">
+          
+            <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div  class="page">
+      <nav  data-bs-theme="dark" class="navbar navbar-expand-sm justify-content-between border border-primary border-0 border-bottom border-4"><div  class="container"><div  data-component-id="xtra:block" class="block block-system block-system-branding-block block--xtra-branding block--system-branding"><a href="/" class="navbar-brand " aria-label="Joshuami"><div class="navbar-brand__text d-flex flex-column"><span class="display-4">Joshuami</span><span class="small text-muted">Maker of web platforms and products</span></div></a></div><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><div class="ms-auto"><div  data-component-id="xtra:block" class="block block-system block-system-menu-blockmain block--xtra-main-menu block--system-menu ms-4"><div class="block__content"><ul  data-component-id="radix:nav" class="nav navbar-nav mt-1"><li class="nav-item"><a href="/blog" class="nav-link fw-bold h2 mb-0 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" data-drupal-link-system-path="blog">Blog</a></li></ul></div></div></div></div></div></nav>  
+      
+
+<main id="main-content">
+              <header data-component-id="xtra:page-content" class="page__header container-fluid"">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col py-4">
+                  <div  data-component-id="xtra:block" class="block block-system block-system-breadcrumb-block block--xtra-breadcrumbs"><div class="block__content"><nav aria-label="breadcrumb"><ol  data-component-id="radix:breadcrumb" class="breadcrumb my-3"><li class="breadcrumb-item "><a href="/">Home</a></li><li class="breadcrumb-item "><a href="/blog">Joshuami</a></li></ol></nav></div></div><div  data-component-id="xtra:block" class="block block-core block-page-title-block block--xtra-page-title"><div class="block__content"><h1  class="title page-title"><span>Image Manipulation for Creative Control: Aspect Switcher and Cropping Techniques</span></h1></div></div>
+  
+          </div>
+                            </div>
+      </div>
+    </header>
+    <div class="container">
+    <div class="row">
+              <div class="page__content col">
+                                <div data-drupal-messages-fallback class="hidden"></div>
+<div  data-component-id="xtra:block" class="block block-system block-system-main-block block--xtra-content block--system-main"><div class="block__content"><article  data-component-id="xtra:node" class="node node--promoted blog blog--full node--blog--full view-mode--full"><div  class="node-content"><div  data-component-id="xtra:field" class="field field--name-field-featured-image field--type-entity-reference field--label-hidden field--item"><div class="media media--type-image media--view-mode-_6-9-large"><picture><source srcset="/sites/default/files/styles/16_9_512x288_focal_point_webp/public/2025-10/sample.png.webp?h=3410e35d&amp;itok=tCM0IDho 512w, /sites/default/files/styles/16_9_704x396_focal_point_webp/public/2025-10/sample.png.webp?h=3410e35d&amp;itok=GrI8i-PA 704w, /sites/default/files/styles/16_9_960x540_focal_point_webp/public/2025-10/sample.png.webp?h=3410e35d&amp;itok=7czOPB-2 960w" media="all and (min-width: 500px)" type="image/webp" sizes="100vw" width="960" height="540"/><img  src="/sites/default/files/styles/16_9_512x288_focal_point_webp/public/2025-10/sample.png.webp?h=3410e35d&amp;itok=tCM0IDho" alt="Balloons over a vinyard. It&#039;s a default image for Drupal image styles." title="" width="512" height="288" loading="lazy" data-component-id="xtra:image" class="img-fluid" /></picture></div></div><div class="badge bg-secondary text-light me-2 my-1 link-light">
+
+  Drupal
+</div><div class="badge bg-secondary text-light me-2 my-1 link-light">
+
+  image styles
+</div><div class="badge bg-secondary text-light me-2 my-1 link-light">
+
+  design
+</div><div class="views-element-container"><div class="view view-eva view-content-dates view-id-content_dates view-display-id-eva_content_dates js-view-dom-id-918016965ef4f6419117baf9f9a044069f425cb9ec47f7cf4efad476c74fb8bf"><div class="views-row"><div class="views-field views-field-created"><span class="field-content"><p class="my-3">Posted on 
+<time datetime="2025-10-13T19:54:00-07:00" title="Monday, 13 October 2025 - 7:54 pm">13 Oct 2025 - 7:54 pm</time></p></span></div></div></div></div><div  data-component-id="xtra:field" class="field field--name-body field--type-text-with-summary field--label-hidden field--item mb-3"><p>Drupal's image manipulation options with image styles, responsive image styles, and image toolkits (GD and Imagemagick) are hard to beat. Have you ever wanted a different image style for landscape versus portrait featured images? Want a custom background fill? Need to make all your images grayscale? Drupal can do that and more. Learn what's possible with image effects to create consistent and performant images.</p><h2>Choosing performant image formats</h2><p>For many years, the internet was text without images in the form of message boards. It was the World Wide Web, which launched in 1993, that represented the dawn of embedded images.</p><p>At the start, GIF and bitmaps were the go to format for images, with JPEG being introduced shortly thereafter.</p><p>For many years, the general consensus based on format and browser support suggested that GIF should be used for flat images (and eventually images involving transparency and animation) with few colors and stark lines such as logos and graphics while JPEG could be used for complex rasterized images with many colors and shading. PNG, once widely adopted, took over much of the logo and graphic space with better compression and transparency support.</p><p>All of that shifted pretty radically in the past 10 years were WebP support and better browser upgrade paths pushed that format into a premier position for both graphics and complex photography. It just performed better than all the rest and supported both transparency and animation.</p><p>In the last few years, AVIF support has increased with up to 30-50% smaller images than WebP at similar quality.</p><p>If your site is not using WebP with an AVIF fallback at this point, it is wasting a ton of bandwidth and energy.</p><h2>Which image toolkit should I use?</h2><p>For years, the responsibility of image performance would fall to designers that would export images for an acceptable size and compression for their use case. This was great for design direction, but it left the less capable editor out of the mix.</p><p>Drupal has excelled at provided options for the common editor to upload a high-quality, low compression image (often straight from the camera) to a website and subsequently resizing that image with an image toolkit. The two most common image toolkits for Drupal are GD and Imagemagick (actual spelling). The toolkits can be combined with image styles to resize images on upload as a PHP process.</p><p>GD is included in Drupal core. It's good for most use cases. If on a site with at least PHP 8.1, it can support both WebP and AVIF formats.</p><p>Imagemagick has long been a go to when you need to support a wider range of image formats. It has quite a few more options for color profiles and advanced effects as well. The <a href="https://www.drupal.org/project/imagemagick">Imagemagick module</a> allows Drupal to be aware of all of these capabilities when it is installed on your server. Check with your host to see if Imagemagick is available. Common hosts like Acquia, Amazee, Pantheon, and Upsun have it preinstalled or easily added as an option.</p><p>In Drupal, you set the toolkit in the admin menu at media &gt; image toolkit.&nbsp;</p><h2>What are image styles?</h2><p>Drupal's concept of image styles allows you to create style and apply a series of effects. For example, you can convert an image to a new format, crop, resize, and scale. The order of the effects is essential to getting the desired result.</p><p>A typical image style, might do the following:</p><ul><li>Focal Point Scale and Crop 330×165 (This is a single effect that sets the overall image size.)</li><li>Convert WebP (I usually do conversions after any scaling or cropping.)</li></ul><p>Advanced effects might include adding text to an image or converting it to a circle with a transparent background.</p><h2>What are responsive image styles?</h2><p>Drupal's concept of responsive images allows you to provide design direction based on multiple breakpoints defined in your theme.</p><p>Breakpoints are measurements of common viewport sizes converted that browsers interpret to choose which image is loaded from a list of possible images.</p><p>For every responsive image, you define the rules for when the breakpoint will deliver a different image style.&nbsp;</p><p>The result is that your site will deliver the image that is at the size appropriate to the device loading the webpage. This may be a little more complicated that you might first think. The ideal size is going to be a combination of the devices rendered viewport size (pixel width), but it also takes into account pixel density. So an older computer with a 1024 pixel width viewport might need a smaller overall image than a mobile device with 3 times or 4 times pixel density.&nbsp;</p><h2>When should I use <code>picture</code> versus <code>srcset</code>?</h2><p>It's because of pixel density selection that I usually recommend sites use the <code>img</code> element with the <code>srcset</code> and <code>sizes</code> attributes rather than the <code>picture</code> element. These attributes allow you to suggest your intent and let the browser choose the best image. The <code>picture</code> element explicitly sets the image size based on the viewport width.&nbsp;</p><p>The one time the <code>picture</code> approach is extremely helpful is when you deliver a different aspect ration when the viewport is a particular size. An example would be a site that loads a 16:9 ratio image (widescreen, landscape) for larger displays and a 1:1 ratio image (square) for smaller displays. &nbsp;I would caution against this for editor or user uploaded images. They simply won't have the skill an ability to crop the image correctly most of the time.</p><h2>Options to crop images in Drupal</h2><p>So if you have editors or users uploading images, how do you get the sized and cropped in a way that meets your design intentions.&nbsp;</p><p>For images uploaded and embedded within content, such as with the media library embed in CKEditor, you probably don't want to provide a default cropping option. Whatever the editor has uploaded is likely the height and width they intend—or at least it will work for the situation.</p><p>For images uploaded in an area strictly intended for a specific aspect ratio, such as 16:9 or 2:1 or 1:1, the 3:4 or 4:3 photo taken with a mobile phone (or any camera) may not be the size you'd like. The solution is cropping the image to match the aspect ratio as part of the upload process.</p><p>Image styles in Drupal core support both scale and crop as well as crop and scale—but you probably don't want either of these options.&nbsp;</p><p>Scale and crop may work if you are lucky enough that the image's subject is positioned within the exact center of the photograph. I find this rare in practice. If you are a trained photographer, you learn to frame your subject based on the window you are viewing. If your aspect ratio is 4:3 (landscape), then you fill that window, likewise if your window is 3:4 (portrait). That doesn't work well if your image style does a scale and crop to 16:9.</p><p>Crop and scale rarely works. It assumes you can crop an image to a size before you scale it. If you have a portrait of a face, you might et just a nose or mouth... and nothing else.</p><p>There are two contrib modules to help editors convey their intention for what they crop should be.</p><p>If you install the <a href="https://www.drupal.org/project/crop">Crop API</a>, there are a couple of modules that can help with this.</p><p>I'll start with the one that doesn't usually work the way I want it to work...</p><p><a href="https://www.drupal.org/project/image_widget_crop">Image Widget Crop</a> lets folks crop images to the dimensions they want to see in the final crop. It does not enforce a specific ratio. So if you let an editor add some crop lines around the subject, you then have to use the scale in crop in core to capture that intention. It results in some weird edge cases that I just don't like.</p><p><a href="https://www.drupal.org/project/focal_point">Focal Point</a> allows for cropping based on a designated "center point" of the image. You drag some crosshairs over the point you want to make sure you don't lose and let the aspect ratio determine the rest. This works amazingly well for any landscape image that is being cropped to a more narrowly defined landscape image. Combined with a preview, you can help editors understand what they will get from the focal point they chose.</p><p>It works great... up to the point that someone uploads a portrait image, sometimes called a mug shot.&nbsp;</p><h2>Providing design direction with aspect switching</h2><p>Cropping a portrait image, say a person looking at the camera from the waist up with a vertical orientation, is a challenge when that image will be used in a fixed ratio featured region. Even if you perfectly tag the focal point of a face in a 3:4 ratio portrait image, then you might end up cutting off the top of a head or the bottom of a chin.&nbsp;</p><p>So if you want to allow your editors to upload a portrait image when creating a landscape featured image, what do you do?</p><p>Enter Image Effects and the aspect switcher effect. The module adds a ton of effects for image styles, but the aspect switcher, in particular, lets you define the ratio at which you want to use a different cropping technique. Take that... every other platform I've ever used for content management.</p><p>Aspect switching allows you to choose two image styles to use depending on the defined aspect ratio. So if you want to use Focal Point with any landscape image (greater than 1:1) and place the image within a set 16:9 canvas for any image that is square or more portrait (less than or equal to 1:1) then you can.&nbsp;</p><p>Add a background color, or better yet a transparency so you can set the background color depending on the use, and you are set.&nbsp;</p><p>Aspect switching was a game changer on a recent project. It allowed for much more specific design direction in our theme.&nbsp;</p><hr><p>Finding that you need a little help in your quest to help editors upload images that meet your design needs? <a href="https://www.linkedin.com/in/joshuami">Connect with me on LinkedIn</a> or reach out to me on Drupal Slack (@joshuami).</p></div></div></article></div></div>
+  
+                    </div>
+                            </div>
+  </div>
+</main>  
+      <footer  class="page__footer my-4"><div class="container"><div class="d-flex flex-wrap justify-content-md-between align-items-md-center"><div  class="block--type-content block block-block-content block-block-contenteef4fdab-fc1c-4734-aee3-9ba82dc12e38 block--content block--xtra-license" data-component-id="xtra:block"><div class="block__content"><div  data-component-id="xtra:field" class="field field--name-body field--type-text-with-summary field--label-hidden field--item mb-3"><p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p></div></div></div><div  data-component-id="xtra:block" class="block block-system block-system-powered-by-block block--xtra-poweredbydrupal"><div class="block__content"><span>Powered by <a href="https://www.drupal.org">Drupal</a></span></div></div></div></div></footer>  </div>
+
+  </div>
+
+    
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/150","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","themeUrl":"themes\/custom\/xtra"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"43bd5edb322b39fbaf1b731997c706a7505ce54acc8144be9aa5ab465a64853d"}}</script>
+<script src="/sites/default/files/js/js_2UjWh_UfnlJAQFbbr2Xw4ZaCQnL9nE8GKYDscdTrcYU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=xtra&amp;include=eJyrKClK1C8uqcxJBQAW1gQg"></script>
+<script src="/themes/custom/xtra/build/js/main.script.js?v=1.0.0" type="module"></script>
+
+          
+      </body>
+</html>

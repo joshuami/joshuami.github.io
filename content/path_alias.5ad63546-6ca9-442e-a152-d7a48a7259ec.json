@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "5ad63546-6ca9-442e-a152-d7a48a7259ec"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/19"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/image-styles"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

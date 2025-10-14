@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "b2f44ee5-a170-4bdc-b78a-e812b45ed241"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "filename": [
+        {
+            "value": "sample.png.webp"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-10\/sample.png.webp",
+            "url": "\/sites\/default\/files\/2025-10\/sample.png.webp"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/webp"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 66608
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-14T02:38:01+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-14T02:38:38+00:00"
+        }
+    ]
+}

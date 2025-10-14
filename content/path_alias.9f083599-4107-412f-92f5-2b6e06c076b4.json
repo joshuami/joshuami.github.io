@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "9f083599-4107-412f-92f5-2b6e06c076b4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/20"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/design"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

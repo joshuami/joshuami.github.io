@@ -14,6 +14,7 @@ settings:
   toolbar:
     items:
       - heading
+      - style
       - bold
       - italic
       - strikethrough
@@ -93,6 +94,11 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Button primary'
+          element: '<a class="btn btn-primary">'
     linkit_extension:
       linkit_enabled: true
       linkit_profile: default

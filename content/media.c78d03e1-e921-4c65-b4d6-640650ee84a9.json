@@ -1,0 +1,90 @@
+{
+    "uuid": [
+        {
+            "value": "c78d03e1-e921-4c65-b4d6-640650ee84a9"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-10-14T02:39:02+00:00"
+        }
+    ],
+    "revision_user": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "name": [
+        {
+            "value": "sample.png.webp"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Balloons over a vinyard. It's a default image for Drupal image styles.",
+            "title": null,
+            "width": 1800,
+            "height": 1080,
+            "target_type": "file",
+            "target_uuid": "b2f44ee5-a170-4bdc-b78a-e812b45ed241"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-14T02:38:01+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-14T02:39:02+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Balloons over a vinyard. It's a default image for Drupal image styles.",
+            "title": "",
+            "width": 1800,
+            "height": 1080,
+            "target_type": "file",
+            "target_uuid": "b2f44ee5-a170-4bdc-b78a-e812b45ed241"
+        }
+    ]
+}
