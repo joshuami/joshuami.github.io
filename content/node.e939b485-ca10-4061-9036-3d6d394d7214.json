@@ -18,13 +18,13 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2025-06-20T19:52:03+00:00"
+            "value": "2025-10-14T16:27:31+00:00"
         }
     ],
     "revision_uid": [
         {
             "target_type": "user",
-            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
         }
     ],
     "revision_log": [],
@@ -51,7 +51,7 @@
     ],
     "changed": [
         {
-            "value": "2025-06-20T19:52:03+00:00"
+            "value": "2025-10-14T16:27:31+00:00"
         }
     ],
     "promote": [
@@ -69,7 +69,11 @@
             "value": true
         }
     ],
-    "revision_translation_affected": [],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
     "path": [
         {
             "alias": "\/about-josh-mitchell",
@@ -78,9 +82,9 @@
     ],
     "body": [
         {
-            "value": "<p>I am the founder of M6L, a full-stack consultancy.&nbsp;<\/p><p>What's a \"full-stack\" consultancy?&nbsp;<\/p><p>Glad you asked. I coach teams to use continuous integration and agile best practices to build great software, usually websites or web-based applications. In my career, I've been a designer, developer, project manager, and a CTO. I've kinda played all the roles and can help fill gaps in your team.<\/p><p>I build big, complex websites. I'm particularly fond of government websites because they help people get stuff done. I've done a lot of work with Drupal. (I was even the CTO of the Drupal Association for a bit around the launch of Drupal 8.)<\/p><p>If you think I can help your project\/product\/program, <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\/\">hit me up on LinkedIn<\/a>.<\/p><p>This blog occasionally strays outside of technology. I'm a musician. I play the guitar, ukulele, mandolin. I'm a singer\/songwriter as well. I'm into the outdoors: run, hike, bike, and ski. My wife and I have a camper van and frequent parks around the Pacific Northwest throughout the year. A separate blog about those adventures may be coming soon.<\/p>",
+            "value": "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"f026182f-eed3-4f0a-82fa-b8293720f736\" data-align=\"right\" data-view-mode=\"1_1_square_small\">&nbsp;<\/drupal-media><p>I am the founder of M6L, a full-stack consultancy.&nbsp;<\/p><p>What's a \"full-stack\" consultancy?&nbsp;<\/p><p>Glad you asked. I coach teams to use continuous integration and agile best practices to build great software, usually websites or web-based applications. In my career, I've been a designer, developer, project manager, and a CTO. I've kinda played all the roles and can help fill gaps in your team.<\/p><p>I build big, complex websites. I'm particularly fond of government websites because they help people get stuff done. I've done a lot of work with Drupal. (I was even the CTO of the Drupal Association for a bit around the launch of Drupal 8.)<\/p><p>If you think I can help your project\/product\/program, <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\/\">hit me up on LinkedIn<\/a>.<\/p><p>This blog occasionally strays outside of technology. I'm a musician. I play the guitar, ukulele, mandolin. I'm a singer\/songwriter as well. I'm into the outdoors: run, hike, bike, and ski. My wife and I have a camper van and frequent parks around the Pacific Northwest throughout the year. A separate blog about those adventures may be coming soon.<\/p>",
             "format": "content_format",
-            "processed": "<p>I am the founder of M6L, a full-stack consultancy.&nbsp;<\/p>\n<p>What's a \"full-stack\" consultancy?&nbsp;<\/p>\n<p>Glad you asked. I coach teams to use continuous integration and agile best practices to build great software, usually websites or web-based applications. In my career, I've been a designer, developer, project manager, and a CTO. I've kinda played all the roles and can help fill gaps in your team.<\/p>\n<p>I build big, complex websites. I'm particularly fond of government websites because they help people get stuff done. I've done a lot of work with Drupal. (I was even the CTO of the Drupal Association for a bit around the launch of Drupal 8.)<\/p>\n<p>If you think I can help your project\/product\/program, <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\/\">hit me up on LinkedIn<\/a>.<\/p>\n<p>This blog occasionally strays outside of technology. I'm a musician. I play the guitar, ukulele, mandolin. I'm a singer\/songwriter as well. I'm into the outdoors: run, hike, bike, and ski. My wife and I have a camper van and frequent parks around the Pacific Northwest throughout the year. A separate blog about those adventures may be coming soon.<\/p>\n",
+            "processed": "<article class=\"align-right media media--type-image media--view-mode-_-1-square-small\">\n  \n      \n  <div class=\"field field--name-field-media-image field--type-image field--label-visually_hidden\">\n    <div class=\"field__label visually-hidden\">Image<\/div>\n              <div class=\"field__item\">    <picture>\n                  <source srcset=\"\/sites\/default\/files\/styles\/1_1_300x300_focal_point_webp\/public\/2025-10\/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&amp;itok=muS1a0XT 300w\" media=\"all and (min-width: 500px)\" type=\"image\/png\" sizes=\"100vw\" width=\"300\" height=\"300\">\n                  <img loading=\"lazy\" width=\"300\" height=\"300\" src=\"\/sites\/default\/files\/styles\/1_1_300x300_focal_point_webp\/public\/2025-10\/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&amp;itok=muS1a0XT\" alt=\"Josh pointing to the right.\">\n\n  <\/picture>\n\n<\/div>\n          <\/div>\n\n  <\/article>\n<p>I am the founder of M6L, a full-stack consultancy.&nbsp;<\/p>\n<p>What's a \"full-stack\" consultancy?&nbsp;<\/p>\n<p>Glad you asked. I coach teams to use continuous integration and agile best practices to build great software, usually websites or web-based applications. In my career, I've been a designer, developer, project manager, and a CTO. I've kinda played all the roles and can help fill gaps in your team.<\/p>\n<p>I build big, complex websites. I'm particularly fond of government websites because they help people get stuff done. I've done a lot of work with Drupal. (I was even the CTO of the Drupal Association for a bit around the launch of Drupal 8.)<\/p>\n<p>If you think I can help your project\/product\/program, <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\/\">hit me up on LinkedIn<\/a>.<\/p>\n<p>This blog occasionally strays outside of technology. I'm a musician. I play the guitar, ukulele, mandolin. I'm a singer\/songwriter as well. I'm into the outdoors: run, hike, bike, and ski. My wife and I have a camper van and frequent parks around the Pacific Northwest throughout the year. A separate blog about those adventures may be coming soon.<\/p>\n",
             "summary": ""
         }
     ],

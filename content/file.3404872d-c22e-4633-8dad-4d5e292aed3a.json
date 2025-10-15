@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "3404872d-c22e-4633-8dad-4d5e292aed3a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "filename": [
+        {
+            "value": "Josh pointing cutout for graphics.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-10\/Josh pointing cutout for graphics.png",
+            "url": "\/sites\/default\/files\/2025-10\/Josh%20pointing%20cutout%20for%20graphics.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 869672
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-14T16:26:40+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-14T16:26:58+00:00"
+        }
+    ]
+}

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Image Manipulation for Creative Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Minimal overrides for specific issues -->
+  <style>
+    /* Ensure slides are left-aligned by default */
+    .reveal .slides section {
+      text-align: left !important;
+    }
+    
+    /* Additional custom styles for this presentation */
+    .reveal .aspect-ratio-example {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .reveal .ratio-box {
+      border: 2px solid #0000ff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .reveal .landscape {
+      width: 200px;
+      height: 112.5px;
+    }
+    .reveal .portrait {
+      width: 112.5px;
+      height: 200px;
+    }
+    .reveal .square {
+      width: 150px;
+      height: 150px;
+    }
+    .reveal .highlight-box {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-left: 4px solid #0000ff;
+      margin: 1rem 0;
+    }
+  </style>
+  <link rel="stylesheet" href="../dist/assets/reveal-entry-BM7nhOpr.css">
+  <link rel="stylesheet" href="../theme-joshuami.css">
+  <script type="module" src="../dist/assets/reveal-entry-B-sVstDz.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Slide -->
+      <section class="title-slide" style="background-image: url('../../sites/default/files/styles/16_9_960x540_focal_point_webp/public/2025-10/sample.png.webp') !important;">
+        <div class="title-content">
+          <h1>Image Manipulation for Creative Control</h1>
+          <p>Aspect Switcher and Cropping Techniques</p>
+        </div>
+      </section>
+
+      <!-- About Josh Mitchell -->
+      <section>
+        <h2>About Josh Mitchell</h2>
+        <div class="slide-layout-two-column">
+          <div>
+            <ul>
+              <li>Founder of M6L</li>
+              <li>Full stack consultancy</li>
+              <li>20 years Drupal experience</li>
+              <li>Musician and outdoor enthusiast</li>
+              <li>Connect: <a href="https://www.linkedin.com/in/joshuami/">LinkedIn</a> or Drupal Slack</li>
+            </ul>
+          </div>
+          <div>
+            <img src="/sites/default/files/styles/1_1_300x300_focal_point_webp/public/2025-10/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&itok=muS1a0XT" alt="Josh Mitchell" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+          </div>
+        </div>
+      </section>
+
+      <!-- Introduction -->
+      <section>
+        <h2>Why Image Manipulation Matters</h2>
+        <ul>
+          <li>Drupal's image manipulation options are hard to beat</li>
+          <li>Image styles, responsive images, and toolkits (GD & ImageMagick)</li>
+          <li>Create consistent and performant images</li>
+          <li>Empower editors without design skills</li>
+        </ul>
+      </section>
+
+      <!-- Image Formats -->
+      <section>
+        <section>
+          <h2>Choosing Performant Image Formats</h2>
+          <p>The evolution of web image formats</p>
+        </section>
+
+        <section>
+          <h3>The Early Days (1993+)</h3>
+          <ul>
+            <li><strong>GIF</strong>: Flat images, few colors, logos, transparency & animation</li>
+            <li><strong>JPEG</strong>: Complex rasterized images, photos</li>
+            <li><strong>PNG</strong>: Better compression, replaced GIF for graphics</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Modern Formats</h3>
+          <div class="highlight-box">
+            <p><strong>WebP</strong></p>
+            <p>Better performance for both graphics and photography</p>
+            <p>Supports transparency and animation</p>
+          </div>
+          <div class="highlight-box">
+            <p><strong>AVIF</strong></p>
+            <p>30-50% smaller than WebP at similar quality</p>
+            <p>Increasing browser support</p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Best Practice Today</h3>
+          <p class="large primary">Use WebP with AVIF fallback</p>
+          <p class="muted">Otherwise you're wasting bandwidth and energy</p>
+        </section>
+      </section>
+
+      <!-- Image Toolkits -->
+      <section>
+        <section>
+          <h2>Which Image Toolkit?</h2>
+          <p>Drupal provides options for image processing</p>
+        </section>
+
+        <section>
+          <h3>GD (Included in Core)</h3>
+          <ul>
+            <li>Good for most use cases</li>
+            <li>PHP 8.1+ supports WebP and AVIF</li>
+            <li>No additional setup required</li>
+          </ul>
+          <p class="muted small">Configure: Media → Image Toolkit</p>
+        </section>
+
+        <section>
+          <h3>ImageMagick</h3>
+          <ul>
+            <li>Wider range of image formats</li>
+            <li>More options for color profiles</li>
+            <li>Advanced effects capabilities</li>
+            <li>Available on Acquia, Amazee, Pantheon, Upsun</li>
+          </ul>
+          <p class="muted small">Check with your host for availability</p>
+        </section>
+      </section>
+
+      <!-- Image Styles -->
+      <section>
+        <section>
+          <h2>What are Image Styles?</h2>
+          <p>Apply a series of effects to transform images</p>
+        </section>
+
+        <section>
+          <h3>Typical Image Style</h3>
+          <ol>
+            <li>Focal Point Scale and Crop (330×165)</li>
+            <li>Convert to WebP</li>
+          </ol>
+          <p class="muted small">Order of effects is essential!</p>
+        </section>
+
+        <section>
+          <h3>Advanced Effects</h3>
+          <ul>
+            <li>Add text to images</li>
+            <li>Convert to circles</li>
+            <li>Transparent backgrounds</li>
+            <li>Grayscale conversion</li>
+            <li>Custom color fills</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Responsive Images -->
+      <section>
+        <section>
+          <h2>Responsive Image Styles</h2>
+          <p>Different images for different devices</p>
+        </section>
+
+        <section>
+          <h3>How Breakpoints Work</h3>
+          <ul>
+            <li>Defined in your theme</li>
+            <li>Based on viewport sizes</li>
+            <li>Account for pixel density</li>
+            <li>Browser chooses the best image</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Example Scenario</h3>
+          <div class="highlight-box">
+            <p>Older computer: 1024px viewport → smaller image</p>
+            <p>Modern mobile: 375px @ 3x density → larger image</p>
+          </div>
+          <p>It's not just about width!</p>
+        </section>
+      </section>
+
+      <!-- Picture vs Srcset -->
+      <section>
+        <section>
+          <h2>Picture vs Srcset</h2>
+          <p>Two approaches to responsive images</p>
+        </section>
+
+        <section>
+          <h3>Recommended: img + srcset</h3>
+          <pre><code data-trim data-noescape>
+&lt;img src="image.jpg"
+     srcset="image-small.jpg 400w,
+             image-medium.jpg 800w,
+             image-large.jpg 1200w"
+     sizes="(max-width: 600px) 100vw, 50vw"&gt;
+          </code></pre>
+          <p class="small">Browser chooses based on viewport and pixel density</p>
+        </section>
+
+        <section>
+          <h3>When to Use Picture</h3>
+          <p>When you need different aspect ratios at different viewports</p>
+          <div class="aspect-ratio-example">
+            <div class="ratio-box landscape">16:9<br>Desktop</div>
+            <div class="ratio-box square">1:1<br>Mobile</div>
+          </div>
+          <p class="muted small">⚠️ Caution with user-uploaded images</p>
+        </section>
+      </section>
+
+      <!-- Cropping Options -->
+      <section>
+        <section>
+          <h2>Options to Crop Images</h2>
+          <p>Helping editors meet design requirements</p>
+        </section>
+
+        <section>
+          <h3>Core Cropping (Not Ideal)</h3>
+          <ul>
+            <li><strong>Scale and Crop</strong>: Only works if subject is centered</li>
+            <li><strong>Crop and Scale</strong>: Crops before scaling (rarely works well)</li>
+          </ul>
+          <p class="accent">We need better solutions!</p>
+        </section>
+
+        <section>
+          <h3>Contrib Modules</h3>
+          <p>Both require Crop API</p>
+          <div class="slide-layout-two-column">
+            <div>
+              <h4>Image Widget Crop</h4>
+              <p class="small">Crop to any dimensions</p>
+              <p class="small muted">Doesn't enforce ratio</p>
+              <p class="small muted">Weird edge cases</p>
+            </div>
+            <div>
+              <h4>Focal Point</h4>
+              <p class="small">Crop based on center point</p>
+              <p class="small primary">✓ Works great for landscapes</p>
+              <p class="small muted">Challenges with portraits</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>The Focal Point Challenge</h3>
+          <div class="aspect-ratio-example">
+            <div class="ratio-box portrait">
+              3:4<br>Portrait<br>Photo
+            </div>
+            <div>→</div>
+            <div class="ratio-box landscape">
+              16:9<br>Featured<br>Region
+            </div>
+          </div>
+          <p>Even perfect focal point tagging can cut off heads or chins!</p>
+        </section>
+      </section>
+
+      <!-- Aspect Switcher -->
+      <section>
+        <section>
+          <h2>The Game Changer</h2>
+          <h3 class="primary">Aspect Switcher Effect</h3>
+          <p>From the Image Effects module</p>
+        </section>
+
+        <section>
+          <h3>How Aspect Switching Works</h3>
+          <p>Use different image styles based on aspect ratio</p>
+          <div class="highlight-box">
+            <p><strong>Landscape (>1:1)</strong></p>
+            <p>Use Focal Point cropping</p>
+          </div>
+          <div class="highlight-box">
+            <p><strong>Portrait (≤1:1)</strong></p>
+            <p>Place on canvas with background</p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Example Configuration</h3>
+          <ul>
+            <li>Landscape images: Focal Point crop to 16:9</li>
+            <li>Square/Portrait images: Place on 16:9 canvas</li>
+            <li>Add background color or transparency</li>
+            <li>Let theme control background color</li>
+          </ul>
+          <p class="primary">No more cut-off heads!</p>
+        </section>
+
+        <section>
+          <h3>Benefits</h3>
+          <ul>
+            <li>Specific design direction maintained</li>
+            <li>Editors can upload any orientation</li>
+            <li>Consistent aspect ratios in featured regions</li>
+            <li>Professional results without design skills</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Image Effects Module -->
+      <section>
+        <h2>Image Effects Module</h2>
+        <p>More than just aspect switching</p>
+        <ul>
+          <li>Watermarks</li>
+          <li>Borders and frames</li>
+          <li>Color adjustments</li>
+          <li>Text overlays</li>
+          <li>Masks and shapes</li>
+          <li>And much more...</li>
+        </ul>
+      </section>
+
+      <!-- Best Practices -->
+      <section>
+        <h2>Best Practices Summary</h2>
+        <ol>
+          <li>Use WebP with AVIF fallback</li>
+          <li>Choose the right toolkit (GD or ImageMagick)</li>
+          <li>Order effects correctly in image styles</li>
+          <li>Use srcset for most responsive images</li>
+          <li>Implement Focal Point for editor control</li>
+          <li>Use Aspect Switcher for mixed orientations</li>
+        </ol>
+      </section>
+
+      <!-- Conclusion -->
+      <section>
+        <h2>Drupal Image Capabilities</h2>
+        <p class="large">Hard to beat on any platform</p>
+        <p>Empowers editors + maintains design integrity</p>
+        <div style="margin-top: 2rem;">
+          <p class="small">Need help with image manipulation?</p>
+          <p class="small">Connect on LinkedIn or Drupal Slack (@joshuami)</p>
+        </div>
+      </section>
+
+      <!-- Thank You -->
+      <section>
+        <h2>Thank You</h2>
+        <p>Questions?</p>
+        <p class="small muted">This work is licensed under a Creative Commons Attribution 4.0 International License</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Override the default configuration for this specific presentation
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.Reveal) {
+        Reveal.configure({
+          hash: true,
+          slideNumber: true,
+          plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+

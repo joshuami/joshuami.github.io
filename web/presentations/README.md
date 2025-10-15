@@ -14,8 +14,24 @@ This directory contains reveal.js presentations for the website.
 2. Edit the new file to customize:
    - Update the `<title>` tag
    - Change the presentation title and content
+   - Set a custom background image for the title slide (see below)
    - Modify the theme if desired
    - Add your own custom CSS
+
+### Custom Title Slide Background Images
+
+Each presentation can have its own background image on the title slide. Add the image URL as an inline style on the `title-slide` section:
+
+```html
+<section class="title-slide" style="background-image: url('../../public/your-image.webp') !important;">
+  <div class="title-content">
+    <h1>Your Presentation Title</h1>
+    <p>Subtitle or description</p>
+  </div>
+</section>
+```
+
+The background image will be positioned at the left top with 120% size, creating a two-column grid layout with the title content on the right side.
 
 ### Available Themes
 

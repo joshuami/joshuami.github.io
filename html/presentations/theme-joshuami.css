@@ -519,7 +519,7 @@
 
 /* Title slide with background image */
 .reveal .slides section.title-slide {
-  background-image: url('../../sites/default/files/styles/16_9_960x540_focal_point_webp/public/2025-06/recipe-unpack-box.webp') !important;
+  /* background-image set per presentation via inline style or custom class */
   background-size: 120% !important;
   background-position: left top !important;
   background-repeat: no-repeat !important;
@@ -543,16 +543,16 @@
   align-items: flex-start !important;
 }
 
-/* 60/40 split - text gets 60%, image gets 40% */
+/* Equal width columns - 50/50 split */
 .reveal .slide-layout-two-column > div:first-child {
-  flex: 0.7 !important;
+  flex: 1 !important;
   text-align: left !important;
   padding-right: 0.5em !important;
 }
 
 .reveal .slide-layout-two-column > div:last-child {
-  flex: 0.3 !important;
-  text-align: right !important;
+  flex: 1 !important;
+  text-align: left !important;
 }
 
 .reveal .slide-layout-three-column {
