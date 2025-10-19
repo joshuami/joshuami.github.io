@@ -154,9 +154,11 @@
       "static": [
         "mkdir -p ../backups && drush sql:dump --gzip --result-file=../backups/db-$(date +%Y%m%d-%H%M%S)",
         "drush tome:static -l --uri=https://joshuami.com",
-        "@copy-presentations"
+        "@copy-presentations",
+        "@copy-originals"
       ],
-      "copy-presentations": "rm -rf html/presentations && cp -r web/presentations html/presentations"
+      "copy-presentations": "rm -rf html/presentations && cp -r web/presentations html/presentations",
+      "copy-originals": "rm -rf html/sites/default/files/originals && mkdir -p html/sites/default/files && cd web && find sites/default/files -type f \\( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.avif' -o -iname '*.gif' \\) -not -path '*/styles/*' -exec cp --parents {} ../html/ \\;"
     },
     "scripts-aliases": {
       "drupal:test": ["dt"],
