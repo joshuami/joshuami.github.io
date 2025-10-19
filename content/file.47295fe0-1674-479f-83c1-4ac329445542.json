@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "47295fe0-1674-479f-83c1-4ac329445542"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "edit-aspect-switcher-style.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-10\/edit-aspect-switcher-style.png",
+            "url": "\/sites\/default\/files\/2025-10\/edit-aspect-switcher-style.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 164494
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-19T16:51:59+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-19T16:52:23+00:00"
+        }
+    ]
+}

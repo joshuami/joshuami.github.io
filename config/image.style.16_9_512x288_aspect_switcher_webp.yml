@@ -1,0 +1,27 @@
+uuid: e28398bb-3c96-47d7-9490-1740ec581b91
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16_9_512x288_focal_point_webp
+    - image.style.16_9_512x288_portrait_webp
+  module:
+    - image_effects
+name: 16_9_512x288_aspect_switcher_webp
+label: '16:9 | 512x288 | Aspect Switcher | WebP'
+effects:
+  fc4b4b59-d3b3-4035-bfe3-ed3831643303:
+    uuid: fc4b4b59-d3b3-4035-bfe3-ed3831643303
+    id: image_effects_aspect_switcher
+    weight: 1
+    data:
+      landscape_image_style: 16_9_512x288_focal_point_webp
+      portrait_image_style: 16_9_512x288_portrait_webp
+      ratio_adjustment: 1.0
+  93df81ed-a5d8-4dd7-bcd2-e6356a02f80e:
+    uuid: 93df81ed-a5d8-4dd7-bcd2-e6356a02f80e
+    id: image_resize
+    weight: 2
+    data:
+      width: 512
+      height: 288

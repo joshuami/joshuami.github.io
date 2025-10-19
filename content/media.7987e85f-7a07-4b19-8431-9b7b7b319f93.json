@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "7987e85f-7a07-4b19-8431-9b7b7b319f93"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-10-19T16:51:59+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "edit-aspect-switcher-style.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Editing the aspect switcher style to choose portraint when the ratio is greater than one.",
+            "title": null,
+            "width": 1462,
+            "height": 864,
+            "target_type": "file",
+            "target_uuid": "47295fe0-1674-479f-83c1-4ac329445542"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-19T16:51:59+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-19T16:51:59+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Editing the aspect switcher style to choose portraint when the ratio is greater than one.",
+            "title": "",
+            "width": 1462,
+            "height": 864,
+            "target_type": "file",
+            "target_uuid": "47295fe0-1674-479f-83c1-4ac329445542"
+        }
+    ]
+}

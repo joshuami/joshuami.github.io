@@ -59,6 +59,7 @@
         "drupal/gin": "^5",
         "drupal/highlightjs_input_filter": "^1.1",
         "drupal/honeypot": "^2.1",
+        "drupal/image_effects": "^4.0",
         "drupal/klaro": "^3",
         "drupal/leaflet": "^10.2.33",
         "drupal/link_attributes": "^2.1",

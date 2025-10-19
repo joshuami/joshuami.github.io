@@ -1,0 +1,41 @@
+uuid: 6ca4da9b-7080-4433-b6b2-65f4b14e195c
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: 16_9_704x396_portrait_webp
+label: '16:9 | 704x396 | Portrait | WebP'
+effects:
+  c4bfe4ab-4ae9-42fa-aece-2162181b23e1:
+    uuid: c4bfe4ab-4ae9-42fa-aece-2162181b23e1
+    id: image_scale
+    weight: 1
+    data:
+      width: 704
+      height: 396
+      upscale: false
+  2a6580e4-9283-4061-9d56-cbfce05159ae:
+    uuid: 2a6580e4-9283-4061-9d56-cbfce05159ae
+    id: image_effects_set_canvas
+    weight: 2
+    data:
+      canvas_size: exact
+      canvas_color: ''
+      exact:
+        width: '704'
+        height: '396'
+        placement: center-center
+        x_offset: 0
+        y_offset: 0
+      relative:
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+  3b208d26-297c-49fd-9359-d8137d8e7e1a:
+    uuid: 3b208d26-297c-49fd-9359-d8137d8e7e1a
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

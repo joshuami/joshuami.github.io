@@ -1,0 +1,27 @@
+uuid: 88bc2a6e-ab1b-4e18-af3d-9ba6b0bdd002
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16_9_1800x1080_focal_point_webp
+    - image.style.16_9_1800x1080_portrait_webp
+  module:
+    - image_effects
+name: 16_9_1800x1080_aspect_switcher_webp
+label: '16:9 | 1800x1080 | Aspect Switcher | WebP'
+effects:
+  1d2347a3-964c-40fe-b96a-c60059916895:
+    uuid: 1d2347a3-964c-40fe-b96a-c60059916895
+    id: image_effects_aspect_switcher
+    weight: 1
+    data:
+      landscape_image_style: 16_9_1800x1080_focal_point_webp
+      portrait_image_style: 16_9_1800x1080_portrait_webp
+      ratio_adjustment: 1.0
+  e389a62f-e85a-4fa1-9a7f-7d2843524328:
+    uuid: e389a62f-e85a-4fa1-9a7f-7d2843524328
+    id: image_resize
+    weight: 2
+    data:
+      width: 1800
+      height: 1080

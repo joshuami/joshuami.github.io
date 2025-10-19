@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "e154992f-debc-4d7c-80ee-90a5ddb5d957"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "responsive-image-style-with-aspect-switcher.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-10\/responsive-image-style-with-aspect-switcher.png",
+            "url": "\/sites\/default\/files\/2025-10\/responsive-image-style-with-aspect-switcher.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 179722
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-19T16:52:53+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-19T16:53:17+00:00"
+        }
+    ]
+}

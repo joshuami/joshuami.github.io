@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "aed35dc2-c002-4068-8729-757c9eb3495f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "image-style-focal-point-crop.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-10\/image-style-focal-point-crop.png",
+            "url": "\/sites\/default\/files\/2025-10\/image-style-focal-point-crop.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 209376
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-19T16:50:13+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-19T16:50:24+00:00"
+        }
+    ]
+}

@@ -23,12 +23,13 @@ content:
       responsive_image_style: 16_9_large
       image_link: ''
       image_loading:
-        attribute: lazy
+        attribute: eager
     third_party_settings: {  }
     weight: 1
     region: content
 hidden:
   created: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true
