@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - focal_point
     - image_effects
 name: 16_9_1008x567_portrait_webp
 label: '16:9 | 1008x567 | Portrait | WebP'
@@ -10,7 +11,7 @@ effects:
   db4629c8-85b1-4b87-8e84-de835df1e0b9:
     uuid: db4629c8-85b1-4b87-8e84-de835df1e0b9
     id: image_scale
-    weight: 1
+    weight: -10
     data:
       width: 1008
       height: 567
@@ -18,7 +19,7 @@ effects:
   3af528d1-c1bc-4f22-8450-3aedbd63fba3:
     uuid: 3af528d1-c1bc-4f22-8450-3aedbd63fba3
     id: image_effects_set_canvas
-    weight: 2
+    weight: -8
     data:
       canvas_size: exact
       canvas_color: ''
@@ -36,6 +37,14 @@ effects:
   517bb4f2-24ab-4b6f-865f-ea5020afc1ac:
     uuid: 517bb4f2-24ab-4b6f-865f-ea5020afc1ac
     id: image_convert
-    weight: 3
+    weight: -9
     data:
       extension: webp
+  9796f13e-ea0a-44d7-9fec-66c972ea19e4:
+    uuid: 9796f13e-ea0a-44d7-9fec-66c972ea19e4
+    id: focal_point_scale_and_crop
+    weight: 4
+    data:
+      width: 1008
+      height: 567
+      crop_type: focal_point

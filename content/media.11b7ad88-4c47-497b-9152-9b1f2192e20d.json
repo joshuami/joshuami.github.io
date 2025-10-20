@@ -1,0 +1,90 @@
+{
+    "uuid": [
+        {
+            "value": "11b7ad88-4c47-497b-9152-9b1f2192e20d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-10-20T00:40:56+00:00"
+        }
+    ],
+    "revision_user": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "Mishya at two"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Mishya",
+            "title": null,
+            "width": 1704,
+            "height": 2272,
+            "target_type": "file",
+            "target_uuid": "f1f555e3-70db-4ecb-af72-497cad3cd44d"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-19T18:43:12+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-20T00:40:56+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "A two-year-old Mishya photo that has not been focal point cropped because of aspect switcher. A little blurry.",
+            "title": "",
+            "width": 1704,
+            "height": 2272,
+            "target_type": "file",
+            "target_uuid": "f1f555e3-70db-4ecb-af72-497cad3cd44d"
+        }
+    ]
+}

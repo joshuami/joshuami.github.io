@@ -10,7 +10,7 @@ effects:
   c53c6951-d1e1-49cd-964d-289513402eb6:
     uuid: c53c6951-d1e1-49cd-964d-289513402eb6
     id: image_scale
-    weight: 1
+    weight: -10
     data:
       width: 1312
       height: 738
@@ -18,7 +18,7 @@ effects:
   2c1c670a-b335-4f7d-9697-517f591c6826:
     uuid: 2c1c670a-b335-4f7d-9697-517f591c6826
     id: image_effects_set_canvas
-    weight: 2
+    weight: -8
     data:
       canvas_size: exact
       canvas_color: ''
@@ -36,6 +36,6 @@ effects:
   9dbcb3e4-c227-401e-a46c-8b0d3f8e2eae:
     uuid: 9dbcb3e4-c227-401e-a46c-8b0d3f8e2eae
     id: image_convert
-    weight: 3
+    weight: -9
     data:
       extension: webp

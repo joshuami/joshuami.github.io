@@ -6,6 +6,7 @@ dependencies:
     - image.style.16_9_1008x567_aspect_switcher_webp
     - image.style.16_9_1312x738_aspect_switcher_webp
     - image.style.16_9_1800x1080_aspect_switcher_webp
+    - image.style.16_9_304x171_aspect_switcher_webp
     - image.style.16_9_512x288_aspect_switcher_webp
     - image.style.16_9_608x342_aspect_switcher_webp
     - image.style.16_9_704x396_aspect_switcher_webp
@@ -23,6 +24,7 @@ image_style_mappings:
         - 16_9_1008x567_aspect_switcher_webp
         - 16_9_1312x738_aspect_switcher_webp
         - 16_9_1800x1080_aspect_switcher_webp
+        - 16_9_304x171_aspect_switcher_webp
         - 16_9_512x288_aspect_switcher_webp
         - 16_9_608x342_aspect_switcher_webp
         - 16_9_704x396_aspect_switcher_webp

@@ -1,0 +1,89 @@
+{
+    "uuid": [
+        {
+            "value": "d927daaa-f4d5-4ed2-b08f-26fd61262670"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image",
+            "target_type": "media_type",
+            "target_uuid": "d465c01f-90a8-4875-b01e-6d460aed9e89"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2025-10-20T00:50:39+00:00"
+        }
+    ],
+    "revision_user": [],
+    "revision_log_message": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "name": [
+        {
+            "value": "edit-portrait-style-order-of operations.png"
+        }
+    ],
+    "thumbnail": [
+        {
+            "alt": "Edit view of a portrait style image that requires the specific order of operations listed above.",
+            "title": null,
+            "width": 1462,
+            "height": 863,
+            "target_type": "file",
+            "target_uuid": "f3890ad7-19b6-4aaf-8678-dc8e1dfbddea"
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-20T00:50:39+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-20T00:50:39+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "field_media_image": [
+        {
+            "alt": "Edit view of a portrait style image that requires the specific order of operations listed above.",
+            "title": "",
+            "width": 1462,
+            "height": 863,
+            "target_type": "file",
+            "target_uuid": "f3890ad7-19b6-4aaf-8678-dc8e1dfbddea"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "f1f555e3-70db-4ecb-af72-497cad3cd44d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "Untitled.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-10\/Untitled.jpg",
+            "url": "\/sites\/default\/files\/2025-10\/Untitled.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 1434302
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-10-19T18:43:12+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-10-19T18:43:17+00:00"
+        }
+    ]
+}

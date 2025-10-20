@@ -25,9 +25,17 @@ content:
       preview_link: true
       offsets: '50,50'
     third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 100
+    weight: 2
     region: content
     settings:
       display_label: true
@@ -35,6 +43,5 @@ content:
 hidden:
   created: true
   langcode: true
-  name: true
   path: true
   uid: true
