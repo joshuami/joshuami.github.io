@@ -139,11 +139,6 @@
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
-        },
-        "patches": {
-            "drupal/tour": {
-                "3539631: Better mobile support:": "patches/3539631.patch"
-            }
         }
     },
     "scripts": {

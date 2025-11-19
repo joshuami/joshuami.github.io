@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "9c64008c-8381-4daa-9991-0ebd14bb7a5b"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "cover-access-control-strategies-for-drupal-websites.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-11\/cover-access-control-strategies-for-drupal-websites.png",
+            "url": "\/sites\/default\/files\/2025-11\/cover-access-control-strategies-for-drupal-websites.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 87257
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-11-19T23:52:59+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-11-19T23:53:20+00:00"
+        }
+    ]
+}

@@ -18,7 +18,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2025-02-05T22:52:18+00:00"
+            "value": "2025-11-19T23:53:28+00:00"
         }
     ],
     "revision_uid": [
@@ -51,7 +51,7 @@
     ],
     "changed": [
         {
-            "value": "2025-02-05T22:52:18+00:00"
+            "value": "2025-11-19T23:53:28+00:00"
         }
     ],
     "promote": [
@@ -102,7 +102,12 @@
             "value": "When working with large organizations\u2014whether in private enterprise, government, higher education, or non-profits\u2014editorial responsibility is often spread across multiple sub-organizations. Set your editors up for success by choosing an access control strategy that works best for the organizational objectives."
         }
     ],
-    "field_featured_image": [],
+    "field_featured_image": [
+        {
+            "target_type": "media",
+            "target_uuid": "3de3951a-33ec-4ad9-bf77-aa980efc3d25"
+        }
+    ],
     "field_seo_description": [],
     "field_seo_image": [],
     "field_seo_title": [],

@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "ed7d87f5-171d-49b0-b32c-738936cee7c3"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "filename": [
+        {
+            "value": "cooking-with-josh.gif"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2025-11\/cooking-with-josh.gif",
+            "url": "\/sites\/default\/files\/2025-11\/cooking-with-josh.gif"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/gif"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 4519982
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2025-11-19T23:53:54+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2025-11-19T23:54:20+00:00"
+        }
+    ]
+}
