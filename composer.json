@@ -94,7 +94,6 @@
         "drupal/trash": "^3.0.13",
         "drupal/twig_tweak": "^3.4",
         "drupal/views_bulk_edit": "^3.0",
-        "drupal/yoast_seo": "^2.1",
         "drush/drush": "^13",
         "geocoder-php/nominatim-provider": "^5.7",
         "league/commonmark": "^2.4",
