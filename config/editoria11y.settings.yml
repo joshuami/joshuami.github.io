@@ -57,3 +57,4 @@ ignore_tests:
   altDeadspace: '0'
   altLong: '0'
   altPartOfLinkWithText: '0'
+db_version: '2'
