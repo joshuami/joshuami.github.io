@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "1a82501e-3d19-4659-a539-f299607eada5"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/21"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/screen-readers"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

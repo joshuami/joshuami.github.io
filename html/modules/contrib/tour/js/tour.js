@@ -33,30 +33,11 @@
           model,
         });
 
-        model
-          // Allow other scripts to respond to tour events.
-          .on('change:isActive', (tourModel, isActive) => {
-            $(document).trigger(
-              isActive ? 'drupalTourStarted' : 'drupalTourStopped',
-            );
-          });
         // Initialization: check whether a tour is available on the current
         // page.
         if (settings._tour_internal) {
           model.set('tour', settings._tour_internal);
         }
-        // Start the tour immediately if toggled via query string.
-        if (/[?&]tour(=|$)/i.test(queryString)) {
-          model.set('isActive', true);
-        }
-
-        document.addEventListener('keydown', function handleKeydown(event) {
-          if (event.altKey && event.code === 'KeyT') {
-            model.set('isActive', true);
-            event.preventDefault();
-            event.stopPropagation();
-          }
-        });
 
         // Provide an API.
         Drupal.tour.setActive = function setActive(active = true) {
@@ -81,6 +62,30 @@
             })(timeout);
           });
         };
+
+        // Register events:
+        model
+          // Allow other scripts to respond to tour events.
+          .on('change:isActive', (tourModel, isActive) => {
+            $(document).trigger(
+              isActive ? 'drupalTourStarted' : 'drupalTourStopped',
+            );
+          });
+
+        // Start the tour immediately if toggled via query string.
+        window.addEventListener('load', (event) => {
+          if (/[?&]tour(=|$)/i.test(queryString)) {
+            model.set('isActive', true);
+          }
+        });
+
+        document.addEventListener('keydown', function handleKeydown(event) {
+          if (event.altKey && event.code === 'KeyT') {
+            model.set('isActive', true);
+            event.preventDefault();
+            event.stopPropagation();
+          }
+        });
       });
     },
   };

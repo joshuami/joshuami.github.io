@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "0f6305d3-bbde-4712-986e-ef73a1f51d3b"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/00ad9bb2-f0bd-4dc6-831c-fb66f18b177b"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2026\/i-asked-ai-use-screen-reader"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

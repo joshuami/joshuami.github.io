@@ -7,6 +7,14 @@
     <language>en</language>
     
     <item>
+  <title>I Asked AI to Use a Screen Reader</title>
+  <link>https://joshuami.com/blog/2026/i-asked-ai-use-screen-reader</link>
+  <description>While conducting accessibility audits of vendor-maintained applications for a government agency, I had an idea. What if I ask Claude Code to create a transcript of the experience of a blind user of NVDA screen reading software using the application. The results were astounding and enlightening.</description>
+  <pubDate>Wed, 25 Feb 2026 12:06:47 -0800</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">00ad9bb2-f0bd-4dc6-831c-fb66f18b177b</guid>
+    </item>
+<item>
   <title>Image Manipulation for Creative Control: Aspect Switcher and Cropping Techniques</title>
   <link>https://joshuami.com/blog/2025/image-manipulation-creative-control-aspect-switcher-and-cropping-techniques</link>
   <description>Drupal's image manipulation options with image styles, responsive image styles, and image toolkits (GD and Imagemagick) are hard to beat. Have you ever wanted a different image style for landscape versus portrait featured images? Want a custom background fill? Need to make all your images grayscale? Drupal can do that and more. Learn what's possible with image effects to create consistent and performant images.</description>

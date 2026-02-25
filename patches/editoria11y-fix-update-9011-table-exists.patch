@@ -1,0 +1,14 @@
+--- a/editoria11y.install
++++ b/editoria11y.install
+@@ -329,7 +329,10 @@ function editoria11y_update_9011(&$sandbox) {
+     $sandbox['oldNames'] = $helper->updateVersion3('oldNames');
+     $sandbox['oldKeys'] = $helper->updateVersion3('oldKeys');
+ 
+-    \Drupal::database()->schema()->createTable('ed11y_action', $helper->schemaVersion3('ed11y_action'));
++    $schema = \Drupal::database()->schema();
++    if (!$schema->tableExists('ed11y_action')) {
++      $schema->createTable('ed11y_action', $helper->schemaVersion3('ed11y_action'));
++    }
+ 
+     // Get number of rows to update.
+     $sandbox['total'] = $database

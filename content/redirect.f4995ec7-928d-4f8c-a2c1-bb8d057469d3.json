@@ -1,0 +1,56 @@
+{
+    "enabled": [
+        {
+            "value": true
+        }
+    ],
+    "uuid": [
+        {
+            "value": "f4995ec7-928d-4f8c-a2c1-bb8d057469d3"
+        }
+    ],
+    "hash": [
+        {
+            "value": "NDIW8wl2o81gEDcwmIt3lpJENuznzwuhzWLOOr4EBjg"
+        }
+    ],
+    "type": [
+        {
+            "value": "redirect"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "redirect_source": [
+        {
+            "path": "blog\/2026\/claude-can-pretend-using-ai-agent-accessibility-testing",
+            "query": []
+        }
+    ],
+    "redirect_redirect": [
+        {
+            "uri": "internal:\/node\/152",
+            "title": null,
+            "options": []
+        }
+    ],
+    "language": [
+        {
+            "value": "en"
+        }
+    ],
+    "status_code": [
+        {
+            "value": 301
+        }
+    ],
+    "created": [
+        {
+            "value": "2026-02-25T20:44:51+00:00"
+        }
+    ]
+}
