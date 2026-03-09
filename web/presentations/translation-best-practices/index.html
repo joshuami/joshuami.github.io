@@ -224,6 +224,29 @@
       border-radius: 4px;
       font-size: 0.9em;
     }
+
+    /* Accessibility: Respect user's motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal .slides section.section-header .section-number,
+      .reveal .slides section.about-slide .author-image,
+      .reveal .slides section.section-header::before,
+      .reveal .slides section.section-header::after {
+        animation: none !important;
+      }
+    }
+
+    /* Accessibility: Visually hidden but screen reader accessible */
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
   </style>
   <link rel="stylesheet" href="../dist/assets/reveal-entry-BM7nhOpr.css">
   <link rel="stylesheet" href="../theme-joshuami.css">
@@ -272,8 +295,8 @@
     <div class="slides">
       <!-- Title Slide -->
       <section class="section-header" data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)">
-        <div class="section-number">12</div>
-        <h2>Best Practices for Translating Government Websites</h2>
+        <div class="section-number" aria-hidden="true">12</div>
+        <h2><span class="visually-hidden">12 </span>Best Practices for Translating Government Websites</h2>
         <p>Improving access for communities with limited language proficiency</p>
       </section>
 
@@ -287,11 +310,11 @@
               <li>Full stack consultancy</li>
               <li>20 years Drupal experience</li>
               <li>Government website specialist</li>
-              <li>Connect: <a href="https://www.linkedin.com/in/joshuami/">LinkedIn</a> or Drupal Slack (@joshuami)</li>
+              <li>Connect: <a href="https://www.linkedin.com/in/joshuami/">Josh Mitchell on LinkedIn</a> or Drupal Slack (@joshuami)</li>
             </ul>
           </div>
           <div>
-            <img class="author-image" src="/sites/default/files/styles/1_1_300x300_focal_point_webp/public/2025-10/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&itok=muS1a0XT" alt="Josh Mitchell" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover;">
+            <img class="author-image" src="/sites/default/files/styles/1_1_300x300_focal_point_webp/public/2025-10/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&itok=muS1a0XT" alt="Portrait of Josh Mitchell pointing, founder of M6L" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover;">
           </div>
         </div>
       </section>
@@ -311,8 +334,8 @@
       <!-- Section 1: Know Your Audience -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)">
-          <div class="section-number">1</div>
-          <h2>Know Who Will Benefit</h2>
+          <div class="section-number" aria-hidden="true">1</div>
+          <h2><span class="visually-hidden">Section 1: </span>Know Who Will Benefit</h2>
           <p>Understanding your community is the first step</p>
         </section>
 
@@ -351,14 +374,14 @@
       <!-- Section 2: Avoid Client-Side Translation -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #5f27cd 0%, #a55eea 100%)">
-          <div class="section-number">2</div>
-          <h2>Avoid the Client-Side Translation Crutch</h2>
+          <div class="section-number" aria-hidden="true">2</div>
+          <h2><span class="visually-hidden">Section 2: </span>Avoid the Client-Side Translation Crutch</h2>
           <p>Why the Google Translate widget isn't enough</p>
         </section>
 
         <section>
           <h3>The Problem</h3>
-          <img src="/sites/default/files/styles/uncropped_600w_webp/public/2025-08/seattle-google-translate-widget.png.webp" alt="Seattle.gov currently uses the Google Translate Widget." style="max-width: 100%; margin-bottom: 1rem;">
+          <img src="/sites/default/files/styles/uncropped_600w_webp/public/2025-08/seattle-google-translate-widget.png.webp" alt="Screenshot of Seattle.gov header with a Google Translate dropdown displaying 'Select Language' in English only, illustrating that users must read English to access translations" style="max-width: 100%; margin-bottom: 1rem;">
           <p class="small muted">Why do people assume someone needing translation can read a word in a language other than the one they speak?</p>
         </section>
 
@@ -392,8 +415,8 @@
       <!-- Section 3: Human Review -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%)">
-          <div class="section-number">3</div>
-          <h2>Review Translations with Human Professionals</h2>
+          <div class="section-number" aria-hidden="true">3</div>
+          <h2><span class="visually-hidden">Section 3: </span>Review Translations with Human Professionals</h2>
           <p>Machine translation needs human verification</p>
         </section>
 
@@ -426,8 +449,8 @@
       <!-- Section 4: SEO and Metatags -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff9f43 0%, #ee5a24 100%)">
-          <div class="section-number">4</div>
-          <h2>Help Search Engines with Proper Metatags</h2>
+          <div class="section-number" aria-hidden="true">4</div>
+          <h2><span class="visually-hidden">Section 4: </span>Help Search Engines with Proper Metatags</h2>
           <p>Using hreflang to boost content relevance</p>
         </section>
 
@@ -453,7 +476,7 @@
 
         <section>
           <h3>Portland.gov Example</h3>
-          <pre><code data-trim data-noescape>
+          <pre role="region" aria-label="HTML code example showing hreflang meta tags for multilingual SEO"><code data-trim data-noescape>
 &lt;meta name="geo.placename" content="Portland" /&gt;
 &lt;meta name="geo.region" content="US-OR" /&gt;
 &lt;link rel="canonical" href="https://www.portland.gov/..." /&gt;
@@ -479,8 +502,8 @@
       <!-- Section 5: Site Search -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #1dd1a1 0%, #10ac84 100%)">
-          <div class="section-number">5</div>
-          <h2>Index Content by Language</h2>
+          <div class="section-number" aria-hidden="true">5</div>
+          <h2><span class="visually-hidden">Section 5: </span>Index Content by Language</h2>
           <p>Improving site search for multilingual users</p>
         </section>
 
@@ -513,15 +536,15 @@
 
         <section>
           <h3>Portland.gov Search Example</h3>
-          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/portlandgov-translation-search.png.webp" alt="Portland.gov has an excellent search experience in any language." style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/portlandgov-translation-search.png.webp" alt="Screenshot of Portland.gov search interface in Vietnamese, showing translated search filters, results headings, and content summaries" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
         </section>
       </section>
 
       <!-- Section 6: Design Considerations -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #f368e0 0%, #be2edd 100%)">
-          <div class="section-number">6</div>
-          <h2>Design for Culture and Word Length</h2>
+          <div class="section-number" aria-hidden="true">6</div>
+          <h2><span class="visually-hidden">Section 6: </span>Design for Culture and Word Length</h2>
           <p>Beyond just translating text</p>
         </section>
 
@@ -547,8 +570,8 @@
       <!-- Section 7: Complex Layouts & Mixed Translation -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #48dbfb 0%, #0abde3 100%)">
-          <div class="section-number">7</div>
-          <h2>Keep Layouts Simple</h2>
+          <div class="section-number" aria-hidden="true">7</div>
+          <h2><span class="visually-hidden">Section 7: </span>Keep Layouts Simple</h2>
           <p>Complex layouts cost more to translate</p>
         </section>
 
@@ -580,8 +603,8 @@
       <!-- Section 8: Avoid Mixed Translation -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #00cec9 0%, #00b894 100%)">
-          <div class="section-number">8</div>
-          <h2>Avoid Mixed Translation</h2>
+          <div class="section-number" aria-hidden="true">8</div>
+          <h2><span class="visually-hidden">Section 8: </span>Avoid Mixed Translation</h2>
           <p>Keep language consistent throughout the page</p>
         </section>
 
@@ -597,7 +620,7 @@
 
         <section>
           <h3>Example Problem</h3>
-          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/washco-example-of-mixed-translation.png.webp" alt="Mixing the translation of titles makes content difficult to read and understand." style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/washco-example-of-mixed-translation.png.webp" alt="Screenshot showing a webpage with mixed English and Spanish titles in a navigation list, demonstrating poor usability when languages are inconsistently applied" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
           <p class="small muted">Mixing English and Spanish titles makes content difficult to read</p>
         </section>
       </section>
@@ -605,8 +628,8 @@
       <!-- Section 9: Language Switcher -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff6b81 0%, #ee5253 100%)">
-          <div class="section-number">9</div>
-          <h2>Help Users Understand Available Languages</h2>
+          <div class="section-number" aria-hidden="true">9</div>
+          <h2><span class="visually-hidden">Section 9: </span>Help Users Understand Available Languages</h2>
           <p>Language switcher best practices</p>
         </section>
 
@@ -641,22 +664,22 @@
 
         <section>
           <h3>Multnomah County Library Example</h3>
-          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/multcolib-translation-navbar.png.webp" alt="The Multnomah County library uses a translation navigation with each language presented as an active or disabled link." style="max-width: 100%; margin-bottom: 1rem;">
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/multcolib-translation-navbar.png.webp" alt="Screenshot of Multnomah County Library website header showing a horizontal language navigation bar with language names displayed in their native scripts: English, Español, Tiếng Việt, 中文, Русский, and Українська" style="max-width: 100%; margin-bottom: 1rem;">
           <p class="small">Sitewide navigation with language labels in target languages</p>
         </section>
 
         <section>
           <h3>Portland.gov Translation Menus</h3>
-          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/portlandgov-translation-menus.png.webp" alt="Portland.gov uses two different approaches for translation menus." style="max-width: 100%; max-height: 65vh; object-fit: contain;">
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/portlandgov-translation-menus.png.webp" alt="Screenshot comparing two Portland.gov translation interfaces: a sitewide language dropdown in the header, and in-page translation links showing available language versions with translated titles" style="max-width: 100%; max-height: 65vh; object-fit: contain;">
           <p class="small">In-page links with language labels and translated titles</p>
         </section>
       </section>
 
       <!-- Section 10: Downloadable Files & Media -->
       <section>
-        <section class="section-header" data-background-gradient="linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%)">
-          <div class="section-number">10</div>
-          <h2>Label Downloadable Files</h2>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #d4a017 0%, #b8860b 100%)">
+          <div class="section-number" aria-hidden="true">10</div>
+          <h2><span class="visually-hidden">Section 10: </span>Label Downloadable Files</h2>
           <p>Dual labeling for translated documents</p>
         </section>
 
@@ -673,7 +696,7 @@
 
         <section>
           <h3>Dual Labeling Example</h3>
-          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/washco-residential-collection-service-rates.png.webp" alt="Example of labeling translated documents in a way that makes it clear what alternatives can be downloaded." style="max-width: 100%; margin-bottom: 1rem;">
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/washco-residential-collection-service-rates.png.webp" alt="Screenshot of a document download section showing file links with dual labeling: document name in English followed by translated language name in parentheses, with file type and size indicators" style="max-width: 100%; margin-bottom: 1rem;">
           <p class="small">Label source language next to document name with file type and size</p>
         </section>
 
@@ -702,18 +725,19 @@
       <!-- Section 11: Plain Language -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%)">
-          <div class="section-number">11</div>
-          <h2>Reduce Costs with Plain Language</h2>
+          <div class="section-number" aria-hidden="true">11</div>
+          <h2><span class="visually-hidden">Section 11: </span>Reduce Costs with Plain Language</h2>
           <p>Less text = lower translation costs</p>
         </section>
 
         <section>
           <h3>Reading Level Comparison</h3>
           <table class="comparison-table">
+            <caption class="visually-hidden">Comparison of post-graduate reading level versus 8th-grade reading level text complexity</caption>
             <thead>
               <tr>
-                <th>Post-Graduate Level</th>
-                <th>8th-Grade Level</th>
+                <th scope="col">Post-Graduate Level</th>
+                <th scope="col">8th-Grade Level</th>
               </tr>
             </thead>
             <tbody>
@@ -744,8 +768,8 @@
       <!-- Section 12: AI and Translation -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #e17055 0%, #d63031 100%)">
-          <div class="section-number">12</div>
-          <h2>AI and Translation</h2>
+          <div class="section-number" aria-hidden="true">12</div>
+          <h2><span class="visually-hidden">Section 12: </span>AI and Translation</h2>
           <p>The future of automated translation</p>
         </section>
 
@@ -761,7 +785,7 @@
 
         <section>
           <h3>Drupal AI Translation</h3>
-          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/drupal-translate-using-ai.png.webp" alt="Drupal's translation interface with AI options enabled." style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/drupal-translate-using-ai.png.webp" alt="Screenshot of Drupal CMS content translation form showing a 'Translate using AI' button alongside the traditional translation fields" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
           <p class="small">Drupal CMS includes basic "translate using AI" capabilities</p>
         </section>
 
@@ -803,7 +827,7 @@
         <h2>Get Help</h2>
         <p>Need help implementing these best practices?</p>
         <div class="highlight-box">
-          <p><a href="https://www.linkedin.com/in/joshuami/">Connect with me on LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/joshuami/">Connect with Josh Mitchell on LinkedIn</a></p>
           <p class="small">I've worked with vendors specializing in translation and localization</p>
           <p class="small">I can connect you to organizations that boost your translation efforts</p>
         </div>
