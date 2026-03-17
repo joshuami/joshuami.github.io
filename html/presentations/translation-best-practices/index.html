@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Best Practices for Translating Government Websites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Minimal overrides for specific issues -->
+  <style>
+    /* Ensure slides are left-aligned by default */
+    .reveal .slides section {
+      text-align: left !important;
+    }
+
+    /* ==========================================
+       PRESENTATION-SPECIFIC THEME OVERRIDES
+       Override dark theme for colorful section headers
+       ========================================== */
+
+    /* Make the slides container transparent so data-background-gradient shows */
+    .reveal .slides {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    /* Keep non-section-header slides with dark background */
+    .reveal .slides > section:not(.section-header),
+    .reveal .slides > section.stack > section:not(.section-header) {
+      background-color: #212529 !important;
+    }
+
+    /* ==========================================
+       PINBALL NUMBER COUNT STYLED SECTIONS
+       Playful, colorful, groovy section headers
+       ========================================== */
+
+    /* Make stack containers transparent so background gradients show through */
+    .reveal .slides > section.stack {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    /* Override theme's global color inheritance for section headers */
+    .reveal .slides section.section-header *,
+    .reveal .slides section.section-header h2,
+    .reveal .slides section.section-header p,
+    .reveal .slides section.section-header .section-number {
+      color: #fff !important;
+    }
+
+    /* Base styling for section header slides */
+    .reveal .slides section.section-header {
+      text-align: center !important;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      background: transparent !important;
+    }
+
+    /* White text with black outline */
+    .reveal .slides section.section-header .section-number {
+      font-size: 10rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+      color: #fff !important;
+      -webkit-text-stroke: 5px #000;
+      paint-order: stroke fill;
+      text-shadow:
+        -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000,
+        -3px 0 0 #000, 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    .reveal .slides section.section-header h2 {
+      font-size: 2.8rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 0.5rem 0 !important;
+      text-align: center !important;
+      color: #fff !important;
+      -webkit-text-stroke: 6px #000;
+      paint-order: stroke fill;
+      text-shadow:
+        -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000,
+        -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000;
+    }
+
+    .reveal .slides section.section-header p {
+      font-size: 1.4rem;
+      margin: 0;
+      text-align: center !important;
+      color: #fff !important;
+      -webkit-text-stroke: 2px #000;
+      paint-order: stroke fill;
+      text-shadow:
+        -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
+        -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+    }
+
+    /* About slide styling */
+    .reveal .slides section.about-slide h2 {
+      color: #fff !important;
+      -webkit-text-stroke: 5px #000;
+      paint-order: stroke fill;
+      text-shadow:
+        -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000,
+        -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000;
+    }
+
+    .reveal .slides section.about-slide li,
+    .reveal .slides section.about-slide a {
+      color: #fff !important;
+      -webkit-text-stroke: 2px #000;
+      paint-order: stroke fill;
+      text-shadow:
+        -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
+        -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+    }
+
+    .reveal .slides section.about-slide .author-image {
+      animation: bounce 2s ease-in-out infinite;
+      border: 5px solid #fff;
+      box-shadow:
+        0 0 0 5px #000,
+        8px 8px 0 rgba(0,0,0,0.3);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-20px) scale(1.05); }
+    }
+
+    /* Decorative circles */
+    .reveal .slides section.section-header::before,
+    .reveal .slides section.section-header::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.25;
+      z-index: 0;
+    }
+    .reveal .slides section.section-header::before {
+      width: 180px;
+      height: 180px;
+      background: #fff !important;
+      top: 8%;
+      left: 5%;
+      animation: float 4s ease-in-out infinite;
+    }
+    .reveal .slides section.section-header::after {
+      width: 140px;
+      height: 140px;
+      background: #fff !important;
+      bottom: 12%;
+      right: 8%;
+      animation: float 4s ease-in-out infinite 1s;
+    }
+
+    .reveal .slides section.section-header > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Gradients now handled via data-background-gradient attribute on each section */
+
+    /* Additional custom styles for this presentation */
+    .reveal .highlight-box {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border-left: 4px solid #0000ff;
+      margin: 1rem 0;
+    }
+    .reveal .warning-box {
+      background: #fff3cd;
+      padding: 1.5rem;
+      border-left: 4px solid #ffc107;
+      margin: 1rem 0;
+      color: #212529;
+    }
+    .reveal .success-box {
+      background: #d4edda;
+      padding: 1.5rem;
+      border-left: 4px solid #28a745;
+      margin: 1rem 0;
+      color: #212529;
+    }
+    .reveal .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9em;
+    }
+    .reveal .comparison-table th,
+    .reveal .comparison-table td {
+      border: 1px solid #dee2e6;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .reveal .comparison-table th {
+      background: #343a40;
+      color: #fff;
+    }
+    .reveal .language-labels {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .reveal .language-label {
+      background: #6c757d;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    /* Accessibility: Respect user's motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal .slides section.section-header .section-number,
+      .reveal .slides section.about-slide .author-image,
+      .reveal .slides section.section-header::before,
+      .reveal .slides section.section-header::after {
+        animation: none !important;
+      }
+    }
+
+    /* Accessibility: Visually hidden but screen reader accessible */
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+  </style>
+  <link rel="stylesheet" href="../dist/assets/reveal-entry-BM7nhOpr.css">
+  <link rel="stylesheet" href="../theme-joshuami.css">
+
+  <!-- Override theme for this presentation - MUST come after theme-joshuami.css -->
+  <style>
+    /* Make slides container transparent for gradient backgrounds */
+    .reveal .slides {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    /* Make stack containers transparent */
+    .reveal .slides > section.stack {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    /* Section header slides should be transparent (gradient via data-background) */
+    .reveal .slides section.section-header,
+    .reveal .slides section.section-header *,
+    .reveal .slides section.about-slide,
+    .reveal .slides section.about-slide * {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    /* Keep regular slides dark */
+    .reveal .slides > section:not(.section-header):not(.stack):not(.about-slide),
+    .reveal .slides > section.stack > section:not(.section-header) {
+      background-color: #212529 !important;
+    }
+
+    /* White text with black outline for section headers */
+    .reveal .slides section.section-header .section-number,
+    .reveal .slides section.section-header h2,
+    .reveal .slides section.section-header p {
+      color: #fff !important;
+    }
+  </style>
+
+  <script type="module" src="../dist/assets/reveal-entry-B-sVstDz.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Slide -->
+      <section class="section-header" data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)">
+        <div class="section-number" aria-hidden="true">12</div>
+        <h2><span class="visually-hidden">12 </span>Best Practices for Translating Government Websites</h2>
+        <p>Improving access for communities with limited language proficiency</p>
+      </section>
+
+      <!-- About Josh Mitchell -->
+      <section class="about-slide" data-background-gradient="linear-gradient(135deg, #11998e 0%, #38ef7d 100%)">
+        <h2>About Josh Mitchell</h2>
+        <div class="slide-layout-two-column">
+          <div>
+            <ul>
+              <li>Founder of M6L</li>
+              <li>Full stack consultancy</li>
+              <li>20 years Drupal experience</li>
+              <li>Government website specialist</li>
+              <li>Connect: <a href="https://www.linkedin.com/in/joshuami/">Josh Mitchell on LinkedIn</a> or Drupal Slack (@joshuami)</li>
+            </ul>
+          </div>
+          <div>
+            <img class="author-image" src="/sites/default/files/styles/1_1_300x300_focal_point_webp/public/2025-10/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&itok=muS1a0XT" alt="Portrait of Josh Mitchell pointing, founder of M6L" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover;">
+          </div>
+        </div>
+      </section>
+
+      <!-- Introduction -->
+      <section>
+        <h2>Why This Matters</h2>
+        <ul>
+          <li>These best practices apply to any website</li>
+          <li>Focus on government due to community impact</li>
+          <li>Applies to all levels: federal, state, local</li>
+          <li>Greater immigration = greater translation impact</li>
+        </ul>
+        <p class="muted small">Originally 10 best practices... now there are 12!</p>
+      </section>
+
+      <!-- Section 1: Know Your Audience -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)">
+          <div class="section-number" aria-hidden="true">1</div>
+          <h2><span class="visually-hidden">Section 1: </span>Know Who Will Benefit</h2>
+          <p>Understanding your community is the first step</p>
+        </section>
+
+        <section>
+          <h3>Data Sources</h3>
+          <ul>
+            <li>Census data (demographics)</li>
+            <li>Survey data</li>
+            <li>Immigration data</li>
+            <li>Literacy rates</li>
+            <li>Analytics (especially for tourist destinations)</li>
+          </ul>
+          <p class="small muted">Example: <a href="https://www.census.gov/newsroom/press-releases/2025/2017-2021-acs-language-use-tables.html">Census.gov language use tables</a></p>
+        </section>
+
+        <section>
+          <h3>Local Resources</h3>
+          <div class="highlight-box">
+            <p><strong>Example:</strong> Oregon provides a <a href="https://www.oregon.gov/languages/pages/common-language-county.aspx">common languages by county breakdown</a></p>
+            <p class="small">Compiled by Portland State University Population Research Center</p>
+          </div>
+          <p>Partner with immigrant and refugee organizations like IRCO for deeper insights</p>
+        </section>
+
+        <section>
+          <h3>Beyond Demographics</h3>
+          <ul>
+            <li>Demographics show bilingual population scope</li>
+            <li>Literacy rates reveal actual reach</li>
+            <li>Recent immigrant pockets may have greater need despite smaller populations</li>
+          </ul>
+          <p class="accent">Example: One Portland school has students speaking 27 languages at home</p>
+        </section>
+      </section>
+
+      <!-- Section 2: Avoid Client-Side Translation -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #5f27cd 0%, #a55eea 100%)">
+          <div class="section-number" aria-hidden="true">2</div>
+          <h2><span class="visually-hidden">Section 2: </span>Avoid the Client-Side Translation Crutch</h2>
+          <p>Why the Google Translate widget isn't enough</p>
+        </section>
+
+        <section>
+          <h3>The Problem</h3>
+          <img src="/sites/default/files/styles/uncropped_600w_webp/public/2025-08/seattle-google-translate-widget.png.webp" alt="Screenshot of Seattle.gov header with a Google Translate dropdown displaying 'Select Language' in English only, illustrating that users must read English to access translations" style="max-width: 100%; margin-bottom: 1rem;">
+          <p class="small muted">Why do people assume someone needing translation can read a word in a language other than the one they speak?</p>
+        </section>
+
+        <section>
+          <h3>Why It's a Crutch</h3>
+          <ul>
+            <li>Policy makers assume the widget provides access</li>
+            <li>Community members already know how to use browser translation</li>
+            <li>If you can find a page, you can figure out how to translate it</li>
+          </ul>
+          <p class="primary large">The real equity issue: finding content in the first place</p>
+        </section>
+
+        <section>
+          <h3>The SEO Problem</h3>
+          <div class="warning-box">
+            <p>Websites without translated content at alternate URLs are <strong>not fully indexed</strong> in target languages by search engines</p>
+          </div>
+          <p>People who speak other languages cannot use their language to search for your content</p>
+        </section>
+
+        <section>
+          <h3>Minimum Recommendation</h3>
+          <div class="success-box">
+            <p>Automate translation using machine translation stored in the database for presentation at a <strong>unique URL</strong></p>
+          </div>
+          <p>Content must be rendered as HTML, not by JavaScript in the browser</p>
+        </section>
+      </section>
+
+      <!-- Section 3: Human Review -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%)">
+          <div class="section-number" aria-hidden="true">3</div>
+          <h2><span class="visually-hidden">Section 3: </span>Review Translations with Human Professionals</h2>
+          <p>Machine translation needs human verification</p>
+        </section>
+
+        <section>
+          <h3>Best Practice</h3>
+          <ul>
+            <li>Full translation at a unique URL</li>
+            <li>Culturally appropriate design</li>
+            <li>May be translated by on-demand service (for speed)</li>
+            <li>Must be reviewed by skilled human translators</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>A Surprising Lesson</h3>
+          <div class="highlight-box">
+            <p>City of Portland project: Compared translation agency work to Google Translate API for interface elements</p>
+            <p class="primary">For UI elements, Google did better!</p>
+          </div>
+          <p class="small">Agencies typically translate documents with more context than interface elements</p>
+        </section>
+
+        <section>
+          <h3>Key Takeaway</h3>
+          <p class="large">Verify translations with trusted professionals regardless of source</p>
+          <p class="muted">Human translators, machine translation, or AI all need review</p>
+        </section>
+      </section>
+
+      <!-- Section 4: SEO and Metatags -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff9f43 0%, #ee5a24 100%)">
+          <div class="section-number" aria-hidden="true">4</div>
+          <h2><span class="visually-hidden">Section 4: </span>Help Search Engines with Proper Metatags</h2>
+          <p>Using hreflang to boost content relevance</p>
+        </section>
+
+        <section>
+          <h3>How hreflang Works</h3>
+          <ul>
+            <li>Link elements with <code>rel="alternate"</code></li>
+            <li>Language attribute like <code>hreflang="es"</code></li>
+            <li>Search engines give relevance to translations of high-ranking pages</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Language and Region Codes</h3>
+          <p>ISO standard codes for language and region:</p>
+          <ul>
+            <li><code>hreflang="en-US"</code> - English (United States)</li>
+            <li><code>hreflang="en-CA"</code> - English (Canada)</li>
+            <li><code>hreflang="es"</code> - Spanish</li>
+            <li><code>hreflang="zh-hans"</code> - Simplified Chinese</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Portland.gov Example</h3>
+          <pre role="region" aria-label="HTML code example showing hreflang meta tags for multilingual SEO"><code data-trim data-noescape>
+&lt;meta name="geo.placename" content="Portland" /&gt;
+&lt;meta name="geo.region" content="US-OR" /&gt;
+&lt;link rel="canonical" href="https://www.portland.gov/..." /&gt;
+&lt;link rel="alternate" hreflang="x-default" href="..." /&gt;
+&lt;link rel="alternate" hreflang="en" href="..." /&gt;
+&lt;link rel="alternate" hreflang="es" href="..." /&gt;
+&lt;link rel="alternate" hreflang="vi" href="..." /&gt;
+&lt;link rel="alternate" hreflang="zh-hans" href="..." /&gt;
+&lt;link rel="alternate" hreflang="ru" href="..." /&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Drupal Modules</h3>
+          <ul>
+            <li><strong>Metatag</strong> - Core metadata management</li>
+            <li><strong>Hreflang</strong> - Language alternate links</li>
+            <li><strong>Schema.org</strong> - Structured data for AI and search</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Section 5: Site Search -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #1dd1a1 0%, #10ac84 100%)">
+          <div class="section-number" aria-hidden="true">5</div>
+          <h2><span class="visually-hidden">Section 5: </span>Index Content by Language</h2>
+          <p>Improving site search for multilingual users</p>
+        </section>
+
+        <section>
+          <h3>The Client-Side Translation Failure</h3>
+          <div class="warning-box">
+            <p>Sites using only client-side translation lose the ability to return search results in the target language</p>
+          </div>
+          <p>Would you find it acceptable if search only returned occasional cognates or misspellings?</p>
+        </section>
+
+        <section>
+          <h3>Language-Specific Challenges</h3>
+          <ul>
+            <li>Unique grammar and syntax</li>
+            <li>Different writing systems (alphabets)</li>
+            <li>Unique characters and accents</li>
+          </ul>
+          <p class="accent">If search is incomprehensible, usability is broken</p>
+        </section>
+
+        <section>
+          <h3>Full Translation Enables</h3>
+          <ul>
+            <li>Translated interface elements (forms, filters)</li>
+            <li>Search results in target language</li>
+            <li>Proper indexing of content</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Portland.gov Search Example</h3>
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/portlandgov-translation-search.png.webp" alt="Screenshot of Portland.gov search interface in Vietnamese, showing translated search filters, results headings, and content summaries" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+        </section>
+      </section>
+
+      <!-- Section 6: Design Considerations -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #f368e0 0%, #be2edd 100%)">
+          <div class="section-number" aria-hidden="true">6</div>
+          <h2><span class="visually-hidden">Section 6: </span>Design for Culture and Word Length</h2>
+          <p>Beyond just translating text</p>
+        </section>
+
+        <section>
+          <h3>Technical Considerations</h3>
+          <ul>
+            <li>Right-to-left language support (Arabic, Hebrew)</li>
+            <li>Word length variations (German words are long!)</li>
+            <li>Character sets and fonts</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Cultural Considerations</h3>
+          <ul>
+            <li>Color meanings vary by culture</li>
+            <li>Imagery appropriateness</li>
+            <li>Tone and formality levels</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Section 7: Complex Layouts & Mixed Translation -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #48dbfb 0%, #0abde3 100%)">
+          <div class="section-number" aria-hidden="true">7</div>
+          <h2><span class="visually-hidden">Section 7: </span>Keep Layouts Simple</h2>
+          <p>Complex layouts cost more to translate</p>
+        </section>
+
+        <section>
+          <h3>Simple vs Complex</h3>
+          <div class="slide-layout-two-column">
+            <div>
+              <h4>Simple (Lower Cost)</h4>
+              <ul>
+                <li>Body content with CKEditor</li>
+                <li>Semantic headings, lists, paragraphs</li>
+                <li>Easy for translators to match structure</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Complex (Higher Cost)</h4>
+              <ul>
+                <li>Layout Builder with multiple sections</li>
+                <li>Paragraphs with various block types</li>
+                <li>Each component needs translation</li>
+                <li>Revision upon revision complexity</li>
+              </ul>
+            </div>
+          </div>
+          <p class="primary">Keep layouts simple for content that updates regularly</p>
+        </section>
+      </section>
+
+      <!-- Section 8: Avoid Mixed Translation -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #00cec9 0%, #00b894 100%)">
+          <div class="section-number" aria-hidden="true">8</div>
+          <h2><span class="visually-hidden">Section 8: </span>Avoid Mixed Translation</h2>
+          <p>Keep language consistent throughout the page</p>
+        </section>
+
+        <section>
+          <h3>Why Mixed Translation Fails</h3>
+          <ul>
+            <li>While indexed, usability suffers</li>
+            <li>Difficult for limited proficiency readers</li>
+            <li>Confusing for native source language speakers</li>
+            <li>Problems compound with more languages</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Example Problem</h3>
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/washco-example-of-mixed-translation.png.webp" alt="Screenshot showing a webpage with mixed English and Spanish titles in a navigation list, demonstrating poor usability when languages are inconsistently applied" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+          <p class="small muted">Mixing English and Spanish titles makes content difficult to read</p>
+        </section>
+      </section>
+
+      <!-- Section 9: Language Switcher -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff6b81 0%, #ee5253 100%)">
+          <div class="section-number" aria-hidden="true">9</div>
+          <h2><span class="visually-hidden">Section 9: </span>Help Users Understand Available Languages</h2>
+          <p>Language switcher best practices</p>
+        </section>
+
+        <section>
+          <h3>Language Labels</h3>
+          <p>Present language labels in the target language:</p>
+          <div class="language-labels">
+            <span class="language-label">English</span>
+            <span class="language-label">Español</span>
+            <span class="language-label">Tiếng Việt</span>
+            <span class="language-label">Русский</span>
+            <span class="language-label">中文</span>
+          </div>
+          <p class="small muted">Users recognize their own language more easily</p>
+        </section>
+
+        <section>
+          <h3>Two Approaches</h3>
+          <div class="slide-layout-two-column">
+            <div>
+              <h4>Sitewide Navigation</h4>
+              <p class="small">For sites with extensive translation</p>
+              <p class="small">Switches to fully translated version</p>
+            </div>
+            <div>
+              <h4>In-Page Navigation</h4>
+              <p class="small">For limited translated content</p>
+              <p class="small">Shows available translations for current page</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Multnomah County Library Example</h3>
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/multcolib-translation-navbar.png.webp" alt="Screenshot of Multnomah County Library website header showing a horizontal language navigation bar with language names displayed in their native scripts: English, Español, Tiếng Việt, 中文, Русский, and Українська" style="max-width: 100%; margin-bottom: 1rem;">
+          <p class="small">Sitewide navigation with language labels in target languages</p>
+        </section>
+
+        <section>
+          <h3>Portland.gov Translation Menus</h3>
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/portlandgov-translation-menus.png.webp" alt="Screenshot comparing two Portland.gov translation interfaces: a sitewide language dropdown in the header, and in-page translation links showing available language versions with translated titles" style="max-width: 100%; max-height: 65vh; object-fit: contain;">
+          <p class="small">In-page links with language labels and translated titles</p>
+        </section>
+      </section>
+
+      <!-- Section 10: Downloadable Files & Media -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #d4a017 0%, #b8860b 100%)">
+          <div class="section-number" aria-hidden="true">10</div>
+          <h2><span class="visually-hidden">Section 10: </span>Label Downloadable Files</h2>
+          <p>Dual labeling for translated documents</p>
+        </section>
+
+        <section>
+          <h3>HTML First</h3>
+          <ul>
+            <li>Prefer HTML content over downloadable files</li>
+            <li>HTML is easier to structure for accessibility</li>
+            <li>Works better on mobile devices</li>
+            <li>Files often fail on mobile</li>
+          </ul>
+          <p class="muted small">What devices are most available to populations needing translation?</p>
+        </section>
+
+        <section>
+          <h3>Dual Labeling Example</h3>
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/washco-residential-collection-service-rates.png.webp" alt="Screenshot of a document download section showing file links with dual labeling: document name in English followed by translated language name in parentheses, with file type and size indicators" style="max-width: 100%; margin-bottom: 1rem;">
+          <p class="small">Label source language next to document name with file type and size</p>
+        </section>
+
+        <section>
+          <h3>File Size Matters</h3>
+          <div class="warning-box">
+            <p>Large file sizes are inequitable</p>
+            <p>Only those with enough data can download them</p>
+          </div>
+          <p>Avoid "click here" or "download now" - explain what will be downloaded</p>
+        </section>
+
+        <section>
+          <h3>Translating Images and Video</h3>
+          <p>Metadata that can be translated:</p>
+          <ul>
+            <li>Alternative text</li>
+            <li>Transcripts</li>
+            <li>Displayed titles</li>
+            <li>Closed captioning</li>
+          </ul>
+          <p class="small muted">Drupal's Translation Management Tool helps track untranslated media</p>
+        </section>
+      </section>
+
+      <!-- Section 11: Plain Language -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%)">
+          <div class="section-number" aria-hidden="true">11</div>
+          <h2><span class="visually-hidden">Section 11: </span>Reduce Costs with Plain Language</h2>
+          <p>Less text = lower translation costs</p>
+        </section>
+
+        <section>
+          <h3>Reading Level Comparison</h3>
+          <table class="comparison-table">
+            <caption class="visually-hidden">Comparison of post-graduate reading level versus 8th-grade reading level text complexity</caption>
+            <thead>
+              <tr>
+                <th scope="col">Post-Graduate Level</th>
+                <th scope="col">8th-Grade Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p class="small">"Landscape design integrates ecological principles with aesthetic considerations to create harmonious outdoor spaces that serve both functional and experiential purposes..."</p>
+                </td>
+                <td>
+                  <p class="small">"Landscape design is about planning and creating beautiful outdoor spaces like parks and gardens..."</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="primary">The simpler version has vastly less text to translate</p>
+        </section>
+
+        <section>
+          <h3>Benefits of Plain Language</h3>
+          <ul>
+            <li>Easier for people to understand</li>
+            <li>Costs less to translate</li>
+            <li>Costs less to maintain</li>
+            <li>Better user experience for everyone</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Section 12: AI and Translation -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #e17055 0%, #d63031 100%)">
+          <div class="section-number" aria-hidden="true">12</div>
+          <h2><span class="visually-hidden">Section 12: </span>AI and Translation</h2>
+          <p>The future of automated translation</p>
+        </section>
+
+        <section>
+          <h3>AI Translation Today</h3>
+          <ul>
+            <li>AI translation is improving rapidly</li>
+            <li>Translation via LLM is a mature AI use case</li>
+            <li>ChatGPT, Claude sometimes create grammatically correct but unnatural passages</li>
+            <li>This will improve</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Drupal AI Translation</h3>
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/drupal-translate-using-ai.png.webp" alt="Screenshot of Drupal CMS content translation form showing a 'Translate using AI' button alongside the traditional translation fields" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+          <p class="small">Drupal CMS includes basic "translate using AI" capabilities</p>
+        </section>
+
+        <section>
+          <h3>Future Possibilities</h3>
+          <div class="success-box">
+            <p>AI prompts can inject specific tone or cultural relevancy</p>
+          </div>
+          <p>A shift from traditional translation APIs toward AI platforms is coming</p>
+        </section>
+      </section>
+
+      <!-- Strive to Be Better -->
+      <section>
+        <h2>Strive to Be Better</h2>
+        <ul>
+          <li>Delivering better services to vulnerable populations isn't easy</li>
+          <li>Initial CMS investment is incremental compared to impact</li>
+          <li>May not achieve perfection in one project</li>
+          <li>Your website is a product that can continuously improve</li>
+        </ul>
+        <p class="primary large">By striving to be better, government organizations improve equity</p>
+      </section>
+
+      <!-- Resources -->
+      <section>
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="https://joshuami.com/blog/2025/revisiting-best-practices-translating-government-websites-2025">Full article on joshuami.com</a></li>
+          <li><a href="https://www.youtube.com/watch?v=_BVlhc_uANQ">2025 Drupal GovCon presentation (YouTube)</a></li>
+          <li><a href="https://www.drupal.org/project/metatag">Metatag module</a></li>
+          <li><a href="https://www.drupal.org/project/hreflang">Hreflang module</a></li>
+          <li><a href="https://www.drupal.org/project/tmgmt">Translation Management Tool</a></li>
+        </ul>
+      </section>
+
+      <!-- Get Help -->
+      <section>
+        <h2>Get Help</h2>
+        <p>Need help implementing these best practices?</p>
+        <div class="highlight-box">
+          <p><a href="https://www.linkedin.com/in/joshuami/">Connect with Josh Mitchell on LinkedIn</a></p>
+          <p class="small">I've worked with vendors specializing in translation and localization</p>
+          <p class="small">I can connect you to organizations that boost your translation efforts</p>
+        </div>
+      </section>
+
+      <!-- Thank You -->
+      <section>
+        <h2>Thank You</h2>
+        <p>Questions?</p>
+        <p class="small muted">This work is licensed under a Creative Commons Attribution 4.0 International License</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Override the default configuration for this specific presentation
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.Reveal) {
+        Reveal.configure({
+          hash: true,
+          slideNumber: true,
+          plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>

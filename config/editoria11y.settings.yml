@@ -1,32 +1,34 @@
-content_root: ''
+_core:
+  default_config_hash: eFkbuYimKVlcAYGUOQQ-XHvDy_AoEehsYHqkKh8--Dw
 assertiveness: assertive
-no_load: ''
-ignore_all_if_absent: ''
-ignore_elements: '.leaflet-map-pane *, .media-edit a'
-panel_no_cover: ''
-embedded_content_warning: ''
-download_links: ''
-link_strings_new_windows: ''
-ignore_link_strings: ''
-link_ignore_selector: 'svg.ext, svg.mailto, .link-purpose-text'
-hidden_handlers: ''
-element_hides_overflow: ''
-ed11y_theme: sleekTheme
-panel_pin: right
-shadow_components: ''
-detect_shadow: false
-watch_for_changes: 'true'
-disable_sync: false
-preserve_params: 'search,keys,page,language,language_content_entity'
-redundant_prefix: ''
+ck5_table_headers: row
+content_root: ''
 custom_tests: 0
+db_version: '2'
+detect_shadow: false
 disable_live: false
-live_h_inherit: ''
+disable_sync: false
+download_links: ''
+ed11y_theme: sleekTheme
+element_hides_overflow: ''
+embedded_content_warning: ''
+hidden_handlers: ''
+hide_edit_links: ''
+ignore_all_if_absent: ''
+ignore_elements: ''
+ignore_link_strings: ''
+ignore_tests: {  }
+link_ignore_selector: 'svg.ext, svg.mailto, .link-purpose-text'
+link_strings_new_windows: ''
 live_h2: 'form[id^="node-"] #edit-body-wrapper .ck-content'
 live_h3: ''
 live_h4: ''
-hide_edit_links: ''
-ck5_table_headers: row
-db_version: '2'
-pepper: 6bb0d41cb1566ba5eb0e13f1e9ea2718
-tests_off: ''
+live_h_inherit: ''
+no_load: ''
+panel_no_cover: ''
+panel_pin: right
+preserve_params: 'search,keys,page,language,language_content_entity'
+redundant_prefix: ''
+shadow_components: ''
+watch_for_changes: checkRoots
+pepper: 70b06238a0d96675d870be767507dd4e

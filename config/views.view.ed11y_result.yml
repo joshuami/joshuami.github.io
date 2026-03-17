@@ -1,4 +1,3 @@
-uuid: a2c78886-c54c-4353-8905-3ab4445d74fb
 langcode: en
 status: true
 dependencies:
@@ -5108,6 +5107,16 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              reader: '0'
+              webform_admin: '0'
+              webform_submissions_viewer: '0'
+              author: '0'
+              content_manager: '0'
+              site_admin: '0'
+              wds_staff: '0'
+              css_manager: '0'
+              admin: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -5146,6 +5155,16 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              reader: '0'
+              webform_admin: '0'
+              webform_submissions_viewer: '0'
+              author: '0'
+              content_manager: '0'
+              site_admin: '0'
+              wds_staff: '0'
+              css_manager: '0'
+              admin: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -5185,6 +5204,16 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              reader: '0'
+              webform_admin: '0'
+              webform_submissions_viewer: '0'
+              author: '0'
+              content_manager: '0'
+              site_admin: '0'
+              wds_staff: '0'
+              css_manager: '0'
+              admin: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -5226,6 +5255,16 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              reader: '0'
+              webform_admin: '0'
+              webform_submissions_viewer: '0'
+              author: '0'
+              content_manager: '0'
+              site_admin: '0'
+              wds_staff: '0'
+              css_manager: '0'
+              admin: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -5310,6 +5349,16 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              reader: '0'
+              webform_admin: '0'
+              webform_submissions_viewer: '0'
+              author: '0'
+              content_manager: '0'
+              site_admin: '0'
+              wds_staff: '0'
+              css_manager: '0'
+              admin: '0'
             min_placeholder: null
             max_placeholder: null
             placeholder: null
@@ -5357,6 +5406,16 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              reader: '0'
+              webform_admin: '0'
+              webform_submissions_viewer: '0'
+              author: '0'
+              content_manager: '0'
+              site_admin: '0'
+              wds_staff: '0'
+              css_manager: '0'
+              admin: '0'
             min_placeholder: null
             max_placeholder: null
             placeholder: null
@@ -5503,7 +5562,6 @@ display:
           empty_table: false
           caption: ''
           description: ''
-          class: ''
       row:
         type: fields
         options:
@@ -5539,7 +5597,6 @@ display:
           empty: true
           content: '<a href="../editoria11y/alerts" class="button button--primary">All alerts</a>'
           tokenize: false
-      display_extenders: {  }
       path: admin/reports/editoria11y/alert
       menu:
         type: none
