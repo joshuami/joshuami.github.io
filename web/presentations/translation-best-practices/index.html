@@ -76,6 +76,15 @@
       animation: bounce 2s ease-in-out infinite;
     }
 
+    /* Dark panel behind section header text */
+    .reveal .slides section.section-header .section-panel {
+      background: rgba(0, 0, 0, 0.6) !important;
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      border-radius: 1rem;
+      padding: 1.5rem 2.5rem;
+      max-width: 85%;
+    }
+
     .reveal .slides section.section-header h2 {
       font-size: 2.8rem !important;
       font-weight: 700 !important;
@@ -84,23 +93,13 @@
       margin: 0 0 0.5rem 0 !important;
       text-align: center !important;
       color: #fff !important;
-      -webkit-text-stroke: 6px #000;
-      paint-order: stroke fill;
-      text-shadow:
-        -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000,
-        -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000;
     }
 
     .reveal .slides section.section-header p {
       font-size: 1.4rem;
       margin: 0;
       text-align: center !important;
-      color: #fff !important;
-      -webkit-text-stroke: 2px #000;
-      paint-order: stroke fill;
-      text-shadow:
-        -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
-        -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+      color: rgba(255, 255, 255, 0.9) !important;
     }
 
     @keyframes bounce {
@@ -108,24 +107,27 @@
       50% { transform: translateY(-10px) rotate(2deg); }
     }
 
-    /* About slide styling */
-    .reveal .slides section.about-slide h2 {
-      color: #fff !important;
-      -webkit-text-stroke: 5px #000;
-      paint-order: stroke fill;
-      text-shadow:
-        -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000,
-        -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000;
+    /* About slide styling - dark panel */
+    .reveal .slides section.about-slide .about-panel {
+      background: rgba(0, 0, 0, 0.6) !important;
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      border-radius: 1rem;
+      padding: 2rem 2.5rem;
     }
 
-    .reveal .slides section.about-slide li,
-    .reveal .slides section.about-slide a {
+    .reveal .slides section.about-slide h2 {
       color: #fff !important;
-      -webkit-text-stroke: 2px #000;
-      paint-order: stroke fill;
-      text-shadow:
-        -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
-        -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000;
+    }
+
+    .reveal .slides section.about-slide li {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-size: 0.85em;
+    }
+
+    .reveal .slides section.about-slide a {
+      color: #7ab8ff !important;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .reveal .slides section.about-slide .author-image {
@@ -176,24 +178,31 @@
 
     /* Additional custom styles for this presentation */
     .reveal .highlight-box {
-      background: #f9f9f9;
+      background: #2a2d3a !important;
       padding: 1.5rem;
-      border-left: 4px solid #0000ff;
+      border-left: 4px solid #54a0ff;
       margin: 1rem 0;
+      border-radius: 4px;
+      color: #e0e0e0 !important;
+    }
+    .reveal .highlight-box a {
+      color: #54a0ff !important;
     }
     .reveal .warning-box {
-      background: #fff3cd;
+      background: #3a3424 !important;
       padding: 1.5rem;
       border-left: 4px solid #ffc107;
       margin: 1rem 0;
-      color: #212529;
+      border-radius: 4px;
+      color: #e0e0e0 !important;
     }
     .reveal .success-box {
-      background: #d4edda;
+      background: #1e3a2a !important;
       padding: 1.5rem;
       border-left: 4px solid #28a745;
       margin: 1rem 0;
-      color: #212529;
+      border-radius: 4px;
+      color: #e0e0e0 !important;
     }
     .reveal .comparison-table {
       width: 100%;
@@ -206,10 +215,15 @@
       border: 1px solid #dee2e6;
       padding: 0.75rem;
       text-align: left;
+      background: transparent !important;
+    }
+    .reveal .comparison-table td {
+      background: #2d3238 !important;
     }
     .reveal .comparison-table th {
-      background: #343a40;
-      color: #fff;
+      background: #495057 !important;
+      color: #fff !important;
+      font-weight: 700;
     }
     .reveal .language-labels {
       display: flex;
@@ -218,11 +232,22 @@
       margin-top: 1rem;
     }
     .reveal .language-label {
-      background: #6c757d;
-      color: #fff;
+      background: #6c757d !important;
+      color: #fff !important;
       padding: 0.5rem 1rem;
       border-radius: 4px;
       font-size: 0.9em;
+      display: inline-block;
+    }
+
+    /* Link styling for content slides */
+    .reveal .slides section:not(.section-header):not(.about-slide) a {
+      color: #54a0ff !important;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .reveal .slides section:not(.section-header):not(.about-slide) a:hover {
+      color: #7ab8ff !important;
     }
 
     /* Accessibility: Respect user's motion preferences */
@@ -274,6 +299,13 @@
       background-color: transparent !important;
     }
 
+    /* Dark panels on gradient slides override the transparent rule */
+    .reveal .slides section.section-header .section-panel,
+    .reveal .slides section.about-slide .about-panel {
+      background: rgba(0, 0, 0, 0.6) !important;
+      background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+
     /* Keep regular slides dark */
     .reveal .slides > section:not(.section-header):not(.stack):not(.about-slide),
     .reveal .slides > section.stack > section:not(.section-header) {
@@ -286,6 +318,47 @@
     .reveal .slides section.section-header p {
       color: #fff !important;
     }
+
+    /* Override aggressive theme wildcard for styled components */
+    .reveal .slides section .language-label {
+      background: #6c757d !important;
+      background-color: #6c757d !important;
+      color: #fff !important;
+    }
+    .reveal .slides section .highlight-box,
+    .reveal .slides section .highlight-box * {
+      background: #2a2d3a !important;
+      background-color: #2a2d3a !important;
+    }
+    .reveal .slides section .highlight-box a {
+      color: #54a0ff !important;
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+    .reveal .slides section .warning-box,
+    .reveal .slides section .warning-box * {
+      background: #3a3424 !important;
+      background-color: #3a3424 !important;
+      color: #e0e0e0 !important;
+    }
+    .reveal .slides section .success-box,
+    .reveal .slides section .success-box * {
+      background: #1e3a2a !important;
+      background-color: #1e3a2a !important;
+      color: #e0e0e0 !important;
+    }
+    .reveal .slides section .comparison-table th {
+      background: #495057 !important;
+      background-color: #495057 !important;
+      color: #fff !important;
+    }
+    .reveal .slides section .comparison-table td {
+      background: #2d3238 !important;
+      background-color: #2d3238 !important;
+    }
+    .reveal .slides section:not(.section-header):not(.about-slide) a {
+      color: #54a0ff !important;
+    }
   </style>
 
   <script type="module" src="../dist/assets/reveal-entry-B-sVstDz.js"></script>
@@ -296,25 +369,29 @@
       <!-- Title Slide -->
       <section class="section-header" data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)">
         <div class="section-number" aria-hidden="true">12</div>
-        <h2><span class="visually-hidden">12 </span>Best Practices for Translating Government Websites</h2>
-        <p>Improving access for communities with limited language proficiency</p>
+        <div class="section-panel">
+          <h2><span class="visually-hidden">12 </span>Best Practices for Translating Government Websites</h2>
+          <p>Helping communities access government services in their language</p>
+        </div>
       </section>
 
       <!-- About Josh Mitchell -->
       <section class="about-slide" data-background-gradient="linear-gradient(135deg, #11998e 0%, #38ef7d 100%)">
-        <h2>About Josh Mitchell</h2>
-        <div class="slide-layout-two-column">
-          <div>
-            <ul>
-              <li>Founder of M6L</li>
-              <li>Full stack consultancy</li>
-              <li>20 years Drupal experience</li>
-              <li>Government website specialist</li>
-              <li>Connect: <a href="https://www.linkedin.com/in/joshuami/">Josh Mitchell on LinkedIn</a> or Drupal Slack (@joshuami)</li>
-            </ul>
-          </div>
-          <div>
-            <img class="author-image" src="/sites/default/files/styles/1_1_300x300_focal_point_webp/public/2025-10/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&itok=muS1a0XT" alt="Portrait of Josh Mitchell pointing, founder of M6L" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover;">
+        <div class="about-panel">
+          <h2>About Josh Mitchell</h2>
+          <div class="slide-layout-two-column">
+            <div>
+              <ul>
+                <li>Founder of M6L</li>
+                <li>Full stack consultancy</li>
+                <li>20 years Drupal experience</li>
+                <li>Government digital services architect</li>
+                <li>Connect: <a href="https://www.linkedin.com/in/joshuami/">Josh Mitchell on LinkedIn</a> or Drupal Slack (@joshuami)</li>
+              </ul>
+            </div>
+            <div>
+              <img class="author-image" src="/sites/default/files/styles/1_1_300x300_focal_point_webp/public/2025-10/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&itok=muS1a0XT" alt="Portrait of Josh Mitchell pointing, founder of M6L" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover;">
+            </div>
           </div>
         </div>
       </section>
@@ -335,8 +412,10 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)">
           <div class="section-number" aria-hidden="true">1</div>
-          <h2><span class="visually-hidden">Section 1: </span>Know Who Will Benefit</h2>
-          <p>Understanding your community is the first step</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 1: </span>Know Who Will Benefit</h2>
+            <p>Understanding your community is the first step</p>
+          </div>
         </section>
 
         <section>
@@ -375,8 +454,10 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #5f27cd 0%, #a55eea 100%)">
           <div class="section-number" aria-hidden="true">2</div>
-          <h2><span class="visually-hidden">Section 2: </span>Avoid the Client-Side Translation Crutch</h2>
-          <p>Why the Google Translate widget isn't enough</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 2: </span>Avoid the Client-Side Translation Crutch</h2>
+            <p>Why the Google Translate widget isn't enough</p>
+          </div>
         </section>
 
         <section>
@@ -416,42 +497,42 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%)">
           <div class="section-number" aria-hidden="true">3</div>
-          <h2><span class="visually-hidden">Section 3: </span>Review Translations with Human Professionals</h2>
-          <p>Machine translation needs human verification</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 3: </span>Review Translations with Human Professionals</h2>
+            <p>Machine translation needs human verification</p>
+          </div>
         </section>
 
         <section>
-          <h3>Best Practice</h3>
+          <h3>Build Review Into the Workflow</h3>
           <ul>
-            <li>Full translation at a unique URL</li>
-            <li>Culturally appropriate design</li>
-            <li>May be translated by on-demand service (for speed)</li>
-            <li>Must be reviewed by skilled human translators</li>
+            <li>Automate the first pass (machine or AI translation)</li>
+            <li>Route translations to human reviewers before publishing</li>
+            <li>Government content carries legal and safety implications</li>
+            <li>A bad translation isn't just embarrassing — it can cause harm</li>
+            <li>Prioritize high-impact content: legal, safety, benefits</li>
           </ul>
         </section>
 
         <section>
           <h3>A Surprising Lesson</h3>
           <div class="highlight-box">
-            <p>City of Portland project: Compared translation agency work to Google Translate API for interface elements</p>
-            <p class="primary">For UI elements, Google did better!</p>
+            <p>When comparing a translation agency to Google Translate API for interface elements, Google did better!</p>
+            <p class="small muted" style="text-align: right; margin-bottom: 0;">— City of Portland translation project</p>
           </div>
-          <p class="small">Agencies typically translate documents with more context than interface elements</p>
+          <p class="small">Agencies typically translate documents with more context than short UI strings</p>
         </section>
 
-        <section>
-          <h3>Key Takeaway</h3>
-          <p class="large">Verify translations with trusted professionals regardless of source</p>
-          <p class="muted">Human translators, machine translation, or AI all need review</p>
-        </section>
       </section>
 
       <!-- Section 4: SEO and Metatags -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff9f43 0%, #ee5a24 100%)">
           <div class="section-number" aria-hidden="true">4</div>
-          <h2><span class="visually-hidden">Section 4: </span>Help Search Engines with Proper Metatags</h2>
-          <p>Using hreflang to boost content relevance</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 4: </span>Help Search Engines with Proper Metatags</h2>
+            <p>Using hreflang to boost content relevance</p>
+          </div>
         </section>
 
         <section>
@@ -465,13 +546,26 @@
 
         <section>
           <h3>Language and Region Codes</h3>
-          <p>ISO standard codes for language and region:</p>
-          <ul>
-            <li><code>hreflang="en-US"</code> - English (United States)</li>
-            <li><code>hreflang="en-CA"</code> - English (Canada)</li>
-            <li><code>hreflang="es"</code> - Spanish</li>
-            <li><code>hreflang="zh-hans"</code> - Simplified Chinese</li>
-          </ul>
+          <div class="slide-layout-two-column">
+            <div>
+              <h4>Language + Region</h4>
+              <p class="small">For global sites distinguishing regional variants</p>
+              <ul class="small">
+                <li><code>hreflang="en-US"</code> - English (US)</li>
+                <li><code>hreflang="en-CA"</code> - English (Canada)</li>
+                <li><code>hreflang="es-MX"</code> - Spanish (Mexico)</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Language Only</h4>
+              <p class="small">For local government — your audience is in one region</p>
+              <ul class="small">
+                <li><code>hreflang="es"</code> - Spanish</li>
+                <li><code>hreflang="vi"</code> - Vietnamese</li>
+                <li><code>hreflang="zh-hans"</code> - Simplified Chinese</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -503,8 +597,10 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #1dd1a1 0%, #10ac84 100%)">
           <div class="section-number" aria-hidden="true">5</div>
-          <h2><span class="visually-hidden">Section 5: </span>Index Content by Language</h2>
-          <p>Improving site search for multilingual users</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 5: </span>Index Content by Language</h2>
+            <p>Improving site search for multilingual users</p>
+          </div>
         </section>
 
         <section>
@@ -544,8 +640,10 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #f368e0 0%, #be2edd 100%)">
           <div class="section-number" aria-hidden="true">6</div>
-          <h2><span class="visually-hidden">Section 6: </span>Design for Culture and Word Length</h2>
-          <p>Beyond just translating text</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 6: </span>Design for Culture and Word Length</h2>
+            <p>Beyond just translating text</p>
+          </div>
         </section>
 
         <section>
@@ -571,8 +669,10 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #48dbfb 0%, #0abde3 100%)">
           <div class="section-number" aria-hidden="true">7</div>
-          <h2><span class="visually-hidden">Section 7: </span>Keep Layouts Simple</h2>
-          <p>Complex layouts cost more to translate</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 7: </span>Keep Layouts Simple</h2>
+            <p>Complex layouts cost more to translate</p>
+          </div>
         </section>
 
         <section>
@@ -580,7 +680,7 @@
           <div class="slide-layout-two-column">
             <div>
               <h4>Simple (Lower Cost)</h4>
-              <ul>
+              <ul class="small">
                 <li>Body content with CKEditor</li>
                 <li>Semantic headings, lists, paragraphs</li>
                 <li>Easy for translators to match structure</li>
@@ -588,7 +688,7 @@
             </div>
             <div>
               <h4>Complex (Higher Cost)</h4>
-              <ul>
+              <ul class="small">
                 <li>Layout Builder with multiple sections</li>
                 <li>Paragraphs with various block types</li>
                 <li>Each component needs translation</li>
@@ -604,8 +704,16 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #00cec9 0%, #00b894 100%)">
           <div class="section-number" aria-hidden="true">8</div>
-          <h2><span class="visually-hidden">Section 8: </span>Avoid Mixed Translation</h2>
-          <p>Keep language consistent throughout the page</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 8: </span>Avoid Mixed Translation</h2>
+            <p>Keep language consistent throughout the page</p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Example Problem</h3>
+          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/washco-example-of-mixed-translation.png.webp" alt="Screenshot showing a webpage with mixed English and Spanish titles in a navigation list, demonstrating poor usability when languages are inconsistently applied" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+          <p class="small muted">Mixing English and Spanish titles makes content difficult to read</p>
         </section>
 
         <section>
@@ -617,20 +725,16 @@
             <li>Problems compound with more languages</li>
           </ul>
         </section>
-
-        <section>
-          <h3>Example Problem</h3>
-          <img src="/sites/default/files/styles/uncropped_960w_webp/public/2025-08/washco-example-of-mixed-translation.png.webp" alt="Screenshot showing a webpage with mixed English and Spanish titles in a navigation list, demonstrating poor usability when languages are inconsistently applied" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
-          <p class="small muted">Mixing English and Spanish titles makes content difficult to read</p>
-        </section>
       </section>
 
       <!-- Section 9: Language Switcher -->
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #ff6b81 0%, #ee5253 100%)">
           <div class="section-number" aria-hidden="true">9</div>
-          <h2><span class="visually-hidden">Section 9: </span>Help Users Understand Available Languages</h2>
-          <p>Language switcher best practices</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 9: </span>Help Users Understand Available Languages</h2>
+            <p>Language switcher best practices</p>
+          </div>
         </section>
 
         <section>
@@ -679,8 +783,10 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #d4a017 0%, #b8860b 100%)">
           <div class="section-number" aria-hidden="true">10</div>
-          <h2><span class="visually-hidden">Section 10: </span>Label Downloadable Files</h2>
-          <p>Dual labeling for translated documents</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 10: </span>Label Downloadable Files</h2>
+            <p>Dual labeling for translated documents</p>
+          </div>
         </section>
 
         <section>
@@ -688,10 +794,11 @@
           <ul>
             <li>Prefer HTML content over downloadable files</li>
             <li>HTML is easier to structure for accessibility</li>
+            <li>Screen readers handle HTML far better than PDFs</li>
             <li>Works better on mobile devices</li>
             <li>Files often fail on mobile</li>
           </ul>
-          <p class="muted small">What devices are most available to populations needing translation?</p>
+          <p class="small">When PDFs are unavoidable, use the <a href="https://www.drupal.org/project/pdfa11y">PDFa11y module</a> to check accessibility</p>
         </section>
 
         <section>
@@ -726,8 +833,10 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%)">
           <div class="section-number" aria-hidden="true">11</div>
-          <h2><span class="visually-hidden">Section 11: </span>Reduce Costs with Plain Language</h2>
-          <p>Less text = lower translation costs</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 11: </span>Reduce Costs with Plain Language</h2>
+            <p>Less text = lower translation costs</p>
+          </div>
         </section>
 
         <section>
@@ -769,8 +878,10 @@
       <section>
         <section class="section-header" data-background-gradient="linear-gradient(135deg, #e17055 0%, #d63031 100%)">
           <div class="section-number" aria-hidden="true">12</div>
-          <h2><span class="visually-hidden">Section 12: </span>AI and Translation</h2>
-          <p>The future of automated translation</p>
+          <div class="section-panel">
+            <h2><span class="visually-hidden">Section 12: </span>AI and Translation</h2>
+            <p>The future of automated translation</p>
+          </div>
         </section>
 
         <section>
@@ -819,6 +930,7 @@
           <li><a href="https://www.drupal.org/project/metatag">Metatag module</a></li>
           <li><a href="https://www.drupal.org/project/hreflang">Hreflang module</a></li>
           <li><a href="https://www.drupal.org/project/tmgmt">Translation Management Tool</a></li>
+          <li><a href="https://www.drupal.org/project/pdfa11y">PDFa11y module</a></li>
         </ul>
       </section>
 
@@ -834,10 +946,20 @@
       </section>
 
       <!-- Thank You -->
-      <section>
-        <h2>Thank You</h2>
-        <p>Questions?</p>
-        <p class="small muted">This work is licensed under a Creative Commons Attribution 4.0 International License</p>
+      <section class="about-slide" data-background-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)">
+        <div class="about-panel">
+          <div class="slide-layout-two-column">
+            <div>
+              <h2>Thank You!</h2>
+              <p>Questions?</p>
+              <p class="small">This work is licensed under a Creative Commons Attribution 4.0 International License</p>
+            </div>
+            <div style="text-align: center;">
+              <img src="sessionize-qr.png" alt="QR code to provide session feedback on Sessionize" style="max-width: 250px; border-radius: 0.5rem;">
+              <p class="small">Session feedback</p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
