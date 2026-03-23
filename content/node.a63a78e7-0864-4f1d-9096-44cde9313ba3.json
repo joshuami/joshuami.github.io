@@ -1,0 +1,107 @@
+{
+    "uuid": [
+        {
+            "value": "a63a78e7-0864-4f1d-9096-44cde9313ba3"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2026-03-23T16:33:29+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "title": [
+        {
+            "value": "Slides from DrupalCon Chicago Gov Summit"
+        }
+    ],
+    "created": [
+        {
+            "value": "2026-03-23T16:27:46+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2026-03-23T16:33:29+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/blog\/2026\/slides-drupalcon-chicago-gov-summit",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>If you were there or you missed it, I've posted my <a href=\"\/presentations\/translation-best-practices\/\">slides for 12 Best Practices for Translating Government Websites<\/a> that I presented at DrupalCon Chicago during the Government Summit.<\/p><p><a class=\"btn btn-primary\" href=\"\/presentations\/translation-best-practices\/\">View and use my slides<\/a><\/p>",
+            "format": "content_format",
+            "processed": "<p>If you were there or you missed it, I've posted my <a href=\"\/presentations\/translation-best-practices\/\">slides for 12 Best Practices for Translating Government Websites<\/a> that I presented at DrupalCon Chicago during the Government Summit.<\/p>\n<p><a class=\"btn btn-primary\" href=\"\/presentations\/translation-best-practices\/\">View and use my slides<\/a><\/p>\n",
+            "summary": ""
+        }
+    ],
+    "feeds_item": [],
+    "field_description": [
+        {
+            "value": "If you attended the summit, or even if you didn't, here are the slides."
+        }
+    ],
+    "field_featured_image": [],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": [
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "3e0556ab-5327-4539-9e94-5e3b63269eaa"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "6a55382a-1865-42dc-9bc7-f5000c2e1bd3"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/22"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/presentations"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

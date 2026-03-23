@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "d8057650-861c-4496-9dba-f0910f175736"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/a63a78e7-0864-4f1d-9096-44cde9313ba3"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2026\/slides-drupalcon-chicago-gov-summit"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}
