@@ -4,7 +4,6 @@ assertiveness: assertive
 ck5_table_headers: row
 content_root: ''
 custom_tests: 0
-db_version: '2'
 detect_shadow: false
 disable_live: false
 disable_sync: false
@@ -31,4 +30,3 @@ preserve_params: 'search,keys,page,language,language_content_entity'
 redundant_prefix: ''
 shadow_components: ''
 watch_for_changes: checkRoots
-pepper: 70b06238a0d96675d870be767507dd4e

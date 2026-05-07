@@ -6,6 +6,9 @@ dependencies:
     - node
     - taxonomy
     - user
+  enforced:
+    module:
+      - editoria11y
 id: ed11y_action
 label: 'Editoria11y: Dismissals'
 module: views
@@ -434,7 +437,7 @@ display:
           group_type: group
           admin_label: Computed
           plugin_id: editoria11y_page_link
-          label: Title
+          label: Page
           exclude: false
           alter:
             alter_text: true
@@ -1796,7 +1799,7 @@ display:
           exposed: true
           expose:
             operator_id: page_title_op
-            label: Title
+            label: Page
             description: ''
             use_operator: false
             operator: page_title_op
@@ -3201,3 +3204,4 @@ display:
         - url.query_args
         - user.permissions
       tags: {  }
+uuid: f23db8c6-3ea7-4182-9fbb-0927a5df4196

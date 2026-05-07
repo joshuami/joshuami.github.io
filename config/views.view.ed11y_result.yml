@@ -6,6 +6,9 @@ dependencies:
     - node
     - taxonomy
     - user
+  enforced:
+    module:
+      - editoria11y
 id: ed11y_result
 label: 'Editoria11y: Alerts'
 module: views
@@ -393,7 +396,7 @@ display:
           group_type: group
           admin_label: 'Computed title'
           plugin_id: editoria11y_page_link
-          label: Title
+          label: Page
           exclude: false
           alter:
             alter_text: true
@@ -830,7 +833,7 @@ display:
           exposed: true
           expose:
             operator_id: page_title_op
-            label: Title
+            label: Page
             description: ''
             use_operator: false
             operator: page_title_op
@@ -1803,7 +1806,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% set dynamic_path = view_node ~ view_taxonomy_term ~ view_user  %}{% if dynamic_path is empty or \"?\" in page_path|render %}{% set dynamic_path = page_path %}{% endif %}\r\n<a href=\"{{ dynamic_path }}\" data-ed1ref=\"{{page_path}}\">{{  page_title_1 }}</a>"
+            text: "{% set dynamic_path = view_node ~ view_taxonomy_term ~ view_user  %}{% if dynamic_path is empty or \"?\" in page_path|render %}{% set dynamic_path = page_path %}{% endif %}\r\n<a href=\"{{ dynamic_path }}\" data-ed1ref=\"{{pid}}\">{{  page_title_1 }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -1921,6 +1924,63 @@ display:
     display_options:
       title: 'Recent Editoria11y Alerts'
       fields:
+        pid:
+          id: pid
+          table: ed11y_page
+          field: pid
+          relationship: editoria11y_result_to_page
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
         created:
           id: created
           table: ed11y_result
@@ -2287,11 +2347,11 @@ display:
           group_type: group
           admin_label: 'Computed title'
           plugin_id: editoria11y_page_link
-          label: Title
+          label: Page
           exclude: false
           alter:
             alter_text: true
-            text: "{% set dynamic_path = view_node ~ view_taxonomy_term ~ view_user  %}{% if dynamic_path is empty or \"?\" in page_path|render %}{% set dynamic_path = page_path %}{% endif %}\r\n<a href=\"{{ dynamic_path }}\" data-ed1ref=\"{{page_path}}\">{{ page_title_1 }}</a>"
+            text: "{% set dynamic_path = view_node ~ view_taxonomy_term ~ view_user  %}{% if dynamic_path is empty or \"?\" in page_path|render %}{% set dynamic_path = page_path %}{% endif %}\r\n<a href=\"{{ dynamic_path }}\" data-ed1ref=\"{{pid}}\">{{ page_title_1 }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -2526,6 +2586,7 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        group_by: false
       display_description: ''
       use_more: true
       use_more_always: true
@@ -2535,6 +2596,7 @@ display:
       display_extenders: {  }
       block_description: 'Editoria11y - Recent alerts'
       block_category: Editoria11y
+      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -2664,55 +2726,6 @@ display:
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
-        result_name:
-          id: result_name
-          table: ed11y_result
-          field: result_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          label: Issue
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
         result_key:
           id: result_key
           table: ed11y_result
@@ -2793,19 +2806,11 @@ display:
           default_row_class: true
           columns:
             content_count: content_count
-            result_name: result_name
             result_key: result_key
             dev_count: dev_count
           default: content_count
           info:
             content_count:
-              sortable: false
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            result_name:
               sortable: false
               default_sort_order: desc
               align: ''
@@ -2928,6 +2933,63 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+        dev_count:
+          id: dev_count
+          table: ed11y_result
+          field: dev_count
+          relationship: none
+          group_type: sum
+          admin_label: ''
+          plugin_id: numeric
+          label: 'Dev alerts'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
         result_key:
           id: result_key
           table: ed11y_result
@@ -3056,7 +3118,7 @@ display:
           default_row_class: true
           columns:
             content_count: content_count
-            result_name_1: result_name_1
+            dev_count: dev_count
             result_key: result_key
           default: content_count
           info:
@@ -3067,8 +3129,8 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            result_name_1:
-              sortable: false
+            dev_count:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -3628,7 +3690,7 @@ display:
           group_type: group
           admin_label: 'Computed title'
           plugin_id: editoria11y_page_link
-          label: Title
+          label: Page
           exclude: true
           alter:
             alter_text: true
@@ -4174,7 +4236,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: 'span class="ed11y-reset-this-path" hidden><p class="more-link"><a role="button" class="action-link action-link--icon-trash action-link--danger"><span hidden class="ed11y-api-path">{{ page_path }}</span>Reset results for this page</a></p></span>'
+          content: '<span class="ed11y-reset-this-path" hidden><p class="more-link"><a role="button" class="action-link action-link--icon-trash action-link--danger"><span hidden class="ed11y-api-path">{{ page_path }}</span>Reset results for this page</a></p></span>'
           tokenize: true
       display_extenders: {  }
       path: admin/reports/editoria11y/page
@@ -4202,8 +4264,57 @@ display:
     display_plugin: page
     position: 2
     display_options:
-      title: 'Pages with a specific alert'
+      title: ''
       fields:
+        result_name:
+          id: result_name
+          table: ed11y_result
+          field: result_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: true
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
         content_count:
           id: content_count
           table: ed11y_result
@@ -4591,7 +4702,7 @@ display:
           group_type: group
           admin_label: 'Computed title'
           plugin_id: editoria11y_page_link
-          label: Title
+          label: Page
           exclude: false
           alter:
             alter_text: true
@@ -4939,55 +5050,6 @@ display:
           date_format: html_date
           custom_date_format: ''
           timezone: ''
-        result_key:
-          id: result_key
-          table: ed11y_result
-          field: result_key
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: editoria11y_pages_by_issue_link
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
       pager:
         type: full
         options:
@@ -5037,7 +5099,8 @@ display:
             label: ''
             field_identifier: ''
           exposed: false
-      arguments:
+      arguments: {  }
+      filters:
         result_key:
           id: result_key
           table: ed11y_result
@@ -5045,40 +5108,38 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: string
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: true
-          title: 'Pages with alert: {{ result_key|striptags }}'
-          default_argument_type: query_parameter
-          default_argument_options:
-            query_param: alert
-            fallback: ''
-            multiple: and
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          glossary: false
-          limit: 0
-          case: none
-          path_case: none
-          transform_dash: false
-          break_phrase: false
-      filters:
+          plugin_id: in_operator
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: result_key_op
+            label: 'Alert type'
+            description: ''
+            use_operator: false
+            operator: result_key_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: alert
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         status:
           id: status
           table: node_field_data
@@ -5455,7 +5516,6 @@ display:
             uid_1: uid_1
             created_1: created_1
             created: created
-            result_key: result_key
           default: content_count
           info:
             content_count:
@@ -5549,13 +5609,6 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            result_key:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
           override: true
           sticky: false
           summary: ''
@@ -5582,6 +5635,7 @@ display:
         filters: false
         filter_groups: false
         footer: false
+        header: false
       use_ajax: true
       group_by: false
       display_description: ''
@@ -5607,6 +5661,18 @@ display:
         menu_name: admin
         parent: editoria11y.settings
         context: '0'
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: '<h1>Pages with alert "{{ result_name }}"</h1>'
+          tokenize: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -5996,11 +6062,11 @@ display:
           group_type: group
           admin_label: 'Computed title'
           plugin_id: editoria11y_page_link
-          label: Title
+          label: Page
           exclude: false
           alter:
             alter_text: true
-            text: "{% set dynamic_path = view_node ~ view_taxonomy_term ~ view_user  %}{% if dynamic_path is empty or \"?\" in page_path|render %}{% set dynamic_path = page_path %}{% endif %}\r\n<a href=\"{{ dynamic_path }}\" data-ed1ref=\"{{page_path}}\">{{  page_title_1 }}</a>"
+            text: "{% set dynamic_path = view_node ~ view_taxonomy_term ~ view_user  %}{% if dynamic_path is empty or \"?\" in page_path|render %}{% set dynamic_path = page_path %}{% endif %}\r\n<a href=\"{{ dynamic_path }}\" data-ed1ref=\"{{pid}}\">{{  page_title_1 }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -6695,7 +6761,7 @@ display:
           exposed: true
           expose:
             operator_id: page_title_op
-            label: Title
+            label: Page
             description: ''
             use_operator: false
             operator: page_title_op
@@ -7301,6 +7367,7 @@ display:
         sorts: true
         filters: true
         filter_groups: true
+        group_by: false
       display_description: ''
       display_extenders: {  }
       path: admin/reports/editoria11y/recent
@@ -7313,6 +7380,7 @@ display:
         menu_name: admin
         parent: editoria11y.settings
         context: '0'
+      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -7323,3 +7391,4 @@ display:
         - user
         - user.permissions
       tags: {  }
+uuid: 39b18140-0580-4355-a30e-94b6881d781a

@@ -7,6 +7,7 @@ module:
   better_exposed_filters: 0
   block: 0
   block_content: 0
+  bpmn_io: 0
   breakpoint: 0
   checklistapi: 0
   ckeditor5: 0
@@ -23,7 +24,6 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   eca: 0
-  eca_modeller_bpmn: 0
   eca_ui: 0
   editor: 0
   editoria11y: 0
@@ -57,6 +57,7 @@ module:
   metatag: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
+  modeler_api: 0
   mysql: 0
   navigation: 0
   node: 0
@@ -65,12 +66,14 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  pathauto: 1
   project_browser: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
   robotstxt: 0
   sam: 0
+  selective_better_exposed_filters: 1
   seo_checklist: 0
   serialization: 0
   shortcut: 0
@@ -94,11 +97,9 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  views: 10
   views_bulk_edit: 0
   views_ui: 0
-  pathauto: 1
-  selective_better_exposed_filters: 1
-  views: 10
 theme:
   claro: 0
   gin: 0

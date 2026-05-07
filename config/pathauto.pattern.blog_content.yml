@@ -2,6 +2,8 @@ uuid: 3b99014c-8701-4125-be96-95a40eb8163f
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.blog
   module:
     - node
   enforced:
@@ -17,7 +19,6 @@ selection_criteria:
   af5ccd8e-f2f4-4055-a8f8-9481a35aafc0:
     id: 'entity_bundle:node'
     negate: false
-    uuid: af5ccd8e-f2f4-4055-a8f8-9481a35aafc0
     context_mapping:
       node: node
     bundles:
