@@ -140,6 +140,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/coffee": {
+                "Coffee navigation in Gin topbar (#3535874)": "patches/3535874-coffee-navigation-topbar-gin.patch"
+            }
         }
     },
     "scripts": {

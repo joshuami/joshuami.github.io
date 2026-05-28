@@ -1,3 +1,4 @@
+uuid: f23db8c6-3ea7-4182-9fbb-0927a5df4196
 langcode: en
 status: true
 dependencies:
@@ -795,7 +796,7 @@ display:
           set_precision: false
           precision: 0
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: false
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
@@ -852,7 +853,7 @@ display:
           set_precision: false
           precision: 0
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: false
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
@@ -1176,7 +1177,7 @@ display:
           set_precision: false
           precision: 0
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: false
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
@@ -1757,7 +1758,7 @@ display:
           set_precision: false
           precision: 0
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: false
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
@@ -2186,7 +2187,7 @@ display:
           set_precision: false
           precision: 0
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: false
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
@@ -2767,7 +2768,7 @@ display:
           set_precision: false
           precision: 0
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: false
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
@@ -3204,4 +3205,3 @@ display:
         - url.query_args
         - user.permissions
       tags: {  }
-uuid: f23db8c6-3ea7-4182-9fbb-0927a5df4196
