@@ -111,7 +111,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-recipe-unpack": true,
             "oomphinc/composer-installers-extender": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "symfony/runtime": true
         },
         "sort-packages": true,
         "optimize-autoloader": true
