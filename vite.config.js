@@ -9,8 +9,9 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'web/presentations/index.html'),
-        template: resolve(__dirname, 'web/presentations/template.html')
+        // template.html is not an input: it is copied into presentation
+        // subdirectories, where its ../dist asset paths resolve correctly
+        'reveal-entry': resolve(__dirname, 'web/presentations/index.html')
       },
       output: {
         // Keep assets in dist folder
