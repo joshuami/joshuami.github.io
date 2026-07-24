@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://joshuami.com/">
   <channel>
-    <title>Joshuami</title>
+    <title>All Drupal posts on Joshuami</title>
     <link>https://joshuami.com/</link>
     <description>Subscribe to our RSS feed to stay up to date with our latest blog posts.</description>
     <language>en</language>
@@ -10,7 +10,7 @@
   <title>We All Deal With Disability</title>
   <link>https://joshuami.com/blog/2026/we-all-deal-disability</link>
   <description>I spent a moment musing on the human condition, our frailty, and what it means for making accessible tools and websites.</description>
-  <pubDate>Thu, 21 May 2026 13:02:06 -0700</pubDate>
+  <pubDate>Thu, 23 Jul 2026 10:15:06 -0700</pubDate>
     <dc:creator>admin</dc:creator>
     <guid isPermaLink="false">b64359c6-3558-4d26-9294-766ef53d4136</guid>
     </item>

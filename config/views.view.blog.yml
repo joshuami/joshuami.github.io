@@ -564,6 +564,7 @@ display:
     position: 6
     display_options:
       enabled: true
+      title: 'All Drupal posts on Joshuami'
       fields:
         title:
           id: title
@@ -1010,8 +1011,10 @@ display:
             guid_field: uuid
             guid_field_is_permalink: false
       defaults:
+        title: false
         fields: false
         arguments: false
+        sitename_title: false
       display_description: ''
       display_extenders: {  }
       path: tags/drupal/feed.rss
@@ -1039,6 +1042,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      title: 'All posts'
       exposed_form:
         type: bef
         options:
@@ -1054,6 +1058,8 @@ display:
           bef:
             general:
               autosubmit: true
+              auto_submit_sort_only: false
+              autosubmit_breakpoint: ''
               autosubmit_exclude_textfield: false
               autosubmit_textfield_delay: 500
               autosubmit_textfield_minimum_length: 3
@@ -1063,35 +1069,33 @@ display:
               secondary_label: 'Advanced options'
               secondary_open: false
               reset_button_always_show: false
-              autosubmit_breakpoint: ''
-              auto_submit_sort_only: false
             filter:
               field_tags_target_id:
                 plugin_id: bef
                 advanced:
                   sort_options: false
+                  sort_options_method: alphabetical_asc
+                  sort_options_natural: true
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
+                  open_by_default: false
                   is_secondary: false
                   hide_label: false
                   field_classes: ''
-                  open_by_default: false
-                  sort_options_method: alphabetical_asc
-                  sort_options_natural: true
                 select_all_none: false
                 select_all_none_nested: false
                 display_inline: false
-                options_show_only_used: true
-                options_show_only_used_filtered: false
-                options_hide_when_empty: true
                 soft_limit: 0
                 soft_limit_label_less: 'Show less'
                 soft_limit_label_more: 'Show more'
                 scrollable: false
                 scrollable_height: 300
+                options_show_only_used: true
+                options_show_only_used_filtered: false
+                options_hide_when_empty: true
       filters:
         type:
           id: type
@@ -1224,6 +1228,7 @@ display:
         groups:
           1: AND
       defaults:
+        title: false
         exposed_form: false
         filters: false
         filter_groups: false
@@ -1449,6 +1454,7 @@ display:
     display_plugin: feed
     position: 6
     display_options:
+      title: 'All posts on Joshuami'
       fields:
         title:
           id: title
@@ -1858,7 +1864,9 @@ display:
             guid_field: uuid
             guid_field_is_permalink: false
       defaults:
+        title: false
         fields: false
+        sitename_title: false
       display_description: ''
       display_extenders: {  }
       path: blog/feed.rss
