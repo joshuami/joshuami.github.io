@@ -7,6 +7,14 @@
     <language>en</language>
     
     <item>
+  <title>PDFa11y: Review PDFs for Accessibility on Upload</title>
+  <link>https://joshuami.com/blog/2026/pdfa11y-review-pdfs-accessibility-upload</link>
+  <description>PDFa11y helps editors understand accessibility issues in many PDFs as they are added to the site. The module scans PDFs on upload to look at their structure an provide immediate feedback. The scan can be run as a bulk process with queuing to give feedback on existing media libraries. Feedback appears on each document media entity as a primary action and in sitewide reports. Admins can also block inaccessible PDFs from upload. The module is open source and free for use.</description>
+  <pubDate>Mon, 27 Jul 2026 08:00:00 -0700</pubDate>
+    <dc:creator>joshuami</dc:creator>
+    <guid isPermaLink="false">cecd815e-b309-4412-8f88-b5b86fd8e06c</guid>
+    </item>
+<item>
   <title>We All Deal With Disability</title>
   <link>https://joshuami.com/blog/2026/we-all-deal-disability</link>
   <description>I spent a moment musing on the human condition, our frailty, and what it means for making accessible tools and websites.</description>

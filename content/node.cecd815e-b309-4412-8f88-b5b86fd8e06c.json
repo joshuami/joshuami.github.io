@@ -1,0 +1,120 @@
+{
+    "uuid": [
+        {
+            "value": "cecd815e-b309-4412-8f88-b5b86fd8e06c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog",
+            "target_type": "node_type",
+            "target_uuid": "5e1cc3ac-5c8f-4194-a7db-a96757398273"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2026-07-27T14:49:00+00:00"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "94f18ca1-24cf-4db9-8dc7-6771e8d09443"
+        }
+    ],
+    "title": [
+        {
+            "value": "PDFa11y: Review PDFs for Accessibility on Upload"
+        }
+    ],
+    "created": [
+        {
+            "value": "2026-07-27T15:00:00+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2026-07-27T14:49:00+00:00"
+        }
+    ],
+    "promote": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/blog\/2026\/pdfa11y-review-pdfs-accessibility-upload",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>When the Department of Justice announced their accessibility ruling in April of 2024, it put many U.S. government organizations on notice that accessibility could no longer be an afterthought. I work with a number of government and higher education organizations that needed to be able to respond to this ruling. While that ruling was delayed, the need to improve accessibility is still present. We've continued to refine our accessibility audits and reporting tools for more than just PDFs, but PDFs are a huge area of risk that many organizations have no visibility into without manual scans and individual efforts.<\/p><p>While their are a lot of PDF-remediation solutions on the market, most are focused on correcting documents with an editor in the loop. This is great if you are remediating a large media library that already exists, but it doesn't address ongoing prevention and education. (These libraries also have a continued cost and vendor lock-in.)<\/p><p>One of my clients worked with me on an approach that would prevent inaccessible PDFs on upload by scanning the XML structure of the PDF and providing feedback to editors on what can be addressed. This resulted in <a href=\"http:\/\/www.drupal.org\/project\/pdfa11y\">PDFa11y<\/a>, a module published to Drupal.org, free for anyone to try. I took heaving inspiration from a module called <a href=\"https:\/\/www.drupal.org\/project\/editoria11y\">Editoria11y<\/a> which gives immediate editor feedback when editing content.<\/p><h2>Open source and free by design<\/h2><p>Maybe this is a mistake, but at a time when so many companies are trying to create a <em>product<\/em> (preferably with recurring revenue), I just didn't see how a simple of scan of a PDF structure belonged behind any sort of a paywall. With that in mind, when I was starting this module, I searched for an open source, PDF-parsing library that would allow me to run the basic scan right on the Drupal host. In the end, I found <a href=\"https:\/\/github.com\/smalot\/pdfparser\">smalot\/phpparser<\/a>, which is licensed under the GNU Lesser General Public License v3.0 and added to my module as a composer dependency.&nbsp;<\/p><h2>How it works<\/h2><p>It's function is pretty straightforward. The phpparser libraries allow you to read the headers, metadata, and basic structure of a PDF. If it has that information, the module can search for inaccessible patterns in your uploaded PDFs. Depending on the size of the PDF, this process typically takes seconds.&nbsp;<\/p><p>Currently, PDFa11y provides six checks, with a few more planned in the backlog.<\/p><h3>Document language<\/h3><p>Checks if the PDF declares its document language. Screen readers use the language to apply correct pronunciation rules; without it, content can be read with the wrong accent or phonetic interpretation.<\/p><h3>Tagged PDF<\/h3><p>Checks if the PDF is marked as tagged. Tags identify reading order, headings, lists, and other semantic elements that screen readers rely on. Works together with the Heading structure check.<\/p><h3>Document title<\/h3><p>Checks if the PDF has a title in its metadata. The title is announced by screen readers when the document opens and appears in browser tabs and bookmarks, helping users identify and return to documents.<\/p><h3>Heading structure<\/h3><p>Checks that the PDF contains a structure tree and that headings within it start at H1 without skipping levels. A missing structure tree, no headings at all, or a hierarchy that jumps from H1 to H3 prevents screen reader users from navigating the document.<\/p><h3>PDF version<\/h3><p>Checks the PDF version against a configurable minimum (default 1.4). Older PDF versions lack support for tagging and other accessibility features required by assistive technologies.<\/p><h3>Document title is not a filename<\/h3><p>Flags titles that end with a document file extension (e.g., \"Report.docx\") because they are usually leftover filenames rather than descriptive titles. Disable this check if your workflow intentionally uses filenames as canonical titles, such as for standardized forms.<\/p><p>I've thought through many more possible checks. In fact, a lot of the checks in Editoria11y that are focused on HTML structure and patterns could be rewritten for the XML format of PDFs. The major difference is that Editoria11y can show you the problem on output or directly in CKEditor. For instance, it will show you exactly where heading order starts to break, PDFa11y can't do that because PDFs are only rendered via a viewer and not as HTML themselves. There is no reliable way to show a javascript widget on top of every browsers' PDF preview. Especially, if you don't use a browser to preview the file. While you can put a link into a PDF, or even provide a link to a PDF, it is not HTML and should never be treated as a webpage. (I once helped a client with a massive migration where PDFs were sometimes their own little interlinked web worlds. It was infuriating to catch all the broken links when something changed.)<\/p><h2>Error handling for PDFs that cannot or should not be scanned<\/h2><p>One key finding as we rolled out PDFa11y on production data was that certain files just can't be scanned by smalot\/pdfparser. They are too complex. We skip parsing PDFs for the following reasons:<\/p><ul><li data-list-item-id=\"e2d9c3a6268c8285c2e3189bf70dcb69d\">The <strong>file is missing<\/strong>. The media record points at a file that no longer exists in storage (usually a leftover from a deleted or migrated file). There's nothing to scan.<\/li><li data-list-item-id=\"e1c7284a7f84ffda11ebce493364e974a\">The <strong>file can't be read right now<\/strong>. A slow or flaky connection to remote storage (like S3) timed out. This is treated as temporary \u2014 the scan can be retried later.<\/li><li data-list-item-id=\"ee3803f2809b5f318d0e1913e53ce96a3\">The <strong>PDF is encrypted or has security restrictions<\/strong>. Password protection or copy\/edit restrictions prevent the checker from opening the document. The fix is to re-export it without security (in Acrobat: File &gt; Properties &gt; Security &gt; \"No Security\") and re-upload.<\/li><li data-list-item-id=\"ea03ba06c5f8c791e335984e7f0d5f811\">The <strong>PDF is corrupt or malformed<\/strong>. The file doesn't follow the PDF specification well enough to be parsed \u2014 often the result of a broken export, a truncated upload, or a file that isn't really a PDF.<\/li><li data-list-item-id=\"e5adb05cc855aaedd5aa0684254ec2cdb\">The <strong>file is too large<\/strong>. It exceeds the configured size limit, so we don't attempt to parse it.<\/li><li data-list-item-id=\"e8edd0e031da25675842def16d0ef02e1\">The <strong>PDF is packed with images<\/strong>. Scanned documents, maps, and technical drawings can be small on disk but balloon to hundreds of megabytes when their images are decompressed during parsing. We estimate this up front and skip files that would exhaust server memory.<\/li><li data-list-item-id=\"eaf9ad4976eb867089aac73413247b1c4\"><strong>Parsing took too long or overwhelmed the server<\/strong>. A rare file can hang the parser or run it out of memory. We cap the time and memory a single file can use, skip it, and move on so one bad file never derails a bulk scan of the whole library.<\/li><\/ul><h2>Reporting on inaccessible PDFs<\/h2><p>The PDF accessibility report will should you if the PDF passed, failed, or error (skipped) with counts and a link to the per media or file entity accessibility tab. All of the needed views plugins are present for you to create your own views of this data.<\/p><h2>Roadmap<\/h2><p>While I'm always open to feature requests in the <a href=\"https:\/\/www.drupal.org\/project\/issues\/pdfa11y\">issue queue<\/a>, there are some features I hope to address on the roadmap in the next few months.<\/p><ul><li data-list-item-id=\"e6bc32668fc02a93dcffb9bb1c4fbe212\"><strong>Integrate with Editoria11y.<\/strong> James Jameson and I have already had a couple of chats about these two ecosystems having a closer relationship and interactivity. Still not sure on the best path forward for this, but I might start with a custom Editoria11y check that shows PDF accessibility fails and errors on embedded media.<\/li><li data-list-item-id=\"e9f7b65d55e80f8f8a0ee34cb35a6c588\"><strong>Check for missing alt text.<\/strong> Simple check for the PDF concept of a <code>&lt;figure&gt;<\/code>, which is similar to the HTML element, and whether it correctly declares alt text.<\/li><li data-list-item-id=\"e46a69ea4cea990411d36f7ac4c93d0a4\"><strong>More settings for fine tuning.<\/strong> For example, you might want to be able to set the max-filesize parse error in the settings rather than only in config overrides. It's not even super clear you can override these settings just yet.<\/li><\/ul><hr><p>Need help auditing your website for accessibility? Want to implement PDFa11y on your site or fund a new feature? <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\">Connect with me on LinkedIn<\/a> or reach out to me on Drupal Slack (@joshuami).<\/p>",
+            "format": "content_format",
+            "processed": "<p>When the Department of Justice announced their accessibility ruling in April of 2024, it put many U.S. government organizations on notice that accessibility could no longer be an afterthought. I work with a number of government and higher education organizations that needed to be able to respond to this ruling. While that ruling was delayed, the need to improve accessibility is still present. We've continued to refine our accessibility audits and reporting tools for more than just PDFs, but PDFs are a huge area of risk that many organizations have no visibility into without manual scans and individual efforts.<\/p>\n<p>While their are a lot of PDF-remediation solutions on the market, most are focused on correcting documents with an editor in the loop. This is great if you are remediating a large media library that already exists, but it doesn't address ongoing prevention and education. (These libraries also have a continued cost and vendor lock-in.)<\/p>\n<p>One of my clients worked with me on an approach that would prevent inaccessible PDFs on upload by scanning the XML structure of the PDF and providing feedback to editors on what can be addressed. This resulted in <a href=\"http:\/\/www.drupal.org\/project\/pdfa11y\">PDFa11y<\/a>, a module published to Drupal.org, free for anyone to try. I took heaving inspiration from a module called <a href=\"https:\/\/www.drupal.org\/project\/editoria11y\">Editoria11y<\/a> which gives immediate editor feedback when editing content.<\/p>\n<h2>Open source and free by design<\/h2>\n<p>Maybe this is a mistake, but at a time when so many companies are trying to create a <em>product<\/em> (preferably with recurring revenue), I just didn't see how a simple of scan of a PDF structure belonged behind any sort of a paywall. With that in mind, when I was starting this module, I searched for an open source, PDF-parsing library that would allow me to run the basic scan right on the Drupal host. In the end, I found <a href=\"https:\/\/github.com\/smalot\/pdfparser\">smalot\/phpparser<\/a>, which is licensed under the GNU Lesser General Public License v3.0 and added to my module as a composer dependency.&nbsp;<\/p>\n<h2>How it works<\/h2>\n<p>It's function is pretty straightforward. The phpparser libraries allow you to read the headers, metadata, and basic structure of a PDF. If it has that information, the module can search for inaccessible patterns in your uploaded PDFs. Depending on the size of the PDF, this process typically takes seconds.&nbsp;<\/p>\n<p>Currently, PDFa11y provides six checks, with a few more planned in the backlog.<\/p>\n<h3>Document language<\/h3>\n<p>Checks if the PDF declares its document language. Screen readers use the language to apply correct pronunciation rules; without it, content can be read with the wrong accent or phonetic interpretation.<\/p>\n<h3>Tagged PDF<\/h3>\n<p>Checks if the PDF is marked as tagged. Tags identify reading order, headings, lists, and other semantic elements that screen readers rely on. Works together with the Heading structure check.<\/p>\n<h3>Document title<\/h3>\n<p>Checks if the PDF has a title in its metadata. The title is announced by screen readers when the document opens and appears in browser tabs and bookmarks, helping users identify and return to documents.<\/p>\n<h3>Heading structure<\/h3>\n<p>Checks that the PDF contains a structure tree and that headings within it start at H1 without skipping levels. A missing structure tree, no headings at all, or a hierarchy that jumps from H1 to H3 prevents screen reader users from navigating the document.<\/p>\n<h3>PDF version<\/h3>\n<p>Checks the PDF version against a configurable minimum (default 1.4). Older PDF versions lack support for tagging and other accessibility features required by assistive technologies.<\/p>\n<h3>Document title is not a filename<\/h3>\n<p>Flags titles that end with a document file extension (e.g., \"Report.docx\") because they are usually leftover filenames rather than descriptive titles. Disable this check if your workflow intentionally uses filenames as canonical titles, such as for standardized forms.<\/p>\n<p>I've thought through many more possible checks. In fact, a lot of the checks in Editoria11y that are focused on HTML structure and patterns could be rewritten for the XML format of PDFs. The major difference is that Editoria11y can show you the problem on output or directly in CKEditor. For instance, it will show you exactly where heading order starts to break, PDFa11y can't do that because PDFs are only rendered via a viewer and not as HTML themselves. There is no reliable way to show a javascript widget on top of every browsers' PDF preview. Especially, if you don't use a browser to preview the file. While you can put a link into a PDF, or even provide a link to a PDF, it is not HTML and should never be treated as a webpage. (I once helped a client with a massive migration where PDFs were sometimes their own little interlinked web worlds. It was infuriating to catch all the broken links when something changed.)<\/p>\n<h2>Error handling for PDFs that cannot or should not be scanned<\/h2>\n<p>One key finding as we rolled out PDFa11y on production data was that certain files just can't be scanned by smalot\/pdfparser. They are too complex. We skip parsing PDFs for the following reasons:<\/p>\n<ul>\n<li>The <strong>file is missing<\/strong>. The media record points at a file that no longer exists in storage (usually a leftover from a deleted or migrated file). There's nothing to scan.<\/li>\n<li>The <strong>file can't be read right now<\/strong>. A slow or flaky connection to remote storage (like S3) timed out. This is treated as temporary \u2014 the scan can be retried later.<\/li>\n<li>The <strong>PDF is encrypted or has security restrictions<\/strong>. Password protection or copy\/edit restrictions prevent the checker from opening the document. The fix is to re-export it without security (in Acrobat: File &gt; Properties &gt; Security &gt; \"No Security\") and re-upload.<\/li>\n<li>The <strong>PDF is corrupt or malformed<\/strong>. The file doesn't follow the PDF specification well enough to be parsed \u2014 often the result of a broken export, a truncated upload, or a file that isn't really a PDF.<\/li>\n<li>The <strong>file is too large<\/strong>. It exceeds the configured size limit, so we don't attempt to parse it.<\/li>\n<li>The <strong>PDF is packed with images<\/strong>. Scanned documents, maps, and technical drawings can be small on disk but balloon to hundreds of megabytes when their images are decompressed during parsing. We estimate this up front and skip files that would exhaust server memory.<\/li>\n<li><strong>Parsing took too long or overwhelmed the server<\/strong>. A rare file can hang the parser or run it out of memory. We cap the time and memory a single file can use, skip it, and move on so one bad file never derails a bulk scan of the whole library.<\/li>\n<\/ul>\n<h2>Reporting on inaccessible PDFs<\/h2>\n<p>The PDF accessibility report will should you if the PDF passed, failed, or error (skipped) with counts and a link to the per media or file entity accessibility tab. All of the needed views plugins are present for you to create your own views of this data.<\/p>\n<h2>Roadmap<\/h2>\n<p>While I'm always open to feature requests in the <a href=\"https:\/\/www.drupal.org\/project\/issues\/pdfa11y\">issue queue<\/a>, there are some features I hope to address on the roadmap in the next few months.<\/p>\n<ul>\n<li><strong>Integrate with Editoria11y.<\/strong> James Jameson and I have already had a couple of chats about these two ecosystems having a closer relationship and interactivity. Still not sure on the best path forward for this, but I might start with a custom Editoria11y check that shows PDF accessibility fails and errors on embedded media.<\/li>\n<li><strong>Check for missing alt text.<\/strong> Simple check for the PDF concept of a <code>&lt;figure&gt;<\/code>, which is similar to the HTML element, and whether it correctly declares alt text.<\/li>\n<li><strong>More settings for fine tuning.<\/strong> For example, you might want to be able to set the max-filesize parse error in the settings rather than only in config overrides. It's not even super clear you can override these settings just yet.<\/li>\n<\/ul>\n<hr>\n<p>Need help auditing your website for accessibility? Want to implement PDFa11y on your site or fund a new feature? <a href=\"https:\/\/www.linkedin.com\/in\/joshuami\">Connect with me on LinkedIn<\/a> or reach out to me on Drupal Slack (@joshuami).<\/p>\n",
+            "summary": ""
+        }
+    ],
+    "feeds_item": [],
+    "field_description": [
+        {
+            "value": "PDFa11y helps editors understand accessibility issues in many PDFs as they are added to the site. The module scans PDFs on upload to look at their structure an provide immediate feedback. The scan can be run as a bulk process with queuing to give feedback on existing media libraries. Feedback appears on each document media entity as a primary action and in sitewide reports. Admins can also block inaccessible PDFs from upload. The module is open source and free for use."
+        }
+    ],
+    "field_featured_image": [
+        {
+            "target_type": "media",
+            "target_uuid": "c12bb49d-24e6-401c-8903-eb56c2109534"
+        }
+    ],
+    "field_seo_description": [],
+    "field_seo_image": [],
+    "field_seo_title": [],
+    "field_tags": [
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "953d2094-d408-40ba-ace8-62e8da23eb27"
+        },
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "6480fb5d-9f08-4a48-80f9-8dc91040f9d8"
+        },
+        {
+            "target_type": "taxonomy_term",
+            "target_uuid": "16476bef-7a21-48f9-ac03-894c0b0be370"
+        }
+    ]
+}

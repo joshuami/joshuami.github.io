@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "b6d1de53-c9b6-4233-baaf-3b55d6477884"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/taxonomy\/term\/23"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/tags\/pdf"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}

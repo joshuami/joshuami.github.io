@@ -423,20 +423,20 @@
     <guid isPermaLink="false">a24479fe-726f-4be7-8416-f835e5791231</guid>
     </item>
 <item>
-  <title>Which OS Are You?</title>
-  <link>https://joshuami.com/2005/05/20/which-os-are-you</link>
-  <description/>
-  <pubDate>Fri, 20 May 2005 00:00:00 -0700</pubDate>
-    <dc:creator>joshuami</dc:creator>
-    <guid isPermaLink="false">0deab5f4-54a0-4187-adb9-3927961be2b7</guid>
-    </item>
-<item>
   <title>Which File Extension Are You?</title>
   <link>https://joshuami.com/2005/05/20/which-file-extension-are-you</link>
   <description/>
   <pubDate>Fri, 20 May 2005 00:00:00 -0700</pubDate>
     <dc:creator>joshuami</dc:creator>
     <guid isPermaLink="false">7487165f-da7f-42ba-84a9-c5c2d80d54c3</guid>
+    </item>
+<item>
+  <title>Which OS Are You?</title>
+  <link>https://joshuami.com/2005/05/20/which-os-are-you</link>
+  <description/>
+  <pubDate>Fri, 20 May 2005 00:00:00 -0700</pubDate>
+    <dc:creator>joshuami</dc:creator>
+    <guid isPermaLink="false">0deab5f4-54a0-4187-adb9-3927961be2b7</guid>
     </item>
 <item>
   <title>I'm a homeowner</title>
@@ -477,6 +477,14 @@
   <pubDate>Mon, 28 Mar 2005 00:00:00 -0800</pubDate>
     <dc:creator>joshuami</dc:creator>
     <guid isPermaLink="false">99f50dfe-dfb0-4713-baee-7db908a6d518</guid>
+    </item>
+<item>
+  <title/>
+  <link>https://joshuami.com/</link>
+  <description/>
+  <pubDate/>
+    <dc:creator/>
+    <guid isPermaLink="false"/>
     </item>
 <item>
   <title/>

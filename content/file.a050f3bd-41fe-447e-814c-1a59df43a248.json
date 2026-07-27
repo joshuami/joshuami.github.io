@@ -1,0 +1,54 @@
+{
+    "uuid": [
+        {
+            "value": "a050f3bd-41fe-447e-814c-1a59df43a248"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "711eae9d-1ca7-45a3-a4b1-9f1e585e1f33"
+        }
+    ],
+    "filename": [
+        {
+            "value": "pdfa11y-feautred-image.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2026-07\/pdfa11y-feautred-image.png",
+            "url": "\/sites\/default\/files\/2026-07\/pdfa11y-feautred-image.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 159934
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2026-07-27T14:48:14+00:00"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2026-07-27T14:48:37+00:00"
+        }
+    ]
+}

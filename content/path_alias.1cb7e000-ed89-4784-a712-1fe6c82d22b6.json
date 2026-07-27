@@ -1,0 +1,27 @@
+{
+    "uuid": [
+        {
+            "value": "1cb7e000-ed89-4784-a712-1fe6c82d22b6"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "path": [
+        {
+            "value": "\/node\/cecd815e-b309-4412-8f88-b5b86fd8e06c"
+        }
+    ],
+    "alias": [
+        {
+            "value": "\/blog\/2026\/pdfa11y-review-pdfs-accessibility-upload"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ]
+}
