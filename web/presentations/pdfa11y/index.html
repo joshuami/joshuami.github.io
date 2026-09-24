@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PDFa11y: Review PDFs for Accessibility on Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../dist/assets/reveal-entry-CkAyCvvr.css">
+  <link rel="stylesheet" href="../theme-joshuami.css">
+
+  <style>
+    /* Ensure slides are left-aligned by default */
+    .reveal .slides section {
+      text-align: left !important;
+    }
+
+    /* ==========================================
+       PRESENTATION-SPECIFIC STYLES
+       Palette: theme dark (#212529) + Bootstrap status colors for
+       pass / fail / skipped, and the City of Mundane seal palette
+       (navy #052E4C, sunset #F2632D, cream #F3E4C6) on demo slides.
+       ========================================== */
+    :root {
+      --pa-pass: #198754;
+      --pa-fail: #dc3545;
+      --pa-skip: #ffc107;
+      --pa-blue: #0d6efd;
+      --mundane-navy: #052E4C;
+      --mundane-sunset: #F2632D;
+      --mundane-cream: #F3E4C6;
+    }
+
+    /* Let per-slide gradients show through */
+    .reveal .slides,
+    .reveal .slides > section.stack {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+    .reveal .slides > section:not(.stack):not(.section-header):not(.demo-slide):not(.title-slide),
+    .reveal .slides > section.stack > section:not(.section-header):not(.demo-slide) {
+      background-color: #212529 !important;
+    }
+
+    /* ---------- Section headers ---------- */
+    .reveal .slides section.section-header {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      background: transparent !important;
+    }
+    .reveal .slides section.section-header .kicker {
+      font-size: 0.8em;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 0.5rem;
+    }
+    .reveal .slides section.section-header h2 {
+      font-size: 2.6em !important;
+      line-height: 1.05 !important;
+      max-width: 14ch;
+    }
+    .reveal .slides section.section-header p {
+      font-size: 1.1em;
+      max-width: 30ch;
+      opacity: 0.9;
+    }
+    .reveal .slides section.section-header * {
+      background: transparent !important;
+      color: #fff !important;
+    }
+
+    /* ---------- Status badges (match the module's pass/fail pill) ---------- */
+    .reveal .slides section .badge {
+      display: inline-block;
+      font-size: 0.55em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.2em 0.7em;
+      border-radius: 999px;
+      vertical-align: middle;
+      color: #fff !important;
+    }
+    .reveal .slides section .badge-pass { background: var(--pa-pass) !important; }
+    .reveal .slides section .badge-fail { background: var(--pa-fail) !important; }
+    .reveal .slides section .badge-skip { background: var(--pa-skip) !important; color: #212529 !important; }
+
+    /* ---------- Check cards ---------- */
+    .reveal .slides section .check-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .reveal .slides section .check-card {
+      background: #2b3035 !important;
+      border: 1px solid #495057;
+      border-top: 6px solid var(--pa-blue);
+      border-radius: 0.6rem;
+      padding: 0.9rem 1.1rem;
+      font-size: 0.62em;
+      line-height: 1.35;
+    }
+    .reveal .slides section .check-card h3, .reveal .slides section .check-card code, .reveal .slides section .check-card p { background: transparent !important; }
+    .reveal .slides section .check-card h3 {
+      font-size: 1.15em !important;
+      margin: 0 0 0.4rem 0 !important;
+    }
+    .reveal .slides section .check-card code {
+      font-size: 0.8em;
+      color: #adb5bd !important;
+    }
+    .reveal .slides section .check-card p { margin: 0.3rem 0 0 0; }
+
+    /* ---------- Pipeline (how it works) ---------- */
+    .reveal .slides section .pipeline {
+      display: flex;
+      align-items: stretch;
+      gap: 0.6rem;
+      margin: 1.5rem 0;
+    }
+    .reveal .slides section .pipeline .step {
+      flex: 1;
+      background: #2b3035 !important;
+      border: 1px solid #495057;
+      border-radius: 0.6rem;
+      padding: 0.8rem;
+      text-align: center;
+      font-size: 0.6em;
+      position: relative;
+    }
+    .reveal .slides section .pipeline .step strong { background: transparent !important; }
+    .reveal .slides section .pipeline .step strong { display: block; font-size: 1.2em; margin-bottom: 0.3rem; }
+    .reveal .slides section .pipeline .step + .step::before {
+      content: "\203A";
+      position: absolute;
+      left: -0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2em;
+      color: #6c757d !important;
+    }
+    .reveal .slides section .pipeline .step.result-pass { border-top: 6px solid var(--pa-pass); }
+    .reveal .slides section .pipeline .step.result-fail { border-top: 6px solid var(--pa-fail); }
+    .reveal .slides section .pipeline .step.result-skip { border-top: 6px solid var(--pa-skip); }
+
+    /* ---------- Callouts ---------- */
+    .reveal .slides section .highlight-box {
+      background: #2b3035 !important;
+      border-left: 6px solid var(--pa-blue);
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 0.9rem 1.3rem;
+      margin: 1rem 0;
+    }
+    .reveal .slides section .highlight-box p, .reveal .slides section .highlight-box strong { background: transparent !important; }
+    .reveal .slides section .highlight-box.warn { border-left-color: var(--pa-skip); }
+    .reveal .slides section .highlight-box.fail { border-left-color: var(--pa-fail); }
+    .reveal .slides section .highlight-box.pass { border-left-color: var(--pa-pass); }
+
+    .reveal .slides section .skip-list li { font-size: 0.8em; margin-bottom: 0.35em; }
+    .reveal .slides section .skip-list li strong { color: #ffd166 !important; }
+
+    /* ---------- Demo slide: City of Mundane ---------- */
+    .reveal .slides section.demo-slide {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      background: transparent !important;
+    }
+    .reveal .slides section.demo-slide * { background: transparent !important; }
+    .reveal .slides section.demo-slide .seal {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .reveal .slides section.demo-slide .seal img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 5px solid var(--mundane-cream);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .reveal .slides section.demo-slide .seal .city {
+      color: var(--mundane-cream) !important;
+    }
+    .reveal .slides section.demo-slide .seal .city .motto {
+      display: block;
+      font-style: italic;
+      font-size: 0.6em;
+      opacity: 0.85;
+    }
+    .reveal .slides section.demo-slide h2 { color: #fff !important; font-size: 1.9em !important; }
+    .reveal .slides section.demo-slide .browser {
+      background: var(--mundane-cream) !important;
+      border-radius: 0.8rem;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+      font-size: 0.6em;
+      margin-top: 0.5rem;
+    }
+    .reveal .slides section.demo-slide .browser .bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #e9d9b8 !important;
+      padding: 0.5rem 0.9rem;
+    }
+    .reveal .slides section.demo-slide .browser .bar .dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #c9b691 !important;
+    }
+    .reveal .slides section.demo-slide .browser .bar .url {
+      flex: 1;
+      background: #fff !important;
+      border-radius: 999px;
+      padding: 0.2rem 0.9rem;
+      color: var(--mundane-navy) !important;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9em;
+    }
+    .reveal .slides section.demo-slide .browser .bar .url a { color: var(--mundane-navy) !important; text-decoration: none; }
+    .reveal .slides section.demo-slide .browser .body {
+      padding: 1rem 1.2rem;
+      color: var(--mundane-navy) !important;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+    }
+    .reveal .slides section.demo-slide .browser .body * { color: var(--mundane-navy) !important; }
+    .reveal .slides section.demo-slide .browser .body ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+    .reveal .slides section.demo-slide .browser .body li { margin-bottom: 0.25em; }
+    .reveal .slides section.demo-slide .browser .body a { text-decoration: underline; text-underline-offset: 3px; }
+    .reveal .slides section.demo-slide .browser .body .badge-pass { background: var(--pa-pass) !important; color: #fff !important; }
+    .reveal .slides section.demo-slide .browser .body .badge-fail { background: var(--pa-fail) !important; color: #fff !important; }
+    .reveal .slides section.demo-slide .launch {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--mundane-sunset) !important;
+      color: #fff !important;
+      font-weight: 700;
+      padding: 0.4em 1.2em;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.8em;
+    }
+
+    /* ---------- About / thank-you panels ---------- */
+    .reveal .slides section.about-slide .about-panel {
+      background: rgba(0, 0, 0, 0.55) !important;
+      border-radius: 1rem;
+      padding: 2rem 2.5rem;
+    }
+    .reveal .slides section.about-slide * { background: transparent !important; }
+    .reveal .slides section.about-slide li { font-size: 0.8em; }
+    .reveal .slides section.about-slide h2 { font-size: 1.5em !important; }
+    .reveal .slides section.about-slide .slide-layout-two-column > div:first-child { flex: 3; }
+    .reveal .slides section.about-slide .slide-layout-two-column > div:last-child { flex: 2; text-align: center; }
+    .reveal .slides section.about-slide a { color: #9ec5ff !important; text-decoration: underline; text-underline-offset: 3px; }
+    .reveal .slides section.about-slide .author-image {
+      border: 5px solid #fff;
+      box-shadow: 0 0 0 5px rgba(0,0,0,0.4);
+    }
+
+    .reveal .slides section .roadmap li { margin-bottom: 0.6em; }
+    .reveal .slides section .roadmap li strong { color: #9ec5ff !important; }
+
+    .reveal .slides section pre { font-size: 0.55em !important; }
+    /* Title slide: drop the title panel to the vertical middle of the image */
+    .reveal .slides section.title-slide { align-items: center !important; padding-top: 0 !important; }
+  </style>  <script type="module" src="../dist/assets/reveal-entry-DO42NPiZ.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ===== 1. Title + About ===== -->
+      <section>
+        <section class="title-slide" style="background-image: url('/sites/default/files/2026-07/pdfa11y-feautred-image.png') !important; background-size: 140% !important; background-position: 100% center !important;">
+          <div class="title-content">
+            <h1>PDFa11y</h1>
+            <p>Review PDFs for accessibility on upload</p>
+            <p class="small muted">Prevention, not just remediation</p>
+          </div>
+          <aside class="notes">
+            Open with the question: how many PDFs are on your site right now, and how many of them could a screen reader user actually read? Most orgs cannot answer that.
+          </aside>
+        </section>
+
+        <section class="about-slide" data-background-gradient="linear-gradient(135deg, #0d6efd 0%, #198754 100%)">
+          <div class="about-panel">
+            <h2>About Josh Mitchell</h2>
+            <div class="slide-layout-two-column">
+              <div>
+                <ul>
+                  <li>Founder of M6L, a full stack consultancy</li>
+                  <li>Government digital services architect</li>
+                  <li>20 years of Drupal</li>
+                  <li>Maintainer of PDFa11y</li>
+                  <li>Connect: <a href="https://www.linkedin.com/in/joshuami/">LinkedIn</a> or Drupal Slack (@joshuami)</li>
+                </ul>
+              </div>
+              <div>
+                <img class="author-image" src="/sites/default/files/styles/1_1_300x300_focal_point_webp/public/2025-10/Josh%20pointing%20cutout%20for%20graphics.png?h=bf743cdb&itok=muS1a0XT" alt="Portrait of Josh Mitchell pointing, founder of M6L" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover;">
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ===== 2. Why this matters ===== -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #b02a37 0%, #dc3545 60%, #f2632d 100%)">
+          <div class="kicker">The problem</div>
+          <h2>PDFs are the accessibility blind spot</h2>
+          <p>Thousands of documents, zero visibility, and a deadline</p>
+        </section>
+
+        <section>
+          <h2>Why now</h2>
+          <ul>
+            <li>April 2024: DOJ finalized the ADA Title II web and app rule</li>
+            <li>State and local governments, and public universities, were put on notice</li>
+            <li>Deadlines have slipped, but the obligation has not</li>
+            <li>HTML pages get audited. PDF libraries mostly do not.</li>
+          </ul>
+          <aside class="notes">
+            The rule covers web content and mobile apps for state and local government. PDFs count. I work with a number of government and higher ed orgs that needed a way to respond.
+          </aside>
+        </section>
+
+        <section>
+          <h2>The remediation market</h2>
+          <div class="slide-layout-two-column">
+            <div>
+              <p><strong>Great at</strong></p>
+              <ul>
+                <li>Fixing a large existing library</li>
+                <li>Editor-in-the-loop correction</li>
+              </ul>
+            </div>
+            <div>
+              <p><strong>Not built for</strong></p>
+              <ul>
+                <li>Preventing the next bad upload</li>
+                <li>Teaching editors why it failed</li>
+                <li>Your budget: recurring cost and vendor lock-in</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Prevention over remediation</h2>
+          <div class="highlight-box pass">
+            <p>Scan the structure of a PDF <strong>at upload</strong>, tell the editor what is wrong, and let them fix the source before it ever publishes.</p>
+          </div>
+          <p>Heavily inspired by <a href="https://www.drupal.org/project/editoria11y">Editoria11y</a>: immediate feedback, right where editors work.</p>
+          <p class="small muted">Built with a client who wanted prevention and education, not another subscription.</p>
+        </section>
+
+        <section>
+          <h2>Open source and free by design</h2>
+          <ul>
+            <li>A structural scan of a PDF does not belong behind a paywall</li>
+            <li>Published on Drupal.org: <a href="https://www.drupal.org/project/pdfa11y">drupal.org/project/pdfa11y</a></li>
+            <li>Runs on your Drupal host, no third-party service</li>
+            <li>Parser: <code>smalot/pdfparser</code> (LGPL 3.0) as a Composer dependency</li>
+          </ul>
+          <aside class="notes">
+            Maybe this is a mistake at a time when everyone wants recurring revenue. But the check is simple enough that it should just be there for everyone.
+          </aside>
+        </section>
+      </section>
+
+      <!-- ===== 3. DEMO: City of Mundane ===== -->
+      <section class="demo-slide" data-background-gradient="linear-gradient(160deg, #052E4C 0%, #0b4a76 60%, #F2632D 160%)">
+        <div class="seal">
+          <img src="/presentations/pdfa11y/mundane-logo-224.png" alt="City seal of Mundane, Oregon">
+          <div class="city">
+            <h2>City of Mundane, Oregon</h2>
+            <span class="motto">Numquam Notabilis, est. 1883. A demo site on Drupal CMS.</span>
+          </div>
+        </div>
+        <div class="browser">
+          <div class="bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="url"><a href="https://mundane.ddev.site/documents" target="_blank" rel="noopener">https://mundane.ddev.site/documents</a></span>
+          </div>
+          <div class="body">
+            <ol>
+              <li><a href="https://mundane.ddev.site/documents" target="_blank" rel="noopener">Document library</a>: every PDF wears a <span class="badge badge-pass">Pass</span> or <span class="badge badge-fail">Fail</span></li>
+              <li><a href="https://mundane.ddev.site/meetings" target="_blank" rel="noopener">A council meeting</a>: agenda and minutes embedded with status</li>
+              <li>Open a failing document's <strong>Accessibility</strong> tab</li>
+            </ol>
+            <ol start="4">
+              <li>Upload a new PDF through the media library and watch the warning</li>
+              <li><a href="https://mundane.ddev.site/admin/reports/pdf-accessibility" target="_blank" rel="noopener">PDF accessibility report</a> for the whole library</li>
+              <li>Terminal: <code>drush pa:check --bundle=document</code></li>
+            </ol>
+          </div>
+        </div>
+        <a class="launch" href="https://mundane.ddev.site/documents" target="_blank" rel="noopener">Open the demo site</a>
+        <aside class="notes">
+          DEMO SCRIPT. Before the talk: ddev start in ~/Projects/mundane, log in with drush uli, have /documents open in a second tab, and have a known-bad PDF on the desktop to upload (council-agenda-2026-10-06.pdf fails untagged, no title, no language; picnic-shelter-reservation-form.pdf fails "title is a filename").
+          1. /documents: 10 PDFs, 4 pass and 6 fail. Point out badges are only visible to users who can view reports.
+          2. /meetings: open a meeting, show agenda and minutes embedded with the pdfa11y status pseudo-field.
+          3. Click a failing doc, open the Accessibility tab: per-check results with the message an editor sees.
+          4. Media library, add document, upload the bad PDF: warning with editor instructions. Mention block mode and the bypass permission.
+          5. /admin/reports/pdf-accessibility: pass, fail, error counts and links. It is a view, so it can be cloned.
+          6. Terminal: drush pa:check --bundle=document --missing-only for backfills. Then come back to the slides.
+        </aside>
+      </section>
+
+      <!-- ===== 4. How it works ===== -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #0a58ca 0%, #0d6efd 55%, #0dcaf0 100%)">
+          <div class="kicker">Under the hood</div>
+          <h2>How it works</h2>
+          <p>Read the structure, look for known bad patterns, report back in seconds</p>
+        </section>
+
+        <section>
+          <h2>Upload to result</h2>
+          <div class="pipeline">
+            <div class="step"><strong>Upload</strong>Media form or Drush</div>
+            <div class="step"><strong>Parse</strong>smalot/pdfparser reads headers, metadata, structure tree</div>
+            <div class="step"><strong>Checks</strong>Each enabled plugin inspects the parsed document</div>
+            <div class="step result-pass"><strong>Result</strong><span class="badge badge-pass">Pass</span> <span class="badge badge-fail">Fail</span> <span class="badge badge-skip">Skipped</span></div>
+            <div class="step"><strong>Surface</strong>Editor message, badge, Accessibility tab, report</div>
+          </div>
+          <p class="small muted">Typical scan time is seconds, depending on file size. Results are stored per file and per media item.</p>
+        </section>
+
+        <section>
+          <h2>Six checks today</h2>
+          <div class="check-grid">
+            <div class="check-card">
+              <h3>Document language</h3>
+              <code>document_language</code>
+              <p>Screen readers use the language to pick pronunciation rules.</p>
+            </div>
+            <div class="check-card">
+              <h3>Tagged PDF</h3>
+              <code>tagged_pdf</code>
+              <p>Tags carry reading order, headings, lists. No tags, no navigation.</p>
+            </div>
+            <div class="check-card">
+              <h3>Document title</h3>
+              <code>document_title</code>
+              <p>Announced when the file opens; shown in tabs and bookmarks.</p>
+            </div>
+            <div class="check-card">
+              <h3>Heading structure</h3>
+              <code>heading_structure</code>
+              <p>Structure tree exists, starts at H1, and never skips a level.</p>
+            </div>
+            <div class="check-card">
+              <h3>PDF version</h3>
+              <code>pdf_version</code>
+              <p>Configurable minimum (default 1.4). Older versions cannot be tagged.</p>
+            </div>
+            <div class="check-card">
+              <h3>Title is not a filename</h3>
+              <code>document_title_filename</code>
+              <p>"Report.docx" is a leftover, not a title. Can be disabled for forms.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Extensible by design</h2>
+          <p>Each check is a plugin. Add your own with an attribute and one method.</p>
+          <pre><code class="language-php" data-trim data-noescape>
+#[AccessibilityCheck(
+  id: 'figure_alt_text',
+  label: new TranslatableMarkup('Figures have alt text'),
+)]
+final class FigureAltTextCheck extends AccessibilityCheckBase {
+  public function check(Document $document): CheckResult {
+    // Walk the structure tree for /Figure nodes without /Alt.
+  }
+}
+          </code></pre>
+          <p class="small muted">Views field and filter plugins ship with the module, so any report is just another view.</p>
+          <aside class="notes">
+            Illustrative shape only. Check the module's Plugin/AccessibilityCheck directory for the real base class and result object before showing this to people who will copy it.
+          </aside>
+        </section>
+      </section>
+
+      <!-- ===== 5. What it cannot do ===== -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #b5830b 0%, #ffc107 100%)">
+          <div class="kicker">What it does not catch</div>
+          <h2>A floor, not a ceiling</h2>
+          <p>What a mechanical scan can and cannot tell you</p>
+        </section>
+
+        <section>
+          <h2>PDFs are not web pages</h2>
+          <ul>
+            <li>Editoria11y can point at the broken heading <em>on the page</em></li>
+            <li>A PDF only renders inside a viewer. There is no reliable way to overlay a widget on every viewer, and many people do not use a browser at all.</li>
+            <li>So PDFa11y reports <strong>next to</strong> the file, not on top of it</li>
+          </ul>
+          <div class="highlight-box warn">
+            <p class="small">A PDF can contain links, and you can link to a PDF. It is still not HTML and should never be treated as a page.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Needs a human</h2>
+          <ul>
+            <li>Alt text <em>quality</em></li>
+            <li>Whether the right text is tagged as a heading</li>
+            <li>Reading order on visually complex pages</li>
+            <li>Whether form fields are labeled meaningfully</li>
+          </ul>
+          <p class="accent">Pair the module with editor training. The checks catch what can be caught mechanically.</p>
+        </section>
+      </section>
+
+      <!-- ===== 6. Files that cannot be scanned ===== -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #343a40 0%, #6c757d 100%)">
+          <div class="kicker">Lessons from production</div>
+          <h2>When we skip a file</h2>
+          <p>Some PDFs cannot or should not be parsed. Say so, and move on.</p>
+        </section>
+
+        <section>
+          <h2>Skipped, with a reason <span class="badge badge-skip">Skipped</span></h2>
+          <ul class="skip-list">
+            <li><strong>Missing file.</strong> The media record points at nothing. Usually a leftover from a delete or migration.</li>
+            <li><strong>Cannot be read right now.</strong> Remote storage such as S3 timed out. Temporary; retry later.</li>
+            <li><strong>Encrypted or restricted.</strong> Fix: re-export with no security and re-upload.</li>
+            <li><strong>Corrupt or malformed.</strong> Broken export, truncated upload, or not really a PDF.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Protecting the server</h2>
+          <ul class="skip-list">
+            <li><strong>Too large.</strong> Over the configured size limit, so we never start.</li>
+            <li><strong>Packed with images.</strong> Scanned plats and drawings can be small on disk and hundreds of MB decompressed. We estimate up front and skip what would exhaust memory.</li>
+            <li><strong>Too slow or too hungry.</strong> Time and memory are capped per file, so one bad file never derails a bulk scan.</li>
+          </ul>
+          <p class="small muted">Rolling this out on real libraries is what produced this list.</p>
+        </section>
+      </section>
+
+      <!-- ===== 7. Reporting and bulk ===== -->
+      <section>
+        <section class="section-header" data-background-gradient="linear-gradient(135deg, #146c43 0%, #198754 60%, #20c997 100%)">
+          <div class="kicker">Operations</div>
+          <h2>Reporting and backfills</h2>
+          <p>Existing libraries grow before the module is installed</p>
+        </section>
+
+        <section>
+          <h2>Where results show up</h2>
+          <ul>
+            <li>Per media item: an <strong>Accessibility</strong> tab with every check and message</li>
+            <li>Site-wide: <code>/admin/reports/pdf-accessibility</code> with pass, fail, and error counts</li>
+            <li>Anywhere else: Views field and filter plugins for your own listings</li>
+            <li>Editors: a status badge on embedded documents, if the theme prints it</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Two safe ways to scan a library</h2>
+          <p><strong>Queue mode</strong> for unattended backfills. Each file runs in its own worker, memory is reclaimed between items.</p>
+          <pre><code class="language-bash" data-trim data-noescape>
+drush pa:check --bundle=document --missing-only --queue
+drush queue:run pdfa11y_check
+          </code></pre>
+          <p><strong>Chunked sync runs</strong> when you are watching and SSH sessions have a time cap.</p>
+          <pre><code class="language-bash" data-trim data-noescape>
+drush pa:check --bundle=document --missing-only --limit=1500 --format=summary
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Configuration</h2>
+          <ul>
+            <li><strong>Editor instructions</strong>: link your own remediation guide</li>
+            <li><strong>Warn or block</strong>: block failing uploads, with a bypass permission</li>
+            <li><strong>Minimum PDF version</strong> and which checks run</li>
+            <li>Permissions: administer, run checks, view reports, bypass</li>
+          </ul>
+          <p class="small muted"><code>/admin/config/media/pdf-accessibility</code></p>
+        </section>
+      </section>
+
+      <!-- ===== 8. Roadmap + close ===== -->
+      <section>
+        <section>
+          <h2>Roadmap</h2>
+          <ul class="roadmap">
+            <li><strong>Editoria11y integration.</strong> A custom check that surfaces PDF fails and errors on embedded media, right in the editor.</li>
+            <li><strong>Missing alt text.</strong> PDF figures have an alt concept too.</li>
+            <li><strong>More settings.</strong> Size and memory limits in the UI, not just config overrides.</li>
+            <li>Many Editoria11y HTML checks have a PDF structure equivalent waiting to be written.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Get involved</h2>
+          <ul>
+            <li>Try it: <a href="https://www.drupal.org/project/pdfa11y">drupal.org/project/pdfa11y</a></li>
+            <li>Feature requests and bugs: the issue queue</li>
+            <li>Need an accessibility audit, an implementation, or want to fund a check? Let's talk.</li>
+          </ul>
+        </section>
+
+        <section class="about-slide" data-background-gradient="linear-gradient(135deg, #0d6efd 0%, #198754 100%)">
+          <div class="about-panel">
+            <div class="slide-layout-two-column">
+              <div>
+                <h2>Thank you</h2>
+                <p>Questions?</p>
+                <p><a href="https://www.linkedin.com/in/joshuami/">Josh Mitchell on LinkedIn</a><br>Drupal Slack: @joshuami</p>
+                <p class="small">Slides: joshuami.com/presentations/pdfa11y</p>
+              </div>
+              <div>
+                <p class="small muted">Blog post: <a href="https://joshuami.com/blog/2026/pdfa11y-review-pdfs-accessibility-upload">PDFa11y: Review PDFs for Accessibility on Upload</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.Reveal) {
+        Reveal.configure({
+          hash: true,
+          slideNumber: true,
+          plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        });
+      }
+    });
+  </script>
+</body>
+</html>

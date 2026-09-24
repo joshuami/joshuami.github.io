@@ -228,6 +228,14 @@
               if (index > 0) {
                 actionButtons.unshift(Drupal.tour.prevButton(shepherdTour));
               }
+
+              // Add recap URL to step config if enabled.
+              if (settings.tourRecap?.enabled && settings.tourRecap?.urls) {
+                const recapUrls = Object.values(settings.tourRecap.urls);
+                if (recapUrls.length > 0) {
+                  tourStepConfig.recapUrl = recapUrls[0];
+                }
+              }
               // Create the configuration for a given tour step by using values
               // defined in TourViewBuilder.
               // @see \Drupal\tour\TourViewBuilder::viewMultiple()
@@ -486,8 +494,15 @@
    * @see \Drupal\tour\TourViewBuilder::viewMultiple()
    * @see https://shepherdjs.dev/docs/Step.html
    */
-  Drupal.theme.tourItemContent = (tourStepConfig) =>
-    `${tourStepConfig.body}<div class="tour-progress">${tourStepConfig.counter}</div>`;
+  Drupal.theme.tourItemContent = (tourStepConfig) => {
+    let recapLink = '';
+    if (tourStepConfig.recapUrl) {
+      const linkText =
+        drupalSettings.tourRecap?.buttonText || Drupal.t('View steps');
+      recapLink = ` | <a href="${tourStepConfig.recapUrl}" target="_blank" class="tour-recap-link">${linkText}</a>`;
+    }
+    return `${tourStepConfig.body}<div class="tour-progress">${tourStepConfig.counter}${recapLink}</div>`;
+  };
 })(
   jQuery,
   Backbone,
